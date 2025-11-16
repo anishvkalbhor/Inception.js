@@ -1,0 +1,110 @@
+# ============================================
+# Python Backend
+# ============================================
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ============================================
+# Frontend (Next.js)
+# ============================================
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================
+# Infrastructure & Data
+# ============================================
+# Milvus volumes (Docker data)
+infrastructure/docker/volumes/
+
+# Legacy folder (if you're migrating)
+milvus_store/
+
+# ============================================
+# Environment Variables
+# ============================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# ============================================
+# Editor & OS
+# ============================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# ============================================
+# Temporary Files
+# ============================================
+*.log
+*.cache
+.cache/
+.tmp/
+temp/
+*.swp
+*.swo
+
+# ============================================
+# Dependencies Lock Files (optional)
+# ============================================
+# Uncomment if you want to ignore lock files
+# package-lock.json
+# pnpm-lock.yaml
+# yarn.lock
+# poetry.lock
+# Pipfile.lock
