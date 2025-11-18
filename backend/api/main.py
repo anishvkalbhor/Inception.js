@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import get_settings
-from backend.api.routers import collections, documents, search, chat, upload
+from backend.api.routers import collections, documents, search, chat, upload, sync, scraper
 from backend.api.routers.parse_marker import router as parse_marker_router
 
 settings = get_settings()
@@ -35,6 +35,8 @@ app.include_router(upload.router, prefix="/api/upload", tags=["Upload"])
 app.include_router(search.router, prefix="/api/search", tags=["Search"])
 app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
 app.include_router(parse_marker_router, prefix="/api/marker", tags=["Marker"])
+app.include_router(sync.router, prefix="/api", tags=["Sync"])
+app.include_router(scraper.router, prefix="/api", tags=["Scraper"])
 
 @app.get("/")
 async def root():

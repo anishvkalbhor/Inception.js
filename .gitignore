@@ -55,6 +55,29 @@ infrastructure/docker/volumes/
 # Legacy folder (if you're migrating)
 milvus_store/
 
+# Processed data files
+backend/data/processed/
+
+# ============================================
+# Local Storage & Sync Data (NEW)
+# ============================================
+# Local storage - synced from Google Drive
+backend/data/local_storage/
+
+# Scraper temporary downloads
+backend/data/scraper_temp/
+
+# Scrape reports (optional - keep locally)
+backend/scrape_report_*.json
+
+# Google Drive service account credentials
+backend/service-account-key.json
+*service-account*.json
+
+# MongoDB dumps
+backup_*/
+mongodump/
+
 # ============================================
 # Environment Variables
 # ============================================
