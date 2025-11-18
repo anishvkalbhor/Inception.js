@@ -13,6 +13,7 @@ app = FastAPI(
 )
 
 # CORS: allow your frontend origins in development
+# CORS: allow your frontend origins in development
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -25,9 +26,14 @@ app.add_middleware(
 )
 
 # Routers
+# Routers
 app.include_router(collections.router, prefix="/api/collections", tags=["Collections"])
 app.include_router(documents.router, prefix="/api/documents", tags=["Documents"])
 app.include_router(upload.router, prefix="/api/upload", tags=["Upload"])
+# NOTE: removed the duplicate include that used prefix=""
+# If you want upload-callback available at root (/upload-callback),
+# either add a small separate router with that single path, or change the client to call /api/upload/upload-callback.
+
 # NOTE: removed the duplicate include that used prefix=""
 # If you want upload-callback available at root (/upload-callback),
 # either add a small separate router with that single path, or change the client to call /api/upload/upload-callback.
@@ -45,3 +51,4 @@ async def root():
 @app.get("/health")
 async def health():
     return {"status": "healthy"}
+
