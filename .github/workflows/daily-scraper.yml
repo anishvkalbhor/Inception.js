@@ -29,16 +29,13 @@ jobs:
       
       - name: Create service account credentials file
         run: |
-          cd backend
-          echo '${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}' > service-account-key.json
+          echo '${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}' > backend/service-account-key.json
       
       - name: Run MoE scraper
         env:
-          GOOGLE_DRIVE_SERVICE_ACCOUNT_FILE: '${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}'
           GOOGLE_DRIVE_MASTER_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_MASTER_FOLDER_ID }}
         run: |
-          cd backend
-          python services/moe_scraper_service.py --all
+          python backend/services/moe_scraper_service.py --all
       
       - name: Upload scrape report
         if: always()
