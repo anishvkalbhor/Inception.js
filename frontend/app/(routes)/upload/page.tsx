@@ -7,14 +7,14 @@ export default function Upload() {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
 
-  // 🔥 Main Upload Handler - Updated for local backend storage
+  // Main Upload Handler - Updated for local backend storage
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
 
     setUploading(true);
     setMessage("");
-    console.log("📂 Selected file:", file);
+    console.log("Selected file:", file);
 
     // Prepare FormData for multipart upload
     const formData = new FormData();
@@ -23,7 +23,7 @@ export default function Upload() {
     formData.append("uploader_id", "TEMP_USER");
     formData.append("category", "uploads");
 
-    console.log("📨 Sending file to backend /api/upload/upload-direct");
+    console.log("Sending file to backend /api/upload/upload-direct");
 
     try {
       const response = await fetch("http://localhost:8000/api/upload/upload-direct", {
@@ -32,7 +32,7 @@ export default function Upload() {
         // Don't set Content-Type header - browser will set it with boundary for multipart/form-data
       });
 
-      console.log("🔎 Backend response status:", response.status);
+      console.log("Backend response status:", response.status);
 
       // Parse response
       let respData;
@@ -43,22 +43,21 @@ export default function Upload() {
       }
 
       if (!response.ok) {
-        console.error("❌ Backend error:", respData);
-        setMessage("❌ Server rejected the upload.");
+        console.error("Backend error:", respData);
+        setMessage("Server rejected the upload.");
         setUploading(false);
         return;
       }
 
-      console.log("🎉 Backend accepted the file!", respData);
-      setMessage("✅ Upload successful! Processing complete.");
+      console.log("Backend accepted the file!", respData);
+      setMessage("Upload successful! Processing complete.");
     } catch (err) {
-      console.error("🚨 Network/Fetch error:", err);
-      setMessage("❌ Network error contacting backend.");
+      console.error("Network/Fetch error:", err);
+      setMessage("Network error contacting backend.");
     } finally {
       setUploading(false);
     }
   }
-}
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">

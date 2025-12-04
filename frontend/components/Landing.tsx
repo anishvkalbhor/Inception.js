@@ -11,6 +11,7 @@ export default function Landing() {
         </div>
         <div className="space-x-6 flex items-center">
           <a href="#features" className="text-gray-600 hover:text-blue-600 transition">Features</a>
+          <Link href="/search" className="text-gray-600 hover:text-blue-600 transition">Search</Link>
           <Link href="/upload" className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition">
             Upload
           </Link>
