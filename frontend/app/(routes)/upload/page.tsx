@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
+import { useTheme } from "@/lib/ThemeContext";
 
 export default function Upload() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -60,38 +65,65 @@ export default function Upload() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <main className={`min-h-screen transition-colors duration-300 ${
+      isDark
+        ? "bg-gradient-to-br from-neutral-950 via-neutral-900 to-black"
+        : "bg-gradient-to-br from-indigo-100 via-blue-50 to-purple-100"
+    }`}>
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 py-6 bg-white bg-opacity-80 backdrop-blur-md shadow-sm">
+      <nav className={`flex justify-between items-center px-8 py-6 backdrop-blur-md shadow-sm ${
+        isDark
+          ? "bg-neutral-900/80 border-b border-neutral-800"
+          : "bg-white/80 border-b border-gray-200"
+      }`}>
         <Link
           href="/"
-          className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+          className={`text-2xl font-bold text-transparent bg-clip-text ${
+            isDark
+              ? "bg-gradient-to-r from-cyan-400 to-blue-400"
+              : "bg-gradient-to-r from-blue-600 to-purple-600"
+          }`}
         >
           Victor
         </Link>
-        <Link
-          href="/"
-          className="text-gray-600 hover:text-blue-600 transition font-semibold"
-        >
-          ← Back to Home
-        </Link>
+        <div className="flex gap-4 items-center">
+          <ThemeToggle />
+          <Link
+            href="/"
+            className={`transition font-semibold ${
+              isDark
+                ? "text-gray-400 hover:text-cyan-400"
+                : "text-gray-600 hover:text-blue-600"
+            }`}
+          >
+            ← Back to Home
+          </Link>
+        </div>
       </nav>
 
       {/* Main Section */}
       <section className="max-w-2xl mx-auto px-8 py-24">
         <div className="space-y-8">
           <div className="text-center space-y-4">
-            <h1 className="text-5xl font-bold text-gray-900">
+            <h1 className={`text-5xl font-bold ${isDark ? "text-white" : "text-gray-900"}`}>
               Upload Your Document
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className={`text-xl ${isDark ? "text-gray-400" : "text-gray-600"}`}>
               Let Victor analyze and process your files with AI-powered intelligence.
             </p>
           </div>
 
           {/* Upload Card */}
-          <div className="bg-white rounded-2xl shadow-xl p-12 space-y-8">
-            <div className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center hover:border-blue-500 transition">
+          <div className={`rounded-2xl shadow-xl p-12 space-y-8 ${
+            isDark
+              ? "bg-neutral-900 border border-neutral-800"
+              : "bg-white"
+          }`}>
+            <div className={`border-2 border-dashed rounded-xl p-8 text-center transition ${
+              isDark
+                ? "border-cyan-500/30 hover:border-cyan-500"
+                : "border-blue-300 hover:border-blue-500"
+            }`}>
               <input
                 type="file"
                 onChange={handleUpload}

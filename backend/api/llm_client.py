@@ -1,9 +1,27 @@
 import httpx
 import os
+from pathlib import Path
 from typing import List, Dict
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load .env from project root (parent of api folder)
+env_path = Path(__file__).parent.parent / ".env"
+print(f"🔍 Loading .env from: {env_path}")
+print(f"✓ .env exists: {env_path.exists()}")
+
+# Load the .env file
+load_dotenv(env_path, override=True)
+
+# Debug: print what's in the .env file
+if env_path.exists():
+    with open(env_path, 'r') as f:
+        for line in f:
+            if 'LLM_MODEL' in line:
+                print(f"📄 Found in .env: {line.strip()}")
+
+# Debug: check environment variable
+llm_model_env = os.getenv("LLM_MODEL")
+print(f"🔍 os.getenv('LLM_MODEL'): {llm_model_env}")
 
 class OpenRouterClient:
     def __init__(self):
@@ -15,6 +33,9 @@ class OpenRouterClient:
         self.model = os.getenv("LLM_MODEL")
         self.site_url = os.getenv("SITE_URL", "http://localhost:3000")  # Add to .env
         self.site_name = os.getenv("SITE_NAME", "VICTOR")  # Add to .env
+        
+        print(f"🚀 LLM Client Initialized with model: {self.model}")
+        print(f"📍 OpenRouter Base URL: {self.base_url}")
         
     def create_prompt(self, query: str, contexts: List[Dict]) -> str:
         """Create RAG prompt with retrieved context"""
@@ -80,18 +101,36 @@ Answer:"""
             "max_tokens": 2000
         }
         
+        print(f"🔵 Calling OpenRouter with model: {self.model}")
+        print(f"🔵 Payload: {payload}")
+        
         async with httpx.AsyncClient(timeout=60.0) as client:
-            response = await client.post(
-                self.base_url,
-                headers=headers,
-                json=payload
-            )
-            response.raise_for_status()
-            
-            result = response.json()
-            answer = result["choices"][0]["message"]["content"]
-            
-            return answer
+            try:
+                response = await client.post(
+                    self.base_url,
+                    headers=headers,
+                    json=payload
+                )
+                
+                print(f"🔵 OpenRouter response status: {response.status_code}")
+                
+                if response.status_code != 200:
+                    print(f"🔴 Error response: {response.text}")
+                    response.raise_for_status()
+                
+                result = response.json()
+                print(f"🟢 Got result from OpenRouter")
+                answer = result["choices"][0]["message"]["content"]
+                
+                return answer
+            except httpx.HTTPStatusError as e:
+                error_msg = f"OpenRouter API Error ({e.response.status_code}): {e.response.text}"
+                print(f"❌ {error_msg}")
+                raise Exception(error_msg)
+            except Exception as e:
+                error_msg = f"Error calling OpenRouter: {str(e)}"
+                print(f"❌ {error_msg}")
+                raise Exception(error_msg)
 
 # Global instance
 llm_client = None
