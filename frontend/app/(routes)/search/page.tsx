@@ -105,7 +105,6 @@ export default function Search() {
       if (data.answer) {
         setResults(data);
         setMessage(`✅ Answer generated using ${data.model_used}`);
-        setQuery(""); // Clear input for next query
       } else {
         setResults(null);
         setMessage("No answer generated. Please try again.");

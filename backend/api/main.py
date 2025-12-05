@@ -101,11 +101,22 @@ async def search(request: QueryRequest):
         
         search_latency = (time.time() - start_time) * 1000  # Convert to ms
         
-        # Format response
+        # Format response with full VictorText schema
         search_results = [
             SearchResult(
-                **result,
-                pdf_url=f"/pdf/{quote(result['source'])}"
+                text=result.get('text'),
+                source=result.get('document_name'),  # Map document_name to source
+                page=result.get('page_idx'),
+                score=result.get('score'),
+                # New VictorText fields
+                document_id=result.get('document_id'),
+                chunk_id=result.get('chunk_id'),
+                global_chunk_id=result.get('global_chunk_id'),
+                chunk_index=result.get('chunk_index'),
+                section_hierarchy=result.get('section_hierarchy'),
+                heading_context=result.get('heading_context'),
+                char_count=result.get('char_count'),
+                word_count=result.get('word_count')
             ) for result in results
         ]
         
@@ -160,10 +171,14 @@ async def ask(request: RAGRequest):
                 detail="No relevant documents found for your query"
             )
         
-        print(f"Found {len(search_results)} relevant documents")
+        print(f"📚 Found {len(search_results)} relevant documents")
+        
+        # Log retrieved chunks
+        for i, result in enumerate(search_results):
+            print(f"   [{i+1}] {result.get('document_name')} (Page {result.get('page_idx')}, Score: {result.get('score'):.4f})")
         
         # Step 2: Generate answer using LLM
-        print(f"Generating answer using model: {llm_client.model}")
+        print(f"🤖 Generating answer using model: {llm_client.model}")
         llm_start = time.time()
         try:
             answer = await llm_client.generate_answer(
@@ -172,7 +187,7 @@ async def ask(request: RAGRequest):
                 temperature=request.temperature
             )
         except Exception as llm_err:
-            print(f"LLM Error: {str(llm_err)}")
+            print(f"❌ LLM Error: {str(llm_err)}")
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
                 detail=f"LLM generation failed: {str(llm_err)}"
@@ -182,13 +197,29 @@ async def ask(request: RAGRequest):
         
         total_latency = (time.time() - total_start) * 1000
         
-        # Format response
+        # Format response with full VictorText schema
         sources = [
             SearchResult(
-                **result,
-                pdf_url=f"/pdf/{quote(result['source'])}"
+                text=result.get('text'),
+                source=result.get('document_name'),
+                page=result.get('page_idx'),
+                score=result.get('score'),
+                # New VictorText fields
+                document_id=result.get('document_id'),
+                chunk_id=result.get('chunk_id'),
+                global_chunk_id=result.get('global_chunk_id'),
+                chunk_index=result.get('chunk_index'),
+                section_hierarchy=result.get('section_hierarchy'),
+                heading_context=result.get('heading_context'),
+                char_count=result.get('char_count'),
+                word_count=result.get('word_count')
             ) for result in search_results
         ]
+        
+        print(f"✅ RAG response generated successfully")
+        print(f"   Search latency: {search_latency:.2f}ms")
+        print(f"   LLM latency: {llm_latency:.2f}ms")
+        print(f"   Total latency: {total_latency:.2f}ms")
         
         return RAGResponse(
             query=request.query,

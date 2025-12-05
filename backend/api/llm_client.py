@@ -31,8 +31,16 @@ class OpenRouterClient:
         
         self.base_url = "https://openrouter.ai/api/v1/chat/completions"
         self.model = os.getenv("LLM_MODEL")
-        self.site_url = os.getenv("SITE_URL", "http://localhost:3000")  # Add to .env
-        self.site_name = os.getenv("SITE_NAME", "VICTOR")  # Add to .env
+        self.site_url = os.getenv("SITE_URL", "http://localhost:3000")
+        self.site_name = os.getenv("SITE_NAME", "VICTOR")
+        
+        # Set headers for OpenRouter API
+        self.headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": self.site_url,
+            "X-Title": self.site_name
+        }
         
         print(f"🚀 LLM Client Initialized with model: {self.model}")
         print(f"📍 OpenRouter Base URL: {self.base_url}")
@@ -79,72 +87,82 @@ Answer:"""
         temperature: float = 0.1
     ) -> str:
         """Generate answer using OpenRouter"""
-        
-        prompt = self.create_prompt(query, contexts)
-        
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": self.site_url,
-            "X-Title": self.site_name
-        }
-        
-        payload = {
-            "model": self.model,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ],
-            "temperature": temperature,
-            "max_tokens": 2000
-        }
-        
-        print(f"🔵 Calling OpenRouter with model: {self.model}")
-        print(f"🔵 Payload: {payload}")
-        
-        async with httpx.AsyncClient(timeout=60.0) as client:
-            try:
+        try:
+            import json
+            
+            # Format contexts with all VictorText fields
+            context_text = "\n\n".join([
+                f"[Document: {ctx.get('document_name', 'Unknown')}] "
+                f"[Page: {ctx.get('page_idx', 'N/A')}] "
+                f"[Section: {ctx.get('section_hierarchy', 'N/A')}]\n"
+                f"{ctx.get('text', '')}"
+                for ctx in contexts
+            ])
+            
+            # Create the prompt
+            prompt = f"""Based on the following context from multiple documents, answer the user's question accurately and concisely.
+
+CONTEXT:
+{context_text}
+
+INSTRUCTIONS:
+- Answer using ONLY information from the context above
+- If the answer is not in the context, say "I cannot answer this question based on the provided documents"
+- Always cite the source document and page number when answering
+- Be accurate and do not add information not in the context
+- Match the language style of the question
+
+USER QUESTION: {query}
+
+ANSWER:"""
+
+            print(f"📝 Prompt created for LLM")
+            
+            # Call OpenRouter API using httpx
+            print(f"🔵 Calling OpenRouter API...")
+            async with httpx.AsyncClient(timeout=60.0) as client:
                 response = await client.post(
                     self.base_url,
-                    headers=headers,
-                    json=payload
+                    headers=self.headers,
+                    json={
+                        "model": self.model,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "temperature": temperature,
+                        "max_tokens": 2000
+                    }
                 )
-                
-                print(f"🔵 OpenRouter response status: {response.status_code}")
-                
-                if response.status_code != 200:
-                    print(f"🔴 Error response: {response.text}")
-                    response.raise_for_status()
-                
-                result = response.json()
-                print(f"🟢 Got result from OpenRouter")
-                print(f"📊 Response keys: {result.keys()}")
-                
-                # Handle both standard OpenAI format and OpenRouter format
-                if "choices" in result and len(result["choices"]) > 0:
-                    choice = result["choices"][0]
-                    if "message" in choice:
-                        answer = choice["message"]["content"]
-                    elif "text" in choice:
-                        answer = choice["text"]
-                    else:
-                        print(f"🔴 Unexpected choice format: {choice.keys()}")
-                        raise Exception(f"Unexpected response format: {result}")
+            
+            print(f"🔵 OpenRouter response status: {response.status_code}")
+            
+            if response.status_code != 200:
+                error_detail = response.text
+                print(f"❌ OpenRouter API Error ({response.status_code}): {error_detail}")
+                raise Exception(f"OpenRouter API Error ({response.status_code}): {error_detail}")
+            
+            result = response.json()
+            print(f"🟢 Got result from OpenRouter")
+            print(f"📊 Response keys: {result.keys()}")
+            
+            # Extract answer from response
+            if "choices" in result and len(result["choices"]) > 0:
+                choice = result["choices"][0]
+                if "message" in choice:
+                    answer = choice["message"]["content"]
+                elif "text" in choice:
+                    answer = choice["text"]
                 else:
-                    print(f"🔴 No choices in response: {result}")
+                    print(f"❌ Unexpected choice format: {choice.keys()}")
                     raise Exception(f"Unexpected response format: {result}")
                 
+                print(f"✅ Answer generated successfully")
                 return answer
-            except httpx.HTTPStatusError as e:
-                error_msg = f"OpenRouter API Error ({e.response.status_code}): {e.response.text}"
-                print(f"❌ {error_msg}")
-                raise Exception(error_msg)
-            except Exception as e:
-                error_msg = f"Error calling OpenRouter: {str(e)}"
-                print(f"❌ {error_msg}")
-                raise Exception(error_msg)
+            else:
+                print(f"❌ Unexpected OpenRouter response structure: {result}")
+                raise Exception(f"Unexpected response structure from OpenRouter: {json.dumps(result)}")
+        
+        except Exception as e:
+            print(f"❌ Error calling OpenRouter: {str(e)}")
+            raise
 
 # Global instance
 llm_client = None

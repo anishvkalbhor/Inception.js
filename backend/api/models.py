@@ -6,13 +6,23 @@ class QueryRequest(BaseModel):
     top_k: Optional[int] = Field(3, description="Number of results to retrieve", ge=1, le=10)
 
 class SearchResult(BaseModel):
+    """Individual search result with full VictorText schema"""
     text: str
     source: str
     page: int
     score: float
-    pdf_url: Optional[str] = None
+    # VictorText schema fields
+    document_id: Optional[str] = None
+    chunk_id: Optional[str] = None
+    global_chunk_id: Optional[str] = None
+    chunk_index: Optional[int] = None
+    section_hierarchy: Optional[str] = None
+    heading_context: Optional[str] = None
+    char_count: Optional[int] = None
+    word_count: Optional[int] = None
 
 class SearchResponse(BaseModel):
+    """Search response"""
     query: str
     results: List[SearchResult]
     count: int
@@ -24,6 +34,7 @@ class RAGRequest(BaseModel):
     temperature: Optional[float] = Field(0.0, description="LLM temperature", ge=0.0, le=1.0)
 
 class RAGResponse(BaseModel):
+    """RAG response with answer and sources"""
     query: str
     answer: str
     sources: List[SearchResult]
