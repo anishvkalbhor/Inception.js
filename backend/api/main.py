@@ -56,6 +56,11 @@ async def lifespan(app: FastAPI):
         print(f"⚠️  LLM client initialization warning: {e}")
         # Don't fail startup, LLM is optional
     
+    # Test role system
+    print("🎭 ROLE SYSTEM: Loading role-based configurations...")
+    from services.role_config import ROLE_CONFIGS
+    print(f"🎭 ROLE SYSTEM: {len(ROLE_CONFIGS)} roles loaded: {list(ROLE_CONFIGS.keys())}")
+    
     yield
     
     # Shutdown
@@ -77,6 +82,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Request logging middleware
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    if "/ask" in str(request.url):
+        print(f"🟡 REQUEST: {request.method} {request.url}")
+    response = await call_next(request)
+    return response
 
 # Pydantic models (keep your existing models)
 class QueryRequest(BaseModel):
@@ -182,10 +195,8 @@ async def search(request: QueryRequest):
 @app.post("/ask", response_model=RAGResponse)
 async def ask(request: RAGRequest, user: dict = Depends(verify_auth_token)):
     """Ask a question with RAG using Full LangChain Pipeline - Protected endpoint"""
+    print(f"📤 QUERY: {request.query} | USER: {user.get('email', 'unknown')} | ROLE: {user.get('role', 'user')}")
     try:
-        print(f"🔵 Full LangChain RAG Request from user: {user['user_id']}")
-        print(f"   Query: {request.query}")
-        print(f"   Conversation ID: {request.conversation_id}")
         
         # Start timing
         total_start_time = time.time()
@@ -193,11 +204,12 @@ async def ask(request: RAGRequest, user: dict = Depends(verify_auth_token)):
         # Get the full LangChain RAG service
         langchain_rag = get_full_langchain_rag()
         
-        # Use LangChain pipeline with conversation memory
+        # Use LangChain pipeline with conversation memory and role-based parameters
         result = langchain_rag.ask(
             query=request.query,
             conversation_id=request.conversation_id,
             user_id=user['user_id'],
+            user=user,  # Pass full user object for role-based parameters
             temperature=request.temperature
         )
         

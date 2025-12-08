@@ -301,75 +301,203 @@ export default function ChatInterface({ authToken }: ChatInterfaceProps) {
   };
 
   const renderMarkdown = (text: string) => {
-    // Convert **bold** to <strong>
-    const boldRegex = /\*\*(.*?)\*\*/g;
-    const withBold = text.replace(boldRegex, '<strong>$1</strong>');
+    // First, escape HTML to prevent XSS, but preserve our own tags
+    let processedText = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
     
-    // Convert numbered lists to proper HTML
-    const lines = withBold.split('\n');
-    const processedLines = lines.map(line => {
-      // Convert numbered list items
-      if (/^\d+\.\s/.test(line)) {
-        return line.replace(/^(\d+\.\s)(.*)/, '<li>$2</li>');
-      }
-      // Convert bullet points
-      if (/^\*\s/.test(line)) {
-        return line.replace(/^\*\s(.*)/, '<li>$1</li>');
-      }
-      return line;
-    });
+    // Convert headers (must be at start of line)
+    processedText = processedText.replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold mt-6 mb-3 text-blue-400 border-b border-blue-800 pb-1">$1</h3>');
+    processedText = processedText.replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold mt-8 mb-4 text-blue-300 border-b border-blue-700 pb-2">$1</h2>');
+    processedText = processedText.replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold mt-8 mb-5 text-blue-200 border-b border-blue-600 pb-2">$1</h1>');
     
-    // Wrap consecutive list items in <ol> or <ul>
+    // Convert **bold** and __bold__ to <strong>
+    processedText = processedText.replace(/(\*\*|__)((?:(?!\1).)+)\1/g, '<strong class="font-semibold text-white bg-slate-800 px-1 rounded">$2</strong>');
+    
+    // Convert *italic* and _italic_ to <em> (but not when part of bold)
+    processedText = processedText.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em class="italic text-blue-200">$1</em>');
+    processedText = processedText.replace(/(?<!_)_([^_\n]+)_(?!_)/g, '<em class="italic text-blue-200">$1</em>');
+    
+    // Convert `inline code` to styled code
+    processedText = processedText.replace(/`([^`\n]+)`/g, '<code class="bg-slate-800 text-green-300 px-2 py-1 rounded font-mono text-sm border border-slate-600">$1</code>');
+    
+    // Convert ```code blocks``` to styled blocks
+    processedText = processedText.replace(/```([^`\n]*)\n([\s\S]*?)```/g, 
+      '<pre class="bg-slate-900 text-green-300 p-4 rounded-lg border border-slate-600 my-4 overflow-x-auto"><code class="font-mono text-sm">$2</code></pre>');
+    
+    // Convert links [text](url) to clickable links
+    processedText = processedText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
+      '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">$1</a>');
+    
+    // Handle blockquotes (lines starting with >)
+    processedText = processedText.replace(/^&gt;\s*(.+)$/gm, 
+      '<blockquote class="border-l-4 border-blue-500 pl-4 my-3 text-slate-300 italic bg-slate-800/50 py-2">$1</blockquote>');
+    
+    // Handle horizontal rules (--- or ***)
+    processedText = processedText.replace(/^(---|\*\*\*)$/gm, 
+      '<hr class="border-t border-slate-600 my-6" />');
+    
+    // Handle tables and complex formatting
+    const lines = processedText.split('\n');
     let result = '';
+    let inTable = false;
     let inOrderedList = false;
     let inUnorderedList = false;
+    let inCodeBlock = false;
     
-    for (let i = 0; i < processedLines.length; i++) {
-      const line = processedLines[i];
-      const isListItem = line.startsWith('<li>');
-      const nextIsListItem = i < processedLines.length - 1 && processedLines[i + 1].startsWith('<li>');
-      const prevWasNumbered = i > 0 && /^\d+\./.test(lines[i - 1]);
-      const nextIsNumbered = i < lines.length - 1 && /^\d+\./.test(lines[i + 1]);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmedLine = line.trim();
       
-      if (isListItem) {
-        const currentIsNumbered = /^\d+\./.test(lines[i]);
-        
-        if (!inOrderedList && !inUnorderedList) {
-          if (currentIsNumbered) {
-            result += '<ol>';
-            inOrderedList = true;
-          } else {
-            result += '<ul>';
-            inUnorderedList = true;
-          }
+      // Skip empty lines in special contexts
+      if (!trimmedLine && (inTable || inOrderedList || inUnorderedList)) {
+        // Close current context on empty line
+        if (inTable) {
+          result += '</tbody></table>';
+          inTable = false;
         }
-        
-        result += line;
-        
-        if (!nextIsListItem) {
-          if (inOrderedList) {
-            result += '</ol>';
-            inOrderedList = false;
-          } else if (inUnorderedList) {
-            result += '</ul>';
-            inUnorderedList = false;
-          }
-        }
-      } else {
         if (inOrderedList) {
           result += '</ol>';
           inOrderedList = false;
-        } else if (inUnorderedList) {
+        }
+        if (inUnorderedList) {
           result += '</ul>';
           inUnorderedList = false;
         }
-        result += line;
+        result += '<br class="my-2" />';
+        continue;
       }
       
-      if (i < processedLines.length - 1) {
-        result += '\n';
+      // Handle table rows
+      if (trimmedLine.includes('|') && trimmedLine.split('|').length > 2) {
+        const cells = trimmedLine.split('|').map(cell => cell.trim()).filter(cell => cell);
+        
+        // Skip table separator lines (like |:--|:--|)
+        if (cells.every(cell => cell.match(/^:?-+:?$/))) {
+          continue;
+        }
+        
+        if (!inTable) {
+          result += `<table class="w-full border-collapse border border-slate-600 my-6 rounded-lg overflow-hidden">
+                     <tbody class="divide-y divide-slate-600">`;
+          inTable = true;
+        }
+        
+        result += '<tr class="hover:bg-slate-800/30">';
+        cells.forEach((cell, index) => {
+          const isFirstRow = result.indexOf('<tr') === result.lastIndexOf('<tbody') + 7;
+          const cellClass = isFirstRow 
+            ? "bg-slate-700 font-semibold text-blue-200 px-4 py-3 text-left border-r border-slate-600 last:border-r-0" 
+            : "px-4 py-3 text-slate-200 border-r border-slate-600 last:border-r-0";
+          result += `<td class="${cellClass}">${cell}</td>`;
+        });
+        result += '</tr>';
+        continue;
+      }
+      
+      // Close table if we're no longer in one
+      if (inTable) {
+        result += '</tbody></table>';
+        inTable = false;
+      }
+      
+      // Handle ordered lists (1. 2. 3.)
+      const orderedMatch = trimmedLine.match(/^(\d+)\.\s+(.+)$/);
+      if (orderedMatch) {
+        if (!inOrderedList) {
+          if (inUnorderedList) {
+            result += '</ul>';
+            inUnorderedList = false;
+          }
+          result += '<ol class="list-none space-y-2 my-4 ml-4">';
+          inOrderedList = true;
+        }
+        result += `<li class="flex items-start">
+                    <span class="font-bold text-blue-400 min-w-[2rem] mr-2">${orderedMatch[1]}.</span>
+                    <span class="text-slate-200">${orderedMatch[2]}</span>
+                   </li>`;
+        continue;
+      }
+      
+      // Handle unordered lists (- * +)
+      const unorderedMatch = trimmedLine.match(/^[\*\-\+]\s+(.+)$/);
+      if (unorderedMatch) {
+        if (!inUnorderedList) {
+          if (inOrderedList) {
+            result += '</ol>';
+            inOrderedList = false;
+          }
+          result += '<ul class="list-none space-y-2 my-4 ml-4">';
+          inUnorderedList = true;
+        }
+        result += `<li class="flex items-start">
+                    <span class="text-blue-400 min-w-[1rem] mr-2">•</span>
+                    <span class="text-slate-200">${unorderedMatch[1]}</span>
+                   </li>`;
+        continue;
+      }
+      
+      // Close lists if we're no longer in them
+      if (inOrderedList && !orderedMatch) {
+        result += '</ol>';
+        inOrderedList = false;
+      }
+      if (inUnorderedList && !unorderedMatch) {
+        result += '</ul>';
+        inUnorderedList = false;
+      }
+      
+      // Handle indented content (4+ spaces or tab)
+      if (trimmedLine && (line.startsWith('    ') || line.startsWith('\t'))) {
+        result += `<div class="ml-8 my-2 p-3 bg-slate-800/40 rounded border-l-2 border-blue-600 text-slate-300 font-mono text-sm">${trimmedLine}</div>`;
+        continue;
+      }
+      
+      // Handle task lists - [x] and [ ]
+      const taskMatch = trimmedLine.match(/^[\*\-\+]?\s*\[([ x])\]\s+(.+)$/);
+      if (taskMatch) {
+        const checked = taskMatch[1] === 'x';
+        const checkboxClass = checked ? 'text-green-400' : 'text-slate-500';
+        const textClass = checked ? 'line-through text-slate-400' : 'text-slate-200';
+        result += `<div class="flex items-start my-2 ml-4">
+                    <span class="${checkboxClass} mr-2">${checked ? '☑' : '☐'}</span>
+                    <span class="${textClass}">${taskMatch[2]}</span>
+                   </div>`;
+        continue;
+      }
+      
+      // Regular paragraphs and text
+      if (trimmedLine) {
+        // Check if this line contains special formatting that wasn't caught above
+        if (trimmedLine.includes('&lt;') && trimmedLine.includes('&gt;')) {
+          // This might be HTML that got escaped, preserve it
+          result += `<div class="my-3 leading-relaxed text-slate-200">${trimmedLine}</div>`;
+        } else {
+          result += `<p class="my-3 leading-relaxed text-slate-200">${trimmedLine}</p>`;
+        }
+      } else {
+        result += '<br class="my-2" />';
       }
     }
+    
+    // Close any remaining open tags
+    if (inTable) {
+      result += '</tbody></table>';
+    }
+    if (inOrderedList) {
+      result += '</ol>';
+    }
+    if (inUnorderedList) {
+      result += '</ul>';
+    }
+    
+    // Final cleanup and optimization
+    result = result
+      .replace(/(<br[^>]*>[\s]*){3,}/g, '<br class="my-4" />') // Collapse multiple breaks
+      .replace(/(<p[^>]*>[\s]*<\/p>[\s]*)+/g, '<br class="my-2" />') // Remove empty paragraphs
+      .replace(/&amp;/g, '&') // Restore ampersands in our generated HTML
+      .replace(/&lt;(\/?(?:strong|em|code|pre|h[1-6]|table|tbody|tr|td|ol|ul|li|br|hr|blockquote|a)[^>]*)&gt;/g, '<$1>'); // Restore our HTML tags
     
     return result;
   };

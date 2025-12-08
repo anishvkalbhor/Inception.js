@@ -386,11 +386,13 @@ Answer:"""
         """
         try:
             query = inputs.get("input", "")
+            top_k = inputs.get("top_k", 5)  # Get role-based top_k
             
             print(f"🔵 TRUE LangChain RAG Chain executing: {query}")
+            print(f"🔍 Retrieving {top_k} documents")
             
-            # 1. Retrieve documents (still manual - retrieval happens before chain)
-            contexts = self.retriever.retrieve(query)
+            # 1. Retrieve documents with role-based top_k
+            contexts = self.retriever.retrieve(query, top_k=top_k)
             print(f"📚 Retrieved {len(contexts)} documents")
             
             # 2. Format context
@@ -620,19 +622,25 @@ Return only valid JSON, no extra text:"""
            query: str, 
            conversation_id: str = None, 
            user_id: str = None,
+           user: dict = None,
            temperature: float = 0.1) -> Dict[str, Any]:
         """
-        Ask a question using TRUE LangChain pipeline
+        Ask a question using TRUE LangChain pipeline with role-based parameters
         - Memory automatically loads from MongoDB
         - Chain automatically injects history into prompt
         - Memory automatically saves after response
+        - Applies role-based RAG parameters
         """
         
-        try:
-            print(f"🔵 TRUE LangChain RAG Query: {query}")
-            print(f"   Conversation ID: {conversation_id}")
-            print(f"   User ID: {user_id}")
+        # Apply role-based parameters if user provided
+        if user:
+            from .role_config import build_chain_params
+            role_params = build_chain_params(user)
             
+            # Override temperature with role-specific value
+            temperature = role_params.get("temperature", temperature)
+        
+        try:
             # Create TRUE LangChain Memory (BaseChatMemory)
             if conversation_id and user_id and self.conversations_collection is not None:
                 memory = MongoConversationMemory(
@@ -640,7 +648,6 @@ Return only valid JSON, no extra text:"""
                     conversation_id,
                     user_id
                 )
-                print("✅ TRUE LangChain Memory (BaseChatMemory) created")
             else:
                 # No-op memory for sessions without persistence
                 memory = type('obj', (object,), {
@@ -649,7 +656,6 @@ Return only valid JSON, no extra text:"""
                     'save_context': lambda self, inputs, outputs: None,
                     'clear': lambda self: None
                 })()
-                print("⚠️ Using no-op memory (no persistence)")
             
             # Create TRUE LangChain Chain with automatic memory
             chain = TrueLangChainRAG(
@@ -659,11 +665,21 @@ Return only valid JSON, no extra text:"""
             )
             
             # Execute chain - memory loads, injects, and saves automatically!
-            print("🔄 Executing TRUE LangChain chain with auto-memory...")
-            result = chain.invoke({
+            
+            # Pass role-based parameters to chain
+            chain_inputs = {
                 "input": query,
                 "temperature": temperature
-            })
+            }
+            
+            # Add role-based top_k if user provided
+            if user:
+                from .role_config import build_chain_params
+                role_params = build_chain_params(user)
+                chain_inputs["top_k"] = role_params.get("top_k", 5)
+                print(f"📥 ANSWER: Generating with role parameters applied")
+            
+            result = chain.invoke(chain_inputs)
             
             # Extract results
             answer = result.get("output", "")
