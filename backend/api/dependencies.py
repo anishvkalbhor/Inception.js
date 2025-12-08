@@ -1,16 +1,33 @@
-# from backend.services.milvus_service import MilvusService
-# from backend.services.embedding_service import EmbeddingService
-# from backend.services.document_processor import DocumentProcessor
-# from backend.services.llm_service import LLMService
+from fastapi import HTTPException, status, Request, Depends
+from services.auth_service import get_auth_service, AuthService
+from typing import Dict
 
-# def get_milvus_service():
-#     return MilvusService()
-
-# def get_embedding_service():
-#     return EmbeddingService()
-
-# def get_document_processor():
-#     return DocumentProcessor()
-
-# def get_llm_service():
-#     return LLMService()
+async def verify_auth_token(request: Request, auth_service: AuthService = Depends(get_auth_service)) -> Dict:
+    """FastAPI dependency to verify authentication token"""
+    
+    # Get token from Authorization header
+    auth_header = request.headers.get("Authorization")
+    
+    if not auth_header:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Missing authorization header"
+        )
+    
+    # Extract Bearer token
+    try:
+        scheme, token = auth_header.split()
+        if scheme.lower() != "bearer":
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid authorization scheme"
+            )
+    except ValueError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authorization header format"
+        )
+    
+    # Verify token
+    user_data = auth_service.verify_token(token)
+    return user_data
