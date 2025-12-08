@@ -6,7 +6,7 @@ from pathlib import Path
 backend_dir = Path(__file__).parent.parent
 sys.path.insert(0, str(backend_dir))
 
-from fastapi import FastAPI, HTTPException, status, Request, Depends
+from fastapi import FastAPI, HTTPException, status, Request, Depends, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
@@ -35,6 +35,12 @@ from .models import (
 from services.mongodb_service import find_documents
 from .milvus_client import get_milvus_client
 from .llm_client import get_llm_client
+try:
+    from services.speech_service import get_speech_service
+except ImportError:
+    print("⚠️ Speech service not available")
+    def get_speech_service():
+        raise ImportError("Speech service not configured")
 import json
 
 # Lifespan context manager for startup/shutdown
@@ -55,6 +61,13 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         print(f"⚠️  LLM client initialization warning: {e}")
         # Don't fail startup, LLM is optional
+    
+    try:
+        get_speech_service()  # Initialize Speech service
+        print("✅ Speech service (ElevenLabs) initialized")
+    except Exception as e:
+        print(f"⚠️  Speech service initialization warning: {e}")
+        # Don't fail startup, Speech is optional
     
     # Test role system
     print("🎭 ROLE SYSTEM: Loading role-based configurations...")
@@ -113,6 +126,10 @@ class ConversationMetadata(BaseModel):
 class ListConversationsResponse(BaseModel):
     conversations: List[ConversationMetadata]
     count: int
+
+# Response model for transcription
+class TranscriptResponse(BaseModel):
+    transcript: str
 
 # Health check endpoint
 @app.get("/health", response_model=HealthResponse)
@@ -434,7 +451,53 @@ async def get_conversation_messages(conversation_id: str, user: dict = Depends(v
             detail=f"Failed to get messages: {str(e)}"
         )
 
-# Root endpoint
+# Voice transcription endpoint
+@app.post("/voice/transcribe", response_model=TranscriptResponse)
+async def transcribe_voice(
+    audio: UploadFile = File(...),
+    language: str = "en"
+):
+    """
+    Transcribe audio to text using ElevenLabs STT.
+    Use the returned transcript with /search or /ask endpoints.
+    
+    Supported formats: mp3, wav, webm, m4a, ogg, flac
+    Supported languages: en, hi, ta, te, bn, mr, gu, kn, ml, pa, etc.
+    """
+    allowed_extensions = {'mp3', 'wav', 'webm', 'm4a', 'ogg', 'flac'}
+    filename = audio.filename or "audio.webm"
+    extension = filename.split('.')[-1].lower()
+    
+    if extension not in allowed_extensions:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Unsupported audio format. Allowed: {', '.join(allowed_extensions)}"
+        )
+    
+    try:
+        audio_data = await audio.read()
+        
+        if len(audio_data) == 0:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Empty audio file"
+            )
+        
+        speech_service = get_speech_service()
+        result = await speech_service.transcribe_audio(audio_data, filename, language)
+        
+        print(f"🎤 Transcribed ({language}): '{result['text'][:100]}...'")
+        
+        return TranscriptResponse(transcript=result["text"])
+        
+    except ValueError as e:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+    except Exception as e:
+        print(f"❌ Transcription error: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Transcription failed: {str(e)}"
+        )# Root endpoint
 @app.get("/")
 async def root():
     """API root"""
@@ -445,6 +508,7 @@ async def root():
             "health": "/health",
             "search": "/search",
             "ask": "/ask",
+            "voice_transcribe": "/voice/transcribe",
             "pdf": "/pdf/{filename}#page={page}"
         }
     }
