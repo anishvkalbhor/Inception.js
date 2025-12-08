@@ -376,77 +376,43 @@ Answer:"""
         
         return "\n---\n".join(context_parts)
     
-    def invoke(self, inputs: Dict) -> Dict:
+    def invoke(self, query: str, top_k: int = 5, temperature: float = 0.1):
         """
-        Execute TRUE LangChain pipeline
-        - memory.load() → automatic
-        - prompt injection → automatic
-        - llm.generate() → automatic
-        - memory.save() → automatic
+        Invoke the TRUE LangChain RAG with role-based parameters
         """
         try:
-            query = inputs.get("input", "")
-            top_k = inputs.get("top_k", 5)  # Get role-based top_k
-            
-            print(f"🔵 TRUE LangChain RAG Chain executing: {query}")
+            print(f"🎯 Using role-based top_k: {top_k}")
             print(f"🔍 Retrieving {top_k} documents")
             
-            # 1. Retrieve documents with role-based top_k
-            contexts = self.retriever.retrieve(query, top_k=top_k)
+            # Retrieve documents with role-based top_k
+            contexts = self.retriever.similarity_search(query, k=top_k)
             print(f"📚 Retrieved {len(contexts)} documents")
             
-            # 2. Format context
-            context_text = self._format_contexts(contexts)
+            if not contexts:
+                return [], "I couldn't find relevant documents to answer your question."
             
-            if self.chain and LANGCHAIN_AVAILABLE:
-                # TRUE LangChain automatic flow:
-                # chain.invoke() → memory loads → injects history → LLM generates → memory saves
-                print("🔄 Executing LLMChain with automatic memory...")
-                
-                result = self.chain.invoke({
-                    "input": query,
-                    "context": context_text
-                })
-                
-                answer = result.get("text", result.get("output", ""))
-                
-                print("✅ LangChain auto-memory completed")
+            # Format contexts for LLM
+            formatted_contexts = []
+            for i, doc in enumerate(contexts):
+                context_dict = {
+                    "text": doc.page_content,
+                    "source": getattr(doc, 'metadata', {}).get('source', f'Document {i+1}'),
+                    "page": getattr(doc, 'metadata', {}).get('page', 1),
+                    "score": getattr(doc, 'metadata', {}).get('score', 0.0)
+                }
+                formatted_contexts.append(context_dict)
             
-            else:
-                # Fallback manual mode
-                print("🔄 Manual mode (LangChain not available)...")
-                
-                memory_vars = self.memory.load_memory_variables({})
-                chat_history = memory_vars.get("chat_history", [])
-                
-                history_text = self._format_chat_history(chat_history)
-                
-                prompt = f"""{history_text}
-
-Document Context:
-{context_text}
-
-Current Question: {query}
-
-Answer:"""
-                
-                answer = self.llm.generate(prompt, temperature=inputs.get("temperature", 0.1))
-                
-                self.memory.save_context(
-                    inputs={"input": query},
-                    outputs={"output": answer, "sources": contexts}
-                )
+            # Generate answer using LLM with role-based temperature
+            prompt = self._create_enhanced_prompt(query, formatted_contexts)
             
-            return {
-                "output": answer,
-                "contexts": contexts
-            }
+            # Use the LLM generate method with role-based temperature
+            answer = self.llm.generate(prompt, temperature=temperature)
+            
+            return formatted_contexts, answer
             
         except Exception as e:
-            print(f"❌ Chain invoke error: {str(e)}")
-            import traceback
-            traceback.print_exc()
-            raise
+            print(f"❌ TRUE LangChain invoke error: {str(e)}")
+            return [], f"Error in retrieval: {str(e)}"
 
 class DocumentRetriever:
     """Document retriever for Milvus"""
@@ -618,29 +584,65 @@ Return only valid JSON, no extra text:"""
         except Exception as e:
             print(f"❌ Error updating conversation context: {e}")
     
-    def ask(self, 
-           query: str, 
-           conversation_id: str = None, 
-           user_id: str = None,
-           user: dict = None,
-           temperature: float = 0.1) -> Dict[str, Any]:
+    def ask(self, query: str, user_id: str, conversation_id: str = None, temperature: float = None, top_k: int = None, user: dict = None, dense_weight: float = 0.6, sparse_weight: float = 0.4, method: str = "hybrid"):
         """
         Ask a question using TRUE LangChain pipeline with role-based parameters
         - Memory automatically loads from MongoDB
         - Chain automatically injects history into prompt
         - Memory automatically saves after response
         - Applies role-based RAG parameters
+        - Supports hybrid search with dense/sparse weights
         """
         
-        # Apply role-based parameters if user provided
+        # Apply role-based parameters if user is provided
         if user:
             from .role_config import build_chain_params
+            user_role = user.get("role", "user")
             role_params = build_chain_params(user)
+            print(f"📊 ROLE: {user_role} | PARAMS: temp={role_params.get('temperature')}, docs={role_params.get('top_k')}")
             
-            # Override temperature with role-specific value
-            temperature = role_params.get("temperature", temperature)
+            # Use role-based parameters with override capability
+            if temperature is None:
+                temperature = role_params.get('temperature', 0.1)
+            if top_k is None:
+                top_k = role_params.get('top_k', 5)
+            if dense_weight is None:
+                dense_weight = role_params.get('dense_weight', 0.6)
+            if sparse_weight is None:
+                sparse_weight = role_params.get('sparse_weight', 0.4)
+            if method == "hybrid":
+                method = role_params.get('method', 'hybrid')
+        else:
+            # Default fallback values
+            if temperature is None:
+                temperature = 0.1
+            if top_k is None:
+                top_k = 5
+            if dense_weight is None:
+                dense_weight = 0.6
+            if sparse_weight is None:
+                sparse_weight = 0.4
+        
+        print(f"🚀 GENERATING RESPONSE with ROLE: {user.get('role', 'user') if user else 'unknown'}")
+        
+        # Use provided parameters or fallback to role config, then to defaults
+        final_temperature = temperature if temperature is not None else role_config.get("temperature", 0.2)
+        final_top_k = top_k if top_k is not None else role_config.get("top_k", 10)
+        final_dense_weight = dense_weight if dense_weight is not None else role_config.get("dense_weight", 0.7)
+        final_sparse_weight = sparse_weight if sparse_weight is not None else role_config.get("sparse_weight", 0.3)
+        
+        # Ensure minimum 10 documents
+        if final_top_k < 10:
+            final_top_k = 10
+        
+        print(f"📊 Final params: temperature={final_temperature}, top_k={final_top_k}, dense_weight={final_dense_weight}, sparse_weight={final_sparse_weight}, method={method}")
         
         try:
+            # Generate conversation_id if not provided
+            if not conversation_id:
+                import uuid
+                conversation_id = str(uuid.uuid4())
+            
             # Create TRUE LangChain Memory (BaseChatMemory)
             if conversation_id and user_id and self.conversations_collection is not None:
                 memory = MongoConversationMemory(
@@ -657,51 +659,84 @@ Return only valid JSON, no extra text:"""
                     'clear': lambda self: None
                 })()
             
-            # Create TRUE LangChain Chain with automatic memory
-            chain = TrueLangChainRAG(
-                llm=self.llm,
-                retriever=self.retriever,
-                memory=memory
-            )
+            # Retrieve documents using Milvus with role-based parameters
+            try:
+                if self.milvus_client:
+                    print(f"🔍 Retrieving {top_k} documents using {method} search")
+                    contexts = self.milvus_client.search(
+                        query=query,
+                        top_k=top_k,
+                        method=method
+                    )
+                    print(f"📚 Retrieved {len(contexts)} documents")
+                else:
+                    contexts = []
+            except Exception as e:
+                print(f"❌ Document retrieval error: {str(e)}")
+                contexts = []
             
-            # Execute chain - memory loads, injects, and saves automatically!
+            # Format contexts for LLM
+            if contexts:
+                context_text = "\n\n".join([
+                    f"[Source {i+1}] {ctx.get('document_name', 'Unknown')} (Page {ctx.get('page_idx', 'N/A')}):\n{ctx.get('text', '')}"
+                    for i, ctx in enumerate(contexts[:5])
+                ])
+            else:
+                context_text = "No relevant documents found."
             
-            # Pass role-based parameters to chain
-            chain_inputs = {
-                "input": query,
-                "temperature": temperature
-            }
+            # Create enhanced prompt
+            prompt = f"""You are VICTOR, a helpful, intelligent AI assistant specializing in government documents and policy materials. Answer the user's question using the information found in the provided context documents.
+
+CONTEXT:
+{context_text}
+
+INSTRUCTIONS:
+- Use the context as your primary reference while applying deep analytical reasoning
+- You may reason and make logical connections between information from different documents
+- When reasoning between documents, clearly indicate this is your logical inference based on the provided information
+- If after reasoning through the documents you still cannot answer, reply: "I cannot answer this question based on the provided documents."
+- Always cite document name and page number for each factual statement
+- Explain naturally, clearly, and in a conversational tone
+- Structure your response clearly with proper formatting
+- Connect information logically and provide meaningful insights
+- Use step-by-step reasoning internally, but deliver a cohesive final answer
+
+USER QUESTION:
+{query}
+
+ANSWER:"""
             
-            # Add role-based top_k if user provided
-            if user:
-                from .role_config import build_chain_params
-                role_params = build_chain_params(user)
-                chain_inputs["top_k"] = role_params.get("top_k", 5)
-                print(f"📥 ANSWER: Generating with role parameters applied")
+            # Generate answer using LLM with role-based temperature
+            answer = self.llm.generate(prompt, temperature=temperature)
             
-            result = chain.invoke(chain_inputs)
-            
-            # Extract results
-            answer = result.get("output", "")
-            contexts = result.get("contexts", [])
+            # Save to memory
+            try:
+                memory.save_context(
+                    inputs={"input": query},
+                    outputs={"output": answer}
+                )
+            except Exception as e:
+                print(f"❌ Memory save error: {str(e)}")
             
             # Format sources
             sources = []
             for ctx in contexts:
                 sources.append({
                     "text": ctx.get('text', '')[:200] + "..." if len(ctx.get('text', '')) > 200 else ctx.get('text', ''),
-                    "source_file": ctx.get("source_file", ""),
-                    "page_idx": ctx.get("page_idx", 0),
+                    "source": ctx.get("document_name", ""),
+                    "page": ctx.get("page_idx", 0),
                     "score": ctx.get("score", 0.0),
-                    "global_chunk_id": ctx.get("global_chunk_id"),
                     "document_id": ctx.get("document_id"),
+                    "chunk_id": ctx.get("chunk_id"),
+                    "global_chunk_id": ctx.get("global_chunk_id"),
                     "chunk_index": ctx.get("chunk_index"),
                     "section_hierarchy": ctx.get("section_hierarchy"),
+                    "heading_context": ctx.get("heading_context"),
                     "char_count": ctx.get("char_count"),
                     "word_count": ctx.get("word_count")
                 })
             
-            print("✅ TRUE LangChain RAG completed (memory auto-saved)")
+            print("✅ TRUE LangChain RAG completed")
             
             # Extract and update conversation context
             if conversation_id and user_id:

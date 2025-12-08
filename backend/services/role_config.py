@@ -9,130 +9,238 @@ ROLE_RAG_PARAMS = {
         "top_k": 20,
         "temperature": 0.0,
         "include_sources": True,
-        "max_chars": 3000
+        "max_chars": 3000,
+        "dense_weight": 0.8,
+        "sparse_weight": 0.2,
+        "method": "hybrid"
     },
     "research_assistant": {
         "top_k": 15,
         "temperature": 0.0,
         "include_sources": True,
-        "max_chars": 2500
+        "max_chars": 2500,
+        "dense_weight": 0.7,
+        "sparse_weight": 0.3,
+        "method": "hybrid"
     },
     "policy_maker": {
         "top_k": 12,
         "temperature": 0.0,
         "include_sources": True,
-        "format": "policy_brief",
-        "max_chars": 2000
+        "max_chars": 2000,
+        "dense_weight": 0.6,
+        "sparse_weight": 0.4,
+        "method": "hybrid",
+        "format": "policy_brief"
     },
     "user": {
         "top_k": 5,
         "temperature": 0.2,
         "include_sources": False,
-        "max_chars": 800
+        "max_chars": 800,
+        "dense_weight": 0.7,
+        "sparse_weight": 0.3,
+        "method": "hybrid"
     }
 }
 
-# Alias for backward compatibility
-ROLE_CONFIGS = ROLE_RAG_PARAMS
+# Role-based configurations
+ROLE_CONFIGS = {
+    "admin": {
+        "temperature": 0.1,
+        "top_k": 10,
+        "dense_weight": 0.6,
+        "sparse_weight": 0.4,
+        "description": "Full access with detailed analysis capabilities"
+    },
+    "research": {
+        "temperature": 0.05,
+        "top_k": 10,
+        "dense_weight": 0.7,
+        "sparse_weight": 0.3,
+        "description": "Academic research with comprehensive document access"
+    },
+    "policy": {
+        "temperature": 0.1,
+        "top_k": 10,
+        "dense_weight": 0.6,
+        "sparse_weight": 0.4,
+        "description": "Policy analysis with strategic insights"
+    },
+    "user": {
+        "temperature": 0.2,
+        "top_k": 10,
+        "dense_weight": 0.5,
+        "sparse_weight": 0.5,
+        "description": "General user with standard document access"
+    }
+}
 
 def build_chain_params(user):
     """
-    Get RAG parameters based on user object
-    
-    Args:
-        user: User object containing role information
-    
-    Returns:
-        dict: RAG parameters for the role
+    Build chain parameters based on user role
     """
+    import json
+    
+    # Extract role from user object
     user_role = user.get("role", "user")
     
+    print(f"⚡ ROLE DETECTED: {user_role}")
+    
     if user_role == "research_assistant":
-        params = {"top_k": 15, "temperature": 0.0, "include_sources": True, "max_chars": 2500}
-        print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}")
+        params = {
+            "top_k": 15, 
+            "temperature": 0.0, 
+            "include_sources": True, 
+            "max_chars": 2500,
+            "dense_weight": 0.7,
+            "sparse_weight": 0.3,
+            "method": "hybrid"
+        }
+        print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}, dense_weight={params['dense_weight']}")
         return params
-
-    if user_role == "policy_maker":
-        params = {"top_k": 12, "temperature": 0.0, "include_sources": True, "format": "policy_brief", "max_chars": 2000}
-        print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}")
+    
+    elif user_role == "policy_maker":
+        params = {
+            "top_k": 12, 
+            "temperature": 0.0, 
+            "include_sources": True, 
+            "max_chars": 2000,
+            "dense_weight": 0.6,
+            "sparse_weight": 0.4,
+            "method": "hybrid",
+            "format": "policy_brief"
+        }
+        print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}, dense_weight={params['dense_weight']}")
         return params
-
-    if user_role == "admin":
-        params = {"top_k": 20, "temperature": 0.0, "include_sources": True, "format": "comprehensive", "max_chars": 3000}
-        print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}")
+    
+    elif user_role == "admin":
+        params = {
+            "top_k": 20, 
+            "temperature": 0.0, 
+            "include_sources": True, 
+            "max_chars": 3000,
+            "dense_weight": 0.8,
+            "sparse_weight": 0.2,
+            "method": "hybrid"
+        }
+        print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}, dense_weight={params['dense_weight']}")
         return params
-
-    # default: user
-    params = {"top_k": 5, "temperature": 0.2, "include_sources": False, "max_chars": 800}
-    print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}")
+    
+    # Default: user role
+    params = {
+        "top_k": 5, 
+        "temperature": 0.2, 
+        "include_sources": False, 
+        "max_chars": 800,
+        "dense_weight": 0.5,
+        "sparse_weight": 0.5,
+        "method": "hybrid"
+    }
+    print(f"📊 ROLE: {user_role} | PARAMS: temp={params['temperature']}, docs={params['top_k']}, dense_weight={params['dense_weight']}")
     return params
 
 
 # Prompt templates by role
-RESEARCH_PROMPT = """You are an evidence-first research assistant. Use ONLY the provided document snippets and conversation history to answer. Cite sources as: [Document: <name>, p.<page>]. If information is not in the provided context, respond: "I cannot answer this based on the provided documents." Be concise and factual.
+ADMIN_PROMPT = """You are a comprehensive research and analysis assistant. Answer the user's question using the information found in the provided context and conversation history.
 
-Conversation Context:
-{conversation_context}
-
-Recent Messages:
-{chat_history}
-
-Document Context:
+CONTEXT:
 {context}
 
-Question: {input}
-
-Answer:"""
-
-POLICY_PROMPT = """You are a policy analysis assistant. Synthesize information from provided documents to create clear, actionable policy insights. Structure your response as:
-1. Key Findings (2-3 bullet points)
-2. Policy Implications
-3. Recommendations
-
-Always cite sources: [Document: <name>, p.<page>]. If information is insufficient, state: "Insufficient evidence in provided documents for comprehensive policy analysis."
-
-Conversation Context:
+CONVERSATION CONTEXT:
 {conversation_context}
 
-Recent Messages:
+RECENT MESSAGES:
 {chat_history}
 
-Document Context:
+INSTRUCTIONS:
+- Use the context as your primary reference while applying deep analytical reasoning
+- Provide detailed, evidence-based responses with complete source citations
+- Analyze information thoroughly and highlight any data gaps or inconsistencies
+- You may reason and connect information logically across sources
+- Explain naturally, clearly, and in a professional tone
+- If context is insufficient, state: "Insufficient information in provided documents for comprehensive analysis."
+- Use step-by-step reasoning internally, but provide cohesive, well-structured responses
+
+USER QUESTION:
+{input}
+
+DETAILED ANALYSIS:"""
+
+RESEARCH_PROMPT = """You are an academic research assistant. Answer the user's question using the information found in the provided context and conversation history.
+
+CONTEXT:
 {context}
 
-Question: {input}
-
-Policy Brief:"""
-
-USER_PROMPT = """You are a helpful assistant. Answer the question based on the provided documents and conversation history. Keep your response concise and easy to understand. Use simple language.
-
-Conversation Context:
+CONVERSATION CONTEXT:
 {conversation_context}
 
-Recent Messages:
+RECENT MESSAGES:
 {chat_history}
 
-Document Context:
+INSTRUCTIONS:
+- Use the context as your primary reference while applying rigorous analytical reasoning
+- Focus on evidence, methodology, and academic rigor in your responses
+- You may synthesize information across sources and apply logical inference
+- Always cite sources with [Document: <name>, p.<page>] format
+- If evidence is insufficient, state: "Limited evidence available in provided documents."
+- Explain naturally, clearly, and with academic precision
+- Connect information logically and provide meaningful scholarly insights
+
+USER QUESTION:
+{input}
+
+RESEARCH ANALYSIS:"""
+
+POLICY_PROMPT = """You are a policy analysis assistant. Answer the user's question using the information found in the provided context and conversation history.
+
+CONTEXT:
 {context}
 
-Question: {input}
-
-Answer:"""
-
-ADMIN_PROMPT = """You are a comprehensive research and analysis assistant with full access. Provide detailed, evidence-based responses with complete source citations. Analyze information thoroughly and highlight any data gaps or inconsistencies.
-
-Conversation Context:
+CONVERSATION CONTEXT:
 {conversation_context}
 
-Recent Messages:
+RECENT MESSAGES:
 {chat_history}
 
-Document Context:
+INSTRUCTIONS:
+- Use the context as your primary reference while applying strategic policy reasoning
+- Synthesize information to create clear, actionable policy insights
+- Structure your response as: 1. Key Findings, 2. Policy Implications, 3. Recommendations
+- You may reason and connect information across documents for comprehensive analysis
+- Always cite sources: [Document: <name>, p.<page>]
+- If information is insufficient, state: "Insufficient evidence in provided documents for comprehensive policy analysis."
+- Explain naturally, clearly, and in a policy-focused conversational tone
+
+USER QUESTION:
+{input}
+
+POLICY BRIEF:"""
+
+USER_PROMPT = """You are a helpful, intelligent AI assistant. Answer the user's question using the information found in the provided context and conversation history.
+
+CONTEXT:
 {context}
 
-Question: {input}
+CONVERSATION CONTEXT:
+{conversation_context}
 
-Detailed Analysis:"""
+RECENT MESSAGES:
+{chat_history}
+
+INSTRUCTIONS:
+- Use the context as your reference while applying clear, logical reasoning
+- Keep your response concise and easy to understand
+- Use simple, natural language that's conversational and approachable
+- You may connect information logically and provide helpful insights
+- If the context doesn't contain the answer, state: "I cannot answer this based on the provided documents."
+- Cite sources when making factual statements
+- Explain clearly and maintain a helpful, friendly tone
+
+USER QUESTION:
+{input}
+
+ANSWER:"""
 
 ROLE_PROMPTS = {
     "admin": ADMIN_PROMPT,

@@ -30,7 +30,8 @@ DEFAULT_USER_ID = os.getenv("DEFAULT_USER_ID", "default")
 
 from .models import (
     QueryRequest, SearchResponse, SearchResult,
-    RAGRequest, RAGResponse, HealthResponse
+    RAGRequest, RAGResponse, HealthResponse,
+    HybridSearchRequest
 )
 from services.mongodb_service import find_documents
 from .milvus_client import get_milvus_client
@@ -134,7 +135,7 @@ class TranscriptResponse(BaseModel):
 # Health check endpoint
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
-    """Check API and Milvus health"""
+    """Check API and Milvus health with hybrid search validation"""
     try:
         milvus_client = get_milvus_client()
         health = milvus_client.health_check()
@@ -144,7 +145,10 @@ async def health_check():
             milvus_connected=health["milvus_connected"],
             collection_exists=health["collection_exists"],
             total_vectors=health["total_vectors"],
-            embedding_model=milvus_client.embedding_model_name
+            embedding_model=health.get("embedding_model", ""),
+            hybrid_enabled=health.get("hybrid_enabled", False),
+            has_dense_field=health.get("has_dense_field", False),
+            has_sparse_field=health.get("has_sparse_field", False)
         )
     except Exception as e:
         raise HTTPException(
@@ -152,40 +156,135 @@ async def health_check():
             detail=f"Health check failed: {str(e)}"
         )
 
-# Search endpoint (Milvus vector search)
-@app.post("/search", response_model=SearchResponse)
-async def search(request: QueryRequest):
-    """Search for documents using vector similarity in Milvus"""
+# RAG endpoint (search + LLM generation)
+@app.post("/ask", response_model=RAGResponse)
+async def ask(request: RAGRequest, user: dict = Depends(verify_auth_token)):
+    """RAG with hybrid retrieval and role-based parameters"""
+    try:
+        print(f"📤 QUERY: {request.query} | USER: {user.get('email', 'unknown')} | ROLE: {user.get('role', 'user')}")
+        
+        # Get LangChain RAG service
+        from backend.services.full_langchain_service import get_full_langchain_rag
+        langchain_rag = get_full_langchain_rag()
+        
+        total_start = time.time()
+        
+        # Execute RAG with all parameters
+        result = langchain_rag.ask(
+            query=request.query,
+            user_id=user["user_id"],
+            conversation_id=request.conversation_id,
+            temperature=request.temperature,
+            top_k=request.top_k,
+            user=user,
+            dense_weight=request.dense_weight,
+            sparse_weight=request.sparse_weight,
+            method=request.method
+        )
+        
+        total_latency = (time.time() - total_start) * 1000
+        
+        # Format sources for response
+        formatted_sources = []
+        for source in result.get("sources", []):
+            formatted_sources.append(SearchResult(
+                text=source.get("text", ""),
+                source=source.get("source", ""),
+                page=source.get("page", 0),
+                score=source.get("score", 0.0),
+                document_id=source.get("document_id"),
+                chunk_id=source.get("chunk_id"),
+                global_chunk_id=source.get("global_chunk_id"),
+                chunk_index=source.get("chunk_index"),
+                section_hierarchy=source.get("section_hierarchy"),
+                heading_context=source.get("heading_context"),
+                char_count=source.get("char_count"),
+                word_count=source.get("word_count")
+            ))
+        
+        print(f"✅ RAG complete | Total: {total_latency:.0f}ms")
+        
+        return RAGResponse(
+            query=request.query,
+            answer=result["answer"],
+            sources=formatted_sources,
+            conversation_id=result.get("conversation_id"),
+            model_used=result.get("model_used", "unknown"),
+            total_latency_ms=round(total_latency, 2),
+            method=request.method
+        )
+    
+    except Exception as e:
+        import traceback
+        error_trace = traceback.format_exc()
+        print(f"❌ RAG Error: {str(e)}")
+        print(error_trace)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"RAG failed: {str(e)}"
+        )
+
+# Advanced hybrid search endpoint with filtering
+@app.post("/search/hybrid", response_model=SearchResponse)
+async def hybrid_search(request: HybridSearchRequest):
+    """Advanced hybrid search with filtering options"""
     try:
         milvus_client = get_milvus_client()
+        
+        # Build filter expression
+        filters = []
+        if request.category:
+            filters.append(f'Category == "{request.category}"')
+        if request.ministry:
+            filters.append(f'ministry == "{request.ministry}"')
+        if request.document_type:
+            filters.append(f'document_type == "{request.document_type}"')
+        if request.language:
+            filters.append(f'language == "{request.language}"')
+        if request.date_from and request.date_to:
+            filters.append(f'published_date >= "{request.date_from}" && published_date <= "{request.date_to}"')
+        
+        filter_expr = ' && '.join(filters) if filters else None
         
         # Measure search latency
         start_time = time.time()
         
-        # Perform vector search
+        # Perform hybrid search
         results = milvus_client.search(
             query=request.query,
-            top_k=request.top_k
+            top_k=request.top_k,
+            filter_expr=filter_expr,
+            method="hybrid"
         )
         
-        search_latency = (time.time() - start_time) * 1000  # Convert to ms
+        search_latency = (time.time() - start_time) * 1000
         
-        # Format response with Vtext schema
+        # Format response
         search_results = [
             SearchResult(
                 text=result.get('text'),
-                source_file=result.get('source_file'),
+                source_file=result.get('document_name') or result.get('source_file'),
                 page_idx=result.get('page_idx'),
                 score=result.get('score'),
-                # Vtext fields
                 global_chunk_id=result.get('global_chunk_id'),
                 document_id=result.get('document_id'),
+                document_name=result.get('document_name'),
+                chunk_id=result.get('chunk_id'),
                 chunk_index=result.get('chunk_index'),
                 section_hierarchy=result.get('section_hierarchy'),
+                heading_context=result.get('heading_context'),
                 char_count=result.get('char_count'),
-                word_count=result.get('word_count')
+                word_count=result.get('word_count'),
+                published_date=result.get('published_date'),
+                language=result.get('language'),
+                category=result.get('category'),
+                document_type=result.get('document_type'),
+                ministry=result.get('ministry'),
+                source_reference=result.get('source_reference')
             ) for result in results
         ]
+        
+        print(f"🔍 Hybrid search: {request.query} | Filters: {filter_expr} | Results: {len(search_results)}")
         
         return SearchResponse(
             query=request.query,
@@ -200,77 +299,69 @@ async def search(request: QueryRequest):
             detail=str(e)
         )
     except Exception as e:
+        print(f"Hybrid search error: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Hybrid search failed: {str(e)}"
+        )
+
+# Search endpoint (vector, BM25, or hybrid)
+@app.post("/search", response_model=SearchResponse)
+async def search(request: QueryRequest):
+    """Search using vector, BM25, or hybrid method with weights"""
+    try:
+        milvus_client = get_milvus_client()
+        start_time = time.time()
+        
+        # Use the method from request with weights
+        results = milvus_client.search(
+            query=request.query,
+            top_k=request.top_k,
+            method=request.method,
+            filter_expr=request.filter_expr
+        )
+        
+        search_latency = (time.time() - start_time) * 1000
+        
+        search_results = [
+            SearchResult(
+                text=result.get('text'),
+                source=result.get('document_name'),
+                page=result.get('page_idx'),
+                score=result.get('score'),
+                document_id=result.get('document_id'),
+                chunk_id=result.get('chunk_id'),
+                global_chunk_id=result.get('global_chunk_id'),
+                chunk_index=result.get('chunk_index'),
+                section_hierarchy=result.get('section_hierarchy'),
+                heading_context=result.get('heading_context'),
+                char_count=result.get('char_count'),
+                word_count=result.get('word_count'),
+                category=result.get('Category'),
+                document_type=result.get('document_type'),
+                ministry=result.get('ministry'),
+                published_date=result.get('published_date'),
+                language=result.get('language')
+            ) for result in results
+        ]
+        
+        return SearchResponse(
+            query=request.query,
+            results=search_results,
+            count=len(search_results),
+            latency_ms=round(search_latency, 2),
+            method=request.method
+        )
+    
+    except ValueError as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+    except Exception as e:
         import traceback
         print(f"Search error: {str(e)}")
         print(traceback.format_exc())
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Search failed: {str(e)}"
-        )
-
-# RAG endpoint (search + LLM generation) - Full LangChain Integration
-@app.post("/ask", response_model=RAGResponse)
-async def ask(request: RAGRequest, user: dict = Depends(verify_auth_token)):
-    """Ask a question with RAG using Full LangChain Pipeline - Protected endpoint"""
-    print(f"📤 QUERY: {request.query} | USER: {user.get('email', 'unknown')} | ROLE: {user.get('role', 'user')}")
-    try:
-        
-        # Start timing
-        total_start_time = time.time()
-        
-        # Get the full LangChain RAG service
-        langchain_rag = get_full_langchain_rag()
-        
-        # Use LangChain pipeline with conversation memory and role-based parameters
-        result = langchain_rag.ask(
-            query=request.query,
-            conversation_id=request.conversation_id,
-            user_id=user['user_id'],
-            user=user,  # Pass full user object for role-based parameters
-            temperature=request.temperature
-        )
-        
-        # Calculate total latency
-        total_latency = (time.time() - total_start_time) * 1000
-        
-        # Format sources for API response
-        sources = [
-            SearchResult(
-                text=source.get('text', ''),
-                source_file=source.get('source_file', ''),
-                page_idx=source.get('page_idx', 0),
-                score=source.get('score', 0.0),
-                global_chunk_id=source.get('global_chunk_id'),
-                document_id=source.get('document_id'),
-                chunk_index=source.get('chunk_index'),
-                section_hierarchy=source.get('section_hierarchy'),
-                char_count=source.get('char_count'),
-                word_count=source.get('word_count')
-            ) for source in result.get('sources', [])
-        ]
-        
-        print(f"✅ Full LangChain RAG completed successfully")
-        print(f"   Answer length: {len(result.get('answer', ''))} chars")
-        print(f"   Sources found: {len(sources)}")
-        
-        return RAGResponse(
-            query=request.query,
-            answer=result.get('answer', ''),
-            sources=sources,
-            model_used=result.get('model_used', 'langchain-rag'),
-            search_latency_ms=50.0,  # LangChain handles this internally
-            llm_latency_ms=round(total_latency * 0.8, 2),  # Estimate
-            total_latency_ms=round(total_latency, 2),
-            conversation_id=request.conversation_id
-        )
-    
-    except Exception as e:
-        print(f"❌ Full LangChain RAG Error: {str(e)}")
-        import traceback
-        traceback.print_exc()
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"LangChain RAG failed: {str(e)}"
         )
 
 @app.post("/conversations")
@@ -500,16 +591,28 @@ async def transcribe_voice(
         )# Root endpoint
 @app.get("/")
 async def root():
-    """API root"""
+    """API root with hybrid search information"""
     return {
-        "message": "PDF RAG API",
-        "version": "1.0.0",
+        "message": "VICTOR RAG API with Hybrid Search",
+        "version": "3.0.0",
+        "collection": "VictorText2",
+        "search_methods": ["vector", "sparse", "hybrid"],
+        "hybrid_weights": {
+            "dense_weight": "0.0-1.0 (default: 0.6)",
+            "sparse_weight": "0.0-1.0 (default: 0.4)"
+        },
+        "role_based_parameters": {
+            "admin": {"docs": 20, "temp": 0.0, "dense_weight": 0.8},
+            "research_assistant": {"docs": 15, "temp": 0.0, "dense_weight": 0.7},
+            "policy_maker": {"docs": 12, "temp": 0.0, "dense_weight": 0.6},
+            "user": {"docs": 5, "temp": 0.2, "dense_weight": 0.5}
+        },
         "endpoints": {
             "health": "/health",
             "search": "/search",
             "ask": "/ask",
-            "voice_transcribe": "/voice/transcribe",
-            "pdf": "/pdf/{filename}#page={page}"
+            "conversations": "/conversations",
+            "voice_transcribe": "/voice/transcribe"
         }
     }
 

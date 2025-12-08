@@ -31,7 +31,6 @@ export default function AuthModal({ isOpen, type, onClose, onSuccess }: AuthModa
           email,
           password,
           name,
-          role, // Include role in signup
         });
       } else {
         await signIn.email({

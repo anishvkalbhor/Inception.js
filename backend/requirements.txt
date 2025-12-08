@@ -12,6 +12,7 @@ pymilvus>=2.4.0
 
 # Embedding & ML
 sentence-transformers>=2.3.0
+FlagEmbedding>=1.2.10
 torch>=2.0.0
 transformers>=4.36.0
 
