@@ -46,8 +46,8 @@
 #     file_bytes = await file.read()
     
 #     # Step 2: Save to local storage
-#     from backend.services.local_storage_service import save_file, compute_bytes_hash
-#     from backend.services.mongodb_service import insert_document
+#     from services.local_storage_service import save_file, compute_bytes_hash
+#     from services.mongodb_service import insert_document
     
 #     # Determine category (default to 'uploads')
 #     category = "uploads"
@@ -79,9 +79,9 @@ from fastapi import APIRouter, UploadFile, File
 from pydantic import BaseModel
 from fastapi.concurrency import run_in_threadpool
 
-from backend.services.local_storage_service import save_file, compute_bytes_hash
-from backend.services.mongodb_service import insert_document
-from backend.services.pdf_parser_service import parse_single_pdf  # <- new import
+from services.local_storage_service import save_file, compute_bytes_hash
+from services.mongodb_service import insert_document
+from services.pdf_parser_service import parse_single_pdf  # <- new import
 
 router = APIRouter()
 

@@ -15,9 +15,9 @@ from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
-from backend.services.sync_service import create_sync_service
-# from backend.services.document_processor import create_document_processor
-from backend.services.mongodb_service import (
+from services.sync_service import create_sync_service
+# from services.document_processor import create_document_processor
+from services.mongodb_service import (
     get_stats,
     get_recent_sync_logs,
     find_documents,
@@ -25,7 +25,7 @@ from backend.services.mongodb_service import (
     update_document,
     get_document_by_drive_id
 )
-from backend.services.local_storage_service import get_storage_stats
+from services.local_storage_service import get_storage_stats
 
 router = APIRouter(prefix="/sync", tags=["sync"])
 

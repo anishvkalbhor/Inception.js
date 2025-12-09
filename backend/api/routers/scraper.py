@@ -10,7 +10,7 @@ from fastapi import APIRouter, HTTPException, BackgroundTasks
 from pydantic import BaseModel
 from typing import Optional, List
 
-from backend.services.moe_scraper_service import create_scraper_service, MoEScraperService
+from services.moe_scraper_service import create_scraper_service, MoEScraperService
 
 router = APIRouter(prefix="/scraper", tags=["scraper"])
 

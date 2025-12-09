@@ -1,8 +1,14 @@
 import os
 from typing import Optional, Dict
+from datetime import datetime, timedelta
+import jwt
 from fastapi import HTTPException, status
 from dotenv import load_dotenv
-from backend.services.user_service import verify_session, get_user_by_id
+from core.config import get_settings
+from services.user_service import verify_session, get_user_by_id  # Remove 'backend.' prefix
+import logging
+
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 

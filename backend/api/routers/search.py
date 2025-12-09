@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import List, Optional
 
 # Import MongoDB service
-from backend.services.mongodb_service import find_documents
+from services.mongodb_service import find_documents
 router = APIRouter()
 
 class SearchRequest(BaseModel):
