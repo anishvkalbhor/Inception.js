@@ -18,13 +18,13 @@ import mimetypes
 from pymongo.errors import DuplicateKeyError
 
 # services
-from backend.services.mongodb_service import (
+from services.mongodb_service import (
     insert_document,
     insert_collection,
     find_documents,
     update_document
 )
-from backend.services.local_storage_service import (
+from services.local_storage_service import (
     save_file,
     get_file_path,
     create_processed_folder,
@@ -272,7 +272,7 @@ async def upload_callback(data: UploadCallback):
                             extracted_docs.append(inserted)
                         except DuplicateKeyError:
                             # File already exists
-                            from backend.services.mongodb_service import get_document_by_hash
+                            from services.mongodb_service import get_document_by_hash
                             existing = await asyncio.to_thread(get_document_by_hash, file_hash)
                             if existing:
                                 existing["status_message"] = "File already exists"
@@ -407,7 +407,7 @@ async def upload_callback(data: UploadCallback):
     except DuplicateKeyError as e:
         # File already exists - find and return the existing document
         print(f"Duplicate file detected: {file_hash}")
-        from backend.services.mongodb_service import get_document_by_hash
+        from services.mongodb_service import get_document_by_hash
         existing_doc = await asyncio.to_thread(get_document_by_hash, file_hash)
         if existing_doc:
             inserted = existing_doc

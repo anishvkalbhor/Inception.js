@@ -28,6 +28,6 @@ async def verify_auth_token(request: Request, auth_service: AuthService = Depend
             detail="Invalid authorization header format"
         )
     
-    # Verify token
-    user_data = auth_service.verify_token(token)
+    # Verify token (now supports async)
+    user_data = await auth_service.verify_token(token)
     return user_data

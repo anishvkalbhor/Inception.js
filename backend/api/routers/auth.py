@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Response, Cookie
 from pydantic import BaseModel, EmailStr
 from typing import Optional
-from backend.services.user_service import (
+from services.user_service import (
     create_user,
     authenticate_user,
     create_session,

@@ -6,8 +6,8 @@ import tempfile
 from pathlib import Path
 import json
 import uuid
-from backend.services.local_storage_service import get_file_path, save_file, create_processed_folder
-from backend.services.mongodb_service import insert_document, update_document, find_document
+from services.local_storage_service import get_file_path, save_file, create_processed_folder
+from services.mongodb_service import insert_document, update_document, find_document
 import fitz  # PyMuPDF
 
 router = APIRouter()

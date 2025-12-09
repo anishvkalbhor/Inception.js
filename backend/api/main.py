@@ -25,6 +25,7 @@ from core.config import get_settings
 from services.ollama_service import OllamaService
 from services.milvus_service import MilvusService
 from services.network_monitor import get_network_monitor
+from services.speech_service import get_speech_service
 from api.llm_client import HybridLLMClient
 
 
@@ -372,7 +373,7 @@ async def ask(request: RAGRequest, user: dict = Depends(verify_auth_token)):
         total_start = time.time()
         
         # ✅ Execute RAG with metadata filter
-        result = langchain_rag.ask(
+        result = await langchain_rag.ask(
             query=search_query,
             user_id=user["user_id"],
             conversation_id=request.conversation_id,

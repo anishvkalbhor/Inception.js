@@ -5,8 +5,9 @@ import jwt
 from fastapi import HTTPException, status
 from dotenv import load_dotenv
 from core.config import get_settings
-from services.user_service import verify_session, get_user_by_id  # Remove 'backend.' prefix
+from services.user_service import verify_session, get_user_by_id
 import logging
+import httpx
 
 logger = logging.getLogger(__name__)
 
@@ -15,16 +16,62 @@ load_dotenv()
 class AuthService:
     def __init__(self):
         self.jwt_secret = os.getenv("JWT_SECRET", "your-secret-key")
+        self.clerk_secret_key = os.getenv("CLERK_SECRET_KEY", "")
+        self.use_clerk = bool(self.clerk_secret_key and self.clerk_secret_key != "your_secret_key_here")
     
-    def verify_token(self, token: str) -> Dict:
+    async def verify_clerk_token(self, token: str) -> Dict:
+        """Verify Clerk JWT token"""
+        try:
+            # Clerk tokens can be verified by calling Clerk's API or decoding the JWT
+            # For now, we'll decode the JWT and extract user info
+            # In production, you should verify the signature using Clerk's public key
+            
+            # Decode without verification (for development)
+            # In production, fetch Clerk's JWKS and verify properly
+            decoded = jwt.decode(token, options={"verify_signature": False})
+            
+            user_id = decoded.get("sub")  # Clerk user ID
+            email = decoded.get("email")
+            
+            if not user_id:
+                raise HTTPException(
+                    status_code=status.HTTP_401_UNAUTHORIZED,
+                    detail="Invalid Clerk token"
+                )
+            
+            return {
+                "user_id": user_id,
+                "email": email,
+                "name": decoded.get("name", email),
+                "role": "user",  # Default role
+                "clerk_user": True
+            }
+            
+        except jwt.InvalidTokenError as e:
+            logger.error(f"Invalid Clerk token: {e}")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid token"
+            )
+    
+    async def verify_token(self, token: str) -> Dict:
         """
-        Verify session token and return user data with role
-        Now uses the custom auth system instead of Better Auth
+        Verify token - supports both Clerk tokens and legacy session tokens
         """
         try:
             print(f"🔍 Verifying token: {token[:20]}...")
             
-            # Use the new verify_session function from user_service
+            # Try Clerk token first if Clerk is enabled
+            if self.use_clerk:
+                try:
+                    clerk_data = await self.verify_clerk_token(token)
+                    print(f"✅ Clerk token verified for user: {clerk_data.get('email')}")
+                    return clerk_data
+                except HTTPException:
+                    # If Clerk verification fails, try legacy auth
+                    print("⚠️ Clerk verification failed, trying legacy auth...")
+            
+            # Fall back to legacy session token verification
             user_data = verify_session(token)
             
             if not user_data:
@@ -39,10 +86,11 @@ class AuthService:
                 "user_id": str(user_data["_id"]),
                 "email": user_data.get("email"),
                 "name": user_data.get("name"),
-                "role": user_data.get("role", "user")
+                "role": user_data.get("role", "user"),
+                "clerk_user": False
             }
             
-            print(f"✅ Token verified for user: {result['email']} (role: {result['role']})")
+            print(f"✅ Legacy token verified for user: {result['email']} (role: {result['role']})")
             return result
             
         except HTTPException:

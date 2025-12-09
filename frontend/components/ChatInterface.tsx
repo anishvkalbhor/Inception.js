@@ -336,6 +336,9 @@ export default function ChatInterface({ authToken, userName = 'User' }: ChatInte
   };
 
   const renderMarkdown = (text: string) => {
+    // Handle undefined or null text
+    if (!text) return '';
+    
     const boldRegex = /\*\*(.*?)\*\*/g;
     const withBold = text.replace(boldRegex, '<strong>$1</strong>');
 

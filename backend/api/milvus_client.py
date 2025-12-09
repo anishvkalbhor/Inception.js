@@ -1,16 +1,15 @@
 from pymilvus import connections, Collection, utility, AnnSearchRequest, RRFRanker
-from sentence_transformers import SentenceTransformer
-from FlagEmbedding import BGEM3FlagModel
 import os
 from typing import List, Dict, Literal, Optional
 from dotenv import load_dotenv
+from services.ollama_service import OllamaService
 
 load_dotenv()
 
 
 class MilvusClient:
     def __init__(self):
-        self.host = os.getenv("MILVUS_HOST", "localhost")
+        self.host = os.getenv("MILVUS_HOST", "192.168.65.188")
         self.port = os.getenv("MILVUS_PORT", "19530")
         self.collection_name = os.getenv("COLLECTION_NAME", "VictorText2")
         self.embedding_model_name = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
@@ -19,16 +18,12 @@ class MilvusClient:
         self.dense_field = "dense_embedding"  # NOT "dense_vector"
         self.sparse_field = "sparse_embedding"  # NOT "sparse_vector"
         
-        # Dense embeddings - SentenceTransformer (cached)
-        print(f"Loading dense embedding model: {self.embedding_model_name}")
-        self.dense_model = SentenceTransformer(self.embedding_model_name)
+        # Use Ollama for embeddings (offline-capable)
+        print(f"🔄 Using Ollama for embeddings: {os.getenv('OLLAMA_EMBED_MODEL', 'bge-m3')}")
+        self.ollama_service = OllamaService()
         
-        # Sparse embeddings - FlagEmbedding (only for sparse)
-        print(f"Loading sparse embedding model: {self.embedding_model_name}")
-        self.sparse_model = BGEM3FlagModel(
-            self.embedding_model_name,
-            use_fp16=False  # No fp16
-        )
+        # Lazy load sparse model only when needed
+        self._sparse_model = None
         
         self.connect()
         self.collection = self.get_collection()
@@ -51,22 +46,28 @@ class MilvusClient:
         collection.load()
         return collection
     
-    def embed_query_dense(self, query: str) -> List[float]:
-        """Generate dense embedding using SentenceTransformer"""
-        embedding = self.dense_model.encode(
-            [query],
-            normalize_embeddings=True
-        )
-        return embedding[0].tolist()
+    async def embed_query_dense(self, query: str) -> List[float]:
+        """Generate dense embedding using Ollama"""
+        embeddings = await self.ollama_service.generate_embeddings([query])
+        return embeddings[0]
     
     def embed_query_sparse(self, query: str) -> Dict[int, float]:
         """
         Generate sparse embedding using FlagEmbedding BGEM3
-        CORRECTLY uses the encode method with proper parameters
+        Lazy loads the sparse model only when needed
         """
         try:
+            # Lazy load sparse model
+            if self._sparse_model is None:
+                print(f"📦 Loading sparse embedding model: {self.embedding_model_name}")
+                from FlagEmbedding import BGEM3FlagModel
+                self._sparse_model = BGEM3FlagModel(
+                    self.embedding_model_name,
+                    use_fp16=False
+                )
+            
             # ✅ CORRECT METHOD: Use encode with batch_size=1 for single query
-            output = self.sparse_model.encode(
+            output = self._sparse_model.encode(
                 sentences=[query],  # Must be list of strings
                 batch_size=1,
                 max_length=8192,
@@ -156,7 +157,7 @@ class MilvusClient:
         return formatted_results
     
     # Simplified search - no fallback, clean filtering
-    def search(self, query: str, top_k: int = 5, method: str = "hybrid", 
+    async def search(self, query: str, top_k: int = 5, method: str = "hybrid", 
                filter_expr: str = None):
         """
         Hybrid search with optional metadata filtering
@@ -179,9 +180,9 @@ class MilvusClient:
             print(f"   🔍 Final filter: {combined_filter}")
             
             if method == "hybrid":
-                # Generate embeddings
+                # Generate embeddings using Ollama
                 print(f"   🔄 Generating embeddings...")
-                dense_vec = self.dense_model.encode(query).tolist()
+                dense_vec = await self.embed_query_dense(query)
                 sparse_vec = self.embed_query_sparse(query)
                 print(f"   ✅ Dense: {len(dense_vec)}D, Sparse: {len(sparse_vec)} tokens")
                 
@@ -299,10 +300,10 @@ class MilvusClient:
         
         return quality_results[:top_k]
     
-    def _vector_search(self, query: str, top_k: int = 5, filter_expr: str = None) -> List[Dict]:
+    async def _vector_search(self, query: str, top_k: int = 5, filter_expr: str = None) -> List[Dict]:
         """Dense vector search using HNSW - FIXED METRIC TYPE"""
         collection = self.get_collection()
-        dense_embedding = self.embed_query_dense(query)
+        dense_embedding = await self.embed_query_dense(query)
         
         search_params = {
             "metric_type": "IP",  # ✅ FIXED: IP not COSINE (matches your index)
@@ -341,12 +342,12 @@ class MilvusClient:
         
         return self._format_results(results)
     
-    def _hybrid_search(self, query: str, top_k: int = 5, filter_expr: str = None) -> List[Dict]:
+    async def _hybrid_search(self, query: str, top_k: int = 5, filter_expr: str = None) -> List[Dict]:
         """Hybrid search using RRF fusion of dense + sparse"""
         collection = self.get_collection()
         
         # Get both embeddings
-        dense_embedding = self.embed_query_dense(query)
+        dense_embedding = await self.embed_query_dense(query)
         sparse_embedding = self.embed_query_sparse(query)
         
         # ✅ Dense search request with IP metric

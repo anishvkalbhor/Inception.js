@@ -2,7 +2,7 @@ from typing import Optional, Dict, Any
 from datetime import datetime
 import hashlib
 import secrets
-from backend.services.mongodb_service import get_mongo_db, serialize_doc
+from services.mongodb_service import get_mongo_db, serialize_doc
 
 def get_ist_now():
     """Get current time in IST"""

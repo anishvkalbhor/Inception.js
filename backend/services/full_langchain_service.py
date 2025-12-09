@@ -190,7 +190,7 @@ class MongoConversationMemory(BaseMemory):
             print(f"⚠️ Error clearing memory: {str(e)}")
 
 class OpenRouterLLM:
-    """OpenRouter LLM wrapper for RAG operations"""
+    """OpenRouter LLM wrapper for RAG operations with Ollama fallback"""
     
     def __init__(self):
         self.api_key = os.getenv("OPENROUTER_API_KEY")
@@ -201,21 +201,33 @@ class OpenRouterLLM:
         self.temperature = 0.1
         self.max_tokens = 2000
         
-        if not self.api_key:
-            raise ValueError("OPENROUTER_API_KEY not found in environment variables")
+        # Initialize Ollama for fallback
+        from services.ollama_service import OllamaService
+        self.ollama_service = OllamaService()
+        self.use_ollama = False  # Will switch to True if OpenRouter fails
         
-        self.client = httpx.Client(
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "HTTP-Referer": self.site_url,
-                "X-Title": self.site_name,
-                "Content-Type": "application/json"
-            },
-            timeout=httpx.Timeout(30.0)
-        )
+        if not self.api_key:
+            print("⚠️ OPENROUTER_API_KEY not found, will use Ollama")
+            self.use_ollama = True
+        else:
+            self.client = httpx.Client(
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "HTTP-Referer": self.site_url,
+                    "X-Title": self.site_name,
+                    "Content-Type": "application/json"
+                },
+                timeout=httpx.Timeout(30.0)
+            )
     
-    def generate(self, prompt: str, temperature: float = None) -> str:
-        """Generate response using OpenRouter"""
+    async def generate(self, prompt: str, temperature: float = None) -> str:
+        """Generate response using OpenRouter with Ollama fallback"""
+        
+        # If already switched to Ollama, use it directly
+        if self.use_ollama:
+            print("🔄 Using Ollama (offline mode)")
+            return await self.ollama_service.generate_response(prompt, temperature=temperature or self.temperature)
+        
         try:
             payload = {
                 "model": self.model_name,
@@ -233,7 +245,9 @@ class OpenRouterLLM:
                 raise Exception(f"OpenRouter API error: {response.status_code} - {response.text}")
                 
         except Exception as e:
-            raise Exception(f"OpenRouter LLM call failed: {str(e)}")
+            print(f"⚠️ OpenRouter failed: {str(e)}, switching to Ollama")
+            self.use_ollama = True  # Switch to Ollama for future calls
+            return await self.ollama_service.generate_response(prompt, temperature=temperature or self.temperature)
 
 # ========== TRUE LANGCHAIN CHAIN WITH AUTO-MEMORY ==========
 class TrueLangChainRAG:
@@ -346,15 +360,15 @@ YOUR RESPONSE STYLE:
             def _llm_type(self) -> str:
                 return "openrouter"
             
-            def _call(self, prompt: str, stop: Optional[List[str]] = None) -> str:
+            async def _call(self, prompt: str, stop: Optional[List[str]] = None) -> str:
                 """Call OpenRouter API"""
-                return self.llm.generate(prompt)
+                return await self.llm.generate(prompt)
             
-            def _generate(self, prompts: List[str], stop: Optional[List[str]] = None) -> LLMResult:
+            async def _generate(self, prompts: List[str], stop: Optional[List[str]] = None) -> LLMResult:
                 """Generate responses for multiple prompts"""
                 generations = []
                 for prompt in prompts:
-                    text = self.llm.generate(prompt)
+                    text = await self.llm.generate(prompt)
                     generations.append([Generation(text=text)])
                 return LLMResult(generations=generations)
         
@@ -398,7 +412,7 @@ YOUR RESPONSE STYLE:
         
         return "\n---\n".join(context_parts)
     
-    def invoke(self, query: str, top_k: int = 5, temperature: float = 0.1):
+    async def invoke(self, query: str, top_k: int = 5, temperature: float = 0.1):
         """
         Invoke the TRUE LangChain RAG with role-based parameters
         """
@@ -428,7 +442,7 @@ YOUR RESPONSE STYLE:
             prompt = self._create_enhanced_prompt(query, formatted_contexts)
             
             # Use the LLM generate method with role-based temperature
-            answer = self.llm.generate(prompt, temperature=temperature)
+            answer = await self.llm.generate(prompt, temperature=temperature)
             
             return formatted_contexts, answer
             
@@ -578,7 +592,7 @@ class FullLangChainRAG:
             traceback.print_exc()
             return []
     
-    def _update_conversation_context(self, conversation_id: str, user_id: str, query: str, answer: str, contexts: List[Dict[str, Any]]):
+    async def _update_conversation_context(self, conversation_id: str, user_id: str, query: str, answer: str, contexts: List[Dict[str, Any]]):
         """
         Extract and update conversation context using LLM analysis
         """
@@ -636,7 +650,7 @@ Return only valid JSON, no extra text:"""
             # Get context extraction with retry logic
             for attempt in range(3):
                 try:
-                    context_response = self.llm.generate(context_prompt)
+                    context_response = await self.llm.generate(context_prompt)
                     context_text = str(context_response)
                     
                     # Clean up response
@@ -813,7 +827,7 @@ Return only valid JSON, no extra text:"""
         
         return results
     
-    def _generate_answer(self, query: str, documents: list, temperature: float,
+    async def _generate_answer(self, query: str, documents: list, temperature: float,
                         conversation_history: list = None, conversation_context: dict = None):
         """Generate answer using LLM with documents and conversation history"""
         if conversation_history is None:
@@ -971,14 +985,14 @@ STEP 4: RESPONSE CONSTRUCTION
         print(f"   Documents with dates: {sum(1 for d in documents if d.get('published_date'))}")
         
         # Generate answer
-        answer = self.llm.generate(full_prompt, temperature=temperature)
+        answer = await self.llm.generate(full_prompt, temperature=temperature)
         
         print(f"📥 LLM response: {len(answer)} chars")
         print(f"📥 LLM response preview: {answer[:200]}...")
         
         return answer
 
-    def ask(self, query: str, user_id: str = None, conversation_id: str = None,
+    async def ask(self, query: str, user_id: str = None, conversation_id: str = None,
             temperature: float = 0.1, top_k: int = 5, user: dict = None,
             dense_weight: float = 0.6, sparse_weight: float = 0.4, 
             method: str = "hybrid",
@@ -1028,7 +1042,7 @@ STEP 4: RESPONSE CONSTRUCTION
             
             # STEP 4: Generate answer
             print(f"\n🤖 GENERATING ANSWER")
-            answer = self._generate_answer(
+            answer = await self._generate_answer(
                 query=query,
                 documents=documents,
                 temperature=temperature,
@@ -1038,12 +1052,12 @@ STEP 4: RESPONSE CONSTRUCTION
             
             # STEP 5: Update context if needed
             if conversation_context:
-                self._update_conversation_context(
-                    conversation_id, 
-                    query, 
-                    answer, 
-                    documents, 
-                    conversation_context
+                await self._update_conversation_context(
+                    conversation_id=conversation_id,
+                    user_id=user_id, 
+                    query=query, 
+                    answer=answer, 
+                    contexts=documents
                 )
             
             # ✅ ALWAYS RETURN A VALID DICTIONARY

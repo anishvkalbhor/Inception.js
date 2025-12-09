@@ -1,21 +1,33 @@
 "use client";
 
-import { useAuth } from "@/lib/auth-context";
+import { useUser, useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ChatInterface from "@/components/ChatInterface";
 
 export default function ChatPage() {
-  const { user, token, loading } = useAuth(); // Get token from context
+  const { user, isLoaded } = useUser();
+  const { getToken } = useAuth();
   const router = useRouter();
+  const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!loading && !user) {
+    if (isLoaded && !user) {
       router.push("/");
     }
-  }, [user, loading, router]);
+  }, [user, isLoaded, router]);
 
-  if (loading) {
+  useEffect(() => {
+    const fetchToken = async () => {
+      if (user) {
+        const clerkToken = await getToken();
+        setToken(clerkToken);
+      }
+    };
+    fetchToken();
+  }, [user, getToken]);
+
+  if (!isLoaded) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-900">
         <div className="text-center">
@@ -32,7 +44,10 @@ export default function ChatPage() {
 
   return (
     <main className="w-full h-screen">
-      <ChatInterface authToken={token} userName={user.name} /> {/* Use token, not user._id */}
+      <ChatInterface 
+        authToken={token} 
+        userName={user.firstName || user.username || user.emailAddresses[0]?.emailAddress || 'User'} 
+      />
     </main>
   );
 }

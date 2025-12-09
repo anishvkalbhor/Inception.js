@@ -2,11 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { useAuth } from "@/lib/auth-context"; // CHANGED: Use new auth context
 import { useTheme } from "@/lib/ThemeContext";
-import AuthModal from "./AuthModal";
 import Image from "next/image";
 import Beams from "./Beams";
+import { useUser, SignInButton, SignUpButton, SignOutButton } from "@clerk/nextjs";
 
 // ========================= SVG Icon Components =========================
 const Icon = {
@@ -88,11 +87,10 @@ const Icon = {
 // ========================= Landing Page Component =========================
 export default function Landing() {
   const { theme } = useTheme();
-  const { user, loading, signout } = useAuth(); // CHANGED: Use new auth context
-  const [showModal, setShowModal] = useState<"signin" | "signup" | null>(null);
+  const { user, isLoaded } = useUser();
   const [navOpen, setNavOpen] = useState(false);
 
-  if (loading) { // CHANGED: renamed from isPending
+  if (!isLoaded) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-black">
         <div className="text-center">
@@ -127,12 +125,12 @@ export default function Landing() {
 
             {/* Right Side: nav + auth */}
             <div className="flex items-center gap-3">
-              {user ? ( // CHANGED: use user directly
+              {user ? (
                 <>
                   {/* Greeting + Hamburger (Sign Out inside menu) */}
                   <div className="flex items-center gap-2">
                     <span className="text-[11px] text-neutral-200 max-w-[140px] truncate">
-                      Hi, {user.name || user.email}
+                      Hi, {user.firstName || user.emailAddresses[0]?.emailAddress}
                     </span>
 
                     {/* Hamburger Menu */}
@@ -173,15 +171,14 @@ export default function Landing() {
                           >
                             Chat
                           </Link>
-                          <button
-                            onClick={() => {
-                              setNavOpen(false);
-                              signout();
-                            }}
-                            className="w-full text-left px-4 py-2 hover:bg-red-500/20 text-red-300"
-                          >
-                            Sign Out
-                          </button>
+                          <SignOutButton>
+                            <button
+                              onClick={() => setNavOpen(false)}
+                              className="w-full text-left px-4 py-2 hover:bg-red-500/20 text-red-300"
+                            >
+                              Sign Out
+                            </button>
+                          </SignOutButton>
                         </div>
                       )}
                     </div>
@@ -190,18 +187,16 @@ export default function Landing() {
               ) : (
                 // When logged out: Sign In / Sign Up buttons
                 <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setShowModal("signin")}
-                    className="px-3 py-1.5 rounded-full border border-white/30 text-xs font-medium text-neutral-100 hover:bg-white/10 transition"
-                  >
-                    Sign In
-                  </button>
-                  <button
-                    onClick={() => setShowModal("signup")}
-                    className="px-3 py-1.5 rounded-full bg-white text-xs font-semibold text-black hover:bg-neutral-200 transition"
-                  >
-                    Sign Up
-                  </button>
+                  <SignInButton mode="modal">
+                    <button className="px-3 py-1.5 rounded-full border border-white/30 text-xs font-medium text-neutral-100 hover:bg-white/10 transition">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <button className="px-3 py-1.5 rounded-full bg-white text-xs font-semibold text-black hover:bg-neutral-200 transition">
+                      Sign Up
+                    </button>
+                  </SignUpButton>
                 </div>
               )}
             </div>
@@ -240,7 +235,7 @@ export default function Landing() {
 
             {/* Hero CTAs: session-aware */}
             <div className="relative flex gap-4 flex-wrap justify-center">
-              {user ? ( // CHANGED
+              {user ? (
                 <>
                   <Link
                     href="/chat"
@@ -263,18 +258,16 @@ export default function Landing() {
                 </>
               ) : (
                 <>
-                  <button
-                    onClick={() => setShowModal("signin")}
-                    className="inline-flex items-center justify-center px-10 py-4 font-mono font-medium tracking-tighter text-black bg-white hover:bg-neutral-200 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                  >
-                    Sign In Now
-                  </button>
-                  <button
-                    onClick={() => setShowModal("signup")}
-                    className="inline-flex items-center justify-center px-10 py-4 font-mono font-medium tracking-tighter text-white bg-black border border-white/40 hover:bg-white/5 rounded-lg transition-all transform hover:scale-105"
-                  >
-                    Create Account
-                  </button>
+                  <SignInButton mode="modal">
+                    <button className="inline-flex items-center justify-center px-10 py-4 font-mono font-medium tracking-tighter text-black bg-white hover:bg-neutral-200 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                      Sign In Now
+                    </button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <button className="inline-flex items-center justify-center px-10 py-4 font-mono font-medium tracking-tighter text-white bg-black border border-white/40 hover:bg-white/5 rounded-lg transition-all transform hover:scale-105">
+                      Create Account
+                    </button>
+                  </SignUpButton>
                 </>
               )}
             </div>
@@ -416,7 +409,7 @@ export default function Landing() {
                     ))}
                   </div>
 
-                  {user ? ( // CHANGED
+                  {user ? (
                     <Link
                       href="/upload"
                       className="inline-flex items-center justify-center mt-8 px-10 py-4 bg-white text-black hover:bg-neutral-200 rounded-lg font-medium transition-colors"
@@ -424,12 +417,11 @@ export default function Landing() {
                       Upload Documents Now
                     </Link>
                   ) : (
-                    <button
-                      onClick={() => setShowModal("signin")}
-                      className="inline-flex items-center justify-center mt-8 px-10 py-4 bg-white text-black hover:bg-neutral-200 rounded-lg font-medium transition-colors"
-                    >
-                      Sign In to Upload
-                    </button>
+                    <SignInButton mode="modal">
+                      <button className="inline-flex items-center justify-center mt-8 px-10 py-4 bg-white text-black hover:bg-neutral-200 rounded-lg font-medium transition-colors">
+                        Sign In to Upload
+                      </button>
+                    </SignInButton>
                   )}
                 </div>
 
@@ -462,7 +454,7 @@ export default function Landing() {
                 AI-powered retrieval system today.
               </p>
               <div className="flex gap-4 justify-center">
-                {user ? ( // CHANGED
+                {user ? (
                   <>
                     <Link
                       href="/upload"
@@ -479,18 +471,16 @@ export default function Landing() {
                   </>
                 ) : (
                   <>
-                    <button
-                      onClick={() => setShowModal("signup")}
-                      className="inline-flex items-center justify-center px-10 py-4 bg-white text-black hover:bg-neutral-200 rounded-lg font-medium transition-colors"
-                    >
-                      Create Account
-                    </button>
-                    <button
-                      onClick={() => setShowModal("signin")}
-                      className="inline-flex items-center justify-center px-10 py-4 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg font-medium transition-colors border border-neutral-700"
-                    >
-                      Sign In
-                    </button>
+                    <SignUpButton mode="modal">
+                      <button className="inline-flex items-center justify-center px-10 py-4 bg-white text-black hover:bg-neutral-200 rounded-lg font-medium transition-colors">
+                        Create Account
+                      </button>
+                    </SignUpButton>
+                    <SignInButton mode="modal">
+                      <button className="inline-flex items-center justify-center px-10 py-4 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg font-medium transition-colors border border-neutral-700">
+                        Sign In
+                      </button>
+                    </SignInButton>
                   </>
                 )}
               </div>
@@ -603,14 +593,6 @@ export default function Landing() {
           }
         `}</style>
       </div>
-
-      {/* Auth Modal */}
-      {showModal !== null && (
-        <AuthModal
-          mode={showModal} // CHANGED: renamed from type to mode
-          onClose={() => setShowModal(null)}
-        />
-      )}
     </>
   );
 }
