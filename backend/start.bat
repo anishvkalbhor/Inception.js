@@ -29,7 +29,7 @@ if %ERRORLEVEL% NEQ 0 (
 
 echo [1/5] Starting databases in Docker...
 echo.
-cd /d d:\meow\infrastructure\docker
+cd /d d:\Inception.js\infrastructure\docker
 docker-compose up -d
 
 if %ERRORLEVEL% NEQ 0 (
@@ -52,13 +52,13 @@ timeout /t 5 /nobreak >nul
 echo.
 echo [4/5] Starting Backend API...
 echo.
-start "VICTOR Backend" cmd /k "cd /d d:\meow\backend && title VICTOR Backend API && python start_offline.py"
+start "VICTOR Backend" cmd /k "cd /d d:\Inception.js\backend && title VICTOR Backend API && python start_offline.py"
 timeout /t 10 /nobreak >nul
 
 echo.
 echo [5/5] Starting Frontend...
 echo.
-start "VICTOR Frontend" cmd /k "cd /d d:\meow\frontend && title VICTOR Frontend && npm run dev"
+start "VICTOR Frontend" cmd /k "cd /d d:\Inception.js\frontend && title VICTOR Frontend && npm run dev"
 
 echo.
 echo ============================================================

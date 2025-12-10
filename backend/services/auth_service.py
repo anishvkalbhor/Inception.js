@@ -10,93 +10,192 @@ import logging
 import httpx
 
 logger = logging.getLogger(__name__)
-
 load_dotenv()
 
 class AuthService:
     def __init__(self):
         self.jwt_secret = os.getenv("JWT_SECRET", "your-secret-key")
         self.clerk_secret_key = os.getenv("CLERK_SECRET_KEY", "")
-        self.use_clerk = bool(self.clerk_secret_key and self.clerk_secret_key != "your_secret_key_here")
+        # Clerk publishable key for decoding JWT
+        self.clerk_publishable_key = os.getenv("NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY", "")
+        
+        # Check if Clerk is properly configured
+        self.use_clerk = bool(
+            self.clerk_secret_key 
+            and self.clerk_secret_key.startswith("sk_")
+        )
+        
+        if self.use_clerk:
+            logger.info("✅ Clerk authentication enabled")
+        else:
+            logger.warning("⚠️ Clerk authentication disabled - using legacy auth only")
+    
+    def is_clerk_token(self, token: str) -> bool:
+        """Check if token is a Clerk JWT (starts with eyJ and is longer than legacy tokens)"""
+        try:
+            # Clerk tokens are JWT format and much longer than our legacy session tokens
+            if token.startswith("eyJ") and len(token) > 100:
+                # Try to decode the header to confirm it's a JWT
+                header = jwt.get_unverified_header(token)
+                # Clerk uses RS256 algorithm
+                return header.get("alg") == "RS256"
+        except:
+            pass
+        return False
     
     async def verify_clerk_token(self, token: str) -> Dict:
-        """Verify Clerk JWT token"""
+        """Verify Clerk JWT token by decoding it"""
         try:
-            # Clerk tokens can be verified by calling Clerk's API or decoding the JWT
-            # For now, we'll decode the JWT and extract user info
-            # In production, you should verify the signature using Clerk's public key
+            # Decode the JWT without verification first to get session_id
+            unverified_payload = jwt.decode(token, options={"verify_signature": False})
+            session_id = unverified_payload.get("sid")
+            user_id = unverified_payload.get("sub")
             
-            # Decode without verification (for development)
-            # In production, fetch Clerk's JWKS and verify properly
-            decoded = jwt.decode(token, options={"verify_signature": False})
-            
-            user_id = decoded.get("sub")  # Clerk user ID
-            email = decoded.get("email")
-            
-            if not user_id:
+            if not session_id or not user_id:
                 raise HTTPException(
                     status_code=status.HTTP_401_UNAUTHORIZED,
-                    detail="Invalid Clerk token"
+                    detail="Invalid Clerk token format"
                 )
             
-            return {
-                "user_id": user_id,
-                "email": email,
-                "name": decoded.get("name", email),
-                "role": "user",  # Default role
-                "clerk_user": True
-            }
-            
-        except jwt.InvalidTokenError as e:
-            logger.error(f"Invalid Clerk token: {e}")
+            # Verify the session is still active via Clerk API
+            async with httpx.AsyncClient() as client:
+                response = await client.get(
+                    f"https://api.clerk.com/v1/sessions/{session_id}",
+                    headers={
+                        "Authorization": f"Bearer {self.clerk_secret_key}",
+                        "Content-Type": "application/json"
+                    },
+                    timeout=10.0
+                )
+                
+                if response.status_code != 200:
+                    logger.error(f"Clerk session verification failed: {response.status_code}")
+                    raise HTTPException(
+                        status_code=status.HTTP_401_UNAUTHORIZED,
+                        detail="Invalid or expired Clerk session"
+                    )
+                
+                session_data = response.json()
+                
+                # Check if session is active
+                if session_data.get("status") != "active":
+                    raise HTTPException(
+                        status_code=status.HTTP_401_UNAUTHORIZED,
+                        detail="Clerk session is not active"
+                    )
+                
+                # Fetch user data from Clerk
+                user_response = await client.get(
+                    f"https://api.clerk.com/v1/users/{user_id}",
+                    headers={
+                        "Authorization": f"Bearer {self.clerk_secret_key}",
+                        "Content-Type": "application/json"
+                    },
+                    timeout=10.0
+                )
+                
+                if user_response.status_code != 200:
+                    logger.error(f"Clerk user fetch failed: {user_response.status_code}")
+                    raise HTTPException(
+                        status_code=status.HTTP_401_UNAUTHORIZED,
+                        detail="Failed to fetch user data"
+                    )
+                
+                user_data = user_response.json()
+                
+                # Extract email and name
+                email = None
+                email_addresses = user_data.get("email_addresses", [])
+                if email_addresses:
+                    # Get primary email or first email
+                    primary_email = next(
+                        (e for e in email_addresses if e.get("is_primary")),
+                        email_addresses[0]
+                    )
+                    email = primary_email.get("email_address")
+                
+                first_name = user_data.get("first_name", "")
+                last_name = user_data.get("last_name", "")
+                name = f"{first_name} {last_name}".strip() or email
+                
+                result = {
+                    "user_id": user_id,
+                    "email": email,
+                    "name": name,
+                    "role": "user",  # Default role for Clerk users
+                    "clerk_user": True
+                }
+                
+                logger.info(f"✅ Clerk token verified for user: {email}")
+                return result
+                
+        except jwt.DecodeError:
+            logger.error("Failed to decode Clerk JWT")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid token"
+                detail="Invalid token format"
+            )
+        except httpx.TimeoutException:
+            logger.error("Clerk API timeout")
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Authentication service unavailable"
+            )
+        except HTTPException:
+            raise
+        except Exception as e:
+            logger.error(f"Clerk token verification error: {str(e)}")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail=f"Token verification failed: {str(e)}"
             )
     
     async def verify_token(self, token: str) -> Dict:
         """
-        Verify token - supports both Clerk tokens and legacy session tokens
+        Verify token - detects and routes to appropriate verification method
         """
         try:
-            print(f"🔍 Verifying token: {token[:20]}...")
+            logger.info(f"🔍 Verifying token: {token[:20]}...")
             
-            # Try Clerk token first if Clerk is enabled
-            if self.use_clerk:
-                try:
-                    clerk_data = await self.verify_clerk_token(token)
-                    print(f"✅ Clerk token verified for user: {clerk_data.get('email')}")
-                    return clerk_data
-                except HTTPException:
-                    # If Clerk verification fails, try legacy auth
-                    print("⚠️ Clerk verification failed, trying legacy auth...")
-            
-            # Fall back to legacy session token verification
-            user_data = verify_session(token)
-            
-            if not user_data:
-                print("❌ Invalid or expired session token")
-                raise HTTPException(
-                    status_code=status.HTTP_401_UNAUTHORIZED,
-                    detail="Invalid or expired token"
-                )
-            
-            # Return user data in the expected format
-            result = {
-                "user_id": str(user_data["_id"]),
-                "email": user_data.get("email"),
-                "name": user_data.get("name"),
-                "role": user_data.get("role", "user"),
-                "clerk_user": False
-            }
-            
-            print(f"✅ Legacy token verified for user: {result['email']} (role: {result['role']})")
-            return result
+            # Detect token type and route to appropriate verification
+            if self.is_clerk_token(token):
+                if not self.use_clerk:
+                    logger.error("❌ Clerk token detected but Clerk is not configured")
+                    raise HTTPException(
+                        status_code=status.HTTP_401_UNAUTHORIZED,
+                        detail="Clerk authentication not configured"
+                    )
+                
+                logger.info("🔑 Detected Clerk JWT token")
+                return await self.verify_clerk_token(token)
+            else:
+                # Legacy session token
+                logger.info("🔑 Detected legacy session token")
+                user_data = verify_session(token)
+                
+                if not user_data:
+                    logger.error("❌ Invalid or expired session token")
+                    raise HTTPException(
+                        status_code=status.HTTP_401_UNAUTHORIZED,
+                        detail="Invalid or expired token"
+                    )
+                
+                # Return user data in the expected format
+                result = {
+                    "user_id": str(user_data["_id"]),
+                    "email": user_data.get("email"),
+                    "name": user_data.get("name"),
+                    "role": user_data.get("role", "user"),
+                    "clerk_user": False
+                }
+                
+                logger.info(f"✅ Legacy token verified for user: {result['email']} (role: {result['role']})")
+                return result
             
         except HTTPException:
             raise
         except Exception as e:
-            print(f"❌ Token verification failed: {str(e)}")
+            logger.error(f"❌ Token verification failed: {str(e)}")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Authentication failed"
@@ -104,30 +203,10 @@ class AuthService:
     
     def get_user_with_role(self, user_id: str) -> Dict:
         """Fetch complete user data including role from MongoDB"""
-        try:
-            print(f"🔍 Fetching user data for ID: {user_id}")
-            
-            # Use the new get_user_by_id function from user_service
-            user_data = get_user_by_id(user_id)
-            
-            if not user_data:
-                print(f"⚠️ User not found: {user_id}")
-                return None
-            
-            result = {
-                "user_id": str(user_data["_id"]),
-                "email": user_data.get("email"),
-                "name": user_data.get("name"),
-                "role": user_data.get("role", "user")
-            }
-            
-            print(f"✅ User data fetched: {result['email']} (role: {result['role']})")
-            return result
-            
-        except Exception as e:
-            print(f"❌ Error fetching user data: {str(e)}")
-            return None
-
+        user = get_user_by_id(user_id)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        return user
 
 # Global instance
 _auth_service = None
