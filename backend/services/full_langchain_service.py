@@ -483,6 +483,13 @@ class FullLangChainRAG:
         self.milvus_client = None
         try:
             from api.milvus_client import get_milvus_client
+            from pymilvus import connections
+            # Close existing connections if any
+            try:
+                connections.disconnect(alias="default")
+                print("🔄 Closed existing Milvus connection")
+            except:
+                pass
             self.milvus_client = get_milvus_client()
             print("✅ Milvus client initialized")
         except Exception as e:
@@ -707,7 +714,7 @@ Return only valid JSON, no extra text:"""
         
         return query
     
-    def _retrieve_documents(self, query: str, top_k: int, dense_weight: float, 
+    async def _retrieve_documents(self, query: str, top_k: int, dense_weight: float, 
                            sparse_weight: float, method: str, 
                            conversation_context: dict = None,
                            filter_expr: str = None,
@@ -724,7 +731,7 @@ Return only valid JSON, no extra text:"""
             # ✅ Always fetch 50 documents for reranking (regardless of requested top_k)
             retrieval_limit = 50
             
-            results = self.milvus_client.search(
+            results = await self.milvus_client.search(
                 query=query,
                 top_k=retrieval_limit,
                 method=method,
@@ -1012,7 +1019,7 @@ STEP 4: RESPONSE CONSTRUCTION
             
             # STEP 2: Retrieve documents
             print(f"\n🔍 RETRIEVING DOCUMENTS (method: {method}, top_k: {top_k})")
-            documents = self._retrieve_documents(
+            documents = await self._retrieve_documents(
                 enhanced_query, 
                 top_k, 
                 dense_weight, 

@@ -1,6 +1,7 @@
 import logging
 import asyncio
 import aiohttp
+import httpx
 from datetime import datetime, timedelta
 from typing import Optional, Tuple, Dict
 from core.config import get_settings
@@ -13,30 +14,43 @@ class NetworkMonitor:
     def __init__(self):
         self.settings = get_settings()
         self._last_check: Optional[datetime] = None
-        self._last_status: Optional[Tuple[bool, bool]] = None  # (online, ollama)
+        self._last_status: Optional[Tuple[bool, bool]] = None
         self._cache_duration = timedelta(seconds=self.settings.CACHE_NETWORK_STATUS)
     
     async def check_online_api(self) -> bool:
         """Check if online API (OpenRouter) is available"""
+        # Check if API key is configured first
         if not self.settings.OPENROUTER_API_KEY:
+            logger.warning("⚠️ OpenRouter API key not configured")
+            return False
+        
+        # Check if API key is valid format
+        if not self.settings.OPENROUTER_API_KEY.startswith("sk-or-v1-"):
+            logger.warning("⚠️ OpenRouter API key has invalid format")
             return False
         
         try:
-            timeout = aiohttp.ClientTimeout(total=self.settings.NETWORK_CHECK_TIMEOUT)
-            headers = {
-                "Authorization": f"Bearer {self.settings.OPENROUTER_API_KEY}",
-                "HTTP-Referer": self.settings.SITE_URL,
-            }
-            
-            async with aiohttp.ClientSession(timeout=timeout) as session:
-                async with session.get(
+            async with httpx.AsyncClient(timeout=self.settings.NETWORK_CHECK_TIMEOUT) as client:
+                response = await client.get(
                     self.settings.NETWORK_CHECK_URL,
-                    headers=headers
-                ) as response:
-                    return response.status == 200
-        except Exception as e:
-            logger.debug(f"Online API check failed: {e}")
+                    headers={
+                        "Authorization": f"Bearer {self.settings.OPENROUTER_API_KEY}",
+                        "HTTP-Referer": self.settings.SITE_URL,
+                        "X-Title": self.settings.SITE_NAME
+                    }
+                )
+                
+                is_available = response.status_code == 200
+                logger.info(f"🌐 Online API check: {'✅ Available' if is_available else '❌ Unavailable'} (status: {response.status_code})")
+                return is_available
+                
+        except httpx.TimeoutException:
+            logger.warning("⏱️ OpenRouter API timeout")
             return False
+        except Exception as e:
+            logger.warning(f"❌ OpenRouter API check failed: {e}")
+            return False
+
     
     async def check_ollama(self) -> bool:
         """Check if Ollama is available"""

@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     # === ONLINE CONFIGURATION (Primary) ===
     
     # OpenRouter (Online LLM)
-    OPENROUTER_API_KEY: Optional[str] = None
+    OPENROUTER_API_KEY: str  = "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"
     OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
     ONLINE_LLM_MODEL: str = "alibaba/tongyi-deepresearch-30b-a3b:free"
     

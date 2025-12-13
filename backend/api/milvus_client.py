@@ -9,7 +9,7 @@ load_dotenv()
 
 class MilvusClient:
     def __init__(self):
-        self.host = os.getenv("MILVUS_HOST", "192.168.65.188")
+        self.host = os.getenv("MILVUS_HOST", "localhost")
         self.port = os.getenv("MILVUS_PORT", "19530")
         self.collection_name = os.getenv("COLLECTION_NAME", "VictorText2")
         self.embedding_model_name = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")

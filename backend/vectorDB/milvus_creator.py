@@ -278,7 +278,7 @@ import time
 from tqdm import tqdm
 from scipy import sparse
 
-MILVUS_HOST = "192.168.65.160"
+MILVUS_HOST = "localhost"
 MILVUS_PORT = "19530"
 
 # Updated paths - flat file structure
@@ -373,7 +373,7 @@ def create_table_hybrid_collection(name: str, dense_dim: int):
         FieldSchema(name="source_reference", dtype=DataType.VARCHAR, max_length=1024),
         FieldSchema(name="version", dtype=DataType.VARCHAR, max_length=128),
         FieldSchema(name="language", dtype=DataType.VARCHAR, max_length=128),
-        FieldSchema(name="semantic_labels", dtype=DataType.VARCHAR, max_length=65535),  # JSON string
+        FieldSchema(name="semantic_labels", dtype=DataType.VARCHAR, max_length=65535),  
     ]
     schema = CollectionSchema(fields, description=f"{name} hybrid collection for tables")
     col = Collection(name, schema)
@@ -604,6 +604,52 @@ def insert_victor_text_hybrid():
     print(f"🎉 VictorText2 hybrid collection ready!")
 
 
+def safe_truncate(text: str, max_length: int) -> str:
+    """Safely truncate text to max_length, ensuring it doesn't exceed"""
+    if not text:
+        return ''
+    text_str = str(text)
+    if len(text_str) <= max_length:
+        return text_str
+    return text_str[:max_length]
+
+
+def safe_truncate(text: str, max_length: int) -> str:
+    """
+    Safely truncate text to max_length BYTES (not characters).
+    Milvus VARCHAR limits are in bytes, not characters.
+    """
+    if not text:
+        return ''
+    
+    text_str = str(text)
+    
+    # Encode to bytes first
+    text_bytes = text_str.encode('utf-8')
+    
+    # If already within limit, return original
+    if len(text_bytes) <= max_length:
+        return text_str
+    
+    # Truncate bytes, then decode safely
+    # We need to avoid cutting in the middle of a multi-byte character
+    truncated_bytes = text_bytes[:max_length]
+    
+    # Decode with error handling - ignore incomplete characters
+    try:
+        return truncated_bytes.decode('utf-8')
+    except UnicodeDecodeError:
+        # If we cut in middle of multi-byte char, remove incomplete bytes
+        # Try progressively smaller lengths until decode succeeds
+        for i in range(1, 5):  # UTF-8 chars are max 4 bytes
+            try:
+                return truncated_bytes[:-i].decode('utf-8')
+            except UnicodeDecodeError:
+                continue
+        # Last resort: decode with replacement character
+        return truncated_bytes.decode('utf-8', errors='ignore')
+
+
 def insert_victor_table_hybrid():
     """Insert table embeddings with both dense and sparse vectors - FLAT FILE VERSION"""
     print("\n" + "="*60)
@@ -654,6 +700,17 @@ def insert_victor_table_hybrid():
     all_metadata = []
     skipped_sparse = 0
     
+    # ✅ Track truncation statistics
+    truncation_stats = {
+        'table_text': {'count': 0, 'max_original': 0, 'indices': []},
+        'table_markdown': {'count': 0, 'max_original': 0, 'indices': []},
+        'table_html': {'count': 0, 'max_original': 0, 'indices': []},
+        'section_hierarchy': {'count': 0, 'max_original': 0, 'indices': []},
+        'heading_context': {'count': 0, 'max_original': 0, 'indices': []},
+        'caption': {'count': 0, 'max_original': 0, 'indices': []},
+        'semantic_labels': {'count': 0, 'max_original': 0, 'indices': []},
+    }
+    
     print("🔄 Processing table chunks...")
     for idx, chunk in enumerate(tqdm(chunks, desc="Preparing data")):
         global_chunk_id = chunk.get('global_chunk_id', f'table_unknown_{idx}')
@@ -667,25 +724,87 @@ def insert_victor_table_hybrid():
             skipped_sparse += 1
         
         all_sparse_embeddings.append(sparse_dict)
+        
+        # Convert semantic_labels to JSON string
+        semantic_labels = chunk.get('semantic_labels', {})
+        semantic_labels_str = json.dumps(semantic_labels) if isinstance(semantic_labels, dict) else str(semantic_labels)
+        
+        # Get raw text fields
+        table_text_raw = chunk.get('table_text', chunk.get('text', ''))
+        table_markdown_raw = chunk.get('table_markdown', '')
+        table_html_raw = chunk.get('table_html', '')
+        section_hierarchy_raw = chunk.get('section_hierarchy', '')
+        heading_context_raw = chunk.get('heading_context', '')
+        caption_raw = chunk.get('caption', '')
+        
+        # ✅ Track truncations for each field
+        def track_and_truncate(field_name, value, max_len):
+            value_str = str(value)
+            byte_len = len(value_str.encode('utf-8'))
+            
+            if byte_len > max_len:
+                truncation_stats[field_name]['count'] += 1
+                truncation_stats[field_name]['max_original'] = max(
+                    truncation_stats[field_name]['max_original'], 
+                    byte_len
+                )
+                if len(truncation_stats[field_name]['indices']) < 3:  # Store first 3 indices
+                    truncation_stats[field_name]['indices'].append(idx)
+            
+            return safe_truncate(value_str, max_len)
+        
+        # Build metadata with BYTE-LEVEL truncation and tracking
         all_metadata.append({
-            'document_name': str(chunk.get('document_name', chunk.get('source', 'unknown')))[:512],
-            'document_id': str(chunk.get('document_id', 'unknown'))[:256],
-            'chunk_id': str(chunk.get('chunk_id', f'table_{idx}'))[:256],
-            'global_chunk_id': str(global_chunk_id)[:256],
+            'document_name': safe_truncate(chunk.get('document_name', chunk.get('source', 'unknown')), 512),
+            'document_id': safe_truncate(chunk.get('document_id', 'unknown'), 256),
+            'chunk_id': safe_truncate(chunk.get('chunk_id', f'table_{idx}'), 256),
+            'global_chunk_id': safe_truncate(global_chunk_id, 256),
             'page_idx': int(chunk.get('page_idx', chunk.get('page', 0))),
             'table_index': int(chunk.get('table_index', idx)),
-            'section_hierarchy': str(chunk.get('section_hierarchy', ''))[:50000],
-            'heading_context': str(chunk.get('heading_context', ''))[:50000],
-            'table_text': str(chunk.get('table_text', chunk.get('text', '')))[:65535],
-            'table_markdown': str(chunk.get('table_markdown', ''))[:65535],
-            'table_html': str(chunk.get('table_html', ''))[:65535],
-            'caption': str(chunk.get('caption', ''))[:65535],
+            'section_hierarchy': track_and_truncate('section_hierarchy', section_hierarchy_raw, 65535),
+            'heading_context': track_and_truncate('heading_context', heading_context_raw, 65535),
+            'table_text': track_and_truncate('table_text', table_text_raw, 65535),
+            'table_markdown': track_and_truncate('table_markdown', table_markdown_raw, 65535),
+            'table_html': track_and_truncate('table_html', table_html_raw, 65535),
+            'caption': track_and_truncate('caption', caption_raw, 65535),
             'row_count': int(chunk.get('row_count', 0)),
             'col_count': int(chunk.get('col_count', 0)),
+            'Category': safe_truncate(chunk.get('Category', ''), 1024),
+            'document_type': safe_truncate(chunk.get('document_type', ''), 1024),
+            'ministry': safe_truncate(chunk.get('ministry', ''), 1024),
+            'published_date': safe_truncate(chunk.get('published_date', '') or '', 256),
+            'source_reference': safe_truncate(chunk.get('source_reference', ''), 1024),
+            'version': safe_truncate(chunk.get('version', '') or '', 128),
+            'language': safe_truncate(chunk.get('language', 'english'), 128),
+            'semantic_labels': track_and_truncate('semantic_labels', semantic_labels_str, 65535),
         })
     
-    print(f"\n📊 Total table embeddings: {len(all_metadata)}")
-    print(f"⚠ Tables without sparse match: {skipped_sparse}")
+    # ✅ Print truncation summary
+    print("\n" + "="*60)
+    print("📊 TRUNCATION SUMMARY")
+    print("="*60)
+    
+    total_truncations = sum(stat['count'] for stat in truncation_stats.values())
+    
+    if total_truncations == 0:
+        print("✅ No fields required truncation - all data within limits!")
+    else:
+        print(f"⚠️  Total fields truncated: {total_truncations} out of {len(chunks)} chunks")
+        print()
+        
+        for field_name, stats in truncation_stats.items():
+            if stats['count'] > 0:
+                percentage = (stats['count'] / len(chunks)) * 100
+                print(f"  📝 {field_name}:")
+                print(f"     • Truncated: {stats['count']} chunks ({percentage:.1f}%)")
+                print(f"     • Largest original: {stats['max_original']:,} bytes (limit: 65,535 bytes)")
+                if stats['indices']:
+                    print(f"     • Example indices: {stats['indices'][:3]}")
+                print()
+    
+    print(f"📊 Total table embeddings: {len(all_metadata)}")
+    print(f"⚠️  Tables without sparse match: {skipped_sparse}")
+    print("="*60)
     
     dim = dense_embeddings.shape[1]
     print(f"📏 Dense embedding dimension: {dim}")
@@ -700,23 +819,46 @@ def insert_victor_table_hybrid():
     for i in tqdm(range(0, total, batch_size), desc="Inserting batches"):
         end = min(i + batch_size, total)
         
+        # ✅ CRITICAL: Double-check byte lengths before insertion
+        batch_metadata = all_metadata[i:end]
+        
+        # Validate all strings are within byte limits
+        emergency_truncations = 0
+        for meta_idx, m in enumerate(batch_metadata):
+            for field_name in ['table_text', 'table_markdown', 'table_html', 'section_hierarchy', 'heading_context', 'semantic_labels', 'caption']:
+                field_value = m.get(field_name, '')
+                byte_len = len(str(field_value).encode('utf-8'))
+                if byte_len > 65535:
+                    emergency_truncations += 1
+                    print(f"\n⚠️  EMERGENCY: Field '{field_name}' at index {i+meta_idx} still exceeds limit: {byte_len} bytes")
+                    # Emergency truncation
+                    m[field_name] = safe_truncate(field_value, 65535)
+        
         batch_data = [
             dense_embeddings[i:end].tolist(),
             all_sparse_embeddings[i:end],
-            [m['document_name'] for m in all_metadata[i:end]],
-            [m['document_id'] for m in all_metadata[i:end]],
-            [m['chunk_id'] for m in all_metadata[i:end]],
-            [m['global_chunk_id'] for m in all_metadata[i:end]],
-            [m['page_idx'] for m in all_metadata[i:end]],
-            [m['table_index'] for m in all_metadata[i:end]],
-            [m['section_hierarchy'] for m in all_metadata[i:end]],
-            [m['heading_context'] for m in all_metadata[i:end]],
-            [m['table_text'] for m in all_metadata[i:end]],
-            [m['table_markdown'] for m in all_metadata[i:end]],
-            [m['table_html'] for m in all_metadata[i:end]],
-            [m['caption'] for m in all_metadata[i:end]],
-            [m['row_count'] for m in all_metadata[i:end]],
-            [m['col_count'] for m in all_metadata[i:end]],
+            [m['document_name'] for m in batch_metadata],
+            [m['document_id'] for m in batch_metadata],
+            [m['chunk_id'] for m in batch_metadata],
+            [m['global_chunk_id'] for m in batch_metadata],
+            [m['page_idx'] for m in batch_metadata],
+            [m['table_index'] for m in batch_metadata],
+            [m['section_hierarchy'] for m in batch_metadata],
+            [m['heading_context'] for m in batch_metadata],
+            [m['table_text'] for m in batch_metadata],
+            [m['table_markdown'] for m in batch_metadata],
+            [m['table_html'] for m in batch_metadata],
+            [m['caption'] for m in batch_metadata],
+            [m['row_count'] for m in batch_metadata],
+            [m['col_count'] for m in batch_metadata],
+            [m['Category'] for m in batch_metadata],
+            [m['document_type'] for m in batch_metadata],
+            [m['ministry'] for m in batch_metadata],
+            [m['published_date'] for m in batch_metadata],
+            [m['source_reference'] for m in batch_metadata],
+            [m['version'] for m in batch_metadata],
+            [m['language'] for m in batch_metadata],
+            [m['semantic_labels'] for m in batch_metadata],
         ]
         
         col.insert(batch_data)
@@ -725,8 +867,21 @@ def insert_victor_table_hybrid():
     print(f"✅ Inserted {col.num_entities} table entities")
     
     build_hybrid_indexes(col)
-    print(f"🎉 VictorTable2 hybrid collection ready!")
-
+    
+    # ✅ Final summary
+    print("\n" + "="*60)
+    print("🎉 VictorTable2 COLLECTION CREATION COMPLETE!")
+    print("="*60)
+    print(f"  📊 Total entities: {col.num_entities}")
+    print(f"  📏 Embedding dimension: {dim}")
+    print(f"  🔍 Indexes: HNSW (dense) + SPARSE_INVERTED (sparse)")
+    if total_truncations > 0:
+        print(f"  ⚠️  Fields truncated: {total_truncations} ({(total_truncations/len(chunks)*100):.1f}% of chunks)")
+        most_truncated = max(truncation_stats.items(), key=lambda x: x[1]['count'])
+        print(f"  📝 Most affected field: {most_truncated[0]} ({most_truncated[1]['count']} chunks)")
+    else:
+        print(f"  ✅ No truncations - all data intact!")
+    print("="*60 + "\n")
 
 def main():
     """Main execution"""
