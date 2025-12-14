@@ -478,6 +478,8 @@ class FullLangChainRAG:
         # Initialize OpenRouter LLM
         self.llm = OpenRouterLLM()
         self.model_name = self.llm.model_name
+        self.TEXT_COLLECTION = "VictorText2"
+        self.TABLE_COLLECTION = "VictorTable2"
         
         # Initialize Milvus client
         self.milvus_client = None

@@ -169,3 +169,4 @@ async def upload_and_parse(file: UploadFile = File(...)):
         },
         "parse": parse_result,
     }
+

@@ -7,12 +7,18 @@ GPU-optimized version
 import json
 import numpy as np
 import torch
+import sys
+import io
 from pathlib import Path
 from typing import List, Dict, Any
 from FlagEmbedding import BGEM3FlagModel
 import logging
 from tqdm import tqdm
 from scipy import sparse
+
+# ✅ Force UTF-8 encoding for Windows console
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -21,13 +27,12 @@ logger = logging.getLogger(__name__)
 class SparseEmbeddingGenerator:
     """Generate ONLY sparse embeddings using BGE-M3"""
     
-    def _init_(self, model_name: str = 'BAAI/bge-m3', device: str = None):
+    def __init__(self, model_name: str = 'BAAI/bge-m3', device: str = None):  # ✅ FIXED: Double underscore
         """
         Initialize BGE-M3 model
         
         Args:
             model_name: Model identifier
-            use_fp16: Use half precision for faster inference
             device: Device to use ('cuda', 'cpu', or None for auto-detect)
         """
         # Detect and set device
@@ -286,7 +291,7 @@ def load_chunks(file_path: Path) -> List[Dict[str, Any]]:
 
 
 def main():
-    """Main execution"""
+    """Main execution - adapted for upload pipeline"""
     logger.info("\n" + "="*60)
     logger.info("BGE-M3 SPARSE EMBEDDING GENERATOR (NPZ FORMAT)")
     logger.info("GPU-optimized | Compressed Sparse Row (CSR)")
@@ -300,11 +305,15 @@ def main():
     else:
         logger.warning("⚠  CUDA not available")
     
-    # Paths
-    base_path = Path(__file__).parent
+    # ✅ FIXED: Use current working directory (set by pipeline orchestrator)
+    base_path = Path.cwd()
     text_chunks_path = base_path / "chunked_outputs_v2" / "all_text_chunks.json"
     table_chunks_path = base_path / "chunked_outputs_v2" / "all_table_chunks.json"
     output_dir = base_path / "sparse_embeddings"
+    
+    logger.info(f"Working directory: {base_path}")
+    logger.info(f"Text chunks: {text_chunks_path}")
+    logger.info(f"Table chunks: {table_chunks_path}")
     
     # Load chunks
     text_chunks = load_chunks(text_chunks_path)
@@ -312,7 +321,7 @@ def main():
     
     if not text_chunks and not table_chunks:
         logger.error("❌ No chunks found to process!")
-        return
+        sys.exit(1)
     
     # Initialize generator with GPU
     generator = SparseEmbeddingGenerator(
@@ -363,6 +372,8 @@ def main():
     logger.info("  - 10x smaller than JSON")
     logger.info("  - Fast loading with numpy/scipy")
     logger.info("  - Compatible with Milvus sparse vectors")
+    
+    sys.exit(0)
 
 
 if __name__ == "__main__":

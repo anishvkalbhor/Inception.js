@@ -267,6 +267,8 @@
 # if _name_ == "_main_":
 #     main()
 
+import sys
+import io
 from pathlib import Path
 import numpy as np
 import json
@@ -277,6 +279,9 @@ from pymilvus import (
 import time
 from tqdm import tqdm
 from scipy import sparse
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 MILVUS_HOST = "localhost"
 MILVUS_PORT = "19530"
@@ -311,11 +316,8 @@ def create_text_hybrid_collection(name: str, dense_dim: int):
     """Create text collection with both dense and sparse vector fields"""
     fields = [
         FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
-        # Dense embedding (HNSW)
         FieldSchema(name="dense_embedding", dtype=DataType.FLOAT_VECTOR, dim=dense_dim),
-        # Sparse embedding (for hybrid search)
         FieldSchema(name="sparse_embedding", dtype=DataType.SPARSE_FLOAT_VECTOR),
-        # Metadata fields
         FieldSchema(name="document_name", dtype=DataType.VARCHAR, max_length=512),
         FieldSchema(name="document_id", dtype=DataType.VARCHAR, max_length=256),
         FieldSchema(name="chunk_id", dtype=DataType.VARCHAR, max_length=256),
@@ -327,7 +329,6 @@ def create_text_hybrid_collection(name: str, dense_dim: int):
         FieldSchema(name="text", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="char_count", dtype=DataType.INT32),
         FieldSchema(name="word_count", dtype=DataType.INT32),
-        # New fields
         FieldSchema(name="Category", dtype=DataType.VARCHAR, max_length=1024),
         FieldSchema(name="document_type", dtype=DataType.VARCHAR, max_length=1024),
         FieldSchema(name="ministry", dtype=DataType.VARCHAR, max_length=1024),
@@ -349,7 +350,6 @@ def create_table_hybrid_collection(name: str, dense_dim: int):
         FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
         FieldSchema(name="dense_embedding", dtype=DataType.FLOAT_VECTOR, dim=dense_dim),
         FieldSchema(name="sparse_embedding", dtype=DataType.SPARSE_FLOAT_VECTOR),
-        # Metadata fields
         FieldSchema(name="document_name", dtype=DataType.VARCHAR, max_length=512),
         FieldSchema(name="document_id", dtype=DataType.VARCHAR, max_length=256),
         FieldSchema(name="chunk_id", dtype=DataType.VARCHAR, max_length=256),
@@ -358,14 +358,12 @@ def create_table_hybrid_collection(name: str, dense_dim: int):
         FieldSchema(name="table_index", dtype=DataType.INT32),
         FieldSchema(name="section_hierarchy", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="heading_context", dtype=DataType.VARCHAR, max_length=65535),
-        # Table-specific fields
         FieldSchema(name="table_text", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="table_markdown", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="table_html", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="caption", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="row_count", dtype=DataType.INT32),
         FieldSchema(name="col_count", dtype=DataType.INT32),
-        # New fields
         FieldSchema(name="Category", dtype=DataType.VARCHAR, max_length=1024),
         FieldSchema(name="document_type", dtype=DataType.VARCHAR, max_length=1024),
         FieldSchema(name="ministry", dtype=DataType.VARCHAR, max_length=1024),

@@ -295,6 +295,7 @@ output/
 results/
 logs/
 chunked_outputs/
+chunked_outputs_v2/
 embeddings_local/
 embeddings_consolidated/
 sparse_embeddings/

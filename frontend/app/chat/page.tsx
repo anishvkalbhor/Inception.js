@@ -10,6 +10,7 @@ export default function ChatPage() {
   const { getToken } = useAuth();
   const router = useRouter();
   const [token, setToken] = useState<string | null>(null);
+  const [currentDocumentName, setCurrentDocumentName] = useState<string | null>(null);
 
   useEffect(() => {
     if (isLoaded && !user) {
@@ -41,6 +42,17 @@ export default function ChatPage() {
   if (!user || !token) {
     return null;
   }
+
+  const handleSubmit = async (query: string) => {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      body: JSON.stringify({
+        query: query,
+        user_id: user.id,
+        document_filter: currentDocumentName,
+      })
+    });
+  };
 
   return (
     <main className="w-full h-screen">

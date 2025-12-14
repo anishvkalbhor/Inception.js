@@ -7,11 +7,17 @@ import os
 import json
 import numpy as np
 import torch
+import sys
+import io
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 
 
 class EmbeddingCreator:
