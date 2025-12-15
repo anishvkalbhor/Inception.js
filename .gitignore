@@ -6,9 +6,10 @@ venv/
 env/
 ENV/
 .venv/
+*.venv
 
 # Python cache
-__pycache__/
+_pycache_/
 *.py[cod]
 *$py.class
 *.so
@@ -18,33 +19,71 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+*.cover
+.hypothesis/
 
 # MyPy
 .mypy_cache/
 .dmypy.json
 dmypy.json
 
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
 # ============================================
 # Frontend (Next.js)
 # ============================================
 # Dependencies
 node_modules/
+bower_components/
 
 # Build output
 .next/
 out/
 dist/
 build/
+.vercel
+.turbo
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Static files
+public/static/
 
 # ============================================
 # Infrastructure & Data
@@ -55,28 +94,73 @@ infrastructure/docker/volumes/
 # Legacy folder (if you're migrating)
 milvus_store/
 
-# Processed data files
-backend/data/processed/
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Data directories
+data/
+*.csv
+*.json
+*.xml
+*.parquet
+*.pdf
+
+# Backup files
+*.bak
+*.backup
 
 # ============================================
-# Local Storage & Sync Data (NEW)
+# AI/ML Specific
 # ============================================
-# Local storage - synced from Google Drive
-backend/data/local_storage/
+# Models
+*.h5
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.onnx
+*.pb
+models/
+checkpoints/
+weights/
 
-# Scraper temporary downloads
-backend/data/scraper_temp/
+# Vector databases
+chromadb/
+faiss_index/
+*.index
+*.vectordb
 
-# Scrape reports (optional - keep locally)
-backend/scrape_report_*.json
+# Datasets
+datasets/
+*.tfrecord
 
-# Google Drive service account credentials
-backend/semester7pro_ServiceAccountKey.json.json
-*service-account*.json
+# Images (add this section)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.webp
+*.ico
+*.tiff
+*.tif
 
-# MongoDB dumps
-backup_*/
-mongodump/
+# Data directories
+data/
+# Be more specific with JSON/PDF - only ignore in data folders
+data//*.json
+data//*.pdf
+# Or ignore all data JSON/PDFs but allow config files
+!package.json
+!tsconfig.json
+!*config.json
+*.csv
+*.xml
+*.parquet
+*.pdf
 
 # ============================================
 # Environment Variables
@@ -87,9 +171,7 @@ mongodump/
 .env.test.local
 .env.production.local
 .env*.local
-.env.docker
-
-
+*.env
 
 # ============================================
 # Editor & OS
@@ -101,18 +183,31 @@ mongodump/
 # JetBrains IDEs
 .idea/
 *.iml
+*.iws
+*.ipr
 
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
 # Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 desktop.ini
+$RECYCLE.BIN/
 
 # Linux
 *~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
 
 # ============================================
 # Temporary Files
@@ -121,7 +216,92 @@ desktop.ini
 *.cache
 .cache/
 .tmp/
+tmp/
 temp/
 *.swp
 *.swo
+*.swn
+*.bak
+*.tmp
+*~
 
+# ============================================
+# Docker
+# ============================================
+*.dockerignore
+docker-compose.override.yml
+
+# ============================================
+# Documentation
+# ============================================
+docs/_build/
+*.pdf
+*.docx
+
+# ============================================
+# Package Managers
+# ============================================
+# Uncomment if you want to ignore lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+poetry.lock
+Pipfile.lock
+
+# ============================================
+# Security & Credentials
+# ============================================
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+*.credentials
+
+# ============================================
+# Testing & Coverage
+# ============================================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+junit.xml
+
+# ============================================
+# Build & Distribution
+# ============================================
+*.egg
+*.egg-info/
+dist-info/
+*.whl
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+# ============================================
+# Outputs & Generated Files
+# ============================================
+victorDB/
+newchunks/
+outputs/
+output/
+results/
+logs/
+chunked_outputs/
+chunked_outputs_v2/
+embeddings_local/
+embeddings_consolidated/
+sparse_embeddings/
+image_embeddings_clip.npy
+image_embeddings_clip_v2.npy
+image_embeddings_clip_v3.npy
+*.out
+*.zip
+*.npy
