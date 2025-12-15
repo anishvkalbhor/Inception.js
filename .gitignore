@@ -136,6 +136,18 @@ faiss_index/
 datasets/
 *.tfrecord
 
+# ✅ ADDED: Generated embeddings and chunks (DO NOT COMMIT)
+backend/vectorDB/embeddings_consolidated/
+backend/vectorDB/chunked_outputs_v2/
+backend/vectorDB/sparse_embeddings/
+backend/data/uploads/
+*.npy
+*.npz
+*_enriched.json
+*_chunks.json
+*_embeddings.json
+*_metadata.json
+
 # Images (add this section)
 *.png
 *.jpg
