@@ -1,0 +1,801 @@
+{
+  "total_chunks": 99,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-14T23:58:34.852876",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "40719b86-5921-456c-a648-f07a4e4057aa",
+      "chunk_id": "Module_6_text_0",
+      "document_id": "Module_6",
+      "page_idx": 0,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 1,
+      "global_chunk_id": "1fd37c11-99b1-42c0-8936-99b342555866",
+      "chunk_id": "Module_6_text_1",
+      "document_id": "Module_6",
+      "page_idx": 0,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 2,
+      "global_chunk_id": "bf5bfca0-59e6-4e26-8292-7e71a2cd9a32",
+      "chunk_id": "Module_6_text_2",
+      "document_id": "Module_6",
+      "page_idx": 0,
+      "text_preview": "Special cells in the eye's retina that are responsible for converting light into signals that are se"
+    },
+    {
+      "embedding_index": 3,
+      "global_chunk_id": "6221d9d2-4142-4713-8ae5-4acdb229eac7",
+      "chunk_id": "Module_6_text_3",
+      "document_id": "Module_6",
+      "page_idx": 0,
+      "text_preview": "The above figure shows the physiology ofahuman eye. The shape is approximately spherical, with a dia"
+    },
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "c0edec76-813b-4609-b658-c15635235667",
+      "chunk_id": "Module_6_text_4",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 5,
+      "global_chunk_id": "f31b15b4-77a9-4bfa-9408-bd8e7137b7a8",
+      "chunk_id": "Module_6_text_5",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 6,
+      "global_chunk_id": "6527a4f3-76a0-4846-98fb-65941ac04683",
+      "chunk_id": "Module_6_text_6",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "The rest of the outer surface of the eye is protected byahard, white layer called the sclera. Mofthe"
+    },
+    {
+      "embedding_index": 7,
+      "global_chunk_id": "c137e199-2e4e-4f11-8ddf-ea9c3f6643d6",
+      "chunk_id": "Module_6_text_7",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "After crossing this, rays enter the lens by passing through the pupil. The size of the pupil is cont"
+    },
+    {
+      "embedding_index": 8,
+      "global_chunk_id": "0e6560d4-983d-4b36-87f1-1f0f8c6cd199",
+      "chunk_id": "Module_6_text_8",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "The optical power of the lens is altered by ciliary muscles. After passing through the lens, rays pa"
+    },
+    {
+      "embedding_index": 9,
+      "global_chunk_id": "a84ded75-8e97-40a6-889d-b3c935bd0bdc",
+      "chunk_id": "Module_6_text_9",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "Since Figure shows a 2D cross section, the retina is shaped like an arc; however, keep in mind that "
+    },
+    {
+      "embedding_index": 10,
+      "global_chunk_id": "3ca36231-d5a7-4fc5-8ab9-b0228557bc61",
+      "chunk_id": "Module_6_text_10",
+      "document_id": "Module_6",
+      "page_idx": 1,
+      "text_preview": "Photoreceptors The retina contains two kinds of photoreceptors for vision: 1) rods, which are trigge"
+    },
+    {
+      "embedding_index": 11,
+      "global_chunk_id": "ab09cfbe-1be4-4246-a4d3-bcc17007135d",
+      "chunk_id": "Module_6_text_11",
+      "document_id": "Module_6",
+      "page_idx": 2,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 12,
+      "global_chunk_id": "e1d8f83f-3ca6-49c6-9858-8352371eb527",
+      "chunk_id": "Module_6_text_12",
+      "document_id": "Module_6",
+      "page_idx": 2,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 13,
+      "global_chunk_id": "2bad4bf8-c51d-4765-8e0f-61b120b8b37e",
+      "chunk_id": "Module_6_text_13",
+      "document_id": "Module_6",
+      "page_idx": 2,
+      "text_preview": "Figure shows the detection capabilities of each photoreceptor type. Rod sensitivity peaks at $4 9 8 "
+    },
+    {
+      "embedding_index": 14,
+      "global_chunk_id": "c00e7983-30c1-48f1-9bcd-ad475d877e28",
+      "chunk_id": "Module_6_text_14",
+      "document_id": "Module_6",
+      "page_idx": 2,
+      "text_preview": "The density of photoreceptors across the retina varies greatly. The most interesting region is the f"
+    },
+    {
+      "embedding_index": 15,
+      "global_chunk_id": "6baa560b-6b1c-4631-9bb9-fac4c474cb75",
+      "chunk_id": "Module_6_text_15",
+      "document_id": "Module_6",
+      "page_idx": 2,
+      "text_preview": "Rays that enter the cornea from the sides land on parts of the retina with lower rod density and ver"
+    },
+    {
+      "embedding_index": 16,
+      "global_chunk_id": "ffadeeb2-4db2-4d46-8332-dd6eefd91fbd",
+      "chunk_id": "Module_6_text_16",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 17,
+      "global_chunk_id": "2fc81446-5c5d-4f06-a098-7f22fd758227",
+      "chunk_id": "Module_6_text_17",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 18,
+      "global_chunk_id": "cfc560a5-4b0a-4d50-a084-2aff5ff7c74a",
+      "chunk_id": "Module_6_text_18",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "most intriguing part of the plot is the blind spot, where there are no photoreceptors. This is due o"
+    },
+    {
+      "embedding_index": 19,
+      "global_chunk_id": "ba293a93-6f52-44be-8b06-e07d17de267e",
+      "chunk_id": "Module_6_text_19",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "Resolution is defined as the number of pixels that can be displayed. The $1 9 2 0 \\mathrm { ~ x ~ } "
+    },
+    {
+      "embedding_index": 20,
+      "global_chunk_id": "40059832-f676-4a66-926b-76bb66f71310",
+      "chunk_id": "Module_6_text_20",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "Perfect Resolution for VR: 8K per Eye Resolution isaphrase that extends beyond VR. Resolution is def"
+    },
+    {
+      "embedding_index": 21,
+      "global_chunk_id": "fbb289a0-e16f-4734-a2bc-5d1442f684ae",
+      "chunk_id": "Module_6_text_21",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "On a 27-inch monitor, that might not seem like much. OnaVR screen measuring 3. 4 or 3. 6 inches, tha"
+    },
+    {
+      "embedding_index": 22,
+      "global_chunk_id": "22ead95a-064e-4e78-b3fa-9196fd690bc5",
+      "chunk_id": "Module_6_text_22",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "There are several components that go into creating a more immersive virtual experience. Some of the "
+    },
+    {
+      "embedding_index": 23,
+      "global_chunk_id": "19a17f7a-f084-4a8e-a827-afbaed46d1fb",
+      "chunk_id": "Module_6_text_23",
+      "document_id": "Module_6",
+      "page_idx": 3,
+      "text_preview": "Eye rotations are a complicated and integral part of human vision. They occur both voluntarily and n"
+    },
+    {
+      "embedding_index": 24,
+      "global_chunk_id": "5dd8bffd-1c31-4e79-a3b9-414a1e94ce5d",
+      "chunk_id": "Module_6_text_24",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 25,
+      "global_chunk_id": "9da70770-3247-42df-9de0-2dbda1f89b55",
+      "chunk_id": "Module_6_text_25",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 26,
+      "global_chunk_id": "ad7a870a-d3b8-449c-83fd-6f5765d0049e",
+      "chunk_id": "Module_6_text_26",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "One of the main reasons for eye movement istoposition the feature of interest on the fovea. o the fo"
+    },
+    {
+      "embedding_index": 27,
+      "global_chunk_id": "4f49ab79-15a2-4da6-aab0-faa91fe18d55",
+      "chunk_id": "Module_6_text_27",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "Another reason for eye movement is that our photoreceptors are slow to respond to stimuli due to the"
+    },
+    {
+      "embedding_index": 28,
+      "global_chunk_id": "a27eafd7-ec1a-4424-a6ea-4eb17b39279f",
+      "chunk_id": "Module_6_text_28",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "Eye movements help keep the image fixed on the same set of photoreceptors so that they can fully cha"
+    },
+    {
+      "embedding_index": 29,
+      "global_chunk_id": "e9abbdea-63cb-4fc4-883f-a52fbe305c49",
+      "chunk_id": "Module_6_text_29",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "Additional reasons for eye movement are to maintain a stereoscopic view and to prevent adaptation to"
+    },
+    {
+      "embedding_index": 30,
+      "global_chunk_id": "41f613b7-aee6-4fef-b722-e3f200491446",
+      "chunk_id": "Module_6_text_30",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "Eye muscles The rotation of each eye is controlled by six muscles that are each attached to the scle"
+    },
+    {
+      "embedding_index": 31,
+      "global_chunk_id": "3c157ea4-c801-4ae8-9784-61109cb5a070",
+      "chunk_id": "Module_6_text_31",
+      "document_id": "Module_6",
+      "page_idx": 4,
+      "text_preview": "For example, to perform a yaw ( side-to-side) rotation, the tensions on the medial rectus and latera"
+    },
+    {
+      "embedding_index": 32,
+      "global_chunk_id": "b3a24d03-a77b-4fd6-a8cb-12f3a604993b",
+      "chunk_id": "Module_6_text_32",
+      "document_id": "Module_6",
+      "page_idx": 5,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 33,
+      "global_chunk_id": "d795095d-71fe-4abe-88ad-db5dc6b545f2",
+      "chunk_id": "Module_6_text_33",
+      "document_id": "Module_6",
+      "page_idx": 5,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 34,
+      "global_chunk_id": "ef906409-88cc-4e38-9532-4761cec9be74",
+      "chunk_id": "Module_6_text_34",
+      "document_id": "Module_6",
+      "page_idx": 5,
+      "text_preview": "All of these motions cause both eyes to rotate approximately the same way, except for vergen which c"
+    },
+    {
+      "embedding_index": 35,
+      "global_chunk_id": "13778374-638e-418d-ac8b-55a42d6e3dc4",
+      "chunk_id": "Module_6_text_35",
+      "document_id": "Module_6",
+      "page_idx": 5,
+      "text_preview": ". Optokinetic reflex -The next category is called the optokinetic reflex, which occurs when a fast b"
+    },
+    {
+      "embedding_index": 36,
+      "global_chunk_id": "7a24d030-9032-4d42-936f-7ca4183d04ab",
+      "chunk_id": "Module_6_text_36",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 37,
+      "global_chunk_id": "90da1886-4800-460d-8e37-9f82c6afba81",
+      "chunk_id": "Module_6_text_37",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 38,
+      "global_chunk_id": "ed59bfb4-daa8-4c17-99aa-4e152cd7bfba",
+      "chunk_id": "Module_6_text_38",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "ground. The eyes rapidly and involuntarily choose features for tracking on the object, wh alternatin"
+    },
+    {
+      "embedding_index": 39,
+      "global_chunk_id": "b167f601-72dd-4f4a-b8da-229ca4db6029",
+      "chunk_id": "Module_6_text_39",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "Eye Strain Eye strain is not unique toVRheadsets, but itisnonetheless a risk. Eye strain happens whe"
+    },
+    {
+      "embedding_index": 40,
+      "global_chunk_id": "fb682aca-b646-4d16-a15b-dc8d91cc87cf",
+      "chunk_id": "Module_6_text_40",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "Eye strain is known as asthenopia, and itisalso referred toaseye fatigue. Symptoms include tired eye"
+    },
+    {
+      "embedding_index": 41,
+      "global_chunk_id": "678bf19c-9773-400e-95dd-4f3bf0849a9a",
+      "chunk_id": "Module_6_text_41",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "Dry Eyes Most people tend to blink less than normal when carrying out visual tasks that require conc"
+    },
+    {
+      "embedding_index": 42,
+      "global_chunk_id": "1275df40-4cf8-4fcf-ab5f-7f75a19d965c",
+      "chunk_id": "Module_6_text_42",
+      "document_id": "Module_6",
+      "page_idx": 6,
+      "text_preview": "Foveated rendering One of the frustrations with this analysis is that we have not been able to explo"
+    },
+    {
+      "embedding_index": 43,
+      "global_chunk_id": "0b24b2e1-17f8-4770-906c-1bd28152f9e8",
+      "chunk_id": "Module_6_text_43",
+      "document_id": "Module_6",
+      "page_idx": 7,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 44,
+      "global_chunk_id": "8af0b85c-1693-44cc-a552-10d9c2384dd6",
+      "chunk_id": "Module_6_text_44",
+      "document_id": "Module_6",
+      "page_idx": 7,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 45,
+      "global_chunk_id": "76154631-d07d-4db4-b370-eaaf328b384e",
+      "chunk_id": "Module_6_text_45",
+      "document_id": "Module_6",
+      "page_idx": 7,
+      "text_preview": "always positioned in front of the pupil, with zero delay, then much fewer pixels would be need This "
+    },
+    {
+      "embedding_index": 46,
+      "global_chunk_id": "030c5461-52f5-4fd9-bb39-e07c7609ac13",
+      "chunk_id": "Module_6_text_46",
+      "document_id": "Module_6",
+      "page_idx": 7,
+      "text_preview": "VOR gain adaptation The VOR gain isaratio that compares the eye rotation rate ( numerator) to counte"
+    },
+    {
+      "embedding_index": 47,
+      "global_chunk_id": "d28c7e34-40a3-4570-a634-ffffd28c4562",
+      "chunk_id": "Module_6_text_47",
+      "document_id": "Module_6",
+      "page_idx": 8,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 48,
+      "global_chunk_id": "c8c17d2d-ee84-409e-a209-7e6d0579b6f9",
+      "chunk_id": "Module_6_text_48",
+      "document_id": "Module_6",
+      "page_idx": 8,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 49,
+      "global_chunk_id": "ae3e6666-fd94-4d98-87be-637580e5545f",
+      "chunk_id": "Module_6_text_49",
+      "document_id": "Module_6",
+      "page_idx": 8,
+      "text_preview": "Figure 5. 26 shows how a rectangle would distort under cases of smooth pursuit and VOR. O possibilit"
+    },
+    {
+      "embedding_index": 50,
+      "global_chunk_id": "a6a46d2e-da8e-4489-8e39-4ff4aa26592f",
+      "chunk_id": "Module_6_text_50",
+      "document_id": "Module_6",
+      "page_idx": 8,
+      "text_preview": "Retinal image slip Recall that eye movements contribute both to maintaining a target inafixed locati"
+    },
+    {
+      "embedding_index": 51,
+      "global_chunk_id": "4cef8a16-208e-4cb2-8f28-64ee1429a6ed",
+      "chunk_id": "Module_6_text_51",
+      "document_id": "Module_6",
+      "page_idx": 8,
+      "text_preview": "Vergence-accommodation mismatch accommodation is the process of changing the eye lens’ optical power"
+    },
+    {
+      "embedding_index": 52,
+      "global_chunk_id": "512484fd-4328-4426-8c5c-37df3acb3fe2",
+      "chunk_id": "Module_6_text_52",
+      "document_id": "Module_6",
+      "page_idx": 9,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 53,
+      "global_chunk_id": "f0a51d52-77ca-4990-9c15-4af62418dad7",
+      "chunk_id": "Module_6_text_53",
+      "document_id": "Module_6",
+      "page_idx": 9,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 54,
+      "global_chunk_id": "be464401-67b9-473c-8c9e-580c0aa1f67b",
+      "chunk_id": "Module_6_text_54",
+      "document_id": "Module_6",
+      "page_idx": 9,
+      "text_preview": "What ifanobject is rendered to the screen so that it appears tobeonly $1 0 \\mathrm { { c m } }$ away"
+    },
+    {
+      "embedding_index": 55,
+      "global_chunk_id": "543fe6d0-89a1-4f15-a785-6197c0a4a425",
+      "chunk_id": "Module_6_text_55",
+      "document_id": "Module_6",
+      "page_idx": 9,
+      "text_preview": "Visual Neuroscience isabranch of neuroscience that focuses on the visual system of the human body, m"
+    },
+    {
+      "embedding_index": 56,
+      "global_chunk_id": "dfb1444e-ab05-454c-a2c2-558243cceac9",
+      "chunk_id": "Module_6_text_56",
+      "document_id": "Module_6",
+      "page_idx": 9,
+      "text_preview": "Ifadepth cue is derived from the photoreceptors or movements ofasingle eye, then itiscalled a monocu"
+    },
+    {
+      "embedding_index": 57,
+      "global_chunk_id": "a69655a9-ed6d-4c3f-b56b-4220c426fa7a",
+      "chunk_id": "Module_6_text_57",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 58,
+      "global_chunk_id": "33f6b7a0-24d7-4059-a12d-2d5331bf0820",
+      "chunk_id": "Module_6_text_58",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 59,
+      "global_chunk_id": "3c635906-0f48-4cc8-8f87-bbe2a1aad477",
+      "chunk_id": "Module_6_text_59",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "Retinal image size-Many cues result from the geometric distortions caused by perspec projection. For"
+    },
+    {
+      "embedding_index": 60,
+      "global_chunk_id": "48aaf77b-c821-4adf-a38f-57d4e2fe33f9",
+      "chunk_id": "Module_6_text_60",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "Two important factors exist. First, the viewer must be familiar with the object to the point of comf"
+    },
+    {
+      "embedding_index": 61,
+      "global_chunk_id": "5d6e8db2-9222-40c6-ad05-edffa0e2380b",
+      "chunk_id": "Module_6_text_61",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "Size constancy falls of the general heading of subjective constancy, which appears through many aspe"
+    },
+    {
+      "embedding_index": 62,
+      "global_chunk_id": "7bd41ef9-c75c-4ebb-805d-1a905efcfb35",
+      "chunk_id": "Module_6_text_62",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "This falls under size perception, which is closely coupled to depth perception. Cues for each influe"
+    },
+    {
+      "embedding_index": 63,
+      "global_chunk_id": "0cb03ca7-9f30-44c2-bf1d-f53eabdb288f",
+      "chunk_id": "Module_6_text_63",
+      "document_id": "Module_6",
+      "page_idx": 10,
+      "text_preview": "Suppose that we can see over a long distance without obstructions. Due to perspective projection, th"
+    },
+    {
+      "embedding_index": 64,
+      "global_chunk_id": "45702677-9a0e-4681-bd60-e5d3955c11a9",
+      "chunk_id": "Module_6_text_64",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 65,
+      "global_chunk_id": "49db413b-eb50-45f8-9571-4e5d97420db5",
+      "chunk_id": "Module_6_text_65",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 66,
+      "global_chunk_id": "1cbd6b0d-bfe1-4c03-9508-866626ed5035",
+      "chunk_id": "Module_6_text_66",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "Subject-ARVR"
+    },
+    {
+      "embedding_index": 67,
+      "global_chunk_id": "727b8215-ade2-4d84-b5a3-ce04dc9dbeea",
+      "chunk_id": "Module_6_text_67",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "Accommodation-The human eye lens can change its optical power through the process accommodation. For"
+    },
+    {
+      "embedding_index": 68,
+      "global_chunk_id": "e955b1e6-7608-49f9-b815-8475f2172b5d",
+      "chunk_id": "Module_6_text_68",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "Motion parallax- Up until now, the depth cues have not exploited motions. If you have ever looked ou"
+    },
+    {
+      "embedding_index": 69,
+      "global_chunk_id": "f2ac64c1-1cf8-42e2-98e0-9a4469fe6726",
+      "chunk_id": "Module_6_text_69",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "The relative difference in speeds is called parallax and isanimportant depth cue; see Even two image"
+    },
+    {
+      "embedding_index": 70,
+      "global_chunk_id": "28538c31-abe0-4c28-89e1-16018f0903b4",
+      "chunk_id": "Module_6_text_70",
+      "document_id": "Module_6",
+      "page_idx": 11,
+      "text_preview": "As you may expect, focusing both eyes on the same object enhances depth perception. Humans perceive "
+    },
+    {
+      "embedding_index": 71,
+      "global_chunk_id": "079ee984-19a8-4adc-ae61-e35a1c43d2bb",
+      "chunk_id": "Module_6_text_71",
+      "document_id": "Module_6",
+      "page_idx": 12,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 72,
+      "global_chunk_id": "8eede059-51cc-41a6-b045-fc8c38ce7bb8",
+      "chunk_id": "Module_6_text_72",
+      "document_id": "Module_6",
+      "page_idx": 12,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 73,
+      "global_chunk_id": "a0ea18ae-4388-4482-9430-274b5080669a",
+      "chunk_id": "Module_6_text_73",
+      "document_id": "Module_6",
+      "page_idx": 12,
+      "text_preview": "the left and right eyes may vary only slightly, but this nevertheless provides a powerful cue usbyth"
+    },
+    {
+      "embedding_index": 74,
+      "global_chunk_id": "29b9c647-d4f0-496a-8538-49db5b67ae7d",
+      "chunk_id": "Module_6_text_74",
+      "document_id": "Module_6",
+      "page_idx": 12,
+      "text_preview": "This double-image effect is called diplopia. You can perceive itbyplacing your finger about $2 0 \\ma"
+    },
+    {
+      "embedding_index": 75,
+      "global_chunk_id": "91e2b42e-5802-466c-a5d5-236d89bba262",
+      "chunk_id": "Module_6_text_75",
+      "document_id": "Module_6",
+      "page_idx": 12,
+      "text_preview": "Motion Perception We rely on our vision to perceive motion for many crucial activities. One use isto"
+    },
+    {
+      "embedding_index": 76,
+      "global_chunk_id": "8ce6903b-9d78-4bcb-b135-eed74493f982",
+      "chunk_id": "Module_6_text_76",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 77,
+      "global_chunk_id": "6ffbf2fd-7dfa-4b84-8c4a-25c0c153255b",
+      "chunk_id": "Module_6_text_77",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 78,
+      "global_chunk_id": "ce7ad825-4f92-4913-a5bd-ef26bf9316cb",
+      "chunk_id": "Module_6_text_78",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "How many frames per second are appropriate for a motion picture?"
+    },
+    {
+      "embedding_index": 79,
+      "global_chunk_id": "6a5f9030-0e19-44a8-a0af-a197c33a9857",
+      "chunk_id": "Module_6_text_79",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "The answer depends on the intended use. Stroboscopic apparent motion begins at 2 FPS. Imagi watching"
+    },
+    {
+      "embedding_index": 80,
+      "global_chunk_id": "fb7d5549-2fae-4016-bf4e-1a433b1c5550",
+      "chunk_id": "Module_6_text_80",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "This section explains how the orientation ofarigid body is estimated using an inertial measurement u"
+    },
+    {
+      "embedding_index": 81,
+      "global_chunk_id": "1493ec0e-e5ff-4a04-becc-8ac57e8d167e",
+      "chunk_id": "Module_6_text_81",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "Another application is estimating the orientation ofahand-held controller. For example, suppose we w"
+    },
+    {
+      "embedding_index": 82,
+      "global_chunk_id": "96f50cf6-34ed-410b-a237-21627a5d9c91",
+      "chunk_id": "Module_6_text_82",
+      "document_id": "Module_6",
+      "page_idx": 13,
+      "text_preview": "Four general problems must be solved to make an effective tracking system, even for this simple case"
+    },
+    {
+      "embedding_index": 83,
+      "global_chunk_id": "8811ee39-ff83-41d5-a142-9133ded1320b",
+      "chunk_id": "Module_6_text_83",
+      "document_id": "Module_6",
+      "page_idx": 14,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 84,
+      "global_chunk_id": "569141e8-9487-49c4-86a8-51507b562a9b",
+      "chunk_id": "Module_6_text_84",
+      "document_id": "Module_6",
+      "page_idx": 14,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 85,
+      "global_chunk_id": "c3be8262-147d-4aed-a82c-516726938591",
+      "chunk_id": "Module_6_text_85",
+      "document_id": "Module_6",
+      "page_idx": 14,
+      "text_preview": "Calibration-The sensor outputs are distorted due to calibration issues. In the one-dimensional angul"
+    },
+    {
+      "embedding_index": 86,
+      "global_chunk_id": "67cb6d81-a217-4947-aa84-23908e28512c",
+      "chunk_id": "Module_6_text_86",
+      "document_id": "Module_6",
+      "page_idx": 14,
+      "text_preview": "At each stage $\\mathrm { k \\Omega }$ a vector $\\boldsymbol { \\omega } \\mathrm { [ k] } = \\mathrm { ("
+    },
+    {
+      "embedding_index": 87,
+      "global_chunk_id": "34a5a5d3-1044-47ca-bf7c-dc4ca33e41c4",
+      "chunk_id": "Module_6_text_87",
+      "document_id": "Module_6",
+      "page_idx": 15,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 88,
+      "global_chunk_id": "6c58aa59-fb92-4e4a-9332-bb6bfd90aa2b",
+      "chunk_id": "Module_6_text_88",
+      "document_id": "Module_6",
+      "page_idx": 15,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 89,
+      "global_chunk_id": "ed1f8bcd-80a6-48bf-9f33-fb32e804b213",
+      "chunk_id": "Module_6_text_89",
+      "document_id": "Module_6",
+      "page_idx": 15,
+      "text_preview": "Tilt correction -The drift error $\\mathrm { d ( t) }$ in was a single angle, which could be positive"
+    },
+    {
+      "embedding_index": 90,
+      "global_chunk_id": "0a7aece8-4e96-46ad-9413-e4032236523f",
+      "chunk_id": "Module_6_text_90",
+      "document_id": "Module_6",
+      "page_idx": 15,
+      "text_preview": "Six-DOF tracking enables eye from tobefully derived from sensor data, rather than inventing position"
+    },
+    {
+      "embedding_index": 91,
+      "global_chunk_id": "1c1dedf8-74ec-4c4d-bc10-a06ef1858141",
+      "chunk_id": "Module_6_text_91",
+      "document_id": "Module_6",
+      "page_idx": 15,
+      "text_preview": "Make your own waves The IMU-based approach to tracking was passive in the sense that it relied on so"
+    },
+    {
+      "embedding_index": 92,
+      "global_chunk_id": "d752e08b-208f-4d0c-8f1b-2d3e0d9c0c50",
+      "chunk_id": "Module_6_text_92",
+      "document_id": "Module_6",
+      "page_idx": 16,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 93,
+      "global_chunk_id": "1a0fa8b0-2e39-40f6-9302-a4ba0c195d03",
+      "chunk_id": "Module_6_text_93",
+      "document_id": "Module_6",
+      "page_idx": 16,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 94,
+      "global_chunk_id": "24b835c0-6440-461d-95c4-2ec912e9288f",
+      "chunk_id": "Module_6_text_94",
+      "document_id": "Module_6",
+      "page_idx": 16,
+      "text_preview": "The power of visibility The most powerful paradigm for 6-DOF tracking is visibility. T idea istoiden"
+    },
+    {
+      "embedding_index": 95,
+      "global_chunk_id": "a91be4be-f9ff-4d38-bf50-9ccfc0eb1571",
+      "chunk_id": "Module_6_text_95",
+      "document_id": "Module_6",
+      "page_idx": 16,
+      "text_preview": "The most common sensor used to detect features isadigital camera. Detecting, labeling, and tracking "
+    },
+    {
+      "embedding_index": 96,
+      "global_chunk_id": "6f8a2a09-049f-4f99-b2fb-9cab7bcea052",
+      "chunk_id": "Module_6_text_96",
+      "document_id": "Module_6",
+      "page_idx": 17,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 97,
+      "global_chunk_id": "965335ff-7f7a-4a1e-a7db-205c1f714fd4",
+      "chunk_id": "Module_6_text_97",
+      "document_id": "Module_6",
+      "page_idx": 17,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 98,
+      "global_chunk_id": "2f854430-81c3-41ec-b07f-ce4280bec011",
+      "chunk_id": "Module_6_text_98",
+      "document_id": "Module_6",
+      "page_idx": 17,
+      "text_preview": "https://jov. arvojournals. org/article. aspx? articleid=2191910 https://www. aao. org/eye \nhealth/an"
+    }
+  ]
+}

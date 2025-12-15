@@ -1,0 +1,1841 @@
+{
+  "total_chunks": 229,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-15T00:20:49.647178",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "8f2cf626-09f2-4fa9-abc3-15c1c1319a65",
+      "chunk_id": "7_National_Credit_Framework_text_0",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 0,
+      "text_preview": "September 2022"
+    },
+    {
+      "embedding_index": 1,
+      "global_chunk_id": "fcb9c86e-bb4b-47a9-85ce-560ee71ec144",
+      "chunk_id": "7_National_Credit_Framework_text_1",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 2,
+      "text_preview": "Foreword.... 5 \nPREFACE..... 7 \nGLOSSARY...... 9 \nCONSTITUTION OF COMMITTEE ON CREDIT FRAMEWORK....."
+    },
+    {
+      "embedding_index": 2,
+      "global_chunk_id": "49787769-eca5-44ef-baf2-afefc722d51f",
+      "chunk_id": "7_National_Credit_Framework_text_2",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 3,
+      "text_preview": "Bibliography/ Sources/ References................ 80"
+    },
+    {
+      "embedding_index": 3,
+      "global_chunk_id": "f29899b4-93f3-433d-b008-c6a5bb08df65",
+      "chunk_id": "7_National_Credit_Framework_text_3",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 4,
+      "text_preview": "Educational opportunities and effective skilling are the driving force of economic growth and social"
+    },
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "555744e9-779b-4027-af12-aa43cbef1886",
+      "chunk_id": "7_National_Credit_Framework_text_4",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 4,
+      "text_preview": "The High-Level Committee constituted by the government to formulate a unified credit accumulation& t"
+    },
+    {
+      "embedding_index": 5,
+      "global_chunk_id": "d798264a-65ae-47d0-85f3-1078fc2e7263",
+      "chunk_id": "7_National_Credit_Framework_text_5",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 4,
+      "text_preview": "Icongratulate the High-Level Committee underthechairmanship of DrN. S. Kalsi, Chairman, NCVETfor tak"
+    },
+    {
+      "embedding_index": 6,
+      "global_chunk_id": "633b5b79-7039-424e-83cc-c19bd8b5d3f7",
+      "chunk_id": "7_National_Credit_Framework_text_6",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "National education Policy ( NEP), 2020, envisioned under the dynamic leadership of our Hon’ble Prime"
+    },
+    {
+      "embedding_index": 7,
+      "global_chunk_id": "02e0720a-0aea-43b3-932f-11e1aaafe063",
+      "chunk_id": "7_National_Credit_Framework_text_7",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "The National education Policy 2020, lays emphasis onofmaking the education more holistic and effecti"
+    },
+    {
+      "embedding_index": 8,
+      "global_chunk_id": "35eb45d8-ba43-40d0-bcb7-ff50408c099c",
+      "chunk_id": "7_National_Credit_Framework_text_8",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "To realise the intent and objectives of National education Policy 2020, the National Credit Framewor"
+    },
+    {
+      "embedding_index": 9,
+      "global_chunk_id": "8ecb52b6-7ff0-44f5-b2c5-03c9bb088259",
+      "chunk_id": "7_National_Credit_Framework_text_9",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "The NCrF provides for creditisation of all learning and assignment, accumulation, storage, transfer "
+    },
+    {
+      "embedding_index": 10,
+      "global_chunk_id": "2fb61aac-6377-4625-abc1-c52d20cac557",
+      "chunk_id": "7_National_Credit_Framework_text_10",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "The NCrF relies onaunified approach across the education and skilling frameworks enabling the educat"
+    },
+    {
+      "embedding_index": 11,
+      "global_chunk_id": "986c80b9-1d90-42ac-a793-321034c648f3",
+      "chunk_id": "7_National_Credit_Framework_text_11",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "Implementation of NCrF will promote Internationalization of education by enabling equivalence of cou"
+    },
+    {
+      "embedding_index": 12,
+      "global_chunk_id": "f695c658-0475-4c9b-8535-dbb66009de47",
+      "chunk_id": "7_National_Credit_Framework_text_12",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 6,
+      "text_preview": "NCrF has provisions for educational acceleration for gifted students with special learning abilities"
+    },
+    {
+      "embedding_index": 13,
+      "global_chunk_id": "95e0f120-9773-40bc-9d94-94a316c73ced",
+      "chunk_id": "7_National_Credit_Framework_text_13",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "NCrF will enable transformation of India by providing high quality education opportunities integrate"
+    },
+    {
+      "embedding_index": 14,
+      "global_chunk_id": "23fc874f-1551-4973-b7cf-f9602fb13489",
+      "chunk_id": "7_National_Credit_Framework_text_14",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "TheNational Credit Framework ( NCrF) isan enabling framework and may not be construed asa regulation"
+    },
+    {
+      "embedding_index": 15,
+      "global_chunk_id": "8291a1d5-48c2-4fc4-9c9e-5da68ecfc87d",
+      "chunk_id": "7_National_Credit_Framework_text_15",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "Asapart ofthe framework formulation and finalisation process extensive consultations, besides MoEand"
+    },
+    {
+      "embedding_index": 16,
+      "global_chunk_id": "8b876757-54e6-42c2-94f0-eb95636abe62",
+      "chunk_id": "7_National_Credit_Framework_text_16",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "Iam thankfultoall the esteemed members of the High-Level Committee Shri Atul Kumar Tiwari, nowSecret"
+    },
+    {
+      "embedding_index": 17,
+      "global_chunk_id": "3deac6ce-0ff8-4b19-a037-0a57bf820024",
+      "chunk_id": "7_National_Credit_Framework_text_17",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "This framework would have not been possible without the valuable guidance and unstinted supportofPro"
+    },
+    {
+      "embedding_index": 18,
+      "global_chunk_id": "55fc2b82-5f22-4d80-a825-ebef74f8a074",
+      "chunk_id": "7_National_Credit_Framework_text_18",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "Mybestwishes toallthe stakeholders foreffectiveand effcient implementation ofthismuch awaited framew"
+    },
+    {
+      "embedding_index": 19,
+      "global_chunk_id": "d00d1c31-d68c-4db1-9138-99588f3ab1de",
+      "chunk_id": "7_National_Credit_Framework_text_19",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 7,
+      "text_preview": "Nirmaljeet Singh Kalsi, Chairperson, NVET"
+    },
+    {
+      "embedding_index": 20,
+      "global_chunk_id": "a0c4a68b-becb-415f-a5d8-85f3c3ce2a84",
+      "chunk_id": "7_National_Credit_Framework_text_20",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 8,
+      "text_preview": "AICTE-All India Institute of technical education CBCS-Choice Based Credit System CBSE- Central Board"
+    },
+    {
+      "embedding_index": 21,
+      "global_chunk_id": "87112a24-7142-4c7a-9c31-918ff419c141",
+      "chunk_id": "7_National_Credit_Framework_text_21",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "The government of India has approved the constitution ofaHigh-Level Committee, vide order dated $1 8"
+    },
+    {
+      "embedding_index": 22,
+      "global_chunk_id": "08dd308f-6650-429a-aa82-227d05ff30bf",
+      "chunk_id": "7_National_Credit_Framework_text_22",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "i. Assign credit value to academic and skill courses taught at various levels"
+    },
+    {
+      "embedding_index": 23,
+      "global_chunk_id": "6e425021-13c6-429e-9cde-1beb4756e03b",
+      "chunk_id": "7_National_Credit_Framework_text_23",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "a. School education, \nb. Higher education, \nc. Skilling Ecosystem, Vocational Training and education"
+    },
+    {
+      "embedding_index": 24,
+      "global_chunk_id": "626abc21-4ba6-4a34-94d4-d6f5b2f3bd28",
+      "chunk_id": "7_National_Credit_Framework_text_24",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "ii. Identify ways of Credit Accumulation for:"
+    },
+    {
+      "embedding_index": 25,
+      "global_chunk_id": "1f72bd82-f3dd-48c3-b3dc-8c2307e559fb",
+      "chunk_id": "7_National_Credit_Framework_text_25",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "a. School education \nb. Higher education. \nc. Vocational education and Training"
+    },
+    {
+      "embedding_index": 26,
+      "global_chunk_id": "ed279ebc-371e-4d12-afd6-7da4ad5b75f8",
+      "chunk_id": "7_National_Credit_Framework_text_26",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "iii. Propose Credit Transfer Model for:"
+    },
+    {
+      "embedding_index": 27,
+      "global_chunk_id": "82f1e21f-de07-4483-ac04-0612662eec0e",
+      "chunk_id": "7_National_Credit_Framework_text_27",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "text_preview": "a. Vocational and School education and vice-versa b. Vocational and Higher education and vice-versa "
+    },
+    {
+      "embedding_index": 28,
+      "global_chunk_id": "7d3d1d5a-b635-47ff-a33c-44a640e78af8",
+      "chunk_id": "7_National_Credit_Framework_text_28",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 10,
+      "text_preview": "levels."
+    },
+    {
+      "embedding_index": 29,
+      "global_chunk_id": "3c75eead-ffc8-49ae-acca-a08380e31431",
+      "chunk_id": "7_National_Credit_Framework_text_29",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 10,
+      "text_preview": "v. Develop the unified credit framework for integration of vocational education and training/ skilli"
+    },
+    {
+      "embedding_index": 30,
+      "global_chunk_id": "54b07c39-34ca-4309-98dc-4182fd2d7797",
+      "chunk_id": "7_National_Credit_Framework_text_30",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 11,
+      "text_preview": "Wethe undersigned members of the High Level Committee on the National CreditAccumulationand Transfer"
+    },
+    {
+      "embedding_index": 31,
+      "global_chunk_id": "c93c758f-9c01-4b2f-93a7-297f9e1ca76d",
+      "chunk_id": "7_National_Credit_Framework_text_31",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 12,
+      "text_preview": "To fulfil the vision of National education Policy 2020, making education more holistic and effective"
+    },
+    {
+      "embedding_index": 32,
+      "global_chunk_id": "040d6ba0-665b-4d25-96f9-6737eca76226",
+      "chunk_id": "7_National_Credit_Framework_text_32",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 12,
+      "text_preview": "The National Credit Framework ( NCrF) has been jointly developed by UGC, AICTE, NCVET, NIOS, CBSE, N"
+    },
+    {
+      "embedding_index": 33,
+      "global_chunk_id": "e59d03df-e164-4d82-bed9-c4111ceebaf3",
+      "chunk_id": "7_National_Credit_Framework_text_33",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 12,
+      "text_preview": "The National Credit Framework ( NCrF) shall beaninclusive umbrella Framework to seamlessly integrate"
+    },
+    {
+      "embedding_index": 34,
+      "global_chunk_id": "5d7f8a36-c7ad-49dc-a329-f6b3e590934f",
+      "chunk_id": "7_National_Credit_Framework_text_34",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 12,
+      "text_preview": "The implementation of NCrF would beagame changer in realising the vision and intent of NEP by removi"
+    },
+    {
+      "embedding_index": 35,
+      "global_chunk_id": "9b5a0e99-1c43-4234-a017-cb148b6f8ef7",
+      "chunk_id": "7_National_Credit_Framework_text_35",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 12,
+      "text_preview": "The National Credit Framework ( NCrF) provides for broad based, multi-disciplinary, holistic educati"
+    },
+    {
+      "embedding_index": 36,
+      "global_chunk_id": "c594557c-e9a7-4d72-9cbd-17d735d463a5",
+      "chunk_id": "7_National_Credit_Framework_text_36",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 13,
+      "text_preview": "The National Credit Framework ( NCrF) provides for Assignment, Accumulation, Storage, Transfer & Red"
+    },
+    {
+      "embedding_index": 37,
+      "global_chunk_id": "9348518f-bfd5-4e65-9561-1fa7564656be",
+      "chunk_id": "7_National_Credit_Framework_text_37",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 13,
+      "text_preview": "The total Notional Learning Hours for assignment of credits across school education, higher educatio"
+    },
+    {
+      "embedding_index": 38,
+      "global_chunk_id": "4e962ce4-68ec-42ad-b6e3-1fdff65f6cbe",
+      "chunk_id": "7_National_Credit_Framework_text_38",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 13,
+      "text_preview": "NCrF recognises no hard separation between different areas of learning, i. e. arts and sciences, voc"
+    },
+    {
+      "embedding_index": 39,
+      "global_chunk_id": "197e3d41-e7b9-43db-af56-4f8a7ed49903",
+      "chunk_id": "7_National_Credit_Framework_text_39",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 13,
+      "text_preview": "Under the National Credit Framework ( NCrF) every learning can be creditised subject to its assessme"
+    },
+    {
+      "embedding_index": 40,
+      "global_chunk_id": "9159912a-4a9c-422c-99ec-41170ce4cc78",
+      "chunk_id": "7_National_Credit_Framework_text_40",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "Draft Report of National Credit Framework The assessment is thus mandatory for earning credits for a"
+    },
+    {
+      "embedding_index": 41,
+      "global_chunk_id": "1b1f14dd-ff69-4b3e-b55c-5f77bc86adba",
+      "chunk_id": "7_National_Credit_Framework_text_41",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "The NCrF credit levels for school education are upto level 4, while for higher education from Level "
+    },
+    {
+      "embedding_index": 42,
+      "global_chunk_id": "c33faccb-e1e3-41e6-b500-eafb14017d98",
+      "chunk_id": "7_National_Credit_Framework_text_42",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "The total Credit Points earned by the student could be obtained by multiplying the credits earned wi"
+    },
+    {
+      "embedding_index": 43,
+      "global_chunk_id": "8aae4d74-5d9f-4a18-9a01-9909981eb2f8",
+      "chunk_id": "7_National_Credit_Framework_text_43",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "In addition to the credits for higher education, the Academic Bank of Credit ( ABC) shall also be ex"
+    },
+    {
+      "embedding_index": 44,
+      "global_chunk_id": "91d9f09b-8813-42b5-a1a7-ce2f95ca3c25",
+      "chunk_id": "7_National_Credit_Framework_text_44",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "The National Credit Framework ( NCrF) also enables creditisation of Experiential learning including "
+    },
+    {
+      "embedding_index": 45,
+      "global_chunk_id": "97dd2494-61d0-4492-9dc3-f7f7063537b7",
+      "chunk_id": "7_National_Credit_Framework_text_45",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "Assignment of Credits has been enabled for online, digital and blended learning in vocational educat"
+    },
+    {
+      "embedding_index": 46,
+      "global_chunk_id": "99cbd8a1-814e-4b00-9ac6-d4be6428664d",
+      "chunk_id": "7_National_Credit_Framework_text_46",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "National Credit Framework ( NCrF) will encourage Internationalization of education through credit tr"
+    },
+    {
+      "embedding_index": 47,
+      "global_chunk_id": "49d7b1bb-30ac-42dd-9fdf-add26abdce62",
+      "chunk_id": "7_National_Credit_Framework_text_47",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 14,
+      "text_preview": "Thus, there would be only one credit Framework for higher education, school education and skill educ"
+    },
+    {
+      "embedding_index": 48,
+      "global_chunk_id": "c4402144-ba75-4353-98b5-61157ea1d3fd",
+      "chunk_id": "7_National_Credit_Framework_text_48",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 15,
+      "text_preview": "various dimensions of academics, skilling and experiential learning including relevant experience an"
+    },
+    {
+      "embedding_index": 49,
+      "global_chunk_id": "051d03f4-2ca5-4c73-a282-33d93210f00e",
+      "chunk_id": "7_National_Credit_Framework_text_49",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 15,
+      "text_preview": "National Credit Framework ( NCrF) shall act asabroad enabling framework for all regulatory organizat"
+    },
+    {
+      "embedding_index": 50,
+      "global_chunk_id": "222b17c0-4099-4f3c-a87c-d38aa728084c",
+      "chunk_id": "7_National_Credit_Framework_text_50",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 15,
+      "text_preview": "Thus, there would be only one credit framework for higher education, school education and skill educ"
+    },
+    {
+      "embedding_index": 51,
+      "global_chunk_id": "f995c0b0-364f-40f1-a238-cb9b51063a05",
+      "chunk_id": "7_National_Credit_Framework_text_51",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 15,
+      "text_preview": "Thus the NCrF shall not only enable effective implementation of National education Policy 2020 throu"
+    },
+    {
+      "embedding_index": 52,
+      "global_chunk_id": "df69fca3-fa66-4dfb-9609-d1df64e2517a",
+      "chunk_id": "7_National_Credit_Framework_text_52",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 16,
+      "text_preview": "education is fundamental for achieving full human potential, developing an equitable society and pro"
+    },
+    {
+      "embedding_index": 53,
+      "global_chunk_id": "fa39d3f2-c979-495f-8fd2-3dfd43caa53b",
+      "chunk_id": "7_National_Credit_Framework_text_53",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 16,
+      "text_preview": "Today, India is one of the youngest nations in the world with more than $6 2 \\%$ of its population i"
+    },
+    {
+      "embedding_index": 54,
+      "global_chunk_id": "b38cafd4-15f9-467c-89d2-a11058fe29f2",
+      "chunk_id": "7_National_Credit_Framework_text_54",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 16,
+      "text_preview": "Not only the educational opportunities but effective skilling is also the driving force of economic "
+    },
+    {
+      "embedding_index": 55,
+      "global_chunk_id": "b48e851a-b9bd-4011-9074-da1ff3062f28",
+      "chunk_id": "7_National_Credit_Framework_text_55",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 17,
+      "text_preview": "This National education Policy, 2020 envisions an education system rooted in Indian ethos that contr"
+    },
+    {
+      "embedding_index": 56,
+      "global_chunk_id": "16f24882-0e12-4eb9-8297-f67ded8c8862",
+      "chunk_id": "7_National_Credit_Framework_text_56",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 17,
+      "text_preview": "The vision of this policy istoinstil among the learners a deep-rooted pride in being Indian, not onl"
+    },
+    {
+      "embedding_index": 57,
+      "global_chunk_id": "d282e66c-2107-4c92-a98f-26444e7cabd9",
+      "chunk_id": "7_National_Credit_Framework_text_57",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 17,
+      "text_preview": "The National education Policy seeks to provide to all students, irrespective of their place of resid"
+    },
+    {
+      "embedding_index": 58,
+      "global_chunk_id": "f0014b0e-c1ee-4cf2-885d-62ccb7e2851a",
+      "chunk_id": "7_National_Credit_Framework_text_58",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 17,
+      "text_preview": "At present, there isnoestablished credit mechanism for regular school education. However, under the "
+    },
+    {
+      "embedding_index": 59,
+      "global_chunk_id": "55643aec-e08a-4b51-a3f4-5047183eeca4",
+      "chunk_id": "7_National_Credit_Framework_text_59",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 17,
+      "text_preview": "i. Each subject is assigned 240 hours for self-study. Total 5 subjects are required at the Secondary"
+    },
+    {
+      "embedding_index": 60,
+      "global_chunk_id": "a4ebd5af-3a1f-4290-a400-6fd743ca71ec",
+      "chunk_id": "7_National_Credit_Framework_text_60",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 18,
+      "text_preview": "Under the CBCS system, the requirement for awarding a degree or diploma or certificate is prescribed"
+    },
+    {
+      "embedding_index": 61,
+      "global_chunk_id": "3b74579f-3d3e-431b-9c3d-cc2edc607ce5",
+      "chunk_id": "7_National_Credit_Framework_text_61",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 18,
+      "text_preview": " The CBCS provides flexibility in designing curriculum and assigning credits based on the course co"
+    },
+    {
+      "embedding_index": 62,
+      "global_chunk_id": "932e0626-1780-49c6-8d5e-2301eca65e11",
+      "chunk_id": "7_National_Credit_Framework_text_62",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 18,
+      "text_preview": "The detailed Guidelines for Choice Based Credit System is available at https://ugc. ac. in/pdfnews/8"
+    },
+    {
+      "embedding_index": 63,
+      "global_chunk_id": "0b9d08e2-f2b2-4980-b84a-4cea5d1f9343",
+      "chunk_id": "7_National_Credit_Framework_text_63",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 18,
+      "text_preview": "The scheme on Skill Assessment Matrix for Vocational Advancement of Youth ( SAMVAY) isacredit framew"
+    },
+    {
+      "embedding_index": 64,
+      "global_chunk_id": "0dde3198-5d95-411c-b340-c608a8719e54",
+      "chunk_id": "7_National_Credit_Framework_text_64",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 18,
+      "text_preview": "The following formula may be used for the credit calculation in general education component of the c"
+    },
+    {
+      "embedding_index": 65,
+      "global_chunk_id": "322da448-68ec-4aef-ab7a-797ae8779964",
+      "chunk_id": "7_National_Credit_Framework_text_65",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "text_preview": "iv. For self-learning, based on e-content or otherwise, the credit weightage for equivalent hours of"
+    },
+    {
+      "embedding_index": 66,
+      "global_chunk_id": "a3bfd228-e2b8-4aa8-a673-74805e8d9909",
+      "chunk_id": "7_National_Credit_Framework_text_66",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "text_preview": "For the ease of calculation, the break -upofcredit wrt general education component isasin the table "
+    },
+    {
+      "embedding_index": 67,
+      "global_chunk_id": "3ff82fab-5e9e-493b-b9ad-c6e765f9e66d",
+      "chunk_id": "7_National_Credit_Framework_text_67",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "text_preview": "As per SAMVAY, the credits regarding skill component may be awarded in terms of NSQF level certifica"
+    },
+    {
+      "embedding_index": 68,
+      "global_chunk_id": "e50cba6b-8db2-4113-9d08-280a70bebc3f",
+      "chunk_id": "7_National_Credit_Framework_text_68",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "text_preview": "The latest SAMVAY guidelines are available at: SAMVAY_1_. pdf ( aicte-india. org)"
+    },
+    {
+      "embedding_index": 69,
+      "global_chunk_id": "445a2ff1-a646-4a44-beab-c3c29d9b087c",
+      "chunk_id": "7_National_Credit_Framework_text_69",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "text_preview": "Under these guidelines, the skill-based programmes shall have a mix of general and skill components "
+    },
+    {
+      "embedding_index": 70,
+      "global_chunk_id": "a16b1a74-2224-4169-9d87-990a1740b6ee",
+      "chunk_id": "7_National_Credit_Framework_text_70",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "text_preview": "a. Skill Component: The skill component should have a minimum of $6 0 \\%$ ( extendable uptoa maximum"
+    },
+    {
+      "embedding_index": 71,
+      "global_chunk_id": "3a5992f0-ed4e-43bb-96c9-9cb4e9679f59",
+      "chunk_id": "7_National_Credit_Framework_text_71",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 20,
+      "text_preview": "b. General education Component: The balance credits of the program i. e. $3 0 { - } 4 0 \\%$ are of g"
+    },
+    {
+      "embedding_index": 72,
+      "global_chunk_id": "30bb6eca-326e-48e7-81f8-133b0a413c52",
+      "chunk_id": "7_National_Credit_Framework_text_72",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 20,
+      "text_preview": "The detailed guidelines can be accessed at 6556003_Guidelines-for-providing-Skill-BasedEducation-und"
+    },
+    {
+      "embedding_index": 73,
+      "global_chunk_id": "8ae8e765-bbe6-4981-931b-485587a5a6a5",
+      "chunk_id": "7_National_Credit_Framework_text_73",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 20,
+      "text_preview": "The autonomous institutions like IIT/IIMs in India are independent and each institute implements its"
+    },
+    {
+      "embedding_index": 74,
+      "global_chunk_id": "8d8bc4ea-002b-4de9-a057-3e4404436ac7",
+      "chunk_id": "7_National_Credit_Framework_text_74",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 20,
+      "text_preview": "The National Skills Qualification Framework ( NSQF) was notified on 27th December 2013, by the minis"
+    },
+    {
+      "embedding_index": 75,
+      "global_chunk_id": "3ba26359-934f-4ea9-bbba-74f5e8c86638",
+      "chunk_id": "7_National_Credit_Framework_text_75",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 20,
+      "text_preview": "NSQF isanational competency-based skill framework that provides for multiple pathways, horizontal as"
+    },
+    {
+      "embedding_index": 76,
+      "global_chunk_id": "d187bf4f-28fc-4d21-81eb-679395f35e01",
+      "chunk_id": "7_National_Credit_Framework_text_76",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 20,
+      "text_preview": "The NSQF is based onanoutcome based approach wherein each level is defined and described in terms of"
+    },
+    {
+      "embedding_index": 77,
+      "global_chunk_id": "e3b27247-6982-4007-a953-ea294b98a569",
+      "chunk_id": "7_National_Credit_Framework_text_77",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 21,
+      "text_preview": "also helped in alignment of Indian qualifications to international qualifications through existing q"
+    },
+    {
+      "embedding_index": 78,
+      "global_chunk_id": "c5b8761e-6864-4ae0-87c6-4c805e22a224",
+      "chunk_id": "7_National_Credit_Framework_text_78",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 21,
+      "text_preview": "NSQF is anchored in National Council for Vocational education and Training and is implemented throug"
+    },
+    {
+      "embedding_index": 79,
+      "global_chunk_id": "5f6a86b1-ef94-4d65-a1c3-001069b7f118",
+      "chunk_id": "7_National_Credit_Framework_text_79",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 21,
+      "text_preview": "The detailed NSQF notification can be accessed at https://www. ncvet. gov. in/nsqfnotification"
+    },
+    {
+      "embedding_index": 80,
+      "global_chunk_id": "b4c1af0c-ad78-4687-84d3-b4cd5b469fa7",
+      "chunk_id": "7_National_Credit_Framework_text_80",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 21,
+      "text_preview": "The National education Policy 2020, lays emphasis on the integration of the general ( academic) educ"
+    },
+    {
+      "embedding_index": 81,
+      "global_chunk_id": "a7bae1d3-c712-4095-8a7e-2580156d8e9c",
+      "chunk_id": "7_National_Credit_Framework_text_81",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 21,
+      "text_preview": "To fulfil the vision of National education Policy 2020, making education more holistic and effective"
+    },
+    {
+      "embedding_index": 82,
+      "global_chunk_id": "f827104c-bd28-4a7d-9f63-954cc9884a6a",
+      "chunk_id": "7_National_Credit_Framework_text_82",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 21,
+      "text_preview": "The detailed National education Policy is available at https://ncert. nic. in/pdf/nep//NEP_2020. pdf"
+    },
+    {
+      "embedding_index": 83,
+      "global_chunk_id": "2082ef72-b4c0-4129-9036-a15c005b88f3",
+      "chunk_id": "7_National_Credit_Framework_text_83",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 22,
+      "text_preview": "The National education Policy ( NEP) 2020, is the first education policy of the 21st century and aim"
+    },
+    {
+      "embedding_index": 84,
+      "global_chunk_id": "cf305b5f-36de-4c71-8046-1a7e3639f5cb",
+      "chunk_id": "7_National_Credit_Framework_text_84",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 22,
+      "text_preview": "NEP 2020 proposes that curriculum content will be reduced in all subject to its core essentials, to "
+    },
+    {
+      "embedding_index": 85,
+      "global_chunk_id": "7562ed69-338b-47a6-9a46-9f6ebbcdd8fe",
+      "chunk_id": "7_National_Credit_Framework_text_85",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 22,
+      "text_preview": "The NEP 2020 while highlighting the importance of flexible learning states that ‘imaginative and fle"
+    },
+    {
+      "embedding_index": 86,
+      "global_chunk_id": "c144d434-8103-4b63-8780-64fa9a0a66b4",
+      "chunk_id": "7_National_Credit_Framework_text_86",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 23,
+      "text_preview": "NEP 2020, highlights the need for multidisciplinary study from the secondary education stage. It lay"
+    },
+    {
+      "embedding_index": 87,
+      "global_chunk_id": "6582410b-8be1-45a0-9355-8b5b321e9150",
+      "chunk_id": "7_National_Credit_Framework_text_87",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 23,
+      "text_preview": "Given the premise, a well-defined and robust credit framework will be instrumental in enabling seaml"
+    },
+    {
+      "embedding_index": 88,
+      "global_chunk_id": "00ec666c-05ab-4bdd-9b33-802680f380af",
+      "chunk_id": "7_National_Credit_Framework_text_88",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 23,
+      "text_preview": "NEP 2020 highlights that, holistic development and a wide choice of subjects and courses should be t"
+    },
+    {
+      "embedding_index": 89,
+      "global_chunk_id": "4fb07508-19d7-40f0-9e87-56b6e7c360df",
+      "chunk_id": "7_National_Credit_Framework_text_89",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 23,
+      "text_preview": "Learning isaprocess that takes into account multi-dimensions of cognitive, emotional, social and phy"
+    },
+    {
+      "embedding_index": 90,
+      "global_chunk_id": "3ef647f5-e018-45e0-96e6-d7766f05fae3",
+      "chunk_id": "7_National_Credit_Framework_text_90",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 23,
+      "text_preview": "The proposed credit system will take into account the learning hours put inbya learner irrespective "
+    },
+    {
+      "embedding_index": 91,
+      "global_chunk_id": "d7f062bb-f99e-4b30-a435-dfe3f78f3d14",
+      "chunk_id": "7_National_Credit_Framework_text_91",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 23,
+      "text_preview": "Equivalency, in general, determines the level of education and number of years of study completed al"
+    },
+    {
+      "embedding_index": 92,
+      "global_chunk_id": "fb328e45-b127-4358-98ea-415bfdb20a25",
+      "chunk_id": "7_National_Credit_Framework_text_92",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 24,
+      "text_preview": "In order to establish such equivalence, itisimportant that each program within general education and"
+    },
+    {
+      "embedding_index": 93,
+      "global_chunk_id": "8899562d-987e-42df-98f3-41025207ff5e",
+      "chunk_id": "7_National_Credit_Framework_text_93",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 24,
+      "text_preview": "The credit framework shall also allow for identifying measurable outcomes through a welldefined asse"
+    },
+    {
+      "embedding_index": 94,
+      "global_chunk_id": "702d96a3-4c1d-4006-8c2f-a86fa849b997",
+      "chunk_id": "7_National_Credit_Framework_text_94",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 24,
+      "text_preview": "One of the major advantages of the national credit framework will betoenable establishment of eligib"
+    },
+    {
+      "embedding_index": 95,
+      "global_chunk_id": "89489fe7-db6c-43d0-9c27-4c7942e9b46c",
+      "chunk_id": "7_National_Credit_Framework_text_95",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 24,
+      "text_preview": "Flexible learning is important to choose one’s learning pathway leading to the award of certificate,"
+    },
+    {
+      "embedding_index": 96,
+      "global_chunk_id": "0dfe7548-27bf-4cd8-8c90-6a95f93f724c",
+      "chunk_id": "7_National_Credit_Framework_text_96",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 24,
+      "text_preview": "The credit transfer mechanism will also enable a student to enter, exit and re-enter the educational"
+    },
+    {
+      "embedding_index": 97,
+      "global_chunk_id": "0e528843-025c-41ac-99fd-9d5bda5abf85",
+      "chunk_id": "7_National_Credit_Framework_text_97",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 25,
+      "text_preview": "undertaken by the learner, in offline or online mode, subject to assessment. The proposed equivalenc"
+    },
+    {
+      "embedding_index": 98,
+      "global_chunk_id": "d1e27076-73d4-4a12-ad16-a705fcbbde59",
+      "chunk_id": "7_National_Credit_Framework_text_98",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 25,
+      "text_preview": "The multiple entry and exit option or the lifelong learning will serve the following objectives: Rem"
+    },
+    {
+      "embedding_index": 99,
+      "global_chunk_id": "2406a802-0db6-4f84-962b-94ba36568e68",
+      "chunk_id": "7_National_Credit_Framework_text_99",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 25,
+      "text_preview": "The proposed credit framework provides for a comprehensive and practical approach to include all dim"
+    },
+    {
+      "embedding_index": 100,
+      "global_chunk_id": "00d87321-1b92-4f32-a4b5-160254f5dcc2",
+      "chunk_id": "7_National_Credit_Framework_text_100",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 25,
+      "text_preview": "This also enables a student/learner to get benefit of all kinds of learning whether acquired from ac"
+    },
+    {
+      "embedding_index": 101,
+      "global_chunk_id": "76617684-46ae-423e-bf25-7bce0d739ad4",
+      "chunk_id": "7_National_Credit_Framework_text_101",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 26,
+      "text_preview": "learning including relevant experience and professional levels acquired by engaging inawork place."
+    },
+    {
+      "embedding_index": 102,
+      "global_chunk_id": "9c3458e2-cc25-44aa-8bee-78057fd0e6d9",
+      "chunk_id": "7_National_Credit_Framework_text_102",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 26,
+      "text_preview": "This framework will also aim to address the educational acceleration of gifted students which is whe"
+    },
+    {
+      "embedding_index": 103,
+      "global_chunk_id": "0c42e06b-5f51-47ec-92cb-2954e46f76d2",
+      "chunk_id": "7_National_Credit_Framework_text_103",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 26,
+      "text_preview": "Within the broad principles of NCrF, the regulator may define the specific modalities for catering t"
+    },
+    {
+      "embedding_index": 104,
+      "global_chunk_id": "6da2021d-ac11-4b98-b1d0-594179cd3e15",
+      "chunk_id": "7_National_Credit_Framework_text_104",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 27,
+      "text_preview": "In order to fulfil the vision of NEP, 2020 and to facilitate its effective implementation, it was fe"
+    },
+    {
+      "embedding_index": 105,
+      "global_chunk_id": "527e4213-e952-414d-89a1-38266097f985",
+      "chunk_id": "7_National_Credit_Framework_text_105",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 27,
+      "text_preview": "Accordingly, a High-Level Committee, with well-defined ToRs was constituted by MSDE vide Order dated"
+    },
+    {
+      "embedding_index": 106,
+      "global_chunk_id": "537ded99-9c50-4396-a2ec-28ad4879db79",
+      "chunk_id": "7_National_Credit_Framework_text_106",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 27,
+      "text_preview": "The ToR of the Committee and scope is also detailed below: To formulate a framework for allocation o"
+    },
+    {
+      "embedding_index": 107,
+      "global_chunk_id": "101ebcaa-8428-45de-ad5f-a437b6f1840c",
+      "chunk_id": "7_National_Credit_Framework_text_107",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 27,
+      "text_preview": "i. To define credit, components of credit and corresponding credit value \nii. To devise a formula fo"
+    },
+    {
+      "embedding_index": 108,
+      "global_chunk_id": "0432df59-3e88-4933-a0ff-fc179ce36dd5",
+      "chunk_id": "7_National_Credit_Framework_text_108",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 27,
+      "text_preview": "vi. Identify the mechanism for accumulation, storage, and redemption of credit through Credit Bank"
+    },
+    {
+      "embedding_index": 109,
+      "global_chunk_id": "016e7686-1667-4aea-b4e3-be52ea1296fe",
+      "chunk_id": "7_National_Credit_Framework_text_109",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 28,
+      "text_preview": "The National Credit Framework ( NCrF) isacomprehensive framework encompassing elementary, school, hi"
+    },
+    {
+      "embedding_index": 110,
+      "global_chunk_id": "c48b3c4a-7734-43de-b935-ef1d6dd0be6d",
+      "chunk_id": "7_National_Credit_Framework_text_110",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 28,
+      "text_preview": "The NCrF has been build and developed on the existing regulations guidelines and qualification frame"
+    },
+    {
+      "embedding_index": 111,
+      "global_chunk_id": "e2481354-3ae8-4d16-8520-bcc2f82d6e91",
+      "chunk_id": "7_National_Credit_Framework_text_111",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 28,
+      "text_preview": "The National Higher education Qualifications Framework ( NHEQF) has been formulated by UGC to achiev"
+    },
+    {
+      "embedding_index": 112,
+      "global_chunk_id": "71495af9-cf26-411a-be80-f47efe36d143",
+      "chunk_id": "7_National_Credit_Framework_text_112",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 28,
+      "text_preview": "The National Credit Framework ( NCrF) is the mother framework which enables seamless integration and"
+    },
+    {
+      "embedding_index": 113,
+      "global_chunk_id": "348999b2-787e-4e0b-95f3-72ab87fb508a",
+      "chunk_id": "7_National_Credit_Framework_text_113",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 28,
+      "text_preview": "The National Credit Framework ( NCrF) shall beaninclusive umbrella framework to integrate the credit"
+    },
+    {
+      "embedding_index": 114,
+      "global_chunk_id": "2e182dd0-8b81-45ef-833b-6e81df1af6bc",
+      "chunk_id": "7_National_Credit_Framework_text_114",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 28,
+      "text_preview": "Accordingly, the integration of all qualification frameworks into NCrF document has been discussed a"
+    },
+    {
+      "embedding_index": 115,
+      "global_chunk_id": "c9fbb07e-af84-4cfc-accc-cfaa8673e207",
+      "chunk_id": "7_National_Credit_Framework_text_115",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 29,
+      "text_preview": "that the National Credit Framework ( NCrF) will be the mother document integrating the credits in th"
+    },
+    {
+      "embedding_index": 116,
+      "global_chunk_id": "da54fe4f-b341-4103-bc5d-1b150c2ea51b",
+      "chunk_id": "7_National_Credit_Framework_text_116",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 29,
+      "text_preview": "Thus, there would be only one credit framework for higher education, school education and skill educ"
+    },
+    {
+      "embedding_index": 117,
+      "global_chunk_id": "93e403c2-3106-43ea-9ff5-3b5c15af6835",
+      "chunk_id": "7_National_Credit_Framework_text_117",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 29,
+      "text_preview": "a. Provision for creditisation of all types of learnings; Assignments of Credit levels for all learn"
+    },
+    {
+      "embedding_index": 118,
+      "global_chunk_id": "b31c8ef3-8eb8-444e-92c1-849fda18ed99",
+      "chunk_id": "7_National_Credit_Framework_text_118",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 30,
+      "text_preview": "Draft Report of National Credit Framework n. Provision for integration of vocational education & ski"
+    },
+    {
+      "embedding_index": 119,
+      "global_chunk_id": "506a055e-8fe2-4d6e-bbbc-3a7e8585d36e",
+      "chunk_id": "7_National_Credit_Framework_text_119",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 30,
+      "text_preview": "However, the credits are tobeintegrated from the different qualification frameworks i. e. school edu"
+    },
+    {
+      "embedding_index": 120,
+      "global_chunk_id": "bf412b00-3b2e-41ad-b486-be00525d52e4",
+      "chunk_id": "7_National_Credit_Framework_text_120",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 30,
+      "text_preview": "a. The curricular structure for accreditation/ approval of qualifications; \nb. Planning and delivery"
+    },
+    {
+      "embedding_index": 121,
+      "global_chunk_id": "7e6bf51d-3635-4a1f-a9a3-c487cbd71c10",
+      "chunk_id": "7_National_Credit_Framework_text_121",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 30,
+      "text_preview": "The National Credit Framework ( NCrF) shall act asabroad enabling framework for all regulatory organ"
+    },
+    {
+      "embedding_index": 122,
+      "global_chunk_id": "251784e1-4a05-4517-9748-3d27e02b2be6",
+      "chunk_id": "7_National_Credit_Framework_text_122",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 31,
+      "text_preview": "Draft Report of National Credit Framework While the NCrF lays down broad framework and enabling prov"
+    },
+    {
+      "embedding_index": 123,
+      "global_chunk_id": "1b86acdc-c58b-4bdc-9d5c-45f187c7ea57",
+      "chunk_id": "7_National_Credit_Framework_text_123",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 31,
+      "text_preview": "‘Credit’ is recognition that a learner has completed a prior course of learning, corresponding toaqu"
+    },
+    {
+      "embedding_index": 124,
+      "global_chunk_id": "861ba996-fcda-4e05-afc7-722ecc0887b7",
+      "chunk_id": "7_National_Credit_Framework_text_124",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 31,
+      "text_preview": "The credit points give learners, employers, and institutions a means of describing and comparing the"
+    },
+    {
+      "embedding_index": 125,
+      "global_chunk_id": "2bfd01af-5d7d-4178-ac52-8f9de3f192a6",
+      "chunk_id": "7_National_Credit_Framework_text_125",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 31,
+      "text_preview": "In line with the philosophy of NEP 2020, which emphasizes on considering any kind of learning as par"
+    },
+    {
+      "embedding_index": 126,
+      "global_chunk_id": "d1d64a4d-435b-4ff4-ae70-a4305c7f9a63",
+      "chunk_id": "7_National_Credit_Framework_text_126",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 31,
+      "text_preview": "Accordingly, it has been agreed by all stakeholders that under the National Credit Framework ( NCrF)"
+    },
+    {
+      "embedding_index": 127,
+      "global_chunk_id": "67f5c4a7-e9a9-4bd7-a4af-f30b83e212aa",
+      "chunk_id": "7_National_Credit_Framework_text_127",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 32,
+      "text_preview": "NCrF recognises no hard separation between different areas of learning, i. e. arts and sciences, voc"
+    },
+    {
+      "embedding_index": 128,
+      "global_chunk_id": "8742243b-f4cc-4341-9924-a88a2c8fc51f",
+      "chunk_id": "7_National_Credit_Framework_text_128",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 32,
+      "text_preview": "Thus under the National Credit Framework ( NCrF) every learning can be creditised subject to its ass"
+    },
+    {
+      "embedding_index": 129,
+      "global_chunk_id": "74b11f7c-056e-4276-9e7d-cb7bda4674af",
+      "chunk_id": "7_National_Credit_Framework_text_129",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 33,
+      "text_preview": "qualification for assignment of credits. It will be under the purview of respective regulator/ insti"
+    },
+    {
+      "embedding_index": 130,
+      "global_chunk_id": "d6d1801a-e985-4362-9a54-6d18c48b4847",
+      "chunk_id": "7_National_Credit_Framework_text_130",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 33,
+      "text_preview": "A snapshot of learning hours across grades ( from pre-school to Ph. D) is given in table below."
+    },
+    {
+      "embedding_index": 131,
+      "global_chunk_id": "1c91bd4c-f6bb-4e82-838e-d28e205f9b0e",
+      "chunk_id": "7_National_Credit_Framework_text_131",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 36,
+      "text_preview": "\\* These hours will not include the self-study hours except in case of except in the case of distanc"
+    },
+    {
+      "embedding_index": 132,
+      "global_chunk_id": "36ec0e4e-1517-46d7-aceb-99640456fd04",
+      "chunk_id": "7_National_Credit_Framework_text_132",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 36,
+      "text_preview": "In order to align with the international best practices being followed wrt assigning credit levels, "
+    },
+    {
+      "embedding_index": 133,
+      "global_chunk_id": "22e9ca5f-4e2c-4a14-9762-466d49a90a79",
+      "chunk_id": "7_National_Credit_Framework_text_133",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 36,
+      "text_preview": "The credit level that can be attained after completion of school education i. e. grade $1 2 ^ { \\mat"
+    },
+    {
+      "embedding_index": 134,
+      "global_chunk_id": "4b188359-f392-4bcd-8a98-f29f5ddb32aa",
+      "chunk_id": "7_National_Credit_Framework_text_134",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 37,
+      "text_preview": "The Credit levels tobeassigned across school/ higher/ vocational education/ skilling, ( independent "
+    },
+    {
+      "embedding_index": 135,
+      "global_chunk_id": "c75d958e-9e82-4045-b3c2-d98c4f538e54",
+      "chunk_id": "7_National_Credit_Framework_text_135",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 37,
+      "text_preview": "The level descriptors for deciding the NCrF credit levels have been defined for every qualification "
+    },
+    {
+      "embedding_index": 136,
+      "global_chunk_id": "e346c541-fb28-4aca-abef-2a9ef3717ff7",
+      "chunk_id": "7_National_Credit_Framework_text_136",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 37,
+      "text_preview": "E. g. In case of National Skills Qualification Framework ( NSQF), there are 5 level descriptors name"
+    },
+    {
+      "embedding_index": 137,
+      "global_chunk_id": "6b14732c-2b64-43f5-aff8-886129a7d9b2",
+      "chunk_id": "7_National_Credit_Framework_text_137",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 37,
+      "text_preview": "In accordance with the international best practice and the current recommendations of NHEQF, the fra"
+    },
+    {
+      "embedding_index": 138,
+      "global_chunk_id": "450ba75d-4efb-4c97-8cee-181de3c40dab",
+      "chunk_id": "7_National_Credit_Framework_text_138",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 37,
+      "text_preview": "The NCrF provides basic guidelines on total learning hours inayear or part thereof and credits tobea"
+    },
+    {
+      "embedding_index": 139,
+      "global_chunk_id": "15fab049-61aa-45db-a7a3-873ae9d7b953",
+      "chunk_id": "7_National_Credit_Framework_text_139",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 37,
+      "text_preview": "Wherever necessary, if the curriculum so demands, the concerned regulator/ autonomous institution ma"
+    },
+    {
+      "embedding_index": 140,
+      "global_chunk_id": "f2015948-c018-416e-a62f-2481bd184a3a",
+      "chunk_id": "7_National_Credit_Framework_text_140",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 38,
+      "text_preview": "Any additional program/ course undertaken by the student/ learner beyond the prescribed 1200 learnin"
+    },
+    {
+      "embedding_index": 141,
+      "global_chunk_id": "24806286-0533-45c8-acbc-856502643fbe",
+      "chunk_id": "7_National_Credit_Framework_text_141",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 38,
+      "text_preview": "The basic principle of the credit framework is that credits are a function of successful completion "
+    },
+    {
+      "embedding_index": 142,
+      "global_chunk_id": "0dc98b04-f988-4474-a855-e91b10c9b2ed",
+      "chunk_id": "7_National_Credit_Framework_text_142",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 38,
+      "text_preview": "Itisalso clear that in case of academic education ( both school and higher education) progression to"
+    },
+    {
+      "embedding_index": 143,
+      "global_chunk_id": "33783989-88ac-4b06-9323-8a7472a73426",
+      "chunk_id": "7_National_Credit_Framework_text_143",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 38,
+      "text_preview": "In addition, to enable implementation of multiple entry- multiple exit options, assessment isacompul"
+    },
+    {
+      "embedding_index": 144,
+      "global_chunk_id": "6cceed3c-d6e0-4db6-9546-ec21d2cd3e04",
+      "chunk_id": "7_National_Credit_Framework_text_144",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 38,
+      "text_preview": "The assessment is thus mandatory for earning credits for all types of learning and progression to th"
+    },
+    {
+      "embedding_index": 145,
+      "global_chunk_id": "fa2d31a5-022f-4a47-bfa3-5195cacdd128",
+      "chunk_id": "7_National_Credit_Framework_text_145",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 38,
+      "text_preview": "The total Credit Points earned by the student could be obtained by multiplying the credits earned wi"
+    },
+    {
+      "embedding_index": 146,
+      "global_chunk_id": "d017ef46-0c2e-4407-a15c-10e9f625c1de",
+      "chunk_id": "7_National_Credit_Framework_text_146",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 39,
+      "text_preview": "higher, technical or Vocational education programs/ courses at multiple levels enabling horizontal a"
+    },
+    {
+      "embedding_index": 147,
+      "global_chunk_id": "68ea52d7-7d7f-4924-a3f3-ffd2ea05cfc8",
+      "chunk_id": "7_National_Credit_Framework_text_147",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 39,
+      "text_preview": "The National Credit Framework ( NCrF) also enables creditisation of Experiential learning including "
+    },
+    {
+      "embedding_index": 148,
+      "global_chunk_id": "68c18d81-eaf0-48b8-b851-69d8a5a2f01f",
+      "chunk_id": "7_National_Credit_Framework_text_148",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 39,
+      "text_preview": "Accordingly, the assessment bands so formulated are as indicated in the Table 3."
+    },
+    {
+      "embedding_index": 149,
+      "global_chunk_id": "3e63174f-cc29-40da-8fda-1a4af9f9c9dc",
+      "chunk_id": "7_National_Credit_Framework_text_149",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 41,
+      "text_preview": "The National Credit Framework encompasses the following main components/ dimensions of learning:"
+    },
+    {
+      "embedding_index": 150,
+      "global_chunk_id": "d1cfd5c6-947b-4100-aebd-60f57cf8c5c1",
+      "chunk_id": "7_National_Credit_Framework_text_150",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 41,
+      "text_preview": " Credits earned by virtue of completed academic education \n Credits earned by virtue of undergoing"
+    },
+    {
+      "embedding_index": 151,
+      "global_chunk_id": "c8d25a00-512a-43f6-8912-06739c3c9be7",
+      "chunk_id": "7_National_Credit_Framework_text_151",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 41,
+      "text_preview": "At present, the school education system follows a system of progression of academic classes that is "
+    },
+    {
+      "embedding_index": 152,
+      "global_chunk_id": "5a821110-231f-45b8-b53e-fc62c16723c8",
+      "chunk_id": "7_National_Credit_Framework_text_152",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 41,
+      "text_preview": "For higher and professional education, frameworks namely CBCS and SAMVAY ( for skill based programs)"
+    },
+    {
+      "embedding_index": 153,
+      "global_chunk_id": "0fa333fa-79a6-4149-89e8-cdd7eeb9527c",
+      "chunk_id": "7_National_Credit_Framework_text_153",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 41,
+      "text_preview": "With the emphasis on mainstreaming vocational education and training/ skilling under the National ed"
+    },
+    {
+      "embedding_index": 154,
+      "global_chunk_id": "f11d2140-a64f-4140-95e9-77c9f2588ef7",
+      "chunk_id": "7_National_Credit_Framework_text_154",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 41,
+      "text_preview": "One of the most unique, practical & beneficial features of the National Credit Framework is assignme"
+    },
+    {
+      "embedding_index": 155,
+      "global_chunk_id": "d8d7121a-1e4a-4251-abe0-5a0b591d14ff",
+      "chunk_id": "7_National_Credit_Framework_text_155",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 42,
+      "text_preview": "student. This means that the experience attained byaperson after undergoing a particular education ("
+    },
+    {
+      "embedding_index": 156,
+      "global_chunk_id": "d2c5f3e9-3e39-4ba9-be3d-9736e4c13f8d",
+      "chunk_id": "7_National_Credit_Framework_text_156",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 42,
+      "text_preview": "The credit assigned by virtue of relevant experience would enable learners to progress in their care"
+    },
+    {
+      "embedding_index": 157,
+      "global_chunk_id": "05b76547-ac72-45a0-90ca-cb6d7c57b93e",
+      "chunk_id": "7_National_Credit_Framework_text_157",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 42,
+      "text_preview": "Thus the National Credit Framework ( NCrF) provides for Assignment, Accumulation, Storage, Transfer "
+    },
+    {
+      "embedding_index": 158,
+      "global_chunk_id": "dd83974a-51ef-48fe-b9b6-c640c20ae3b9",
+      "chunk_id": "7_National_Credit_Framework_text_158",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 42,
+      "text_preview": "A diagrammatic view of the dimensions of the credit assignment isinfigure I below:"
+    },
+    {
+      "embedding_index": 159,
+      "global_chunk_id": "62088612-9ae7-4d19-bf71-c56882c989ed",
+      "chunk_id": "7_National_Credit_Framework_text_159",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 44,
+      "text_preview": "Based on the principles defined in the sections above, the total credits attained byastudent who has"
+    },
+    {
+      "embedding_index": 160,
+      "global_chunk_id": "97db696d-9190-4a8a-85ee-f54967e5e3d2",
+      "chunk_id": "7_National_Credit_Framework_text_160",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 44,
+      "text_preview": "In case of higher education, all one year programs offered will have notional learning hours of 1200"
+    },
+    {
+      "embedding_index": 161,
+      "global_chunk_id": "34e717ca-5d59-4f92-b2fc-5d9957203428",
+      "chunk_id": "7_National_Credit_Framework_text_161",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 45,
+      "text_preview": "Accordingly, the assignment of credits wrt Higher education as prescribed under NHEQF, for all strea"
+    },
+    {
+      "embedding_index": 162,
+      "global_chunk_id": "31ba80d5-2525-415a-bae5-8cb6ca08ce41",
+      "chunk_id": "7_National_Credit_Framework_text_162",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 46,
+      "text_preview": "The Credit assignment isafunction of total hours of learning put inbya student inayear versus total "
+    },
+    {
+      "embedding_index": 163,
+      "global_chunk_id": "eacb6669-f693-4aca-a24a-7b49dd149c7f",
+      "chunk_id": "7_National_Credit_Framework_text_163",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 46,
+      "text_preview": "Assignment of Credits has also been enabled for online and blended learning in vocational education "
+    },
+    {
+      "embedding_index": 164,
+      "global_chunk_id": "295a91f5-853c-4bf9-9121-99dd816491cd",
+      "chunk_id": "7_National_Credit_Framework_text_164",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 46,
+      "text_preview": "For the vocational education and training/ skilling ecosystem, wrt credit assignment, the following "
+    },
+    {
+      "embedding_index": 165,
+      "global_chunk_id": "5230c0fa-a2cd-49b9-a5bf-09a8ad6de7cb",
+      "chunk_id": "7_National_Credit_Framework_text_165",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 46,
+      "text_preview": " Total notional learning hours inayear ( for purpose of calculating credits): 1200  Credits tobeal"
+    },
+    {
+      "embedding_index": 166,
+      "global_chunk_id": "212e7991-94ed-4d2e-8bc3-29726fc31b85",
+      "chunk_id": "7_National_Credit_Framework_text_166",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 46,
+      "text_preview": "The credit assignment for vocational/ skill education as per NSQF levels & credit assignment at diff"
+    },
+    {
+      "embedding_index": 167,
+      "global_chunk_id": "34f041b3-45c2-48e5-b300-f05f114c60d0",
+      "chunk_id": "7_National_Credit_Framework_text_167",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 54,
+      "text_preview": "One of the dimensions of assigning credit within the NCrF is through relevant experience/ proficienc"
+    },
+    {
+      "embedding_index": 168,
+      "global_chunk_id": "1f40226a-39e1-43da-84e9-b0601df1e86c",
+      "chunk_id": "7_National_Credit_Framework_text_168",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 54,
+      "text_preview": "The total Credit Points earned by the student could be obtained by multiplying the credits earned wi"
+    },
+    {
+      "embedding_index": 169,
+      "global_chunk_id": "a781fd13-c077-4194-806f-c30d820c531b",
+      "chunk_id": "7_National_Credit_Framework_text_169",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 54,
+      "text_preview": "The principle of calculating credits acquired byacandidate by virtue of relevant Experiential learni"
+    },
+    {
+      "embedding_index": 170,
+      "global_chunk_id": "9bafb378-2219-4079-bbfb-13ae4f16daf9",
+      "chunk_id": "7_National_Credit_Framework_text_170",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 55,
+      "text_preview": "The total credit points earned byastudent/learner isamultiplication of total credits earned atalevel"
+    },
+    {
+      "embedding_index": 171,
+      "global_chunk_id": "3136d9be-7f07-448b-b9e8-57d337ecb17c",
+      "chunk_id": "7_National_Credit_Framework_text_171",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 55,
+      "text_preview": "Such a student, if desirous of returning to mainstream education shall benefit as the experience gai"
+    },
+    {
+      "embedding_index": 172,
+      "global_chunk_id": "ced39f61-5525-4193-824b-015042ab0c10",
+      "chunk_id": "7_National_Credit_Framework_text_172",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 55,
+      "text_preview": "Accordingly, at any point of time, the overall credit points accumulated byastudent shall be calcula"
+    },
+    {
+      "embedding_index": 173,
+      "global_chunk_id": "d948d6ae-789e-4c23-8ea6-69ff2ed25921",
+      "chunk_id": "7_National_Credit_Framework_text_173",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 56,
+      "text_preview": "The transfer of Credits may be defined as the process of mutual acceptance of credits between two en"
+    },
+    {
+      "embedding_index": 174,
+      "global_chunk_id": "4d5af819-6342-4e16-bdd4-60ea0e20391f",
+      "chunk_id": "7_National_Credit_Framework_text_174",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 56,
+      "text_preview": "While having the requisite number of credits shall make a learner fulfill the eligibility criteria f"
+    },
+    {
+      "embedding_index": 175,
+      "global_chunk_id": "f1e3d4b2-ec21-45e3-9087-1cf9c8c82749",
+      "chunk_id": "7_National_Credit_Framework_text_175",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 56,
+      "text_preview": "The transfer of credits shall fulfil the following objectives: i. Establishing equivalence between G"
+    },
+    {
+      "embedding_index": 176,
+      "global_chunk_id": "5b03d5fa-5e95-468e-b0fe-397d2164558f",
+      "chunk_id": "7_National_Credit_Framework_text_176",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 56,
+      "text_preview": "One of the objectives of the National Credit Framework istoestablish equivalence between various str"
+    },
+    {
+      "embedding_index": 177,
+      "global_chunk_id": "f6c75e33-26f6-462d-849a-d38f7b665771",
+      "chunk_id": "7_National_Credit_Framework_text_177",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 57,
+      "text_preview": "Such an equivalence shall be applicable to all kinds of program including those being implemented wi"
+    },
+    {
+      "embedding_index": 178,
+      "global_chunk_id": "89cfd9d1-88d4-4dba-8787-00587a1a8eea",
+      "chunk_id": "7_National_Credit_Framework_text_178",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 57,
+      "text_preview": "The matrix of equivalence between school education & vocational education and training/ skilling and"
+    },
+    {
+      "embedding_index": 179,
+      "global_chunk_id": "19d071ea-274c-49ef-b433-82f6cc6819b3",
+      "chunk_id": "7_National_Credit_Framework_text_179",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 58,
+      "text_preview": "Table 8: The National Credit Framework Levels ( NCrF), Academic Levels ( National School education, "
+    },
+    {
+      "embedding_index": 180,
+      "global_chunk_id": "359e3251-f6fd-48fa-9ca1-dd4e3149dc08",
+      "chunk_id": "7_National_Credit_Framework_text_180",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 65,
+      "text_preview": "a. The NTC stands for National Trade Certificate and isaone or two- year duration certificate progra"
+    },
+    {
+      "embedding_index": 181,
+      "global_chunk_id": "3b77cbf0-be45-4c94-82e5-4c037ee4cd88",
+      "chunk_id": "7_National_Credit_Framework_text_181",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 65,
+      "text_preview": "a. Open schooling isanalternative and complementary to formal education offering an opportunity for "
+    },
+    {
+      "embedding_index": 182,
+      "global_chunk_id": "edf0b0b2-765b-4f80-a527-604f3636bd3d",
+      "chunk_id": "7_National_Credit_Framework_text_182",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 66,
+      "text_preview": "Draft Report of National Credit Framework"
+    },
+    {
+      "embedding_index": 183,
+      "global_chunk_id": "263aae27-0e90-4d1b-80a4-12aeec9f628d",
+      "chunk_id": "7_National_Credit_Framework_text_183",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 66,
+      "text_preview": "is largely placed in the categories of equivalency or alternative schooling, life skills education &"
+    },
+    {
+      "embedding_index": 184,
+      "global_chunk_id": "6290ceda-2348-45d6-b084-ac6701810443",
+      "chunk_id": "7_National_Credit_Framework_text_184",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 67,
+      "text_preview": "I. The credit points earned and accumulated can be used to determine the eligibility for taking admi"
+    },
+    {
+      "embedding_index": 185,
+      "global_chunk_id": "109c6ce8-02e9-4664-a40b-17608b230f3f",
+      "chunk_id": "7_National_Credit_Framework_text_185",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 67,
+      "text_preview": "a. It must be ensured that the student has acquired and accumulated the credit points needed for mov"
+    },
+    {
+      "embedding_index": 186,
+      "global_chunk_id": "f10a415b-c235-4c1c-8594-2db9c0135387",
+      "chunk_id": "7_National_Credit_Framework_text_186",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": "International level/ Commonwealth/ Olympics/ World Championships etc), the level of representation ("
+    },
+    {
+      "embedding_index": 187,
+      "global_chunk_id": "8af305d3-31f1-4b39-9102-b9218d81148c",
+      "chunk_id": "7_National_Credit_Framework_text_187",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": "The credit transfer mechanism will also enable a student/ learner to enter and exit the educational "
+    },
+    {
+      "embedding_index": 188,
+      "global_chunk_id": "276a4c12-44c1-4700-9052-1ee3187528b6",
+      "chunk_id": "7_National_Credit_Framework_text_188",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": "While NCrF isanenabling framework, the detailed guidelines of ME-ME shall beasdefined/ prescribed by"
+    },
+    {
+      "embedding_index": 189,
+      "global_chunk_id": "8c6bd8c7-9d02-4ac5-a4e3-8979d442bc36",
+      "chunk_id": "7_National_Credit_Framework_text_189",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": "Some examples of ME-ME are: i. A $5 ^ { \\mathrm { t h } }$ grade student with total accumulated cred"
+    },
+    {
+      "embedding_index": 190,
+      "global_chunk_id": "5934f1cb-28de-4d04-a776-4d5bbd1a54b6",
+      "chunk_id": "7_National_Credit_Framework_text_190",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": " Certificate after completing one year inadiscipline or field including vocational and professional"
+    },
+    {
+      "embedding_index": 191,
+      "global_chunk_id": "d0afe90a-5b45-4b81-b75e-1d9538399f45",
+      "chunk_id": "7_National_Credit_Framework_text_191",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": "iii. For the Master’s programmes:"
+    },
+    {
+      "embedding_index": 192,
+      "global_chunk_id": "7ec58f3e-7f93-489f-963d-381048528d45",
+      "chunk_id": "7_National_Credit_Framework_text_192",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 68,
+      "text_preview": " A two-year programme with the second year devoted entirely to research for those who have complete"
+    },
+    {
+      "embedding_index": 193,
+      "global_chunk_id": "0ed10579-16e3-4ec3-ae5c-40e2548ce10f",
+      "chunk_id": "7_National_Credit_Framework_text_193",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "An integrated five-year Bachelor’s/Master’s programme with an option to exit at the end of the third"
+    },
+    {
+      "embedding_index": 194,
+      "global_chunk_id": "b051ca11-69c8-4828-9879-a341e847796b",
+      "chunk_id": "7_National_Credit_Framework_text_194",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "iv. Other Examples of ME-ME"
+    },
+    {
+      "embedding_index": 195,
+      "global_chunk_id": "f54c0131-b4e5-4fd7-855a-cb3f1ef2a007",
+      "chunk_id": "7_National_Credit_Framework_text_195",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "Learner after completing first year of M. Tech program, shall be eligible for an M. Voc degree, upon"
+    },
+    {
+      "embedding_index": 196,
+      "global_chunk_id": "1b1cec6d-02f6-4461-a745-77fbafc2ea22",
+      "chunk_id": "7_National_Credit_Framework_text_196",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "The responsibility of detailing out the multiple entry- multiple exit options for the general educat"
+    },
+    {
+      "embedding_index": 197,
+      "global_chunk_id": "3ebe9243-49bf-4a1f-853d-d6450d350ced",
+      "chunk_id": "7_National_Credit_Framework_text_197",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "The ME-ME options separately for higher education ( both by UGC and AICTE) isatAnnexure I."
+    },
+    {
+      "embedding_index": 198,
+      "global_chunk_id": "95ef1500-163e-4eec-b4a3-2b9e519667ba",
+      "chunk_id": "7_National_Credit_Framework_text_198",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "The framework envisages a well-developed Academic Bank of Credits ( ABC), encompassing the requireme"
+    },
+    {
+      "embedding_index": 199,
+      "global_chunk_id": "351939c8-39d2-4077-aaaf-b7c98e2fce9b",
+      "chunk_id": "7_National_Credit_Framework_text_199",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 69,
+      "text_preview": "ABC shall enable the integration of multiple disciplines of higher learning leading to the desired l"
+    },
+    {
+      "embedding_index": 200,
+      "global_chunk_id": "8d9595cf-2216-421e-97ae-6ea6cd56f85c",
+      "chunk_id": "7_National_Credit_Framework_text_200",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "vocational education and training/ skilling through a formal system of credit recognition, credit ac"
+    },
+    {
+      "embedding_index": 201,
+      "global_chunk_id": "71ac51ea-c25c-4a72-8111-d73fb292e913",
+      "chunk_id": "7_National_Credit_Framework_text_201",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "The Academic Bank of Credit shall bearepository of all credits earned byastudent. These credits shal"
+    },
+    {
+      "embedding_index": 202,
+      "global_chunk_id": "aac1142f-07b3-4e13-9e11-1956cd453faf",
+      "chunk_id": "7_National_Credit_Framework_text_202",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "This will be the responsibility of independent regulators based on the type, relevance and future ut"
+    },
+    {
+      "embedding_index": 203,
+      "global_chunk_id": "b16af83e-8c38-42ae-8427-0eb0302e1bea",
+      "chunk_id": "7_National_Credit_Framework_text_203",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "The verification of credits accumulated and stored in ABC will be done by respective regulators."
+    },
+    {
+      "embedding_index": 204,
+      "global_chunk_id": "843b8098-97f1-40bf-a9a6-eddd7bb030dd",
+      "chunk_id": "7_National_Credit_Framework_text_204",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "The ABC will promote equity, quality, flexibility, mobility, collaboration, transparency, and integr"
+    },
+    {
+      "embedding_index": 205,
+      "global_chunk_id": "ca32fa5d-0e8d-48aa-8d8d-08270a7f82bd",
+      "chunk_id": "7_National_Credit_Framework_text_205",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "Students who pursue education as freelancers or through open / home / online schooling can also accu"
+    },
+    {
+      "embedding_index": 206,
+      "global_chunk_id": "57e1c41c-0901-49af-9e49-84643475b3ab",
+      "chunk_id": "7_National_Credit_Framework_text_206",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 70,
+      "text_preview": "For credit redemption, the process tobefollowed will beasper the Academic Bank Guidelines notified b"
+    },
+    {
+      "embedding_index": 207,
+      "global_chunk_id": "e846f16c-ab3e-49bd-9a90-1668f0f245bb",
+      "chunk_id": "7_National_Credit_Framework_text_207",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 71,
+      "text_preview": "‘Credits earned by students shall be deposited in the respective Bank Account with ABC and shall be "
+    },
+    {
+      "embedding_index": 208,
+      "global_chunk_id": "75a8ac86-b789-4b8c-87d7-c2bd898a8141",
+      "chunk_id": "7_National_Credit_Framework_text_208",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 72,
+      "text_preview": "The framework would be considered as successful only ifitis responsive to the special needs of vario"
+    },
+    {
+      "embedding_index": 209,
+      "global_chunk_id": "cbd41523-9722-4c69-ae45-e1aec01f4dce",
+      "chunk_id": "7_National_Credit_Framework_text_209",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 72,
+      "text_preview": "a. education acceleration is one of the established mechanism for gifted children. The practice of e"
+    },
+    {
+      "embedding_index": 210,
+      "global_chunk_id": "2231895e-1d23-4bb8-a026-fe671eb70dde",
+      "chunk_id": "7_National_Credit_Framework_text_210",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 72,
+      "text_preview": "i. NCERT & SCERTs when framing the national or state curricular and pedagogical framework for early "
+    },
+    {
+      "embedding_index": 211,
+      "global_chunk_id": "609f8f76-6c73-4e2a-8074-c1e053427774",
+      "chunk_id": "7_National_Credit_Framework_text_211",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 73,
+      "text_preview": "There exists a large section of student/ learners/ persons/ workers who have acquired knowledge, ski"
+    },
+    {
+      "embedding_index": 212,
+      "global_chunk_id": "b8b11daf-3f8e-4780-9064-87738d7dd00c",
+      "chunk_id": "7_National_Credit_Framework_text_212",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 73,
+      "text_preview": "To enable such student/ learners/ persons/ workers, NCrF provides for ‘Recognition of Prior Learning"
+    },
+    {
+      "embedding_index": 213,
+      "global_chunk_id": "e6bb13fb-e0fd-4f48-8ab8-7cef12efa3a9",
+      "chunk_id": "7_National_Credit_Framework_text_213",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 73,
+      "text_preview": "As envisaged under NEP, NCrF provides for earning and accumulation of credits through education, ski"
+    },
+    {
+      "embedding_index": 214,
+      "global_chunk_id": "13cdfe11-d622-4b92-bb7f-707224335903",
+      "chunk_id": "7_National_Credit_Framework_text_214",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 73,
+      "text_preview": "Therefore, NCrF shall provide a gateway to the student/ learners/ persons/ workers to creditise thei"
+    },
+    {
+      "embedding_index": 215,
+      "global_chunk_id": "1d5b22e9-79bc-42bf-9023-0628bc807d46",
+      "chunk_id": "7_National_Credit_Framework_text_215",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 74,
+      "text_preview": "progression pathways to higher education for such persons and enhance the employability and/or entre"
+    },
+    {
+      "embedding_index": 216,
+      "global_chunk_id": "526d1e11-ad96-480b-a095-77e885e91df0",
+      "chunk_id": "7_National_Credit_Framework_text_216",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 74,
+      "text_preview": "The similar concept of RPL may also be extended to the general education domain to create options fo"
+    },
+    {
+      "embedding_index": 217,
+      "global_chunk_id": "777f9bb1-fbcc-435b-a25e-0832c77e1e9d",
+      "chunk_id": "7_National_Credit_Framework_text_217",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 74,
+      "text_preview": "The students should also have option to get themselves assessed for learning /subject/ skills acquir"
+    },
+    {
+      "embedding_index": 218,
+      "global_chunk_id": "789d85a2-76c8-467d-b840-6cefa9b3f56a",
+      "chunk_id": "7_National_Credit_Framework_text_218",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 74,
+      "text_preview": "The NEP discusses the rich heritage of ancient and Indian eternal knowledge and promotes the nurturi"
+    },
+    {
+      "embedding_index": 219,
+      "global_chunk_id": "54a02241-ba34-4983-93b5-91f5362205d4",
+      "chunk_id": "7_National_Credit_Framework_text_219",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 74,
+      "text_preview": "However, the Recognition of Prior Learning ( RPL) would require trained master assessors and assesso"
+    },
+    {
+      "embedding_index": 220,
+      "global_chunk_id": "c5ea4768-2fdc-4633-ac38-e10ff48e48db",
+      "chunk_id": "7_National_Credit_Framework_text_220",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 74,
+      "text_preview": "The detailed guidelines for implementation of RPL will be developed by the respective regulators. Th"
+    },
+    {
+      "embedding_index": 221,
+      "global_chunk_id": "bd5dd4a2-e21b-4665-a0ac-aa21d3a390ba",
+      "chunk_id": "7_National_Credit_Framework_text_221",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 75,
+      "text_preview": "i. Learning Outcome based assessment approach recognizing learning through informal methods; \nii. Pr"
+    },
+    {
+      "embedding_index": 222,
+      "global_chunk_id": "c6d3bcd2-52be-4dd3-8962-0065151eb183",
+      "chunk_id": "7_National_Credit_Framework_text_222",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 75,
+      "text_preview": "Provision and detailed guidelines would also be developed for handling hackathons, and subject Olymp"
+    },
+    {
+      "embedding_index": 223,
+      "global_chunk_id": "db1cdd9c-d9e6-41e9-8c41-ac1a58a026d0",
+      "chunk_id": "7_National_Credit_Framework_text_223",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 75,
+      "text_preview": "a. Hackathons, and subject Olympiads, both would need special assessment methods and credit assignme"
+    },
+    {
+      "embedding_index": 224,
+      "global_chunk_id": "3906b325-b301-42f8-9176-055a016aa7cb",
+      "chunk_id": "7_National_Credit_Framework_text_224",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 76,
+      "text_preview": "The National Credit Framework ( NCrF) will have the following benefits: i. NCrF will enables fulfill"
+    },
+    {
+      "embedding_index": 225,
+      "global_chunk_id": "9b1351cb-43e4-4de8-b45c-76981abfea0b",
+      "chunk_id": "7_National_Credit_Framework_text_225",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 77,
+      "text_preview": "ix. This Framework will provide the basis for Recognition of Prior Learning. Through this, dropouts "
+    },
+    {
+      "embedding_index": 226,
+      "global_chunk_id": "1bb10007-0e7b-4832-bb01-01914a9aa1fb",
+      "chunk_id": "7_National_Credit_Framework_text_226",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 79,
+      "text_preview": "A number of documents/ articles/ reports/ publications were referred to while making of this report "
+    },
+    {
+      "embedding_index": 227,
+      "global_chunk_id": "564ae536-4809-4e72-a56d-e8dc83bbd2f6",
+      "chunk_id": "7_National_Credit_Framework_text_227",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 81,
+      "text_preview": "\\* Admission will be open to those who have met the entrance requirements, including specified level"
+    },
+    {
+      "embedding_index": 228,
+      "global_chunk_id": "44c2d24f-be77-400a-90eb-f0f5a19cb39b",
+      "chunk_id": "7_National_Credit_Framework_text_228",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 84,
+      "text_preview": "At each entry, institution/ university has to identify the educational gaps/ skill gaps and suitable"
+    }
+  ]
+}

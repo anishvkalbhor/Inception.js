@@ -1,0 +1,769 @@
+{
+  "total_chunks": 95,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-14T23:46:27.706903",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "bec56de4-3a72-49f1-8707-c70ab589e8f3",
+      "chunk_id": "Module1_text_0",
+      "document_id": "Module1",
+      "page_idx": 0,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 1,
+      "global_chunk_id": "c99baab9-e200-4d62-ae0c-9987dfe1734e",
+      "chunk_id": "Module1_text_1",
+      "document_id": "Module1",
+      "page_idx": 0,
+      "text_preview": "-Augmented reality holds the promise of creating direct, automatic, and actionable links between the"
+    },
+    {
+      "embedding_index": 2,
+      "global_chunk_id": "666a5a84-8e14-443b-9a7b-8db243a1d946",
+      "chunk_id": "Module1_text_2",
+      "document_id": "Module1",
+      "page_idx": 0,
+      "text_preview": "There are three characteristics that define augmented reality:"
+    },
+    {
+      "embedding_index": 3,
+      "global_chunk_id": "7c633555-6d34-446c-9464-0e26d5ed950d",
+      "chunk_id": "Module1_text_3",
+      "document_id": "Module1",
+      "page_idx": 0,
+      "text_preview": "1. The physical world is augmented by digital information superimposed onaview of the physical world"
+    },
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "55967835-68f2-4039-8dd8-a1289b1a5d7a",
+      "chunk_id": "Module1_text_4",
+      "document_id": "Module1",
+      "page_idx": 0,
+      "text_preview": "2. The information is displayed in registration with the physical world."
+    },
+    {
+      "embedding_index": 5,
+      "global_chunk_id": "135d033a-82c9-4447-8649-f30ef316289a",
+      "chunk_id": "Module1_text_5",
+      "document_id": "Module1",
+      "page_idx": 1,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 6,
+      "global_chunk_id": "a687ecf4-c590-43f1-b4b1-bc7431d4c399",
+      "chunk_id": "Module1_text_6",
+      "document_id": "Module1",
+      "page_idx": 1,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 7,
+      "global_chunk_id": "12455d4b-ffce-4a63-a418-acab8ec662b4",
+      "chunk_id": "Module1_text_7",
+      "document_id": "Module1",
+      "page_idx": 1,
+      "text_preview": "Augmented reality: A medium in which digital information is overlaid on the physical world that isin"
+    },
+    {
+      "embedding_index": 8,
+      "global_chunk_id": "2220f90c-2ec1-4888-8758-e7365ad30bf7",
+      "chunk_id": "Module1_text_8",
+      "document_id": "Module1",
+      "page_idx": 1,
+      "text_preview": "Augmented reality ( AR) isaterm for a live direct or indirect view ofaphysical, real-world environme"
+    },
+    {
+      "embedding_index": 9,
+      "global_chunk_id": "7caa54d0-6fc4-4ba7-861f-d62feccf9f74",
+      "chunk_id": "Module1_text_9",
+      "document_id": "Module1",
+      "page_idx": 1,
+      "text_preview": "Augmented reality can be delivered inavariety of formats, including within smartphones, tablets and "
+    },
+    {
+      "embedding_index": 10,
+      "global_chunk_id": "4e8c3820-e92b-4c6e-8518-46bed30cebf3",
+      "chunk_id": "Module1_text_10",
+      "document_id": "Module1",
+      "page_idx": 2,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 11,
+      "global_chunk_id": "e60fc395-81e8-4f99-835d-70376f28a596",
+      "chunk_id": "Module1_text_11",
+      "document_id": "Module1",
+      "page_idx": 2,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 12,
+      "global_chunk_id": "c30903da-2ba8-4de8-a4ce-3054993dd506",
+      "chunk_id": "Module1_text_12",
+      "document_id": "Module1",
+      "page_idx": 2,
+      "text_preview": "- The technology requires hardware components, such asaprocessor, sensors, a display and in devices."
+    },
+    {
+      "embedding_index": 13,
+      "global_chunk_id": "265d99ca-21fc-4eac-9c0e-d3e79aa4a964",
+      "chunk_id": "Module1_text_13",
+      "document_id": "Module1",
+      "page_idx": 2,
+      "text_preview": "1) Retail-Consumers can use a store's online app to see how products, such as furniture, will look i"
+    },
+    {
+      "embedding_index": 14,
+      "global_chunk_id": "9d03df6d-796a-4afb-9619-3cd99fc0aee1",
+      "chunk_id": "Module1_text_14",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 15,
+      "global_chunk_id": "9fd31524-2390-44bd-8ff3-99ed3875177c",
+      "chunk_id": "Module1_text_15",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 16,
+      "global_chunk_id": "da1d8194-cf60-41f1-9b98-b5b9e6c028e6",
+      "chunk_id": "Module1_text_16",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "3) Architecture- AR can help architects visualize a building project. E. g. ARki App 4) Tools and me"
+    },
+    {
+      "embedding_index": 17,
+      "global_chunk_id": "0b02e1ee-6b65-48ef-8f6f-61062fc0cbd6",
+      "chunk_id": "Module1_text_17",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "1968: Ivan Sutherland, a Harvard professor and computer scientist, created the first headmounted dis"
+    },
+    {
+      "embedding_index": 18,
+      "global_chunk_id": "6bbeaa79-e5d8-485a-bd0a-48908dc6bc4d",
+      "chunk_id": "Module1_text_18",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "1974: Myron Kruger, a computer researcher and artist, built a laboratory at the university of Connec"
+    },
+    {
+      "embedding_index": 19,
+      "global_chunk_id": "7fd369f1-2e67-41ef-a5ed-2371a4d0f946",
+      "chunk_id": "Module1_text_19",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "1990: Tom Caudell, a Boeing researcher, coined the term ‘augmented reality’."
+    },
+    {
+      "embedding_index": 20,
+      "global_chunk_id": "7e665df3-66f4-414b-bfa2-9e5eeab18b01",
+      "chunk_id": "Module1_text_20",
+      "document_id": "Module1",
+      "page_idx": 3,
+      "text_preview": "1992: Louis Rosenburg, a researcher in the USAF Armstrong's Research Lab, created ‘Virtual Fixtures’"
+    },
+    {
+      "embedding_index": 21,
+      "global_chunk_id": "7f25943f-ff8e-4e1b-b37f-0cb9b4e8ebad",
+      "chunk_id": "Module1_text_21",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 22,
+      "global_chunk_id": "137c9992-a4fc-48c1-9c20-4f961f1fcd35",
+      "chunk_id": "Module1_text_22",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 23,
+      "global_chunk_id": "94c32ff0-73e6-4d49-a191-ba55324d77e0",
+      "chunk_id": "Module1_text_23",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "1994: Julie Martin, a writer and producer, brought augmented reality to the entertainment indus for "
+    },
+    {
+      "embedding_index": 24,
+      "global_chunk_id": "e83d4472-2586-45da-8b7f-135b1952c461",
+      "chunk_id": "Module1_text_24",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "1998: Sportsvision broadcasts the first live NFL game with the virtual 1st & Ten graphic system-aka "
+    },
+    {
+      "embedding_index": 25,
+      "global_chunk_id": "5f38255a-d78f-41ef-9f68-142990f30722",
+      "chunk_id": "Module1_text_25",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "1999: NASA created a hybrid synthetic vision system of their X-38 spacecraft. The system leveraged A"
+    },
+    {
+      "embedding_index": 26,
+      "global_chunk_id": "f9f8f97b-bdd7-4eff-b66b-d44bc84604e2",
+      "chunk_id": "Module1_text_26",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "2000: Hirokazu Kato developed an open-source software library called the ARToolKit. This package hel"
+    },
+    {
+      "embedding_index": 27,
+      "global_chunk_id": "d3cbf8eb-8218-4a61-ac59-21e53d4e5c3b",
+      "chunk_id": "Module1_text_27",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "2003: Sportvision enhanced the 1st & Ten graphic to include the feature on the new Skycam system-pro"
+    },
+    {
+      "embedding_index": 28,
+      "global_chunk_id": "93415e17-a2c6-49ab-a675-f6c295ac42d0",
+      "chunk_id": "Module1_text_28",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "2009: Esquire Magazine used augmented reality in print media for the first time inanattempt to make "
+    },
+    {
+      "embedding_index": 29,
+      "global_chunk_id": "209a5d6f-0f4a-4058-acb4-4cfe62869769",
+      "chunk_id": "Module1_text_29",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "2013: Volkswagen debuted the MARTA app ( Mobile Augmented Reality technical assistance) which primar"
+    },
+    {
+      "embedding_index": 30,
+      "global_chunk_id": "b150cb70-ea5b-4145-98ab-9e8b02cbd6d8",
+      "chunk_id": "Module1_text_30",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "2014: Google unveiled its Google Glass devices, a pair of augmented reality glasses that users could"
+    },
+    {
+      "embedding_index": 31,
+      "global_chunk_id": "bf95236b-2db8-4a76-a482-821cd645fdc4",
+      "chunk_id": "Module1_text_31",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "2016: Microsoft starts shipping its version of wearable AR technology called the HoloLens, which is "
+    },
+    {
+      "embedding_index": 32,
+      "global_chunk_id": "4c3a97a7-700a-4d21-8d9b-d965d16991ed",
+      "chunk_id": "Module1_text_32",
+      "document_id": "Module1",
+      "page_idx": 4,
+      "text_preview": "017: IKEA released its augmented reality app called IKEA Place that changed the retail industry orev"
+    },
+    {
+      "embedding_index": 33,
+      "global_chunk_id": "58698124-815f-4939-8d73-f0b8ffd91d5d",
+      "chunk_id": "Module1_text_33",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 34,
+      "global_chunk_id": "22cc7ef6-1b40-4463-969b-b2121d1a9e8f",
+      "chunk_id": "Module1_text_34",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 35,
+      "global_chunk_id": "63f33c18-8322-417c-bdbe-16b9dcb1b9fe",
+      "chunk_id": "Module1_text_35",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "Augmented reality architecture comprised by six key elements with some of the feature definition and"
+    },
+    {
+      "embedding_index": 36,
+      "global_chunk_id": "f91b656a-d76a-481d-9dd9-9611a4134730",
+      "chunk_id": "Module1_text_36",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "1) User-It’s refer toanindividual who manipulates and controls, is the immediate intended beneficiar"
+    },
+    {
+      "embedding_index": 37,
+      "global_chunk_id": "82122673-b373-462a-ba55-c52580efbbde",
+      "chunk_id": "Module1_text_37",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "2) Interaction-Interaction is composed of two components including inter- and action. Inter means th"
+    },
+    {
+      "embedding_index": 38,
+      "global_chunk_id": "597f2518-2726-4780-a0a9-23c7bc186141",
+      "chunk_id": "Module1_text_38",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "4) Virtual Content-Virtual content means the digital information presented byARdevice, which plays t"
+    },
+    {
+      "embedding_index": 39,
+      "global_chunk_id": "75e3724f-41ea-4e8e-9aa7-d4e770a9533f",
+      "chunk_id": "Module1_text_39",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "5) Real content-Real content is the real-world information directly presented by device without any "
+    },
+    {
+      "embedding_index": 40,
+      "global_chunk_id": "cf8cb937-f36f-4247-bf83-01bcef3e37ab",
+      "chunk_id": "Module1_text_40",
+      "document_id": "Module1",
+      "page_idx": 5,
+      "text_preview": "6) Tracking-Tracking describes the way of generating virtual content based on the real content, ompr"
+    },
+    {
+      "embedding_index": 41,
+      "global_chunk_id": "9bb41582-4357-49fe-806c-b7ac89e82cfb",
+      "chunk_id": "Module1_text_41",
+      "document_id": "Module1",
+      "page_idx": 6,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 42,
+      "global_chunk_id": "1e87ddfe-68ae-4912-adf2-e77ac84f1225",
+      "chunk_id": "Module1_text_42",
+      "document_id": "Module1",
+      "page_idx": 6,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 43,
+      "global_chunk_id": "95fa56b7-17e8-437c-9876-0e25b3fe68ff",
+      "chunk_id": "Module1_text_43",
+      "document_id": "Module1",
+      "page_idx": 6,
+      "text_preview": "user changes his or her point of view to another word, the displayed translation on the device rapid"
+    },
+    {
+      "embedding_index": 44,
+      "global_chunk_id": "9b07e4c6-10c4-4ecc-9f85-82598e6e5f9c",
+      "chunk_id": "Module1_text_44",
+      "document_id": "Module1",
+      "page_idx": 6,
+      "text_preview": "Definition: Mixed reality isaterm used to describe the merging ofareal-world environment and a compu"
+    },
+    {
+      "embedding_index": 45,
+      "global_chunk_id": "e611fc59-8562-482b-a650-1a26973bbbb1",
+      "chunk_id": "Module1_text_45",
+      "document_id": "Module1",
+      "page_idx": 6,
+      "text_preview": "It combines both physical as well as virtual worlds to form a new environment where interaction etwe"
+    },
+    {
+      "embedding_index": 46,
+      "global_chunk_id": "4f3e194d-15c3-4d8e-81f4-9de9ec7bfa9f",
+      "chunk_id": "Module1_text_46",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 47,
+      "global_chunk_id": "1015dd26-f5f4-43db-8529-81ae1c4e5c19",
+      "chunk_id": "Module1_text_47",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 48,
+      "global_chunk_id": "bbe9bb0e-78f6-4dc8-b5f5-b9d30de185cc",
+      "chunk_id": "Module1_text_48",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "Mixed reality have wide range of real time application following are some of them. 1) education-Ther"
+    },
+    {
+      "embedding_index": 49,
+      "global_chunk_id": "1614d682-9052-4af0-a8e2-50e81a9f8944",
+      "chunk_id": "Module1_text_49",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "Mixed reality technologies are being used within the education industry to both enhance students’ ab"
+    },
+    {
+      "embedding_index": 50,
+      "global_chunk_id": "742d5e30-c273-4b33-b605-6ad59799917a",
+      "chunk_id": "Module1_text_50",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "Using 3D projections and simulations, students can interact with and manipulate virtual objects in o"
+    },
+    {
+      "embedding_index": 51,
+      "global_chunk_id": "c121fbd3-4a4a-479f-838a-915c6873cc24",
+      "chunk_id": "Module1_text_51",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "Interact with the environment inanimmersive experience. \n* Touch and manipulate objects. \n* Itisan e"
+    },
+    {
+      "embedding_index": 52,
+      "global_chunk_id": "ef7ea4ae-5251-45f7-9931-62b5e9205c13",
+      "chunk_id": "Module1_text_52",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "2) Entertainment- From television shows to game consoles, mixed reality has many applications in the"
+    },
+    {
+      "embedding_index": 53,
+      "global_chunk_id": "6d538b69-fdaa-455f-bf59-093084b81446",
+      "chunk_id": "Module1_text_53",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "VR entertainment has been around for decades and because of this, it’s the most acclimatized and mos"
+    },
+    {
+      "embedding_index": 54,
+      "global_chunk_id": "c37fc4ce-f269-4e93-b4c4-9073d412a717",
+      "chunk_id": "Module1_text_54",
+      "document_id": "Module1",
+      "page_idx": 7,
+      "text_preview": "AR and VR technology is improving so much that the film and big screen industry are after the vision"
+    },
+    {
+      "embedding_index": 55,
+      "global_chunk_id": "a8ea3ceb-55f2-47b8-afe2-b31bf019f5a3",
+      "chunk_id": "Module1_text_55",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 56,
+      "global_chunk_id": "96e98336-0a4a-40c3-8ae6-27e103012ba7",
+      "chunk_id": "Module1_text_56",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 57,
+      "global_chunk_id": "731e0a54-ec6c-472f-9469-550f8b27d329",
+      "chunk_id": "Module1_text_57",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "Mixed reality entertainment is already here with companies like Magic Leap, Lucasfilm, a Industrial "
+    },
+    {
+      "embedding_index": 58,
+      "global_chunk_id": "45a6e51d-a6db-4f0a-a0e1-12e7e7938b2d",
+      "chunk_id": "Module1_text_58",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "3) Business firms-Mixed reality allows sellers to show the customers how a certain commodity will su"
+    },
+    {
+      "embedding_index": 59,
+      "global_chunk_id": "4bbae5ed-a5a3-4c62-bd1a-be6d5ec8a9dc",
+      "chunk_id": "Module1_text_59",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "This technology is used more and more to create business profits by incorporating a digital sense th"
+    },
+    {
+      "embedding_index": 60,
+      "global_chunk_id": "dd8d1e8e-47dc-432c-bb3e-7a03b66807a4",
+      "chunk_id": "Module1_text_60",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "2. Immersive and interactive marketing strategies-“try before you buy” concept. With mixed reality, "
+    },
+    {
+      "embedding_index": 61,
+      "global_chunk_id": "2a039c0a-77a9-4bf0-a7e8-a7b0695fff2d",
+      "chunk_id": "Module1_text_61",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "Mixed reality by creating an environment, where both real and virtual objects are used together to c"
+    },
+    {
+      "embedding_index": 62,
+      "global_chunk_id": "dc40e254-b685-424b-97e0-418702585f37",
+      "chunk_id": "Module1_text_62",
+      "document_id": "Module1",
+      "page_idx": 8,
+      "text_preview": "4) Product content management-With mixed reality technology improvements, new forms of teractive pro"
+    },
+    {
+      "embedding_index": 63,
+      "global_chunk_id": "f8bc97f4-2545-4238-afc4-5886afec456d",
+      "chunk_id": "Module1_text_63",
+      "document_id": "Module1",
+      "page_idx": 9,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 64,
+      "global_chunk_id": "8d991c70-e566-4339-aaa8-43a0e11d32fa",
+      "chunk_id": "Module1_text_64",
+      "document_id": "Module1",
+      "page_idx": 9,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 65,
+      "global_chunk_id": "91e9d730-e10c-40be-890d-ff9a3319c8a7",
+      "chunk_id": "Module1_text_65",
+      "document_id": "Module1",
+      "page_idx": 9,
+      "text_preview": "The MR content includes useful data for MR applications, such as maps, three virtual-mode models, an"
+    },
+    {
+      "embedding_index": 66,
+      "global_chunk_id": "4f3ea081-6654-4774-8366-be430edf05cb",
+      "chunk_id": "Module1_text_66",
+      "document_id": "Module1",
+      "page_idx": 9,
+      "text_preview": "The algorithm isanimportant part of any MR application. It contains analytical mathematical models t"
+    },
+    {
+      "embedding_index": 67,
+      "global_chunk_id": "74150f9b-bc47-4317-a52b-ba72141e3e38",
+      "chunk_id": "Module1_text_67",
+      "document_id": "Module1",
+      "page_idx": 9,
+      "text_preview": "Calibration-Calibration models are used to set MR devices, such as see-through tools and cameras. Su"
+    },
+    {
+      "embedding_index": 68,
+      "global_chunk_id": "996d9977-c46d-41ef-bb44-fee68ae830ea",
+      "chunk_id": "Module1_text_68",
+      "document_id": "Module1",
+      "page_idx": 10,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 69,
+      "global_chunk_id": "15a061bf-25b1-4957-b756-620c83f252b2",
+      "chunk_id": "Module1_text_69",
+      "document_id": "Module1",
+      "page_idx": 10,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 70,
+      "global_chunk_id": "181748c6-7a48-44f3-b364-52bc29a82df2",
+      "chunk_id": "Module1_text_70",
+      "document_id": "Module1",
+      "page_idx": 10,
+      "text_preview": "with the virtual object ( such asavirtual button), thereby allowing for more accurate cam parameter "
+    },
+    {
+      "embedding_index": 71,
+      "global_chunk_id": "d428446b-1222-460a-9997-ceec6c3bfffb",
+      "chunk_id": "Module1_text_71",
+      "document_id": "Module1",
+      "page_idx": 10,
+      "text_preview": "4. point-primitive and elastic theory model to simulate the deformation of soft tissues for surgical"
+    },
+    {
+      "embedding_index": 72,
+      "global_chunk_id": "1a7ca937-52dc-4ae6-ab9d-68853eb57012",
+      "chunk_id": "Module1_text_72",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 73,
+      "global_chunk_id": "1ba04ecf-ceed-4caa-b734-62941b4dd91a",
+      "chunk_id": "Module1_text_73",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 74,
+      "global_chunk_id": "5f1273e3-8042-4b69-901d-3dbf52372651",
+      "chunk_id": "Module1_text_74",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "Object Recognition-Identifying a real object and tracking enables the embedding ofavir object in rea"
+    },
+    {
+      "embedding_index": 75,
+      "global_chunk_id": "b984c48f-7d0d-49bb-aead-95240e5eb086",
+      "chunk_id": "Module1_text_75",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "1. image processing based approach using probability -based segmentation to detect a moving object ("
+    },
+    {
+      "embedding_index": 76,
+      "global_chunk_id": "bb14e178-6890-4d03-8bcf-7707c4a4b56a",
+      "chunk_id": "Module1_text_76",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "Object Tracking-The interaction of virtual and real objects requires them tobepositioned, which is a"
+    },
+    {
+      "embedding_index": 77,
+      "global_chunk_id": "424e390f-7f07-426d-aeb5-b3774ec4d95e",
+      "chunk_id": "Module1_text_77",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "circle based tracking in virtual factory layout planning \nmarkerless tracking using feature based tr"
+    },
+    {
+      "embedding_index": 78,
+      "global_chunk_id": "6f686bf2-7b41-4cb1-9fae-e390c4653c37",
+      "chunk_id": "Module1_text_78",
+      "document_id": "Module1",
+      "page_idx": 11,
+      "text_preview": "Registration and Mapping-Interaction among virtual and real objects requires mapping and registratio"
+    },
+    {
+      "embedding_index": 79,
+      "global_chunk_id": "421f084d-b37d-462e-9e13-e6ecdd63b564",
+      "chunk_id": "Module1_text_79",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 80,
+      "global_chunk_id": "a5b5276b-5920-41c4-95a2-6b4fa965b6e5",
+      "chunk_id": "Module1_text_80",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 81,
+      "global_chunk_id": "2db1c343-c2e3-4e87-8c1f-c09c4a96c63e",
+      "chunk_id": "Module1_text_81",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "markerless registration tracking for surgery to register medical images on the pati uses facial feat"
+    },
+    {
+      "embedding_index": 82,
+      "global_chunk_id": "13edbbf6-d2d1-4985-8226-e6773156924a",
+      "chunk_id": "Module1_text_82",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "Visualization and Rendering-Displaying MR content requires the use of appropriate analytical algorit"
+    },
+    {
+      "embedding_index": 83,
+      "global_chunk_id": "7433e7c6-7fc1-482e-ba18-232c5bad2409",
+      "chunk_id": "Module1_text_83",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "Chroma keying with PCA fo5r immersion of virtual objects in video images used for foreground identif"
+    },
+    {
+      "embedding_index": 84,
+      "global_chunk_id": "3603f247-13ea-4d9e-8c9c-42141f4ca0b3",
+      "chunk_id": "Module1_text_84",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "information Transfer for Portable Devices-Portable MR applications require the use of appropriate mo"
+    },
+    {
+      "embedding_index": 85,
+      "global_chunk_id": "b45ff2d1-1878-4947-93fc-75a6dfd4693d",
+      "chunk_id": "Module1_text_85",
+      "document_id": "Module1",
+      "page_idx": 12,
+      "text_preview": "probabilistic methods based on Expectation maximization( EM) algorithm to create camera based model "
+    },
+    {
+      "embedding_index": 86,
+      "global_chunk_id": "7406dbbb-1dc0-425d-99e0-5abc400b3699",
+      "chunk_id": "Module1_text_86",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Academic Year: 2025-26"
+    },
+    {
+      "embedding_index": 87,
+      "global_chunk_id": "06ab4e6a-74f6-48ae-ab20-8d2eb15223a7",
+      "chunk_id": "Module1_text_87",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Class-BE( INFT) Div- A &B"
+    },
+    {
+      "embedding_index": 88,
+      "global_chunk_id": "accb5a1f-f0d7-45ab-95fb-de250c2cd54f",
+      "chunk_id": "Module1_text_88",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q1. Write down the Algorithm steps of Mixed Reality."
+    },
+    {
+      "embedding_index": 89,
+      "global_chunk_id": "21650442-fd23-445c-9d2f-5fe08efa77a0",
+      "chunk_id": "Module1_text_89",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q2. Explain In general architecture of MR."
+    },
+    {
+      "embedding_index": 90,
+      "global_chunk_id": "c77496a3-05bc-4b78-9ca4-4f5c6a55c872",
+      "chunk_id": "Module1_text_90",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q3. Distinguish Between ARVRand MR?"
+    },
+    {
+      "embedding_index": 91,
+      "global_chunk_id": "2fd06e77-441f-4c75-8ada-165ebd69c04f",
+      "chunk_id": "Module1_text_91",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q4. What is Visualization and Rendering?"
+    },
+    {
+      "embedding_index": 92,
+      "global_chunk_id": "16b5c2da-537b-4635-a963-ee1c71358505",
+      "chunk_id": "Module1_text_92",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q. 5 Explain real world applications of ARVR."
+    },
+    {
+      "embedding_index": 93,
+      "global_chunk_id": "5caa3fa6-3ba2-4636-b3c2-2e35a6725d16",
+      "chunk_id": "Module1_text_93",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q6. What are Key aspects ( ingredients)/features of augmented reality?"
+    },
+    {
+      "embedding_index": 94,
+      "global_chunk_id": "bf48910b-e3d0-4cb4-93cf-6693cad1db2e",
+      "chunk_id": "Module1_text_94",
+      "document_id": "Module1",
+      "page_idx": 13,
+      "text_preview": "Q7. What is MR, explain algorithms used in MR?"
+    }
+  ]
+}

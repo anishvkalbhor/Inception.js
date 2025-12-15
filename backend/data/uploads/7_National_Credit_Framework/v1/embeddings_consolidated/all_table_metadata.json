@@ -1,0 +1,185 @@
+{
+  "total_chunks": 22,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-15T00:20:51.060561",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "c643b24b-0f94-4ffa-96b2-233fdbfdce95",
+      "chunk_id": "7_National_Credit_Framework_table_0",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 9,
+      "table_text_preview": "1. | Dr. Nirmaljeet Singh Kalsi, Chairperson, NCVET | Chairman\n2. | Shri Atul Kumar Tiwari, Addl Sec"
+    },
+    {
+      "embedding_index": 1,
+      "global_chunk_id": "26e85de8-9f03-41e9-9ece-a752dbe39749",
+      "chunk_id": "7_National_Credit_Framework_table_1",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 19,
+      "table_text_preview": "Caption: Table1: Break-UpofCredits\nTheory1 Credit = 15 hours | Practical1 Credit = 30 hours | Experi"
+    },
+    {
+      "embedding_index": 2,
+      "global_chunk_id": "e7a21cb4-00ed-4e04-8aa8-ad600241884e",
+      "chunk_id": "7_National_Credit_Framework_table_2",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 34,
+      "table_text_preview": "Caption: Draft Report of National Credit Framework Table 2: Learning hours across academic classes\nS"
+    },
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "267d27ca-4b68-4cd1-bd71-86ed2eead729",
+      "chunk_id": "7_National_Credit_Framework_table_4",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 36,
+      "table_text_preview": "Caption: Draft Report of National Credit Framework\n20. | UGC: 4-year UG with Honours /Honours with R"
+    },
+    {
+      "embedding_index": 5,
+      "global_chunk_id": "b1cabe61-9041-4985-864e-9bd1f4c91b76",
+      "chunk_id": "7_National_Credit_Framework_table_5",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 40,
+      "table_text_preview": "Caption: able 3: NCrF levels for different academic grades/ Vocational education & Training/ Skillin"
+    },
+    {
+      "embedding_index": 6,
+      "global_chunk_id": "191c24c8-cdab-462d-af83-7e557d9af769",
+      "chunk_id": "7_National_Credit_Framework_table_6",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 44,
+      "table_text_preview": "Caption: Table 4: NCrF levels and credit assignment for school education\nS. No | S. No Academic Educ"
+    },
+    {
+      "embedding_index": 7,
+      "global_chunk_id": "8ecb9e28-8ff8-4f84-8fc3-0327e7913804",
+      "chunk_id": "7_National_Credit_Framework_table_7",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 45,
+      "table_text_preview": "Caption: Table 5: NCrF levels and Credit Assignment in Higher education\nSr. No | EXAMPLES OF HIGHER "
+    },
+    {
+      "embedding_index": 8,
+      "global_chunk_id": "2ed7288d-a122-4289-af8b-6eded72a13b9",
+      "chunk_id": "7_National_Credit_Framework_table_8",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 46,
+      "table_text_preview": "8 | Master&#x27; s degree. Programme duration: two years( foursemesters) after obtaining a Bachelor&"
+    },
+    {
+      "embedding_index": 9,
+      "global_chunk_id": "c6e8fc57-687e-401f-ab91-9d45de04954a",
+      "chunk_id": "7_National_Credit_Framework_table_9",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 47,
+      "table_text_preview": "Caption: Table 6: NCrF Levels and Credit Assignment in Vocational education and Training/ Skilling\nN"
+    },
+    {
+      "embedding_index": 12,
+      "global_chunk_id": "cafefcfc-4bb1-43b3-a647-60386087890c",
+      "chunk_id": "7_National_Credit_Framework_table_12",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 50,
+      "table_text_preview": " | · Pursuing 2nd year of 2-year diploma after12th |  | For UG Students-510 Hours of Internship + pr"
+    },
+    {
+      "embedding_index": 13,
+      "global_chunk_id": "a2714c36-3542-47a7-8729-8d77e8e0791f",
+      "chunk_id": "7_National_Credit_Framework_table_13",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 51,
+      "table_text_preview": "Level 5. 5 | Level 6 | · Pursuing first year of 2-year PG program after completing 3 year UG degree·"
+    },
+    {
+      "embedding_index": 15,
+      "global_chunk_id": "f6a967e9-79f5-4c65-8528-cb6273c15c32",
+      "chunk_id": "7_National_Credit_Framework_table_15",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 53,
+      "table_text_preview": " |  | Relevant Experience may include On the Job training ( OJT), Internship and Apprenticeship trai"
+    },
+    {
+      "embedding_index": 16,
+      "global_chunk_id": "115a9871-6e53-47fc-bcc2-ee81d5ccf8af",
+      "chunk_id": "7_National_Credit_Framework_table_16",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 55,
+      "table_text_preview": "Caption: Table 7: Credit acquired by virtue of relevant experience / proficiency\nExperience Descript"
+    },
+    {
+      "embedding_index": 17,
+      "global_chunk_id": "0bd3e235-8298-4392-8493-70746a8ca26f",
+      "chunk_id": "7_National_Credit_Framework_table_17",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 58,
+      "table_text_preview": "No ofearsofEdu | Stages/Band/EducationProgram | SchoolEducationgrade Passed /Credits Earnedper year/"
+    },
+    {
+      "embedding_index": 21,
+      "global_chunk_id": "4804d0b4-332b-4e71-b392-23d82010b30f",
+      "chunk_id": "7_National_Credit_Framework_table_21",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 62,
+      "table_text_preview": " |  |  |  |  |  |  | torNatioharCreurt | TiaimieWor | \n |  |  | Forces Prog byIGNOU/ 16°Credits (+24"
+    },
+    {
+      "embedding_index": 22,
+      "global_chunk_id": "26008382-67c8-410a-b151-bb67411d37a0",
+      "chunk_id": "7_National_Credit_Framework_table_22",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 63,
+      "table_text_preview": "1200 Hrs/ Yr | UG 40 credits OR | 40 credits OR Completed 1st year of 2-year PG after 3-year | 40 cr"
+    },
+    {
+      "embedding_index": 23,
+      "global_chunk_id": "26106aa0-df99-4b6f-a084-9602d7b6112f",
+      "chunk_id": "7_National_Credit_Framework_table_23",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 64,
+      "table_text_preview": " |  |  |  |  |  | · 570-660 hrs of Vocational education &amp; Training/ Skilling |  |  | \n18 | Maste"
+    },
+    {
+      "embedding_index": 24,
+      "global_chunk_id": "961348ac-b95f-43d7-9213-8bb89053bb7c",
+      "chunk_id": "7_National_Credit_Framework_table_24",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 78,
+      "table_text_preview": "S No | NCrFBENEFICIARIES\nSTUDENTS | INSTITUTIONS | government | INDUSTRY\n1. | Creditisation ofall le"
+    },
+    {
+      "embedding_index": 25,
+      "global_chunk_id": "69de15fb-ff1b-40a4-8233-928bfc603068",
+      "chunk_id": "7_National_Credit_Framework_table_25",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 80,
+      "table_text_preview": "ACADEMIC LEVEL ENTRY EXIT QUALIFICATION AND NATIONAL QUALIFICATION* CREDITS required for the level C"
+    },
+    {
+      "embedding_index": 27,
+      "global_chunk_id": "36a16fec-6c21-4e98-87b2-93ab1209da19",
+      "chunk_id": "7_National_Credit_Framework_table_27",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 82,
+      "table_text_preview": "Caption: Draft Report of National Credit Framework ii. MULTIPLE ENTRY- MULTIPLE EXIT IN HIGHER educa"
+    },
+    {
+      "embedding_index": 28,
+      "global_chunk_id": "b0e08bcf-55e3-42c0-980a-a65f9b3ce8ea",
+      "chunk_id": "7_National_Credit_Framework_table_28",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 83,
+      "table_text_preview": "Draft Report of National Credit Framework\n3rdyr UG | UG Diploma( Eng.) | B. VoC ( Eng.) | 5. 5 | org"
+    },
+    {
+      "embedding_index": 29,
+      "global_chunk_id": "8778be92-8b97-490b-b3b0-674d058a5147",
+      "chunk_id": "7_National_Credit_Framework_table_29",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 84,
+      "table_text_preview": " |  |  |  | tomorrow world will be ruled byideas, concept, and creativity. Understanding that when I"
+    }
+  ]
+}

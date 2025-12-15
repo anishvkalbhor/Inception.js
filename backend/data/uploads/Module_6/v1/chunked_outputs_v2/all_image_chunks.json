@@ -1,0 +1,77 @@
+[
+  {
+    "global_chunk_id": "c9057095-1a84-421f-842b-57faaeced7ae",
+    "document_id": "Module_6",
+    "chunk_id": "Module_6_image_0",
+    "chunk_index": 0,
+    "chunk_type": "image",
+    "source_file": "D:\\Inception.js\\backend\\data\\uploads\\Module_6\\v1\\outputs",
+    "page_idx": 0,
+    "bbox": [
+      163,
+      441,
+      681,
+      739
+    ],
+    "img_path": "images/2e45806335cde9d1b2d32d387daafd876ff5847cdcc773d2c3b8efd87f9b6c0f.jpg",
+    "full_img_path": "D:\\Inception.js\\backend\\data\\uploads\\Module_6\\v1\\outputs\\original\\auto\\images/2e45806335cde9d1b2d32d387daafd876ff5847cdcc773d2c3b8efd87f9b6c0f.jpg",
+    "caption": "Figure5. 1: Physiology of the human cye. This viewpoint shows how the right eyewouldappearifslicedhorizontally( thenosewouldbetotheleft).( From WikipediauserRhcastilhos.",
+    "exists": true,
+    "has_embedding": false,
+    "embedding_model": null,
+    "embedding_dimension": null,
+    "created_at": "2025-12-14 18:27:59.412591",
+    "embedding_created_at": null,
+    "_id": "693f01afec9fc9069b13040d"
+  },
+  {
+    "global_chunk_id": "fc856632-a8c7-4ae8-926d-00768d7bee88",
+    "document_id": "Module_6",
+    "chunk_id": "Module_6_image_1",
+    "chunk_index": 1,
+    "chunk_type": "image",
+    "source_file": "D:\\Inception.js\\backend\\data\\uploads\\Module_6\\v1\\outputs",
+    "page_idx": 2,
+    "bbox": [
+      181,
+      224,
+      645,
+      458
+    ],
+    "img_path": "images/feaa5166060ef9361b7d1cbcdfac1699d41a94d0a7c218f211eb3b8334404ae2.jpg",
+    "full_img_path": "D:\\Inception.js\\backend\\data\\uploads\\Module_6\\v1\\outputs\\original\\auto\\images/feaa5166060ef9361b7d1cbcdfac1699d41a94d0a7c218f211eb3b8334404ae2.jpg",
+    "caption": "Figure5. 3: Thesensitivityofrodsatd cones asafunction ofwavelength [ 29]. ( FigureadaptedbyOpenStaxCollege.)",
+    "exists": true,
+    "has_embedding": false,
+    "embedding_model": null,
+    "embedding_dimension": null,
+    "created_at": "2025-12-14 18:27:59.412591",
+    "embedding_created_at": null,
+    "_id": "693f01afec9fc9069b13040e"
+  },
+  {
+    "global_chunk_id": "13397554-94a2-460f-9723-58ed4d921b44",
+    "document_id": "Module_6",
+    "chunk_id": "Module_6_image_2",
+    "chunk_index": 2,
+    "chunk_type": "image",
+    "source_file": "D:\\Inception.js\\backend\\data\\uploads\\Module_6\\v1\\outputs",
+    "page_idx": 8,
+    "bbox": [
+      125,
+      353,
+      593,
+      501
+    ],
+    "img_path": "images/236850508f7ee5c698ca97a53450050a4cc552aa69e52a4645c383b370b9d2d2.jpg",
+    "full_img_path": "D:\\Inception.js\\backend\\data\\uploads\\Module_6\\v1\\outputs\\original\\auto\\images/236850508f7ee5c698ca97a53450050a4cc552aa69e52a4645c383b370b9d2d2.jpg",
+    "caption": "",
+    "exists": true,
+    "has_embedding": false,
+    "embedding_model": null,
+    "embedding_dimension": null,
+    "created_at": "2025-12-14 18:27:59.412591",
+    "embedding_created_at": null,
+    "_id": "693f01afec9fc9069b13040f"
+  }
+]

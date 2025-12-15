@@ -1,0 +1,18 @@
+{
+  "total_chunks": 1,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-15T00:20:51.098585",
+  "chunks": [
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "596191dc-355c-45cc-a7ad-775e13869648",
+      "chunk_id": "7_National_Credit_Framework_image_4",
+      "document_id": "7_National_Credit_Framework",
+      "page_idx": 43,
+      "img_path": "images/d0421e418f822e84a13d98e4b519734d08715c1106dafdab693f036299e614dc.jpg",
+      "caption_preview": "The3Dimensions of Credit Assignment-( NCrF)"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "total_chunks": 44,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-15T00:36:58.547369",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "7b099e64-1e59-4816-9a73-bea01e25f973",
+      "chunk_id": "10_FMP_2024_table_0",
+      "document_id": "10_FMP_2024",
+      "page_idx": 2,
+      "table_text_preview": "Chapter | Chapter Name | Page No. | Annexure No. | Para No.\nChapter-1 | Introduction | 1-8 |  | \nCha"
+    },
+    {
+      "embedding_index": 1,
+      "global_chunk_id": "22616512-444c-45f8-8ac2-447553ba348d",
+      "chunk_id": "10_FMP_2024_table_1",
+      "document_id": "10_FMP_2024",
+      "page_idx": 4,
+      "table_text_preview": "Caption: Output Outcome Framework of the Scheme\nElementary\nIndicator | Output\n2015-16( Baseline data"
+    },
+    {
+      "embedding_index": 2,
+      "global_chunk_id": "19d6ea7e-7ee9-4dd2-ab1a-efaf65764018",
+      "chunk_id": "10_FMP_2024_table_2",
+      "document_id": "10_FMP_2024",
+      "page_idx": 5,
+      "table_text_preview": "SI. No. | Indicators | 2023-24\nAnnual Target( NITI Aayog 2023-24)\n1 | No. of new schools opened/ exi"
+    },
+    {
+      "embedding_index": 3,
+      "global_chunk_id": "369aeb90-3959-4f55-ab63-a871857a6f48",
+      "chunk_id": "10_FMP_2024_table_3",
+      "document_id": "10_FMP_2024",
+      "page_idx": 21,
+      "table_text_preview": "Caption: Table 1: Tranche Release Arrangements\nTranche | Timing | Conditions Precedent\nRelease of Fi"
+    },
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "087701ed-f3a5-4bc7-af43-496e6f6223ca",
+      "chunk_id": "10_FMP_2024_table_4",
+      "document_id": "10_FMP_2024",
+      "page_idx": 22,
+      "table_text_preview": " | for previous year/ previous release, with matching state share to State Nodal agency account from"
+    },
+    {
+      "embedding_index": 6,
+      "global_chunk_id": "0dce27c4-93eb-4b1d-be1c-a39c8542cfb4",
+      "chunk_id": "10_FMP_2024_table_6",
+      "document_id": "10_FMP_2024",
+      "page_idx": 24,
+      "table_text_preview": "accrued in SNA account in theConsolidated Fund of India. Submission of Annual Report of oneyear prio"
+    },
+    {
+      "embedding_index": 7,
+      "global_chunk_id": "d6cdc4bb-bd04-4dde-b5e0-6f171fd3e616",
+      "chunk_id": "10_FMP_2024_table_7",
+      "document_id": "10_FMP_2024",
+      "page_idx": 29,
+      "table_text_preview": "Caption: Table2: Type and Date of Reports for States/UTs\nS. No. | Report | Date on whichto be sent |"
+    },
+    {
+      "embedding_index": 9,
+      "global_chunk_id": "06d9272c-095f-4c62-abbd-a856a56bb02c",
+      "chunk_id": "10_FMP_2024_table_9",
+      "document_id": "10_FMP_2024",
+      "page_idx": 38,
+      "table_text_preview": "Balance as per Cash Book | \n\nAdd: | \n( i) Cheque issued but not cashed | \n\n( ii) Credit entries made"
+    },
+    {
+      "embedding_index": 10,
+      "global_chunk_id": "83bcc4ef-0ddb-451a-9296-00fe6eb8e320",
+      "chunk_id": "10_FMP_2024_table_10",
+      "document_id": "10_FMP_2024",
+      "page_idx": 39,
+      "table_text_preview": "Name of the Post | No. of Posts at State level( SPO) | No. of PostsatDistrict level( DPO) | Qualific"
+    },
+    {
+      "embedding_index": 11,
+      "global_chunk_id": "ce1aff87-6a35-414d-ba3d-932be59d24ac",
+      "chunk_id": "10_FMP_2024_table_11",
+      "document_id": "10_FMP_2024",
+      "page_idx": 54,
+      "table_text_preview": "1. | DateofEC&#x27; sapprovalfor engagement of auditors | Between Jan and March of everyyear.\n2. | D"
+    },
+    {
+      "embedding_index": 12,
+      "global_chunk_id": "a4a465c2-3b7a-4b36-b966-6ad1eca3a4f1",
+      "chunk_id": "10_FMP_2024_table_12",
+      "document_id": "10_FMP_2024",
+      "page_idx": 56,
+      "table_text_preview": "S. No. | Procurement Type | Financial Limit\n1. | No Tender or Direct Purchase ( Certificate tobe fur"
+    },
+    {
+      "embedding_index": 14,
+      "global_chunk_id": "0b8620e7-63c9-47d9-bdb8-d1c188944a9c",
+      "chunk_id": "10_FMP_2024_table_14",
+      "document_id": "10_FMP_2024",
+      "page_idx": 57,
+      "table_text_preview": "Open tender using e-procurement process for Civil works, goods and services | Rs. 25. 00 Lakh or abo"
+    },
+    {
+      "embedding_index": 15,
+      "global_chunk_id": "18140289-61d5-4f75-880a-240ff5014ab7",
+      "chunk_id": "10_FMP_2024_table_15",
+      "document_id": "10_FMP_2024",
+      "page_idx": 57,
+      "table_text_preview": "S. No. | FinancialLimit | Details\n1. | Upto Rs. 25, 000/- | Through any of the available supplier on"
+    },
+    {
+      "embedding_index": 16,
+      "global_chunk_id": "d96424ee-27a4-47c4-88f2-b047d9ca7397",
+      "chunk_id": "10_FMP_2024_table_16",
+      "document_id": "10_FMP_2024",
+      "page_idx": 58,
+      "table_text_preview": " | and delivery period. After mandatorily obtaining bids using online bidding."
+    },
+    {
+      "embedding_index": 17,
+      "global_chunk_id": "05acb556-6ee6-48b2-9dcc-3fd2a3ae8e6d",
+      "chunk_id": "10_FMP_2024_table_17",
+      "document_id": "10_FMP_2024",
+      "page_idx": 88,
+      "table_text_preview": "Caption: Utilisation Certificate -( Name of State) Scheme- Samagra Shiksha Utilization Certificate f"
+    },
+    {
+      "embedding_index": 18,
+      "global_chunk_id": "ad3d1530-fa48-4fab-b571-044eb3739fe4",
+      "chunk_id": "10_FMP_2024_table_18",
+      "document_id": "10_FMP_2024",
+      "page_idx": 90,
+      "table_text_preview": "Caption: Utilisation Certificate- ( Name of State) Scheme- Samagra Shiksha Utilization Certificate f"
+    },
+    {
+      "embedding_index": 19,
+      "global_chunk_id": "00f86d09-c8d7-41f0-ad1d-a12557178e50",
+      "chunk_id": "10_FMP_2024_table_19",
+      "document_id": "10_FMP_2024",
+      "page_idx": 92,
+      "table_text_preview": "Caption: Name and description of the Fixed Assets.... NOTE: Theitems ofsimilar nature but having sig"
+    },
+    {
+      "embedding_index": 20,
+      "global_chunk_id": "dc504a0a-a9be-4240-977b-a5b6ff7df3d9",
+      "chunk_id": "10_FMP_2024_table_20",
+      "document_id": "10_FMP_2024",
+      "page_idx": 93,
+      "table_text_preview": "Date | To whomgiven | Particularsofadvance | Cheque No.&amp; Date | Amount | Adjustmentdetails | tde"
+    },
+    {
+      "embedding_index": 21,
+      "global_chunk_id": "515d88ae-a51d-4243-ad84-876c24d1c82d",
+      "chunk_id": "10_FMP_2024_table_21",
+      "document_id": "10_FMP_2024",
+      "page_idx": 94,
+      "table_text_preview": "s. No. | state/UT | Pertaining perioduptoFY-2014-2015 | Pertaining to FY-2015-2016 Pertaining to FY-"
+    },
+    {
+      "embedding_index": 22,
+      "global_chunk_id": "f6a9cdf6-28c8-4db4-a07b-d160cf1dc40f",
+      "chunk_id": "10_FMP_2024_table_22",
+      "document_id": "10_FMP_2024",
+      "page_idx": 94,
+      "table_text_preview": "s. NO. | State/UT | Pertaining to FY-2017-18\nAdvances accrued during 201718 | Adjustment of Advances"
+    },
+    {
+      "embedding_index": 23,
+      "global_chunk_id": "9b5b13b3-be50-4c80-93ea-15da6d4a1bc7",
+      "chunk_id": "10_FMP_2024_table_23",
+      "document_id": "10_FMP_2024",
+      "page_idx": 94,
+      "table_text_preview": "s. No. | State/ UT |  | Pertalning tosubsequentyears | \nAdvances accrued during | Adjustment of Adva"
+    },
+    {
+      "embedding_index": 24,
+      "global_chunk_id": "76f4b324-0216-4b97-9b79-c3bfbe6550ab",
+      "chunk_id": "10_FMP_2024_table_24",
+      "document_id": "10_FMP_2024",
+      "page_idx": 95,
+      "table_text_preview": "Staff forfinancialManagement | StateLevel | District Level\nNameof Post | Postssanctioned | PostsFill"
+    },
+    {
+      "embedding_index": 25,
+      "global_chunk_id": "63334643-cc20-49b2-98c2-6d889a20b688",
+      "chunk_id": "10_FMP_2024_table_25",
+      "document_id": "10_FMP_2024",
+      "page_idx": 96,
+      "table_text_preview": "Nature of Training | Training planned for the year | Training Completed | Remarks on areasand conten"
+    },
+    {
+      "embedding_index": 26,
+      "global_chunk_id": "c44011a7-143c-44aa-9b93-e964fc80d228",
+      "chunk_id": "10_FMP_2024_table_26",
+      "document_id": "10_FMP_2024",
+      "page_idx": 97,
+      "table_text_preview": "S. No. | Activity | Status\n1. | Status on Audit work for the previous year( Mention the stage at whi"
+    },
+    {
+      "embedding_index": 27,
+      "global_chunk_id": "376f22e5-56ed-40bb-bfb0-ba0959503f80",
+      "chunk_id": "10_FMP_2024_table_27",
+      "document_id": "10_FMP_2024",
+      "page_idx": 100,
+      "table_text_preview": "s. No. | NameofStates/UT | Location | No. ofDistricts/BRC/others | InternalAuditSystem( whetherIn-Ho"
+    },
+    {
+      "embedding_index": 28,
+      "global_chunk_id": "118436a3-eaff-44c6-b443-7adc5b2377b1",
+      "chunk_id": "10_FMP_2024_table_28",
+      "document_id": "10_FMP_2024",
+      "page_idx": 102,
+      "table_text_preview": "Nameof thearea /sector | Name of the company/body audited( a） Society/PSU/autonomous body( b）Compani"
+    },
+    {
+      "embedding_index": 29,
+      "global_chunk_id": "ec7a4921-7d5a-4035-9cf2-c74007caa64f",
+      "chunk_id": "10_FMP_2024_table_29",
+      "document_id": "10_FMP_2024",
+      "page_idx": 102,
+      "table_text_preview": "S. No. | Description of specialisation | Specify nature of assignment, if other than audit | Name of"
+    },
+    {
+      "embedding_index": 30,
+      "global_chunk_id": "d858eb74-016a-46e4-85f4-082ab55eba94",
+      "chunk_id": "10_FMP_2024_table_30",
+      "document_id": "10_FMP_2024",
+      "page_idx": 103,
+      "table_text_preview": "S. No. | Years of continuous association in the firm | Number ofNumber ofFCA | Number ofNumber ofACA"
+    },
+    {
+      "embedding_index": 31,
+      "global_chunk_id": "ebd6912a-fc2b-4291-978e-b152bbb7a7f4",
+      "chunk_id": "10_FMP_2024_table_31",
+      "document_id": "10_FMP_2024",
+      "page_idx": 105,
+      "table_text_preview": "S1. No. | Name of the partner 1 sole proprietor | Membership Registration No. | PAN No | Dates of pa"
+    },
+    {
+      "embedding_index": 32,
+      "global_chunk_id": "0cdd920c-3524-4f97-b9a1-8fbb852f5134",
+      "chunk_id": "10_FMP_2024_table_32",
+      "document_id": "10_FMP_2024",
+      "page_idx": 106,
+      "table_text_preview": "Caption: Details of Full Time Partners / Sole Proprietor of the firm ( Please refer to Sl. No. 5 of "
+    },
+    {
+      "embedding_index": 33,
+      "global_chunk_id": "0ed20ddf-360c-4a5e-82d9-a10db2f0cebc",
+      "chunk_id": "10_FMP_2024_table_33",
+      "document_id": "10_FMP_2024",
+      "page_idx": 106,
+      "table_text_preview": "Nameofpartners | Membership No. | WhetherFCA /ACA | Date ofbecomingFCA | Date ofJoiningpartnership |"
+    },
+    {
+      "embedding_index": 34,
+      "global_chunk_id": "d40b7685-0912-4f07-8448-a6d3668b8f08",
+      "chunk_id": "10_FMP_2024_table_34",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "table_text_preview": "S. No. | Name | Membership No. | WhetherFCA ！ACA | Date of joiningthe firm as fulltime employee | Wh"
+    },
+    {
+      "embedding_index": 35,
+      "global_chunk_id": "2983d933-6fde-42bc-9150-cdec2aeacfa1",
+      "chunk_id": "10_FMP_2024_table_35",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "table_text_preview": "S. No. | Name | Membership No. | Whether Full Time Partner/Part Time Partner/FullTimeCAEmployee\n |  "
+    },
+    {
+      "embedding_index": 36,
+      "global_chunk_id": "761ac4d0-57c3-4208-83b0-caf961f78351",
+      "chunk_id": "10_FMP_2024_table_36",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "table_text_preview": "S. No. | Station atwhichlocated | Complete addresswith PIN Code&amp; Telephone No. | Name of thepart"
+    },
+    {
+      "embedding_index": 37,
+      "global_chunk_id": "a1af29e7-b4c6-467b-ad09-4c2231a61b50",
+      "chunk_id": "10_FMP_2024_table_37",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "table_text_preview": "S. No. | Name of thePSU/Unit | Nature of assignment | Year forwhich appointed\n |  |  | \n |  |  | \n |"
+    },
+    {
+      "embedding_index": 38,
+      "global_chunk_id": "275ec6b8-5778-4c0a-a833-9ef3d4586efc",
+      "chunk_id": "10_FMP_2024_table_38",
+      "document_id": "10_FMP_2024",
+      "page_idx": 111,
+      "table_text_preview": "( Rs. inIakns)\nState:\nYear Ending\nSOURCE&amp; APPLICATION\n | SamagraShiksha | TOTAL\nOpeningBalance |"
+    },
+    {
+      "embedding_index": 39,
+      "global_chunk_id": "ddd6cd0d-a122-444b-b8ac-9402084502f5",
+      "chunk_id": "10_FMP_2024_table_39",
+      "document_id": "10_FMP_2024",
+      "page_idx": 112,
+      "table_text_preview": "Caption: Samagra Shiksha Consolidated Balance Sheet asonState Project Director ( SSA)\nLIABILITIES | "
+    },
+    {
+      "embedding_index": 40,
+      "global_chunk_id": "2eea4b6f-1119-4200-8c1a-9fa7f645fa8b",
+      "chunk_id": "10_FMP_2024_table_40",
+      "document_id": "10_FMP_2024",
+      "page_idx": 113,
+      "table_text_preview": "EXPENDITURE | Schedule | Amount Current year | Amount Previous Year | INCOME | Schedule Amount Curre"
+    },
+    {
+      "embedding_index": 41,
+      "global_chunk_id": "03e7c144-3a99-4b97-9254-a3aed360db2c",
+      "chunk_id": "10_FMP_2024_table_41",
+      "document_id": "10_FMP_2024",
+      "page_idx": 114,
+      "table_text_preview": "Caption: Samagra Shiksha Consolidated Receipt and Payments Account for the year ended ( In Rs.)\nRECE"
+    },
+    {
+      "embedding_index": 42,
+      "global_chunk_id": "2d6a8337-65e5-4e31-9f39-8997dc09115e",
+      "chunk_id": "10_FMP_2024_table_42",
+      "document_id": "10_FMP_2024",
+      "page_idx": 115,
+      "table_text_preview": "S. No. | Period ofaccountscovered byaudit | Audit ParaNo. | Date ofissue | Brief detailsof the audit"
+    },
+    {
+      "embedding_index": 43,
+      "global_chunk_id": "576dbce1-7b92-4e73-9d34-3b938c716af6",
+      "chunk_id": "10_FMP_2024_table_43",
+      "document_id": "10_FMP_2024",
+      "page_idx": 116,
+      "table_text_preview": "S. No. | Audit Objection pertaining to( District / SPO) | Periodofaccounts coveredby audit | Name of"
+    },
+    {
+      "embedding_index": 44,
+      "global_chunk_id": "8f98cdf4-eae3-4a36-8cc7-3064e07a2be1",
+      "chunk_id": "10_FMP_2024_table_44",
+      "document_id": "10_FMP_2024",
+      "page_idx": 117,
+      "table_text_preview": "S. No. | Description ofGoods | Quantity innumbers | Method ofProcurement | Estimated Cost( Rs. in Ia"
+    },
+    {
+      "embedding_index": 45,
+      "global_chunk_id": "d1de9c75-ea70-4ee0-8b19-a04d16340adc",
+      "chunk_id": "10_FMP_2024_table_45",
+      "document_id": "10_FMP_2024",
+      "page_idx": 118,
+      "table_text_preview": "Caption: Namc of State:\nS. No. | Description ofworks | Quantity innumbers | Method ofProcurement | E"
+    },
+    {
+      "embedding_index": 46,
+      "global_chunk_id": "c9e5807e-b39b-4a0f-b2db-6450fabebe4a",
+      "chunk_id": "10_FMP_2024_table_46",
+      "document_id": "10_FMP_2024",
+      "page_idx": 119,
+      "table_text_preview": "Caption: Name of State:\nS. No. | Name ofConsultancy | Estimatedman monthsfor eachconsultancy | No. o"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "total_chunks": 1,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-14T23:46:27.770304",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "d2231347-7420-458e-9e5a-c9da2163e2ae",
+      "chunk_id": "Module1_table_0",
+      "document_id": "Module1",
+      "page_idx": 6,
+      "table_text_preview": "Caption: Difference between Mixed Reality, Virtual Reality, Immersive Reality, Extended Reality\nPara"
+    }
+  ]
+}

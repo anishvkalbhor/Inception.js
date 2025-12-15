@@ -1,0 +1,2217 @@
+{
+  "total_chunks": 276,
+  "embedding_dim": 1024,
+  "model_name": "BAAI/bge-m3",
+  "max_seq_length": 384,
+  "created_at": "2025-12-15T00:36:55.911577",
+  "chunks": [
+    {
+      "embedding_index": 0,
+      "global_chunk_id": "88c77f7b-6739-4a82-a3ea-6afec874cd7c",
+      "chunk_id": "10_FMP_2024_text_0",
+      "document_id": "10_FMP_2024",
+      "page_idx": 0,
+      "text_preview": "l). o. No. l-l/2018-EE. l5 ( IS."
+    },
+    {
+      "embedding_index": 1,
+      "global_chunk_id": "43c6d0be-6940-4997-83d5-f73467edfea5",
+      "chunk_id": "10_FMP_2024_text_1",
+      "document_id": "10_FMP_2024",
+      "page_idx": 0,
+      "text_preview": "As you are aware that the Department of School education & Literacy had launched Samagra Shiksha sch"
+    },
+    {
+      "embedding_index": 2,
+      "global_chunk_id": "181f9548-c7f1-4b36-931f-f6abe70dfe6d",
+      "chunk_id": "10_FMP_2024_text_2",
+      "document_id": "10_FMP_2024",
+      "page_idx": 0,
+      "text_preview": "Irinancial Management and Procurement ( FMI'}) Manual of Samagra Shiksha [ version 2018) was earlier"
+    },
+    {
+      "embedding_index": 3,
+      "global_chunk_id": "ce7b56a1-5870-4001-a15f-35d64232a0cf",
+      "chunk_id": "10_FMP_2024_text_3",
+      "document_id": "10_FMP_2024",
+      "page_idx": 0,
+      "text_preview": "I would, therefore, request you to ensure that the guidelines of the FMP-2024 are l'ollowed in all f"
+    },
+    {
+      "embedding_index": 4,
+      "global_chunk_id": "e01396ca-8d54-409b-b59a-86d18060206b",
+      "chunk_id": "10_FMP_2024_text_4",
+      "document_id": "10_FMP_2024",
+      "page_idx": 3,
+      "text_preview": "In the Budget Speech of 2018 of Hon’ble finance minister mentioned an integrated scheme for secondar"
+    },
+    {
+      "embedding_index": 5,
+      "global_chunk_id": "be76073a-10a9-4092-ab0e-7361d37b7bb7",
+      "chunk_id": "10_FMP_2024_text_5",
+      "document_id": "10_FMP_2024",
+      "page_idx": 3,
+      "text_preview": "In accordance to the aforesaid announcement, a Scheme was envisaged to treat education holistically "
+    },
+    {
+      "embedding_index": 6,
+      "global_chunk_id": "325fd947-1c59-419e-9514-0cc6db08aa1f",
+      "chunk_id": "10_FMP_2024_text_6",
+      "document_id": "10_FMP_2024",
+      "page_idx": 3,
+      "text_preview": "( i) Provision of quality education and enhancing learning outcomes of students; \n( ii) Bridging Soc"
+    },
+    {
+      "embedding_index": 7,
+      "global_chunk_id": "74c7bb9b-8e80-40ca-8007-e69d99a5e52e",
+      "chunk_id": "10_FMP_2024_text_7",
+      "document_id": "10_FMP_2024",
+      "page_idx": 4,
+      "text_preview": "education Institutions ( TEIs). The Scheme will help to improve the Transition rates across the vari"
+    },
+    {
+      "embedding_index": 8,
+      "global_chunk_id": "3e27abae-e4ee-43e2-8294-13ac307b5f2c",
+      "chunk_id": "10_FMP_2024_text_8",
+      "document_id": "10_FMP_2024",
+      "page_idx": 5,
+      "text_preview": "( i) Sanction of new schools which would include new primary schools, upgradation of primary school "
+    },
+    {
+      "embedding_index": 9,
+      "global_chunk_id": "b3f0c725-8ead-4d08-8423-4fcc4f1ec070",
+      "chunk_id": "10_FMP_2024_text_9",
+      "document_id": "10_FMP_2024",
+      "page_idx": 6,
+      "text_preview": "( ii) Residential Schools and Hostels in inaccessible areas ranging from Classes IXII. \n( iii) Stren"
+    },
+    {
+      "embedding_index": 10,
+      "global_chunk_id": "b3cae15d-bf4e-4eb6-85b4-b696ae0ae259",
+      "chunk_id": "10_FMP_2024_text_10",
+      "document_id": "10_FMP_2024",
+      "page_idx": 6,
+      "text_preview": "( i) The existing Kasturba Gandhi Balika Vidyalayas ( KGBVs) at upper primary level and Girls Hostel"
+    },
+    {
+      "embedding_index": 11,
+      "global_chunk_id": "7f15f3c3-6a96-4004-a83f-8a90e54d260b",
+      "chunk_id": "10_FMP_2024_text_11",
+      "document_id": "10_FMP_2024",
+      "page_idx": 6,
+      "text_preview": "( i) Supporting Children with Special Needs ( CWSN) in schools at all levels in Classes-ItoXII. \n( i"
+    },
+    {
+      "embedding_index": 12,
+      "global_chunk_id": "ad21e7db-9c70-42c3-8a8f-547c7826b389",
+      "chunk_id": "10_FMP_2024_text_12",
+      "document_id": "10_FMP_2024",
+      "page_idx": 6,
+      "text_preview": "( i) Conduct student assessments at National or State level \n( ii) Research studies on factors effec"
+    },
+    {
+      "embedding_index": 13,
+      "global_chunk_id": "7c0a793b-ab18-430e-8367-adef68029227",
+      "chunk_id": "10_FMP_2024_text_13",
+      "document_id": "10_FMP_2024",
+      "page_idx": 7,
+      "text_preview": "( i) support for teachers in upgraded schools. \n( ii) support of special teachers in schools/cluster"
+    },
+    {
+      "embedding_index": 14,
+      "global_chunk_id": "9650fec2-ed49-449e-9275-dcb4e06a2002",
+      "chunk_id": "10_FMP_2024_text_14",
+      "document_id": "10_FMP_2024",
+      "page_idx": 7,
+      "text_preview": "( i) Innovation for promoting access, equity, quality and gender equality."
+    },
+    {
+      "embedding_index": 15,
+      "global_chunk_id": "7098a3c8-979d-4f9f-9caa-2129df310596",
+      "chunk_id": "10_FMP_2024_text_15",
+      "document_id": "10_FMP_2024",
+      "page_idx": 7,
+      "text_preview": "( i) Sanction of new ICT projects in schools which would include hardware/software support. \n( ii) d"
+    },
+    {
+      "embedding_index": 16,
+      "global_chunk_id": "f6944c4e-7c4a-4ef2-a971-904a3c5ea467",
+      "chunk_id": "10_FMP_2024_text_16",
+      "document_id": "10_FMP_2024",
+      "page_idx": 7,
+      "text_preview": "( i) Free Uniforms. \n( ii) Free Textbooks. \n( iii) Re-imbursement towards expenditure incurred for $"
+    },
+    {
+      "embedding_index": 17,
+      "global_chunk_id": "0486e663-6ef3-4cdb-9f56-e408a20a3261",
+      "chunk_id": "10_FMP_2024_text_17",
+      "document_id": "10_FMP_2024",
+      "page_idx": 7,
+      "text_preview": "( i) support to States for pre-primary level for training, co-location of Anganwadis in Primary Scho"
+    },
+    {
+      "embedding_index": 18,
+      "global_chunk_id": "3338787a-1e9b-4305-8a77-ec18619b70e9",
+      "chunk_id": "10_FMP_2024_text_18",
+      "document_id": "10_FMP_2024",
+      "page_idx": 7,
+      "text_preview": "( i) Vocational education asanintegral part of general education at Secondary and Higher Secondary l"
+    },
+    {
+      "embedding_index": 19,
+      "global_chunk_id": "72b4b00b-6e4f-464f-94ba-392c1cb0fa12",
+      "chunk_id": "10_FMP_2024_text_19",
+      "document_id": "10_FMP_2024",
+      "page_idx": 8,
+      "text_preview": "( ii) Introduction of Vocational subjects at secondary level which would include Tools, Equipment an"
+    },
+    {
+      "embedding_index": 20,
+      "global_chunk_id": "61708451-3e78-4d93-9069-f5d9b3250866",
+      "chunk_id": "10_FMP_2024_text_20",
+      "document_id": "10_FMP_2024",
+      "page_idx": 8,
+      "text_preview": "( i) Increased convergence with Department of Sports. \n( ii) Provision of sports and physical educat"
+    },
+    {
+      "embedding_index": 21,
+      "global_chunk_id": "7db2c9d8-310d-4571-9cd4-e23e89492f8b",
+      "chunk_id": "10_FMP_2024_text_21",
+      "document_id": "10_FMP_2024",
+      "page_idx": 8,
+      "text_preview": "( i) support to National Institutions like NIEPA, NCERT, NCPCR, NCTE etc. for National level program"
+    },
+    {
+      "embedding_index": 22,
+      "global_chunk_id": "d43fadfd-f204-4273-ae7f-33faec3569d9",
+      "chunk_id": "10_FMP_2024_text_22",
+      "document_id": "10_FMP_2024",
+      "page_idx": 8,
+      "text_preview": "( i) Construction of schools, additional classrooms, strengthening of BRCs and CRCs, toilets and dri"
+    },
+    {
+      "embedding_index": 23,
+      "global_chunk_id": "3d745796-6e1c-4eb4-afe7-02114b02e07c",
+      "chunk_id": "10_FMP_2024_text_23",
+      "document_id": "10_FMP_2024",
+      "page_idx": 8,
+      "text_preview": "( i) Strengthening of State Councils of Educational Research and Training ( SCERTs); District Instit"
+    },
+    {
+      "embedding_index": 24,
+      "global_chunk_id": "3dff972b-f53d-4194-aab4-ee59c35051c5",
+      "chunk_id": "10_FMP_2024_text_24",
+      "document_id": "10_FMP_2024",
+      "page_idx": 9,
+      "text_preview": "( a) Planning-A system to identify the needs to achieve the programme objectives, evolve strategies "
+    },
+    {
+      "embedding_index": 25,
+      "global_chunk_id": "c6e4676b-c825-4d35-b1e9-3110322a3046",
+      "chunk_id": "10_FMP_2024_text_25",
+      "document_id": "10_FMP_2024",
+      "page_idx": 10,
+      "text_preview": "( i) Financial procedures manual-A manual that sets forth the programme financial policies and proce"
+    },
+    {
+      "embedding_index": 26,
+      "global_chunk_id": "1670ac75-91d3-40a0-a410-da46b017e648",
+      "chunk_id": "10_FMP_2024_text_26",
+      "document_id": "10_FMP_2024",
+      "page_idx": 10,
+      "text_preview": "The manual is mandatory for all the activities under Scheme at all levels of implementation. No devi"
+    },
+    {
+      "embedding_index": 27,
+      "global_chunk_id": "ea91798d-3d66-4fee-b923-666fff2437ba",
+      "chunk_id": "10_FMP_2024_text_27",
+      "document_id": "10_FMP_2024",
+      "page_idx": 10,
+      "text_preview": "Further, however Scheme Manual strictly follows the GFR 2017, in case of any contradiction, GFR 2017"
+    },
+    {
+      "embedding_index": 28,
+      "global_chunk_id": "f51630c8-3f64-40b9-91ea-92620b8dd835",
+      "chunk_id": "10_FMP_2024_text_28",
+      "document_id": "10_FMP_2024",
+      "page_idx": 11,
+      "text_preview": " Take into account the local conditions of the area for which the plan istobe made; \n Help in expa"
+    },
+    {
+      "embedding_index": 29,
+      "global_chunk_id": "e5c97f61-2f99-4e16-8adb-7fc750557549",
+      "chunk_id": "10_FMP_2024_text_29",
+      "document_id": "10_FMP_2024",
+      "page_idx": 11,
+      "text_preview": "The planning process shall be carried out through the following steps:  Formation of core planning "
+    },
+    {
+      "embedding_index": 30,
+      "global_chunk_id": "40abd27c-9603-4d5d-bb5f-213ad0749eb2",
+      "chunk_id": "10_FMP_2024_text_30",
+      "document_id": "10_FMP_2024",
+      "page_idx": 12,
+      "text_preview": "The Annual Work Plan should be realistic and correlate in financial and physical terms."
+    },
+    {
+      "embedding_index": 31,
+      "global_chunk_id": "3235631b-d80e-40eb-aa00-09758e6546ab",
+      "chunk_id": "10_FMP_2024_text_31",
+      "document_id": "10_FMP_2024",
+      "page_idx": 12,
+      "text_preview": "It will be the responsibility of the core district team to develop the plans as per the procedure la"
+    },
+    {
+      "embedding_index": 32,
+      "global_chunk_id": "ed4bcc19-7355-4726-8947-289c052943ea",
+      "chunk_id": "10_FMP_2024_text_32",
+      "document_id": "10_FMP_2024",
+      "page_idx": 12,
+      "text_preview": ". 5. 2 Participatory Planning Process: Scheme envisages a bottom-up approach of planning as opposed "
+    },
+    {
+      "embedding_index": 33,
+      "global_chunk_id": "5bd59b68-bcb8-4975-b7ad-545f6091a157",
+      "chunk_id": "10_FMP_2024_text_33",
+      "document_id": "10_FMP_2024",
+      "page_idx": 13,
+      "text_preview": "Documentation of consultative meetings and community interaction would enable the persons at the dis"
+    },
+    {
+      "embedding_index": 34,
+      "global_chunk_id": "d33d02b5-9062-46b3-90eb-8fe02566179b",
+      "chunk_id": "10_FMP_2024_text_34",
+      "document_id": "10_FMP_2024",
+      "page_idx": 13,
+      "text_preview": "( i) District-wise number of schools/sections for education. \n( ii) District-wise access position on"
+    },
+    {
+      "embedding_index": 35,
+      "global_chunk_id": "5dd86e10-c327-4315-9d10-2ba36c63ea63",
+      "chunk_id": "10_FMP_2024_text_35",
+      "document_id": "10_FMP_2024",
+      "page_idx": 14,
+      "text_preview": "( b) Enrolment by gender and social categories i. e. boys, girls, S. C., S. T. etc. ( c) Gross and N"
+    },
+    {
+      "embedding_index": 36,
+      "global_chunk_id": "9dcfd22d-096f-4b07-a409-298499905216",
+      "chunk_id": "10_FMP_2024_text_36",
+      "document_id": "10_FMP_2024",
+      "page_idx": 14,
+      "text_preview": "States/UTs to ensure that uploaded AWP&B along with the other supporting documents are duly signed."
+    },
+    {
+      "embedding_index": 37,
+      "global_chunk_id": "befecbcd-a2d1-4ad8-a7d1-1002e23a08c0",
+      "chunk_id": "10_FMP_2024_text_37",
+      "document_id": "10_FMP_2024",
+      "page_idx": 14,
+      "text_preview": ". 9 Progress Overview: Since AWP&B proposals are part ofacontinuing programme they have tobebased on"
+    },
+    {
+      "embedding_index": 38,
+      "global_chunk_id": "d5eca74d-0923-40a9-a49d-dc53f921fca5",
+      "chunk_id": "10_FMP_2024_text_38",
+      "document_id": "10_FMP_2024",
+      "page_idx": 15,
+      "text_preview": "Example: If actual release by GoI is ${ \\bf 4 0 ~ C r }$ only in the year 2022-23 against 100 cr pro"
+    },
+    {
+      "embedding_index": 39,
+      "global_chunk_id": "262983f7-6e39-433b-9922-12adff3f1f20",
+      "chunk_id": "10_FMP_2024_text_39",
+      "document_id": "10_FMP_2024",
+      "page_idx": 15,
+      "text_preview": "( i) The Scheme framework for implementation; \n( ii) Planning and Appraisal Manual for education \n( "
+    },
+    {
+      "embedding_index": 40,
+      "global_chunk_id": "69af82f9-6a60-49e8-989b-bb1415672b88",
+      "chunk_id": "10_FMP_2024_text_40",
+      "document_id": "10_FMP_2024",
+      "page_idx": 16,
+      "text_preview": "Budget allocation to the States and UTs under the Scheme would be made considering the annual budget"
+    },
+    {
+      "embedding_index": 41,
+      "global_chunk_id": "5dcbc285-c8a4-4c82-8891-1ff15898a110",
+      "chunk_id": "10_FMP_2024_text_41",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "3. 4. 1 1 Every State government will designate a Single Nodal Agency ( SNA) for implementing CSS ( "
+    },
+    {
+      "embedding_index": 42,
+      "global_chunk_id": "7bcc5c5c-0126-4bc4-b65e-bbe786ddd3da",
+      "chunk_id": "10_FMP_2024_text_42",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "3. 4. 2 2The ministry of education ( MoE) will release the central share for Samagra Shiksha program"
+    },
+    {
+      "embedding_index": 43,
+      "global_chunk_id": "bd0912a4-2992-4141-9f94-b207b2078f49",
+      "chunk_id": "10_FMP_2024_text_43",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "3. 4. 3 3After opening of Single Nodal Account of the scheme and before opening zero balance subsidi"
+    },
+    {
+      "embedding_index": 44,
+      "global_chunk_id": "1bc7b5ee-ff59-43f0-955e-8d623fa85860",
+      "chunk_id": "10_FMP_2024_text_44",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "The State government will ensure that all the accounts of IAs, except the Single Nodal Account are c"
+    },
+    {
+      "embedding_index": 45,
+      "global_chunk_id": "dba102ea-b953-4f0b-9cb2-6e9ee6079faf",
+      "chunk_id": "10_FMP_2024_text_45",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "It will be the responsibility of the concerned State government to ensure that the entire unspent am"
+    },
+    {
+      "embedding_index": 46,
+      "global_chunk_id": "38ec64d1-160a-4bfa-9143-cd1b7ef4bb0e",
+      "chunk_id": "10_FMP_2024_text_46",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "It must be ensured by the State that all identified IAs are mapped in the PFMS correctly to reflect "
+    },
+    {
+      "embedding_index": 47,
+      "global_chunk_id": "11a8560f-c4cd-4e51-ad7f-a5f3db90bfbd",
+      "chunk_id": "10_FMP_2024_text_47",
+      "document_id": "10_FMP_2024",
+      "page_idx": 18,
+      "text_preview": "3. 4. 4 4Refund of balance amount by IAs and the amount available in the SNA’s account would be take"
+    },
+    {
+      "embedding_index": 48,
+      "global_chunk_id": "1abc240e-88dd-4ccf-b931-8986240ea530",
+      "chunk_id": "10_FMP_2024_text_48",
+      "document_id": "10_FMP_2024",
+      "page_idx": 19,
+      "text_preview": "3. 4. 5 5To accurately monitor flow of CSS funds from ministry of education to State treasury and fu"
+    },
+    {
+      "embedding_index": 49,
+      "global_chunk_id": "69ca8e35-0d59-4164-89e5-7cce783d5370",
+      "chunk_id": "10_FMP_2024_text_49",
+      "document_id": "10_FMP_2024",
+      "page_idx": 19,
+      "text_preview": "3. 4. 6 6Except in case of schemes/sub-schemes having no State share, States will maintain separate "
+    },
+    {
+      "embedding_index": 50,
+      "global_chunk_id": "c30b1bdb-a580-413a-84a7-2aa4ee95796c",
+      "chunk_id": "10_FMP_2024_text_50",
+      "document_id": "10_FMP_2024",
+      "page_idx": 19,
+      "text_preview": "3. 4. 7 7UTs without legislature will also open a Single Nodal Account for the scheme atUTlevel. Usi"
+    },
+    {
+      "embedding_index": 51,
+      "global_chunk_id": "0f223326-8e99-48f8-92fe-71a8bbe5a759",
+      "chunk_id": "10_FMP_2024_text_51",
+      "document_id": "10_FMP_2024",
+      "page_idx": 19,
+      "text_preview": "3. 4. 8 8The Central share shall not be diverted to the Personal Deposit ( PD) account or any other "
+    },
+    {
+      "embedding_index": 52,
+      "global_chunk_id": "f7a92e78-3085-4a7e-9d73-728a587126e6",
+      "chunk_id": "10_FMP_2024_text_52",
+      "document_id": "10_FMP_2024",
+      "page_idx": 19,
+      "text_preview": "3. 4. 9 9Funds available in the bank account of SNA should not be more than the $50 \\%$ of central s"
+    },
+    {
+      "embedding_index": 53,
+      "global_chunk_id": "9b2d8001-4a56-4ddd-ba9d-e343c23c2a61",
+      "chunk_id": "10_FMP_2024_text_53",
+      "document_id": "10_FMP_2024",
+      "page_idx": 19,
+      "text_preview": "However, as per office memorandum, Department of Expenditure, ministry of finance, dated $2 ^ { \\mat"
+    },
+    {
+      "embedding_index": 54,
+      "global_chunk_id": "96437c4f-112d-453d-9b54-bf8a8ed91439",
+      "chunk_id": "10_FMP_2024_text_54",
+      "document_id": "10_FMP_2024",
+      "page_idx": 20,
+      "text_preview": "The amount released as central share would be released after adjusting unspent balance of grant of t"
+    },
+    {
+      "embedding_index": 55,
+      "global_chunk_id": "6aaa29bd-37af-4586-8780-f982f2077c0d",
+      "chunk_id": "10_FMP_2024_text_55",
+      "document_id": "10_FMP_2024",
+      "page_idx": 20,
+      "text_preview": "There would be four installments each year. First installment would cater to the expenditure from Ap"
+    },
+    {
+      "embedding_index": 56,
+      "global_chunk_id": "bb1734da-4f64-4528-8437-58aac16cf885",
+      "chunk_id": "10_FMP_2024_text_56",
+      "document_id": "10_FMP_2024",
+      "page_idx": 20,
+      "text_preview": "( i) Submission of expenditure statement showing that at least 75 per cent of funds/resources alread"
+    },
+    {
+      "embedding_index": 57,
+      "global_chunk_id": "e69e37b7-5544-4396-91eb-722449716acd",
+      "chunk_id": "10_FMP_2024_text_57",
+      "document_id": "10_FMP_2024",
+      "page_idx": 21,
+      "text_preview": "( iii) 25 Funds available in the bank account of SNA Should not be more than the $50 \\%$ of Central "
+    },
+    {
+      "embedding_index": 58,
+      "global_chunk_id": "17736e51-0267-4c4e-a35d-67f74f68f109",
+      "chunk_id": "10_FMP_2024_text_58",
+      "document_id": "10_FMP_2024",
+      "page_idx": 21,
+      "text_preview": "( i) ( ii) SNA 01- Comprehensive Report for release & expenditure SNA 03- Agency Mapping Status \n( i"
+    },
+    {
+      "embedding_index": 59,
+      "global_chunk_id": "55638e28-9e1a-4ee8-927b-20cbb9e00934",
+      "chunk_id": "10_FMP_2024_text_59",
+      "document_id": "10_FMP_2024",
+      "page_idx": 25,
+      "text_preview": "11The financial norms of the programme envisage that the participating State/UTs would contribute it"
+    },
+    {
+      "embedding_index": 60,
+      "global_chunk_id": "15355ae3-7f10-472f-9b60-ba55aa30fe05",
+      "chunk_id": "10_FMP_2024_text_60",
+      "document_id": "10_FMP_2024",
+      "page_idx": 25,
+      "text_preview": "3. 5. 2 12State government wants to contribute an amount in excess of its proportionate share of fun"
+    },
+    {
+      "embedding_index": 61,
+      "global_chunk_id": "3b9c7fce-8003-40f0-9654-d11aea56fcbb",
+      "chunk_id": "10_FMP_2024_text_61",
+      "document_id": "10_FMP_2024",
+      "page_idx": 25,
+      "text_preview": "Option 1: State Governments should open a separate budget line for the ‘top-up’ part in the State bu"
+    },
+    {
+      "embedding_index": 62,
+      "global_chunk_id": "44334e55-1204-4d38-934d-6711b8bddd7e",
+      "chunk_id": "10_FMP_2024_text_62",
+      "document_id": "10_FMP_2024",
+      "page_idx": 25,
+      "text_preview": "Option 2: State Governments may spend the ‘top-up’ amount through a separate budget line either dire"
+    },
+    {
+      "embedding_index": 63,
+      "global_chunk_id": "cc3f20a9-8b83-4c51-8ee8-8b3c8b60c537",
+      "chunk_id": "10_FMP_2024_text_63",
+      "document_id": "10_FMP_2024",
+      "page_idx": 25,
+      "text_preview": "3. 5. 3 13SNAs will keep all the funds received in the Single Nodal Account only and shall not diver"
+    },
+    {
+      "embedding_index": 64,
+      "global_chunk_id": "c5b53ed7-5d45-4953-828d-8402e5cd16b8",
+      "chunk_id": "10_FMP_2024_text_64",
+      "document_id": "10_FMP_2024",
+      "page_idx": 26,
+      "text_preview": "3. 5. 4 14State Governments will register the SNAs on PFMS and use the unique PFMS ID assigned to th"
+    },
+    {
+      "embedding_index": 65,
+      "global_chunk_id": "3c87e993-21e9-494f-bfc4-32cef0006e0a",
+      "chunk_id": "10_FMP_2024_text_65",
+      "document_id": "10_FMP_2024",
+      "page_idx": 26,
+      "text_preview": "3. 5. 6 16The SNAs shall ensure that the interest earned from the funds released should be mandatori"
+    },
+    {
+      "embedding_index": 66,
+      "global_chunk_id": "f0e3835c-2dd2-4f37-a81d-88d11dc51545",
+      "chunk_id": "10_FMP_2024_text_66",
+      "document_id": "10_FMP_2024",
+      "page_idx": 26,
+      "text_preview": "In this regard, the Single Nodal Agency ( SNA) of CSS in the State shall compute the total interest "
+    },
+    {
+      "embedding_index": 67,
+      "global_chunk_id": "f6e42519-2b47-4fda-a13d-c057c7ed53d7",
+      "chunk_id": "10_FMP_2024_text_67",
+      "document_id": "10_FMP_2024",
+      "page_idx": 26,
+      "text_preview": "3. 5. 7. 17Single Nodal Agency down the ladder should use the SNA’s account with clearly defined dra"
+    },
+    {
+      "embedding_index": 68,
+      "global_chunk_id": "c60a2483-6e18-4931-b521-a16ed8bfba61",
+      "chunk_id": "10_FMP_2024_text_68",
+      "document_id": "10_FMP_2024",
+      "page_idx": 26,
+      "text_preview": "3. 5. 8 18All zero balance subsidiary accounts will have allocated drawing limits tobedecided by the"
+    },
+    {
+      "embedding_index": 69,
+      "global_chunk_id": "3727ad92-bc1a-4db5-8346-372a28a35bba",
+      "chunk_id": "10_FMP_2024_text_69",
+      "document_id": "10_FMP_2024",
+      "page_idx": 26,
+      "text_preview": "3. 5. 9 19For seamless management of funds, The main account and all zero-balance subsidiary account"
+    },
+    {
+      "embedding_index": 70,
+      "global_chunk_id": "63bfd46f-1f2f-435e-b823-daf60272129d",
+      "chunk_id": "10_FMP_2024_text_70",
+      "document_id": "10_FMP_2024",
+      "page_idx": 27,
+      "text_preview": "3. 5. 12 20The Central Share of funds received byaState Govt. till 31st March-23 but not released fu"
+    },
+    {
+      "embedding_index": 71,
+      "global_chunk_id": "ab380d55-983e-4b88-b068-692863a503a2",
+      "chunk_id": "10_FMP_2024_text_71",
+      "document_id": "10_FMP_2024",
+      "page_idx": 27,
+      "text_preview": "For the accountability of transactions of funds under Scheme, registration of all the agencies shoul"
+    },
+    {
+      "embedding_index": 72,
+      "global_chunk_id": "e0d55b80-2af6-46e1-9fbd-67877db6f284",
+      "chunk_id": "10_FMP_2024_text_72",
+      "document_id": "10_FMP_2024",
+      "page_idx": 27,
+      "text_preview": "3. 5. 18 21The following procedure may be adopted regarding payment of salaries, remittance of statu"
+    },
+    {
+      "embedding_index": 73,
+      "global_chunk_id": "dcf96644-1578-431b-b88f-867ac82f7fd0",
+      "chunk_id": "10_FMP_2024_text_73",
+      "document_id": "10_FMP_2024",
+      "page_idx": 27,
+      "text_preview": "( i) Entire Gol releases along with the State’s share for CSS will be transferred to the Single Noda"
+    },
+    {
+      "embedding_index": 74,
+      "global_chunk_id": "130978ac-1983-41a2-aa5d-c5d1df5dea44",
+      "chunk_id": "10_FMP_2024_text_74",
+      "document_id": "10_FMP_2024",
+      "page_idx": 28,
+      "text_preview": "( ii) Separate budget line for the salary portion of such employees will be created in the State bud"
+    },
+    {
+      "embedding_index": 75,
+      "global_chunk_id": "59ee7fa6-91ee-4692-936f-f5b340861d70",
+      "chunk_id": "10_FMP_2024_text_75",
+      "document_id": "10_FMP_2024",
+      "page_idx": 28,
+      "text_preview": "( a) Civil Works upto Rs. 30 lakh may be undertaken through SMCs/SMDCs $\\mathrm { GOI } \\to \\mathrm "
+    },
+    {
+      "embedding_index": 76,
+      "global_chunk_id": "e1bf9752-261d-4bca-a044-1f8e01be88e2",
+      "chunk_id": "10_FMP_2024_text_76",
+      "document_id": "10_FMP_2024",
+      "page_idx": 28,
+      "text_preview": "For activities at school level which are contracted at State or district level, the SMDC/SMC should "
+    },
+    {
+      "embedding_index": 77,
+      "global_chunk_id": "6cbfc783-f45b-4f75-99ac-92ebc54991b2",
+      "chunk_id": "10_FMP_2024_text_77",
+      "document_id": "10_FMP_2024",
+      "page_idx": 29,
+      "text_preview": "3. 8. 1 Project expenditure will be reported on monthly basis by State Nodal agency on PRABANDH"
+    },
+    {
+      "embedding_index": 78,
+      "global_chunk_id": "9991c122-9de1-48cc-a2c9-a9d284de2d60",
+      "chunk_id": "10_FMP_2024_text_78",
+      "document_id": "10_FMP_2024",
+      "page_idx": 29,
+      "text_preview": "( i) ( ii) SNA 01- Comprehensive Report for release & expenditure SNA 03- Agency Mapping Status \n( i"
+    },
+    {
+      "embedding_index": 79,
+      "global_chunk_id": "9ee76868-c26e-4d66-be3d-06fa61cc440c",
+      "chunk_id": "10_FMP_2024_text_79",
+      "document_id": "10_FMP_2024",
+      "page_idx": 31,
+      "text_preview": "( a) Cash Book \n( b) ( c) Ledger Journal \n( d) ( e) Register for Journal / Magazines / News Papers R"
+    },
+    {
+      "embedding_index": 80,
+      "global_chunk_id": "7f143bbf-3cc1-48c4-b550-e52461fa532e",
+      "chunk_id": "10_FMP_2024_text_80",
+      "document_id": "10_FMP_2024",
+      "page_idx": 31,
+      "text_preview": "( i) SNA 01- Comprehensive Report for release & expenditure ( ii) SNA 03- Agency Mapping Status"
+    },
+    {
+      "embedding_index": 81,
+      "global_chunk_id": "0f6fe91d-fe46-49be-9ab5-33a4a179816b",
+      "chunk_id": "10_FMP_2024_text_81",
+      "document_id": "10_FMP_2024",
+      "page_idx": 32,
+      "text_preview": "( iii) SNA 04- Interest Report \n( iv) SNA 04 A- Interest Deposited \n( v) SNA06- Centre & State Relea"
+    },
+    {
+      "embedding_index": 82,
+      "global_chunk_id": "da77db37-e5ae-4dee-96d6-2255413b03aa",
+      "chunk_id": "10_FMP_2024_text_82",
+      "document_id": "10_FMP_2024",
+      "page_idx": 33,
+      "text_preview": "( i) Every government servant is expected to exercise the same vigilance in respect of expenditure i"
+    },
+    {
+      "embedding_index": 83,
+      "global_chunk_id": "96b88a09-d3b8-46cf-bd69-711fc01be617",
+      "chunk_id": "10_FMP_2024_text_83",
+      "document_id": "10_FMP_2024",
+      "page_idx": 33,
+      "text_preview": "In respect of releases by the State Nodal Agency, Implementing Agencies ( IAs) down the ladder shoul"
+    },
+    {
+      "embedding_index": 84,
+      "global_chunk_id": "185ec971-3463-499b-ab18-c9dbed092c8c",
+      "chunk_id": "10_FMP_2024_text_84",
+      "document_id": "10_FMP_2024",
+      "page_idx": 33,
+      "text_preview": "The advances are tobeavoided as far as possible and should be done only under exceptional circumstan"
+    },
+    {
+      "embedding_index": 85,
+      "global_chunk_id": "43502394-6167-4448-9c48-c8410ce8b6bd",
+      "chunk_id": "10_FMP_2024_text_85",
+      "document_id": "10_FMP_2024",
+      "page_idx": 34,
+      "text_preview": "( i) All funds released to the districts and sub-district level units are initially classified as ad"
+    },
+    {
+      "embedding_index": 86,
+      "global_chunk_id": "c65c615f-ea62-4ea8-81fc-82b2d3c857e3",
+      "chunk_id": "10_FMP_2024_text_86",
+      "document_id": "10_FMP_2024",
+      "page_idx": 34,
+      "text_preview": "( i) All advances are tobeentered in the advance register tobemaintained as per specimen given in An"
+    },
+    {
+      "embedding_index": 87,
+      "global_chunk_id": "474e7802-addb-44dc-9be4-1dcb1a22bed2",
+      "chunk_id": "10_FMP_2024_text_87",
+      "document_id": "10_FMP_2024",
+      "page_idx": 34,
+      "text_preview": "( i) The Account head and account code should be similar to the budget head and budget code. This sh"
+    },
+    {
+      "embedding_index": 88,
+      "global_chunk_id": "5a4141e2-ca31-4394-be15-648f0a2040f3",
+      "chunk_id": "10_FMP_2024_text_88",
+      "document_id": "10_FMP_2024",
+      "page_idx": 34,
+      "text_preview": "( i) Cash book is the principal record of all money transactions which take place every day and all "
+    },
+    {
+      "embedding_index": 89,
+      "global_chunk_id": "f041ff99-10de-401a-bcdc-96986db253e2",
+      "chunk_id": "10_FMP_2024_text_89",
+      "document_id": "10_FMP_2024",
+      "page_idx": 36,
+      "text_preview": "“Cash balance verified bymetoday and found tobeRs. ( in figures) ( Rupees...( in words) on actual co"
+    },
+    {
+      "embedding_index": 90,
+      "global_chunk_id": "11110530-345a-4ef9-be2a-e9c19a163811",
+      "chunk_id": "10_FMP_2024_text_90",
+      "document_id": "10_FMP_2024",
+      "page_idx": 36,
+      "text_preview": "Signature"
+    },
+    {
+      "embedding_index": 91,
+      "global_chunk_id": "6f09722b-7cb2-47e0-95b1-72bdba5f7f26",
+      "chunk_id": "10_FMP_2024_text_91",
+      "document_id": "10_FMP_2024",
+      "page_idx": 36,
+      "text_preview": "( Designation of the Officer)"
+    },
+    {
+      "embedding_index": 92,
+      "global_chunk_id": "05ac4830-2d77-4bf4-ab86-ea17beba952d",
+      "chunk_id": "10_FMP_2024_text_92",
+      "document_id": "10_FMP_2024",
+      "page_idx": 36,
+      "text_preview": "( a) If the error is discovered before the close of the day’s accounts, necessary correction should "
+    },
+    {
+      "embedding_index": 93,
+      "global_chunk_id": "e9a482d0-b491-4317-973b-35ae137cf9b0",
+      "chunk_id": "10_FMP_2024_text_93",
+      "document_id": "10_FMP_2024",
+      "page_idx": 36,
+      "text_preview": "Journal is one of the important account books. Its use is restricted to only recording adjustment en"
+    },
+    {
+      "embedding_index": 94,
+      "global_chunk_id": "e6d85546-7f45-4764-96b2-f55fb282ac7e",
+      "chunk_id": "10_FMP_2024_text_94",
+      "document_id": "10_FMP_2024",
+      "page_idx": 36,
+      "text_preview": "( i) The Ledger isaregister in which all transactions recorded in the cashbook or Journal shall be c"
+    },
+    {
+      "embedding_index": 95,
+      "global_chunk_id": "0bcca785-78ab-4251-ac63-9f687e1ccf02",
+      "chunk_id": "10_FMP_2024_text_95",
+      "document_id": "10_FMP_2024",
+      "page_idx": 37,
+      "text_preview": "( ii) The Ledger should be kept in the prescribed form. Separate pages are tobeopened for each item "
+    },
+    {
+      "embedding_index": 96,
+      "global_chunk_id": "548dfd64-237e-4ea6-af71-ca42b08b63be",
+      "chunk_id": "10_FMP_2024_text_96",
+      "document_id": "10_FMP_2024",
+      "page_idx": 38,
+      "text_preview": "( i) Monthly bank reconciliation should be carried out onaregular basis. \n( ii) Bank Pass Book shoul"
+    },
+    {
+      "embedding_index": 97,
+      "global_chunk_id": "e81916dd-441d-4ecb-9322-7624f73b84d9",
+      "chunk_id": "10_FMP_2024_text_97",
+      "document_id": "10_FMP_2024",
+      "page_idx": 38,
+      "text_preview": "B. PFMS Reconciliation:- Each agency should be prepared the monthly reconciliation between PFMS & Bo"
+    },
+    {
+      "embedding_index": 98,
+      "global_chunk_id": "88faee65-6e10-4b31-855b-d96813c0ccd3",
+      "chunk_id": "10_FMP_2024_text_98",
+      "document_id": "10_FMP_2024",
+      "page_idx": 40,
+      "text_preview": "Expenditure incurred should beasper GFR, 2017 as amended from time to time or/and any other guidelin"
+    },
+    {
+      "embedding_index": 99,
+      "global_chunk_id": "d43fbe7d-a909-4ef8-bf3f-983fff0f6ba2",
+      "chunk_id": "10_FMP_2024_text_99",
+      "document_id": "10_FMP_2024",
+      "page_idx": 42,
+      "text_preview": "( i) ( ii) Monitoring at school /Community level, District level \n( iii) State level and \n( iv) Nati"
+    },
+    {
+      "embedding_index": 100,
+      "global_chunk_id": "1155bac2-3d3e-4af4-a46d-d427d1900f82",
+      "chunk_id": "10_FMP_2024_text_100",
+      "document_id": "10_FMP_2024",
+      "page_idx": 43,
+      "text_preview": "( i) ( ii) Principal, Chairman of the Committee Vice Principal, Member \n( iii) One teacher related t"
+    },
+    {
+      "embedding_index": 101,
+      "global_chunk_id": "9fe300bb-bf05-42db-829f-cc883beaca2b",
+      "chunk_id": "10_FMP_2024_text_101",
+      "document_id": "10_FMP_2024",
+      "page_idx": 43,
+      "text_preview": "( i) One member from Panchayat or Urban Local Body \n( ii) One member from parents \n( iii) One member"
+    },
+    {
+      "embedding_index": 102,
+      "global_chunk_id": "78d7a9f9-77b6-487f-83d8-3cc371f0ceca",
+      "chunk_id": "10_FMP_2024_text_102",
+      "document_id": "10_FMP_2024",
+      "page_idx": 44,
+      "text_preview": "A District Level Committee comprising public representatives would be constituted to monitor the imp"
+    },
+    {
+      "embedding_index": 103,
+      "global_chunk_id": "acbbdef1-699f-47ba-8202-0f84703ecee2",
+      "chunk_id": "10_FMP_2024_text_103",
+      "document_id": "10_FMP_2024",
+      "page_idx": 44,
+      "text_preview": "( i) All Members of Parliament, Members of the State Legislature and members of the Zilla Parishad ("
+    },
+    {
+      "embedding_index": 104,
+      "global_chunk_id": "195e1655-fedf-4b8f-bc46-a3138d3e80e7",
+      "chunk_id": "10_FMP_2024_text_104",
+      "document_id": "10_FMP_2024",
+      "page_idx": 44,
+      "text_preview": "( i) The Committee will be apprised of the progress of the scheme implementation in the district, bo"
+    },
+    {
+      "embedding_index": 105,
+      "global_chunk_id": "65c12593-a7e4-4d41-b372-6b204f8a0f50",
+      "chunk_id": "10_FMP_2024_text_105",
+      "document_id": "10_FMP_2024",
+      "page_idx": 45,
+      "text_preview": "( v) Committee should ensure community participation in monitoring and data should be open for socia"
+    },
+    {
+      "embedding_index": 106,
+      "global_chunk_id": "51cf868e-cd74-4407-ae91-11cf24e10db6",
+      "chunk_id": "10_FMP_2024_text_106",
+      "document_id": "10_FMP_2024",
+      "page_idx": 45,
+      "text_preview": "( i) Component wise details of approved funds and the district level programmes intended to carry ou"
+    },
+    {
+      "embedding_index": 107,
+      "global_chunk_id": "ce92b6f2-cd80-4be0-8d62-9328599b5e43",
+      "chunk_id": "10_FMP_2024_text_107",
+      "document_id": "10_FMP_2024",
+      "page_idx": 45,
+      "text_preview": ". 5. 4. Updated data on- progress of each components of the programme, school wise physical progress"
+    },
+    {
+      "embedding_index": 108,
+      "global_chunk_id": "cc1d18bc-1090-48be-a1af-9600f828b669",
+      "chunk_id": "10_FMP_2024_text_108",
+      "document_id": "10_FMP_2024",
+      "page_idx": 45,
+      "text_preview": "Other monitoring tools at district level are conducting field visits by the District team. Schools s"
+    },
+    {
+      "embedding_index": 109,
+      "global_chunk_id": "3b518fea-c5f9-4750-810d-ffa92f0944e4",
+      "chunk_id": "10_FMP_2024_text_109",
+      "document_id": "10_FMP_2024",
+      "page_idx": 45,
+      "text_preview": "( i) Actual amount spent on civil work: The amount spent on civil work in each financial year istobe"
+    },
+    {
+      "embedding_index": 110,
+      "global_chunk_id": "cdb281dd-a740-4d71-b063-aa04dab20759",
+      "chunk_id": "10_FMP_2024_text_110",
+      "document_id": "10_FMP_2024",
+      "page_idx": 46,
+      "text_preview": "State should also develop a monitoring system soasto enable the monitoring and supervision of the en"
+    },
+    {
+      "embedding_index": 111,
+      "global_chunk_id": "71c6f2e6-82d9-464b-aced-2e86975b2ae7",
+      "chunk_id": "10_FMP_2024_text_111",
+      "document_id": "10_FMP_2024",
+      "page_idx": 47,
+      "text_preview": "The Indicators of Financial Management checks by government of India are as follows: a. Expenditure:"
+    },
+    {
+      "embedding_index": 112,
+      "global_chunk_id": "02f41f46-bd60-4e91-8ac7-57477ceacba8",
+      "chunk_id": "10_FMP_2024_text_112",
+      "document_id": "10_FMP_2024",
+      "page_idx": 48,
+      "text_preview": "to all financial management staff at periodic intervals. In order to monitor the position, the infor"
+    },
+    {
+      "embedding_index": 113,
+      "global_chunk_id": "d7977aae-6ebf-4f12-a41a-fceb7aa468dc",
+      "chunk_id": "10_FMP_2024_text_113",
+      "document_id": "10_FMP_2024",
+      "page_idx": 48,
+      "text_preview": "e. External Audit: Itismandatory to conduct an external audit of the accounts of the Agency onanannu"
+    },
+    {
+      "embedding_index": 114,
+      "global_chunk_id": "e6613b83-3acc-42a3-b49c-e266d3c98a35",
+      "chunk_id": "10_FMP_2024_text_114",
+      "document_id": "10_FMP_2024",
+      "page_idx": 48,
+      "text_preview": "( i) To ensure an end to end information sharing system \n( ii) To obviate the need for sending hard "
+    },
+    {
+      "embedding_index": 115,
+      "global_chunk_id": "9479af09-407f-4acc-aaab-8d93904426cb",
+      "chunk_id": "10_FMP_2024_text_115",
+      "document_id": "10_FMP_2024",
+      "page_idx": 48,
+      "text_preview": "( i) Online retrieval of Sanction Order of GoI Releases \n( ii) Online Monthly Progress Reports ( phy"
+    },
+    {
+      "embedding_index": 116,
+      "global_chunk_id": "f20c1ab3-c14b-4876-a7dc-bd8977220076",
+      "chunk_id": "10_FMP_2024_text_116",
+      "document_id": "10_FMP_2024",
+      "page_idx": 48,
+      "text_preview": "In PMS, States/UTs are required to submit monthly physical and Financial Progress of Scheme."
+    },
+    {
+      "embedding_index": 117,
+      "global_chunk_id": "17ebae38-13ed-4f17-8669-bf62dcef2fff",
+      "chunk_id": "10_FMP_2024_text_117",
+      "document_id": "10_FMP_2024",
+      "page_idx": 48,
+      "text_preview": "Public Financial Management System ( PFMS) has been implemented for all the Centrally Sponsored sche"
+    },
+    {
+      "embedding_index": 118,
+      "global_chunk_id": "051aff45-448f-428d-a205-c7599fc1f256",
+      "chunk_id": "10_FMP_2024_text_118",
+      "document_id": "10_FMP_2024",
+      "page_idx": 49,
+      "text_preview": "The implementing agencies at all level are required to keep proper accounts of the funds received by"
+    },
+    {
+      "embedding_index": 119,
+      "global_chunk_id": "b499f230-8aeb-4fcc-bc31-3ce042621718",
+      "chunk_id": "10_FMP_2024_text_119",
+      "document_id": "10_FMP_2024",
+      "page_idx": 49,
+      "text_preview": "The accounts of the State Nodal Agency shall be opened to inspection by government of India/State go"
+    },
+    {
+      "embedding_index": 120,
+      "global_chunk_id": "625901ec-1834-4734-afba-77bd9d48dfce",
+      "chunk_id": "10_FMP_2024_text_120",
+      "document_id": "10_FMP_2024",
+      "page_idx": 49,
+      "text_preview": "government of India may hire the services of reputed institutions to undertake concurrent financial "
+    },
+    {
+      "embedding_index": 121,
+      "global_chunk_id": "7c0a80a2-46bf-44a7-8a40-04055a68a2bf",
+      "chunk_id": "10_FMP_2024_text_121",
+      "document_id": "10_FMP_2024",
+      "page_idx": 49,
+      "text_preview": "The State may consider the engagement of similar credible organizations or firms of Chartered Accoun"
+    },
+    {
+      "embedding_index": 122,
+      "global_chunk_id": "20a98d06-ac99-4cb0-afe8-17b4ffda4984",
+      "chunk_id": "10_FMP_2024_text_122",
+      "document_id": "10_FMP_2024",
+      "page_idx": 52,
+      "text_preview": "( a) Review of the Audit Reports pertaining to the districts received from other CA firms and sugges"
+    },
+    {
+      "embedding_index": 123,
+      "global_chunk_id": "88672aac-9bfa-4c43-beba-6b094b8e0a7e",
+      "chunk_id": "10_FMP_2024_text_123",
+      "document_id": "10_FMP_2024",
+      "page_idx": 52,
+      "text_preview": "a) A properly constituted three member selection committee including the Chief finance Officer of th"
+    },
+    {
+      "embedding_index": 124,
+      "global_chunk_id": "d32f19b3-9750-4a1f-98a0-716b625acbd8",
+      "chunk_id": "10_FMP_2024_text_124",
+      "document_id": "10_FMP_2024",
+      "page_idx": 53,
+      "text_preview": "f) The audited accounts shall be communicated to the Executive Committee of the Society which shall "
+    },
+    {
+      "embedding_index": 125,
+      "global_chunk_id": "2c85d2b7-6c43-46d6-b5d6-5bcb06519ff6",
+      "chunk_id": "10_FMP_2024_text_125",
+      "document_id": "10_FMP_2024",
+      "page_idx": 53,
+      "text_preview": "6. 3. 3 22Audited accounts of SNA of State/UTs with Legislature in respect of Samagra Shiksha are to"
+    },
+    {
+      "embedding_index": 126,
+      "global_chunk_id": "eda572cb-d437-4675-9b78-687aca8035d0",
+      "chunk_id": "10_FMP_2024_text_126",
+      "document_id": "10_FMP_2024",
+      "page_idx": 54,
+      "text_preview": "Statement in the format given in Annexure-XIII, Balance Sheet in Annexure-XIV, Income and Expenditur"
+    },
+    {
+      "embedding_index": 127,
+      "global_chunk_id": "6ff7ddfe-aafa-432f-884e-009d920b9792",
+      "chunk_id": "10_FMP_2024_text_127",
+      "document_id": "10_FMP_2024",
+      "page_idx": 54,
+      "text_preview": "The following time table is prescribed for the external audit arrangements which should be strictly "
+    },
+    {
+      "embedding_index": 128,
+      "global_chunk_id": "90ea49f4-94eb-474a-a236-d39e2abaf88a",
+      "chunk_id": "10_FMP_2024_text_128",
+      "document_id": "10_FMP_2024",
+      "page_idx": 55,
+      "text_preview": "( i) All the procurement will now be through single nodal agency ( due to subsuming of the three sch"
+    },
+    {
+      "embedding_index": 129,
+      "global_chunk_id": "3711faca-449f-48d6-906b-5e1690952e44",
+      "chunk_id": "10_FMP_2024_text_129",
+      "document_id": "10_FMP_2024",
+      "page_idx": 56,
+      "text_preview": "7. 7 23As a guiding principle, the financial threshold and type of procurement as provided in the GF"
+    },
+    {
+      "embedding_index": 130,
+      "global_chunk_id": "3590a46b-c4b8-492c-987a-a2ea59736d1b",
+      "chunk_id": "10_FMP_2024_text_130",
+      "document_id": "10_FMP_2024",
+      "page_idx": 57,
+      "text_preview": "Additionally the following financial threshold may be adhered to, if necessary"
+    },
+    {
+      "embedding_index": 131,
+      "global_chunk_id": "fccd8a89-6c08-410e-a795-48332649d0a3",
+      "chunk_id": "10_FMP_2024_text_131",
+      "document_id": "10_FMP_2024",
+      "page_idx": 57,
+      "text_preview": "24In addition, purchases / procurement of goods and services through GeM portal, the following limit"
+    },
+    {
+      "embedding_index": 132,
+      "global_chunk_id": "e8fe4b69-0335-4398-92a7-82d7f3c91fd0",
+      "chunk_id": "10_FMP_2024_text_132",
+      "document_id": "10_FMP_2024",
+      "page_idx": 58,
+      "text_preview": "The States may, however, follow the financial ceiling prescribed by each State for various methods o"
+    },
+    {
+      "embedding_index": 133,
+      "global_chunk_id": "07051e57-6335-469a-b76e-e1858b409ae7",
+      "chunk_id": "10_FMP_2024_text_133",
+      "document_id": "10_FMP_2024",
+      "page_idx": 58,
+      "text_preview": "MoE may also be prescribed financial ceilings for different methods of procurement from time to time"
+    },
+    {
+      "embedding_index": 134,
+      "global_chunk_id": "8012d84f-86b8-40a9-9278-b69c82d31198",
+      "chunk_id": "10_FMP_2024_text_134",
+      "document_id": "10_FMP_2024",
+      "page_idx": 58,
+      "text_preview": "( a) Specific budget provision should be available for meeting the expenditure in the financial year"
+    },
+    {
+      "embedding_index": 135,
+      "global_chunk_id": "1270b0f6-97ca-45ac-a41b-3b037232fcdc",
+      "chunk_id": "10_FMP_2024_text_135",
+      "document_id": "10_FMP_2024",
+      "page_idx": 58,
+      "text_preview": "( a) Such firm is providing goods, works, or services resulting from or directly related to consulti"
+    },
+    {
+      "embedding_index": 136,
+      "global_chunk_id": "69bf1274-29cb-4db1-8a28-e4776ba36abb",
+      "chunk_id": "10_FMP_2024_text_136",
+      "document_id": "10_FMP_2024",
+      "page_idx": 59,
+      "text_preview": "( b) Such firm submits more than one bid, either individually orasa joint venture partner in another"
+    },
+    {
+      "embedding_index": 137,
+      "global_chunk_id": "002b6248-f9a9-4d44-a9d8-b431d4029c8c",
+      "chunk_id": "10_FMP_2024_text_137",
+      "document_id": "10_FMP_2024",
+      "page_idx": 59,
+      "text_preview": "( i) Conflict between consulting activities and procurement of goods, works or services: A firm that"
+    },
+    {
+      "embedding_index": 138,
+      "global_chunk_id": "528ea581-97a3-4140-a4e4-9b1e5e7d6099",
+      "chunk_id": "10_FMP_2024_text_138",
+      "document_id": "10_FMP_2024",
+      "page_idx": 60,
+      "text_preview": "( iii) Relationship with MoE / SNA’s ’s staff: Consultants ( including their personnel and sub-consu"
+    },
+    {
+      "embedding_index": 139,
+      "global_chunk_id": "f1b029b2-ba90-4ebb-aadc-6b5a5c945db2",
+      "chunk_id": "10_FMP_2024_text_139",
+      "document_id": "10_FMP_2024",
+      "page_idx": 60,
+      "text_preview": "a) The government of India may exclude firms ofacountry or goods manufactured inacountry if, ( i) as"
+    },
+    {
+      "embedding_index": 140,
+      "global_chunk_id": "2f363152-264c-4671-a6d5-3f59feb0667e",
+      "chunk_id": "10_FMP_2024_text_140",
+      "document_id": "10_FMP_2024",
+      "page_idx": 61,
+      "text_preview": "( a) the terms set forth below are defined as follows:"
+    },
+    {
+      "embedding_index": 141,
+      "global_chunk_id": "1078486c-3d69-4d82-a819-cd23dfcd12a4",
+      "chunk_id": "10_FMP_2024_text_141",
+      "document_id": "10_FMP_2024",
+      "page_idx": 61,
+      "text_preview": "( i) “corrupt practice” is the offering, giving, receiving, or soliciting, directly or indirectly, o"
+    },
+    {
+      "embedding_index": 142,
+      "global_chunk_id": "726a564c-5289-47ed-973d-e3c654f0dc43",
+      "chunk_id": "10_FMP_2024_text_142",
+      "document_id": "10_FMP_2024",
+      "page_idx": 61,
+      "text_preview": "( b) A proposal for award will be rejected ifitis determined that the bidder recommended for award, "
+    },
+    {
+      "embedding_index": 143,
+      "global_chunk_id": "22eab5d3-0b68-4699-8603-d8f450c89ef3",
+      "chunk_id": "10_FMP_2024_text_143",
+      "document_id": "10_FMP_2024",
+      "page_idx": 62,
+      "text_preview": "( a) Procurement of uniforms may not necessarily be entrusted at the school level but should beasper"
+    },
+    {
+      "embedding_index": 144,
+      "global_chunk_id": "3156ef7a-bbbb-4c1d-874e-b2798f3a2543",
+      "chunk_id": "10_FMP_2024_text_144",
+      "document_id": "10_FMP_2024",
+      "page_idx": 63,
+      "text_preview": "( i) UNIFORMS \n( ii) All civil works, Hostels in government upper primary schools/secondary schools/"
+    },
+    {
+      "embedding_index": 145,
+      "global_chunk_id": "3bcfce29-99d1-4570-8672-0808e653e74e",
+      "chunk_id": "10_FMP_2024_text_145",
+      "document_id": "10_FMP_2024",
+      "page_idx": 63,
+      "text_preview": "( i) Pre-primary procurement of non-recurring and recurring items."
+    },
+    {
+      "embedding_index": 146,
+      "global_chunk_id": "60ea31e6-c971-4455-aa8e-758560c4e82f",
+      "chunk_id": "10_FMP_2024_text_146",
+      "document_id": "10_FMP_2024",
+      "page_idx": 63,
+      "text_preview": "BRC/URC and CRC are the most critical units for providing training on-site support schools and teach"
+    },
+    {
+      "embedding_index": 147,
+      "global_chunk_id": "2eb7a777-0741-4af7-be15-385067ec6561",
+      "chunk_id": "10_FMP_2024_text_147",
+      "document_id": "10_FMP_2024",
+      "page_idx": 63,
+      "text_preview": "( i) Furniture/equipment/computer etc. from the furniture grant of BRC and CRC. ( ii) Office conting"
+    },
+    {
+      "embedding_index": 148,
+      "global_chunk_id": "3855d64d-edbf-4ae8-ad5e-1b714917854f",
+      "chunk_id": "10_FMP_2024_text_148",
+      "document_id": "10_FMP_2024",
+      "page_idx": 63,
+      "text_preview": "( a) Items tobeprocured:"
+    },
+    {
+      "embedding_index": 149,
+      "global_chunk_id": "c5ba53d1-8ee6-4fa1-97a1-5c1ea69ef0e1",
+      "chunk_id": "10_FMP_2024_text_149",
+      "document_id": "10_FMP_2024",
+      "page_idx": 63,
+      "text_preview": "( i) Office equipment for DPO ( ii) Office furniture for DPO"
+    },
+    {
+      "embedding_index": 150,
+      "global_chunk_id": "0fe7e109-0daa-437c-87fd-4143f0892a8c",
+      "chunk_id": "10_FMP_2024_text_150",
+      "document_id": "10_FMP_2024",
+      "page_idx": 64,
+      "text_preview": "( iii) Textbooks/other books/supplementary materials for elementary schools. \n( iv) Computers and IT"
+    },
+    {
+      "embedding_index": 151,
+      "global_chunk_id": "3347fbaf-7f7b-4b4c-b38c-b05fd8bc8ea1",
+      "chunk_id": "10_FMP_2024_text_151",
+      "document_id": "10_FMP_2024",
+      "page_idx": 64,
+      "text_preview": "( b) The procurement rules and delegation of financial powers as laid down by SIS will be operated b"
+    },
+    {
+      "embedding_index": 152,
+      "global_chunk_id": "b93bb786-7e31-4f9a-aae7-747decfd5ee9",
+      "chunk_id": "10_FMP_2024_text_152",
+      "document_id": "10_FMP_2024",
+      "page_idx": 64,
+      "text_preview": "( i) ( ii) Textbooks upto elementary schools. \nComputers and IT related equipment and accessories. \n"
+    },
+    {
+      "embedding_index": 153,
+      "global_chunk_id": "bb9ae563-d6c7-4034-bc27-1a50109994dd",
+      "chunk_id": "10_FMP_2024_text_153",
+      "document_id": "10_FMP_2024",
+      "page_idx": 65,
+      "text_preview": "( xviii) Additional teaching learning materials including for activities PBBB and remedial teaching "
+    },
+    {
+      "embedding_index": 154,
+      "global_chunk_id": "4f08611c-7775-42af-a24f-f8ebde69850b",
+      "chunk_id": "10_FMP_2024_text_154",
+      "document_id": "10_FMP_2024",
+      "page_idx": 65,
+      "text_preview": "( b) The procurement procedure and financial delegation of powers will operate as laid down by the S"
+    },
+    {
+      "embedding_index": 155,
+      "global_chunk_id": "84350e53-8588-4802-9a9a-9048d47381e9",
+      "chunk_id": "10_FMP_2024_text_155",
+      "document_id": "10_FMP_2024",
+      "page_idx": 65,
+      "text_preview": "( i) Training, capacity building and technical support from national apex level institutions \n( ii) "
+    },
+    {
+      "embedding_index": 156,
+      "global_chunk_id": "f670b91f-6e76-47f0-a158-df89dfcdf712",
+      "chunk_id": "10_FMP_2024_text_156",
+      "document_id": "10_FMP_2024",
+      "page_idx": 66,
+      "text_preview": "( b) Procurement procedures as prescribed by government of India will be followed for procurement at"
+    },
+    {
+      "embedding_index": 157,
+      "global_chunk_id": "d630e279-e757-4794-9470-f98baa826ef0",
+      "chunk_id": "10_FMP_2024_text_157",
+      "document_id": "10_FMP_2024",
+      "page_idx": 66,
+      "text_preview": "( a) The preparation ofaprocurement plan isanessential requirement. \n( b) The procurement plan cover"
+    },
+    {
+      "embedding_index": 158,
+      "global_chunk_id": "22ffa4e2-91c5-454b-8701-6782b09378a5",
+      "chunk_id": "10_FMP_2024_text_158",
+      "document_id": "10_FMP_2024",
+      "page_idx": 66,
+      "text_preview": "( a) ( b) Open tenders, Limited tenders, \n( c) Single tenders, \n( d) Without tenders, and \n( e) Civi"
+    },
+    {
+      "embedding_index": 159,
+      "global_chunk_id": "4073265f-f4c9-411c-b535-aa573dd73b0a",
+      "chunk_id": "10_FMP_2024_text_159",
+      "document_id": "10_FMP_2024",
+      "page_idx": 67,
+      "text_preview": "The States may, however, follow their own Financial Rules and financial ceiling prescribed under tho"
+    },
+    {
+      "embedding_index": 160,
+      "global_chunk_id": "9723954b-c9d7-475b-a4af-ed726ba0a789",
+      "chunk_id": "10_FMP_2024_text_160",
+      "document_id": "10_FMP_2024",
+      "page_idx": 67,
+      "text_preview": "( i) prohibition of ( a) making offer, solicitation or acceptance of bribe, reward or gift or any ma"
+    },
+    {
+      "embedding_index": 161,
+      "global_chunk_id": "9d5aa848-2b75-4b66-99e1-03f8edd855c6",
+      "chunk_id": "10_FMP_2024_text_161",
+      "document_id": "10_FMP_2024",
+      "page_idx": 68,
+      "text_preview": "( iv) with any entity in any country during the last three years orofbeing debarred by any other pro"
+    },
+    {
+      "embedding_index": 162,
+      "global_chunk_id": "4f5dd844-d530-410d-973b-a624f507f396",
+      "chunk_id": "10_FMP_2024_text_162",
+      "document_id": "10_FMP_2024",
+      "page_idx": 68,
+      "text_preview": "Rule 175 ( 2) The procuring entity, after giving a reasonable opportunity of being heard, comes to t"
+    },
+    {
+      "embedding_index": 163,
+      "global_chunk_id": "2d954d69-e464-4c51-bcba-04a49c489b07",
+      "chunk_id": "10_FMP_2024_text_163",
+      "document_id": "10_FMP_2024",
+      "page_idx": 68,
+      "text_preview": "( a) Notification / Advertising, \n( b) Issue of tender documents, \n( c) Submission of tender documen"
+    },
+    {
+      "embedding_index": 164,
+      "global_chunk_id": "0d4674f8-d5fc-49b2-b325-a465a3733336",
+      "chunk_id": "10_FMP_2024_text_164",
+      "document_id": "10_FMP_2024",
+      "page_idx": 68,
+      "text_preview": "( a) Invitation to bid shall be published in newspapers and at least in one national English daily, "
+    },
+    {
+      "embedding_index": 165,
+      "global_chunk_id": "fd198b05-8a18-410d-aa41-92193fc74713",
+      "chunk_id": "10_FMP_2024_text_165",
+      "document_id": "10_FMP_2024",
+      "page_idx": 71,
+      "text_preview": "( a) The implementing agency shall ascertain whether the tenders"
+    },
+    {
+      "embedding_index": 166,
+      "global_chunk_id": "a41e9846-c3db-41fd-954c-5865a75535ed",
+      "chunk_id": "10_FMP_2024_text_166",
+      "document_id": "10_FMP_2024",
+      "page_idx": 71,
+      "text_preview": "( i) ( ii) meet the eligibility requirements specified, have been properly signed, \n( iii) are accom"
+    },
+    {
+      "embedding_index": 167,
+      "global_chunk_id": "7da847ce-4db2-41d4-82b6-e6c791e0f0ed",
+      "chunk_id": "10_FMP_2024_text_167",
+      "document_id": "10_FMP_2024",
+      "page_idx": 71,
+      "text_preview": "( b) Ifabid is not substantially responsive, that is, it contains material deviations from or reserv"
+    },
+    {
+      "embedding_index": 168,
+      "global_chunk_id": "6699295d-69f0-4d6c-bb8c-f6dad1fb5f26",
+      "chunk_id": "10_FMP_2024_text_168",
+      "document_id": "10_FMP_2024",
+      "page_idx": 71,
+      "text_preview": "( a) The purpose of tender evaluation istodetermine the cost to the implementing agency of each tend"
+    },
+    {
+      "embedding_index": 169,
+      "global_chunk_id": "2e34167b-d86f-4089-adb9-b27bc33285c8",
+      "chunk_id": "10_FMP_2024_text_169",
+      "document_id": "10_FMP_2024",
+      "page_idx": 72,
+      "text_preview": "( a) Implementing agency shall award the contract, within the period of the validity of tenders, to "
+    },
+    {
+      "embedding_index": 170,
+      "global_chunk_id": "381cf47c-8acf-4bc2-9392-afe55e37c8b2",
+      "chunk_id": "10_FMP_2024_text_170",
+      "document_id": "10_FMP_2024",
+      "page_idx": 72,
+      "text_preview": "( a) Tender documents usually provide that implementing agency may reject all tenders. Rejection of "
+    },
+    {
+      "embedding_index": 171,
+      "global_chunk_id": "65b84b5b-5966-4fa5-b678-afa4e182657c",
+      "chunk_id": "10_FMP_2024_text_171",
+      "document_id": "10_FMP_2024",
+      "page_idx": 73,
+      "text_preview": "( b) If the rejection of all tenders is due to lack of competition, wider advertising shall be consi"
+    },
+    {
+      "embedding_index": 172,
+      "global_chunk_id": "20891a22-db89-4b37-b3c3-539ac5fe9770",
+      "chunk_id": "10_FMP_2024_text_172",
+      "document_id": "10_FMP_2024",
+      "page_idx": 73,
+      "text_preview": "( a) Goods including books, teaching learning materials, school equipment hiring of vehicles and ope"
+    },
+    {
+      "embedding_index": 173,
+      "global_chunk_id": "13a4c9fc-f354-490a-acf8-b6addbcd9139",
+      "chunk_id": "10_FMP_2024_text_173",
+      "document_id": "10_FMP_2024",
+      "page_idx": 74,
+      "text_preview": "( a) Identifying items for purchase, \n( b) Laying down specifications for the items identified, \n( c"
+    },
+    {
+      "embedding_index": 174,
+      "global_chunk_id": "58b11180-ea7e-4761-8a0f-6a0bcdba8f1b",
+      "chunk_id": "10_FMP_2024_text_174",
+      "document_id": "10_FMP_2024",
+      "page_idx": 74,
+      "text_preview": "( a) The Single Tender system may be adopted in case of articles which are specifically certified as"
+    },
+    {
+      "embedding_index": 175,
+      "global_chunk_id": "d527e50b-c8e3-46fb-93ba-423927e6cec2",
+      "chunk_id": "10_FMP_2024_text_175",
+      "document_id": "10_FMP_2024",
+      "page_idx": 74,
+      "text_preview": "( i) Itisin the knowledge of the user department that only a particular firm is the manufacturer of "
+    },
+    {
+      "embedding_index": 176,
+      "global_chunk_id": "0bb558d7-038d-46a9-ab71-868020d839b1",
+      "chunk_id": "10_FMP_2024_text_176",
+      "document_id": "10_FMP_2024",
+      "page_idx": 75,
+      "text_preview": "Note: Proprietary Article Certificate in the following form istobe provided before procuring the goo"
+    },
+    {
+      "embedding_index": 177,
+      "global_chunk_id": "8bb9662d-1845-499d-9e4a-665bad3df59f",
+      "chunk_id": "10_FMP_2024_text_177",
+      "document_id": "10_FMP_2024",
+      "page_idx": 75,
+      "text_preview": "A. The indented goods are manufactured by M/s... \nB. No other make or model is acceptable for the fo"
+    },
+    {
+      "embedding_index": 178,
+      "global_chunk_id": "480b4452-2d29-404c-9600-fc74d5716e71",
+      "chunk_id": "10_FMP_2024_text_178",
+      "document_id": "10_FMP_2024",
+      "page_idx": 75,
+      "text_preview": "Rate contracts of Directorate General of Supplies and Disposals ( DGS & D) and of the State Governme"
+    },
+    {
+      "embedding_index": 179,
+      "global_chunk_id": "bee3b431-c50c-4b14-b229-59931fa8630e",
+      "chunk_id": "10_FMP_2024_text_179",
+      "document_id": "10_FMP_2024",
+      "page_idx": 76,
+      "text_preview": "( a) That the community should be involved actively in planning and implementation, \n( b) Identifica"
+    },
+    {
+      "embedding_index": 180,
+      "global_chunk_id": "14144b2e-7d29-42ad-ac27-a092ce5b2e23",
+      "chunk_id": "10_FMP_2024_text_180",
+      "document_id": "10_FMP_2024",
+      "page_idx": 76,
+      "text_preview": "Advance ( mobilization advance upon: $40 \\%$ of total cost start upofthe work and on reaching lintel"
+    },
+    {
+      "embedding_index": 181,
+      "global_chunk_id": "f4f9591a-15b3-4722-962f-868af97a0081",
+      "chunk_id": "10_FMP_2024_text_181",
+      "document_id": "10_FMP_2024",
+      "page_idx": 76,
+      "text_preview": "( a) Single tender system ( Direct Contracting) from State Textbook Corporation, NCERT etc. or \n( b)"
+    },
+    {
+      "embedding_index": 182,
+      "global_chunk_id": "6c7af3be-a6ab-489f-a61f-8a5832bfab25",
+      "chunk_id": "10_FMP_2024_text_182",
+      "document_id": "10_FMP_2024",
+      "page_idx": 76,
+      "text_preview": "( a) Most States have formulated policies on procurement and maintenance of computer system in the S"
+    },
+    {
+      "embedding_index": 183,
+      "global_chunk_id": "f36f1bee-22e6-4339-b936-9d2f0b86f3da",
+      "chunk_id": "10_FMP_2024_text_183",
+      "document_id": "10_FMP_2024",
+      "page_idx": 76,
+      "text_preview": "( i) Limited Tender System-Tenders are obtained from the State approved list of vendors."
+    },
+    {
+      "embedding_index": 184,
+      "global_chunk_id": "f455aa39-2ce9-42bf-9c92-75549178c7c5",
+      "chunk_id": "10_FMP_2024_text_184",
+      "document_id": "10_FMP_2024",
+      "page_idx": 77,
+      "text_preview": "( ii) Procurement through State Electronic Corporations /IT Department/other State agencies provided"
+    },
+    {
+      "embedding_index": 185,
+      "global_chunk_id": "ae82f8dc-1aea-4402-be83-153152fa5fc7",
+      "chunk_id": "10_FMP_2024_text_185",
+      "document_id": "10_FMP_2024",
+      "page_idx": 77,
+      "text_preview": "( b) technical Specification should be very clear with reference to the latest technology available "
+    },
+    {
+      "embedding_index": 186,
+      "global_chunk_id": "6cbeaf47-a849-464c-b65f-1e412f0672c6",
+      "chunk_id": "10_FMP_2024_text_186",
+      "document_id": "10_FMP_2024",
+      "page_idx": 77,
+      "text_preview": "( a) The printing work includes mainly printing of question papers, teacher’s guide, newsletters, bo"
+    },
+    {
+      "embedding_index": 187,
+      "global_chunk_id": "e937b68f-850f-4562-be26-e25643a2e947",
+      "chunk_id": "10_FMP_2024_text_187",
+      "document_id": "10_FMP_2024",
+      "page_idx": 77,
+      "text_preview": "( i) Rate contract for printing approved by the State government. \n( ii) Limited Tender System-minim"
+    },
+    {
+      "embedding_index": 188,
+      "global_chunk_id": "1f88a193-f779-4480-afb1-e097acfe676b",
+      "chunk_id": "10_FMP_2024_text_188",
+      "document_id": "10_FMP_2024",
+      "page_idx": 78,
+      "text_preview": "7. 25. 1"
+    },
+    {
+      "embedding_index": 189,
+      "global_chunk_id": "818995be-7606-45e0-9d83-20c22f97aab3",
+      "chunk_id": "10_FMP_2024_text_189",
+      "document_id": "10_FMP_2024",
+      "page_idx": 78,
+      "text_preview": "Service contracts in INTEGRATED SCHEME may cover hiring of services, from house-keeping/security. It"
+    },
+    {
+      "embedding_index": 190,
+      "global_chunk_id": "df23ef24-8e66-4f76-b50e-a1bb7d61d556",
+      "chunk_id": "10_FMP_2024_text_190",
+      "document_id": "10_FMP_2024",
+      "page_idx": 78,
+      "text_preview": "The main considerations governing the selection process shall be ( a) the need for high quality serv"
+    },
+    {
+      "embedding_index": 191,
+      "global_chunk_id": "a4eff7df-d810-4d1e-a22e-9b55909326b8",
+      "chunk_id": "10_FMP_2024_text_191",
+      "document_id": "10_FMP_2024",
+      "page_idx": 78,
+      "text_preview": "7. 25. 3"
+    },
+    {
+      "embedding_index": 192,
+      "global_chunk_id": "c89d0441-e647-4dd0-8294-a507d55a182d",
+      "chunk_id": "10_FMP_2024_text_192",
+      "document_id": "10_FMP_2024",
+      "page_idx": 78,
+      "text_preview": "Selection Process: The selection process shall include the following steps: ( a) preparation of the "
+    },
+    {
+      "embedding_index": 193,
+      "global_chunk_id": "ae8ab2d4-2c91-42db-b26f-e9d865e01b6b",
+      "chunk_id": "10_FMP_2024_text_193",
+      "document_id": "10_FMP_2024",
+      "page_idx": 78,
+      "text_preview": "( a) ( b)( c) Background information, A precise Statement of objectives, An outline of the tasks tob"
+    },
+    {
+      "embedding_index": 194,
+      "global_chunk_id": "7eb6a959-b1d3-4500-a2b4-ebe59445006c",
+      "chunk_id": "10_FMP_2024_text_194",
+      "document_id": "10_FMP_2024",
+      "page_idx": 79,
+      "text_preview": "7. 25. 12 Combined Quality and Cost Evaluation: The total score shall be obtained by weighing the qu"
+    },
+    {
+      "embedding_index": 195,
+      "global_chunk_id": "aafd769d-f598-4781-a073-4a66db405318",
+      "chunk_id": "10_FMP_2024_text_195",
+      "document_id": "10_FMP_2024",
+      "page_idx": 79,
+      "text_preview": "( a) The selected firm shall not be allowed to substitute key staff, unless both parties agree that "
+    },
+    {
+      "embedding_index": 196,
+      "global_chunk_id": "f59f29ef-9fc7-40ec-97b2-cf7b05a42f63",
+      "chunk_id": "10_FMP_2024_text_196",
+      "document_id": "10_FMP_2024",
+      "page_idx": 80,
+      "text_preview": "( b) Financial discussions shall include clarification of the firms/institutions tax liability, and "
+    },
+    {
+      "embedding_index": 197,
+      "global_chunk_id": "adc45140-f82f-4902-a89d-530e62e6dd72",
+      "chunk_id": "10_FMP_2024_text_197",
+      "document_id": "10_FMP_2024",
+      "page_idx": 80,
+      "text_preview": "( a) The NGOs should be having a proven track record on similar assignments \n( b) It should consist "
+    },
+    {
+      "embedding_index": 198,
+      "global_chunk_id": "83b87dc1-daa6-4e85-a6b1-d2de6f49117e",
+      "chunk_id": "10_FMP_2024_text_198",
+      "document_id": "10_FMP_2024",
+      "page_idx": 81,
+      "text_preview": "MoE shall cause a post review of the contracts awarded on procurement of goods, works and services b"
+    },
+    {
+      "embedding_index": 199,
+      "global_chunk_id": "49890bd6-5ed1-42d7-954a-95a93d1ac94b",
+      "chunk_id": "10_FMP_2024_text_199",
+      "document_id": "10_FMP_2024",
+      "page_idx": 81,
+      "text_preview": "The goods, works and services that have not been procured in accordance with the prescribed procedur"
+    },
+    {
+      "embedding_index": 200,
+      "global_chunk_id": "f40d9808-8a33-46ca-b9af-04ff1383ab49",
+      "chunk_id": "10_FMP_2024_text_200",
+      "document_id": "10_FMP_2024",
+      "page_idx": 83,
+      "text_preview": "Under the scheme, the district will be the unit of planning and coordinating the implementation of t"
+    },
+    {
+      "embedding_index": 201,
+      "global_chunk_id": "9c5d9ec5-ad4d-4526-86e9-3d609cdb8b9f",
+      "chunk_id": "10_FMP_2024_text_201",
+      "document_id": "10_FMP_2024",
+      "page_idx": 83,
+      "text_preview": "Capacity building process needs to be: ( a) continuous and ( b) customised. These two themes are app"
+    },
+    {
+      "embedding_index": 202,
+      "global_chunk_id": "12bdd321-2d8f-467e-a381-8cb853497ca2",
+      "chunk_id": "10_FMP_2024_text_202",
+      "document_id": "10_FMP_2024",
+      "page_idx": 84,
+      "text_preview": "( i) Regional Capacity building workshops focusing on critical financial management and procurement "
+    },
+    {
+      "embedding_index": 203,
+      "global_chunk_id": "cc83736d-d9a9-4604-8f34-e50083dad321",
+      "chunk_id": "10_FMP_2024_text_203",
+      "document_id": "10_FMP_2024",
+      "page_idx": 85,
+      "text_preview": "Effective implementation of the scheme will require expertise at different levels from the local to "
+    },
+    {
+      "embedding_index": 204,
+      "global_chunk_id": "784f70c5-97dd-4f48-9610-8cbd39662e10",
+      "chunk_id": "10_FMP_2024_text_204",
+      "document_id": "10_FMP_2024",
+      "page_idx": 85,
+      "text_preview": "The thrust of the Scheme would betosupport States to improve the quality of school education. The Sc"
+    },
+    {
+      "embedding_index": 205,
+      "global_chunk_id": "5d5b2c57-197c-4ee9-a25a-721e2b9e280a",
+      "chunk_id": "10_FMP_2024_text_205",
+      "document_id": "10_FMP_2024",
+      "page_idx": 86,
+      "text_preview": "The Scheme for school education envisages the ‘school’ asacontinuum from primary, upper primary, sec"
+    },
+    {
+      "embedding_index": 206,
+      "global_chunk_id": "2ddc9637-cdb3-4e00-b0ef-0ba367a14d7b",
+      "chunk_id": "10_FMP_2024_text_206",
+      "document_id": "10_FMP_2024",
+      "page_idx": 86,
+      "text_preview": "Institutional capacity building: Improvement in quality requires a sustainable support system of nat"
+    },
+    {
+      "embedding_index": 207,
+      "global_chunk_id": "84181b57-7c6d-4007-8922-f9db63a0e9ab",
+      "chunk_id": "10_FMP_2024_text_207",
+      "document_id": "10_FMP_2024",
+      "page_idx": 87,
+      "text_preview": "NIEPA has the objective of planning and management by promoting advanced level teaching, research an"
+    },
+    {
+      "embedding_index": 208,
+      "global_chunk_id": "942658a4-2f00-49d7-9b4f-e6187b660da9",
+      "chunk_id": "10_FMP_2024_text_208",
+      "document_id": "10_FMP_2024",
+      "page_idx": 87,
+      "text_preview": "NCTE has objective to achieve planned and coordinated development of the teacher education system th"
+    },
+    {
+      "embedding_index": 209,
+      "global_chunk_id": "1baac037-4800-4088-96dc-4d094aa9c69d",
+      "chunk_id": "10_FMP_2024_text_209",
+      "document_id": "10_FMP_2024",
+      "page_idx": 87,
+      "text_preview": "The Commission ensures that all Laws, Policies, Programmes, and Administrative Mechanisms are in con"
+    },
+    {
+      "embedding_index": 210,
+      "global_chunk_id": "2c311992-b93c-4293-9e82-d244f1a1f529",
+      "chunk_id": "10_FMP_2024_text_210",
+      "document_id": "10_FMP_2024",
+      "page_idx": 87,
+      "text_preview": "NIC support the initiatives of MoE by providing an e-platform to cater to the scheme."
+    },
+    {
+      "embedding_index": 211,
+      "global_chunk_id": "27fd2575-c5fd-4d43-9719-d0d857a2f1f1",
+      "chunk_id": "10_FMP_2024_text_211",
+      "document_id": "10_FMP_2024",
+      "page_idx": 88,
+      "text_preview": "Certified that out of...... fgrants. sanctioned. during. theyear..... in favourof... unrder the mini"
+    },
+    {
+      "embedding_index": 212,
+      "global_chunk_id": "cd1e8733-3d49-442d-a927-45a75372f77b",
+      "chunk_id": "10_FMP_2024_text_212",
+      "document_id": "10_FMP_2024",
+      "page_idx": 89,
+      "text_preview": "Kinds of checks exercised ( i Audited Statement of Accounts ( Copy enclosed) ( i) Utilization receiv"
+    },
+    {
+      "embedding_index": 213,
+      "global_chunk_id": "5caecb61-1381-4f90-8bb2-1fa2d96fab2d",
+      "chunk_id": "10_FMP_2024_text_213",
+      "document_id": "10_FMP_2024",
+      "page_idx": 89,
+      "text_preview": "Signature with rubber-stamp finance Controller Dated:"
+    },
+    {
+      "embedding_index": 214,
+      "global_chunk_id": "c925d7cd-8358-46ef-a2e0-c1a37ff30312",
+      "chunk_id": "10_FMP_2024_text_214",
+      "document_id": "10_FMP_2024",
+      "page_idx": 89,
+      "text_preview": "Signature with rubber-stamp State Project Director Dated:"
+    },
+    {
+      "embedding_index": 215,
+      "global_chunk_id": "68dedeee-f9e1-4777-92d2-3fe5cc703df6",
+      "chunk_id": "10_FMP_2024_text_215",
+      "document_id": "10_FMP_2024",
+      "page_idx": 90,
+      "text_preview": "Certified that out of R...... f. grants. sanctioned. during. they. ea...... infavourof..... under th"
+    },
+    {
+      "embedding_index": 216,
+      "global_chunk_id": "b642a68c-3d37-44f7-8094-75f4689a6359",
+      "chunk_id": "10_FMP_2024_text_216",
+      "document_id": "10_FMP_2024",
+      "page_idx": 91,
+      "text_preview": "Kinds of checks exercised ( i0 Audited Statement of Accounts ( Copy enclosed) \n( i) Utilization rece"
+    },
+    {
+      "embedding_index": 217,
+      "global_chunk_id": "cedfa966-9092-439b-9e50-cf10bf3dffcf",
+      "chunk_id": "10_FMP_2024_text_217",
+      "document_id": "10_FMP_2024",
+      "page_idx": 91,
+      "text_preview": "Signature with rubber-stamp State Project Director Dated:"
+    },
+    {
+      "embedding_index": 218,
+      "global_chunk_id": "0af46680-ebfc-402f-a6d1-bae5c042e601",
+      "chunk_id": "10_FMP_2024_text_218",
+      "document_id": "10_FMP_2024",
+      "page_idx": 91,
+      "text_preview": "Signature with rubber-stamp Secretary ( education) Dated:"
+    },
+    {
+      "embedding_index": 219,
+      "global_chunk_id": "8f358a3a-7d8a-43af-93b1-1f1a83b008ea",
+      "chunk_id": "10_FMP_2024_text_219",
+      "document_id": "10_FMP_2024",
+      "page_idx": 97,
+      "text_preview": "Status of Audit, Audit report and Annual Report as on"
+    },
+    {
+      "embedding_index": 220,
+      "global_chunk_id": "d6767c08-3003-4f84-925b-45a879cbf225",
+      "chunk_id": "10_FMP_2024_text_220",
+      "document_id": "10_FMP_2024",
+      "page_idx": 98,
+      "text_preview": "The isaregistered Society which is implementing the centrally sponsored Programme of Samagra Shiksha"
+    },
+    {
+      "embedding_index": 221,
+      "global_chunk_id": "1ee59ea6-a4b8-4962-a141-19a00913ad18",
+      "chunk_id": "10_FMP_2024_text_221",
+      "document_id": "10_FMP_2024",
+      "page_idx": 98,
+      "text_preview": "Internal Audit isacontrol that functions by examining and evaluating the adequacy and effectiveness "
+    },
+    {
+      "embedding_index": 222,
+      "global_chunk_id": "87e6f1f2-1a93-41db-b192-b94ed7a394b3",
+      "chunk_id": "10_FMP_2024_text_222",
+      "document_id": "10_FMP_2024",
+      "page_idx": 98,
+      "text_preview": "Expenditure is incurred against various activities approved in the Annual Work Plan & Budget from fu"
+    },
+    {
+      "embedding_index": 223,
+      "global_chunk_id": "42861e33-cb68-4e51-a558-85c50f07018c",
+      "chunk_id": "10_FMP_2024_text_223",
+      "document_id": "10_FMP_2024",
+      "page_idx": 99,
+      "text_preview": "Immediately on completion of the internal audit, the auditor should submit his report indicating the"
+    },
+    {
+      "embedding_index": 224,
+      "global_chunk_id": "3f88f69f-96c2-430c-b33f-ad3fa27f94d3",
+      "chunk_id": "10_FMP_2024_text_224",
+      "document_id": "10_FMP_2024",
+      "page_idx": 99,
+      "text_preview": "The auditor should be given access to all legal documents, books of accounts, procurement documents,"
+    },
+    {
+      "embedding_index": 225,
+      "global_chunk_id": "87bd5084-6859-4f0f-b9a0-9635a226d8d8",
+      "chunk_id": "10_FMP_2024_text_225",
+      "document_id": "10_FMP_2024",
+      "page_idx": 99,
+      "text_preview": "A review committee consisting of SPD, head of the financial management group at the SPO and accounts"
+    },
+    {
+      "embedding_index": 226,
+      "global_chunk_id": "7499121b-e2a2-4f6a-ac7f-469cc23a5298",
+      "chunk_id": "10_FMP_2024_text_226",
+      "document_id": "10_FMP_2024",
+      "page_idx": 101,
+      "text_preview": "Expression of Interest is invited from Chartered Accountants firms ( Partnership / Sole \nproprietors"
+    },
+    {
+      "embedding_index": 227,
+      "global_chunk_id": "5a7c64cb-1166-4a3e-9ffb-1b38f2cc3e87",
+      "chunk_id": "10_FMP_2024_text_227",
+      "document_id": "10_FMP_2024",
+      "page_idx": 101,
+      "text_preview": "Partners in other firms Employed part-time / ful-time elsewhere, practicing in their own name or eng"
+    },
+    {
+      "embedding_index": 228,
+      "global_chunk_id": "dcb327b8-eddc-49eb-beb3-28afb91d2f2f",
+      "chunk_id": "10_FMP_2024_text_228",
+      "document_id": "10_FMP_2024",
+      "page_idx": 101,
+      "text_preview": "Similarly, the full time Sole Proprietor does not include a person who isapartner in other firms ori"
+    },
+    {
+      "embedding_index": 229,
+      "global_chunk_id": "5d7d2ccf-1ab7-4e1b-b2de-5b4e7f705181",
+      "chunk_id": "10_FMP_2024_text_229",
+      "document_id": "10_FMP_2024",
+      "page_idx": 101,
+      "text_preview": "( i) A copy of constitution certificates of firm issued by the ICAI containing interalia. Date of fo"
+    },
+    {
+      "embedding_index": 230,
+      "global_chunk_id": "6d8d581f-4d96-4506-8649-29884059f92f",
+      "chunk_id": "10_FMP_2024_text_230",
+      "document_id": "10_FMP_2024",
+      "page_idx": 101,
+      "text_preview": "( i) A copy ofthe latest partnership deed in the case of partnership firms. \n( ii) A copy of the ack"
+    },
+    {
+      "embedding_index": 231,
+      "global_chunk_id": "1114f583-4cfe-4011-9d87-62eea9fd2d76",
+      "chunk_id": "10_FMP_2024_text_231",
+      "document_id": "10_FMP_2024",
+      "page_idx": 102,
+      "text_preview": "( v） Details of court cases /arbitration cases /or any other case pending against the firm"
+    },
+    {
+      "embedding_index": 232,
+      "global_chunk_id": "2f3e5c67-90a6-47b1-b134-cdcba9a7fc83",
+      "chunk_id": "10_FMP_2024_text_232",
+      "document_id": "10_FMP_2024",
+      "page_idx": 102,
+      "text_preview": "The State Project Director, Samagra Shiksha,"
+    },
+    {
+      "embedding_index": 233,
+      "global_chunk_id": "7cf0dd63-460c-49ef-a5fa-661abea99b0d",
+      "chunk_id": "10_FMP_2024_text_233",
+      "document_id": "10_FMP_2024",
+      "page_idx": 102,
+      "text_preview": "EDP systems IT assisted audit Any other important special assignments etc. in the following format"
+    },
+    {
+      "embedding_index": 234,
+      "global_chunk_id": "d9100730-2954-4242-b0aa-a23213b127a7",
+      "chunk_id": "10_FMP_2024_text_234",
+      "document_id": "10_FMP_2024",
+      "page_idx": 103,
+      "text_preview": "Status of Firm Partnership Sole Proprietorship 1. ( a) Name of the firm ( in Capital letters) ( b) A"
+    },
+    {
+      "embedding_index": 235,
+      "global_chunk_id": "82e66712-39e0-455c-a0cb-4c8cbeb1bc10",
+      "chunk_id": "10_FMP_2024_text_235",
+      "document_id": "10_FMP_2024",
+      "page_idx": 103,
+      "text_preview": "3. ( a) Date of constitution of the firm: ( b) Date since when the firms has a full time FCA"
+    },
+    {
+      "embedding_index": 236,
+      "global_chunk_id": "306945b6-c51e-4371-80d2-6bb940df27c9",
+      "chunk_id": "10_FMP_2024_text_236",
+      "document_id": "10_FMP_2024",
+      "page_idx": 103,
+      "text_preview": "PSU/ Companies in Banks autonomous Private sector body"
+    },
+    {
+      "embedding_index": 237,
+      "global_chunk_id": "cff00f55-f8ee-462c-acde-1d086f053479",
+      "chunk_id": "10_FMP_2024_text_237",
+      "document_id": "10_FMP_2024",
+      "page_idx": 103,
+      "text_preview": "( i Statutory/Branch Audit / 6 monthly Audit Review ( ii) Internal /Concurrent Audit"
+    },
+    {
+      "embedding_index": 238,
+      "global_chunk_id": "39019e39-fa2a-45c9-9fcd-de55479cde34",
+      "chunk_id": "10_FMP_2024_text_238",
+      "document_id": "10_FMP_2024",
+      "page_idx": 105,
+      "text_preview": "I/We the sole proprietor $/$ following partners of M/s. ，Chartered Accountant do hereby jointly and "
+    },
+    {
+      "embedding_index": 239,
+      "global_chunk_id": "154ad805-6e7d-472b-97ca-43c3596e637c",
+      "chunk_id": "10_FMP_2024_text_239",
+      "document_id": "10_FMP_2024",
+      "page_idx": 105,
+      "text_preview": "( Seal of the Firm)"
+    },
+    {
+      "embedding_index": 240,
+      "global_chunk_id": "1d22fb08-773e-4345-8e19-0dbede00e8fd",
+      "chunk_id": "10_FMP_2024_text_240",
+      "document_id": "10_FMP_2024",
+      "page_idx": 105,
+      "text_preview": "$^ { * } A$ For membership \n$\\pmb { \\mathscr { B } }$ For issue of certificate ofpractice \nPlace: \nD"
+    },
+    {
+      "embedding_index": 241,
+      "global_chunk_id": "7dca2c71-5ecf-47c2-841e-b5c065300580",
+      "chunk_id": "10_FMP_2024_text_241",
+      "document_id": "10_FMP_2024",
+      "page_idx": 105,
+      "text_preview": "Checked by"
+    },
+    {
+      "embedding_index": 242,
+      "global_chunk_id": "94022eaf-9030-4ca2-bfb3-8f7471000772",
+      "chunk_id": "10_FMP_2024_text_242",
+      "document_id": "10_FMP_2024",
+      "page_idx": 105,
+      "text_preview": "Date updated by"
+    },
+    {
+      "embedding_index": 243,
+      "global_chunk_id": "8475d6e1-2497-4a84-b327-d18dbaedfa77",
+      "chunk_id": "10_FMP_2024_text_243",
+      "document_id": "10_FMP_2024",
+      "page_idx": 106,
+      "text_preview": "\\*If yes, please attach a copy of the certificate"
+    },
+    {
+      "embedding_index": 244,
+      "global_chunk_id": "a20b844e-c4aa-42eb-bf5c-000048bfd50f",
+      "chunk_id": "10_FMP_2024_text_244",
+      "document_id": "10_FMP_2024",
+      "page_idx": 106,
+      "text_preview": "( Annex A-2)"
+    },
+    {
+      "embedding_index": 245,
+      "global_chunk_id": "0d37b3a6-445c-4447-a33c-f0b1ed420849",
+      "chunk_id": "10_FMP_2024_text_245",
+      "document_id": "10_FMP_2024",
+      "page_idx": 106,
+      "text_preview": "Details of Part-Time Partners of the firm ( Please refer to S1. No. 6 of the Expression of Interest "
+    },
+    {
+      "embedding_index": 246,
+      "global_chunk_id": "5dfa072d-5239-4d79-8ebd-02acc5eddf36",
+      "chunk_id": "10_FMP_2024_text_246",
+      "document_id": "10_FMP_2024",
+      "page_idx": 106,
+      "text_preview": "$^ { * } \\mathrm { I f }$ yes, please attach a copy of the certificate."
+    },
+    {
+      "embedding_index": 247,
+      "global_chunk_id": "a71d36dc-0c2c-4226-bd47-26e09a32d93c",
+      "chunk_id": "10_FMP_2024_text_247",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "Details of full time Chartered Accountant Employees ( Please refer to Sl. No. 7 of the Expression of"
+    },
+    {
+      "embedding_index": 248,
+      "global_chunk_id": "b68d0e88-4d24-48b3-9928-aa5575e8fb38",
+      "chunk_id": "10_FMP_2024_text_248",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "\\*If yes, please atach a copy of the certificate"
+    },
+    {
+      "embedding_index": 249,
+      "global_chunk_id": "b83439f0-72b8-4a5c-a671-bf72300d1dcc",
+      "chunk_id": "10_FMP_2024_text_249",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "( Annex A-4)"
+    },
+    {
+      "embedding_index": 250,
+      "global_chunk_id": "5c4a7810-0843-480e-8faf-a5c00289f69e",
+      "chunk_id": "10_FMP_2024_text_250",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "Details of partners and full time Chartered Accountant Employees of the firm included this year in A"
+    },
+    {
+      "embedding_index": 251,
+      "global_chunk_id": "5334c9df-480f-4144-8d5a-396ff93b9616",
+      "chunk_id": "10_FMP_2024_text_251",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "\\*If yes, please attach a copy ofthe certificate Particulars of Branches ( including foreign branche"
+    },
+    {
+      "embedding_index": 252,
+      "global_chunk_id": "dc2e79d1-8fde-4b9c-bb82-0beee2e50396",
+      "chunk_id": "10_FMP_2024_text_252",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "( Annex B)"
+    },
+    {
+      "embedding_index": 253,
+      "global_chunk_id": "7ad24069-5f94-43df-b254-ce3eea32927e",
+      "chunk_id": "10_FMP_2024_text_253",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "( Annex C)"
+    },
+    {
+      "embedding_index": 254,
+      "global_chunk_id": "4988738f-957a-48be-985d-8300fb8556ea",
+      "chunk_id": "10_FMP_2024_text_254",
+      "document_id": "10_FMP_2024",
+      "page_idx": 107,
+      "text_preview": "Details of internal audit work /any other accounting work of Public Sector Undertaking in hand with "
+    },
+    {
+      "embedding_index": 255,
+      "global_chunk_id": "a6823d1b-88cd-49df-ab5d-464e37753736",
+      "chunk_id": "10_FMP_2024_text_255",
+      "document_id": "10_FMP_2024",
+      "page_idx": 108,
+      "text_preview": "The.. isaregistered Society which is implementing the centrally sponsored Programme of Samagra Shiks"
+    },
+    {
+      "embedding_index": 256,
+      "global_chunk_id": "ef89c9ca-3412-4ae9-a823-95f946455b07",
+      "chunk_id": "10_FMP_2024_text_256",
+      "document_id": "10_FMP_2024",
+      "page_idx": 108,
+      "text_preview": "The objective of the audit of the Programme Accounts ( Programme Financial Statement {PFS}） istoenab"
+    },
+    {
+      "embedding_index": 257,
+      "global_chunk_id": "899decfd-19d7-46b7-a0a0-fffc13954307",
+      "chunk_id": "10_FMP_2024_text_257",
+      "document_id": "10_FMP_2024",
+      "page_idx": 108,
+      "text_preview": "The programme accounts ( books of accounts) provide the basis for preparation of the PFS and are est"
+    },
+    {
+      "embedding_index": 258,
+      "global_chunk_id": "526b7603-239a-4c31-baa2-cfd1027fe81e",
+      "chunk_id": "10_FMP_2024_text_258",
+      "document_id": "10_FMP_2024",
+      "page_idx": 108,
+      "text_preview": "Expenditure is incurred against various activities approved in the Annual Work Plan& Budget from fun"
+    },
+    {
+      "embedding_index": 259,
+      "global_chunk_id": "b48b2fa2-7ea0-4c8f-ac7b-ec94312bffb6",
+      "chunk_id": "10_FMP_2024_text_259",
+      "document_id": "10_FMP_2024",
+      "page_idx": 109,
+      "text_preview": "Clear linkages should exist between the books of accounts and reports presented to the government of"
+    },
+    {
+      "embedding_index": 260,
+      "global_chunk_id": "aac11eff-03ad-49ea-b94e-4c8cdf872050",
+      "chunk_id": "10_FMP_2024_text_260",
+      "document_id": "10_FMP_2024",
+      "page_idx": 109,
+      "text_preview": "( e) Expenditure incurred under Samagra Shiksha is strictly in accordance with the financial norms p"
+    },
+    {
+      "embedding_index": 261,
+      "global_chunk_id": "a15065fc-8665-4535-83c8-adda11352212",
+      "chunk_id": "10_FMP_2024_text_261",
+      "document_id": "10_FMP_2024",
+      "page_idx": 109,
+      "text_preview": "Programme Financial Statements should include: ( a) A summary of funds received from government of I"
+    },
+    {
+      "embedding_index": 262,
+      "global_chunk_id": "e8ae35dc-a947-47c0-9c32-ab244e5c06e6",
+      "chunk_id": "10_FMP_2024_text_262",
+      "document_id": "10_FMP_2024",
+      "page_idx": 110,
+      "text_preview": "The primary audit opinion should include the Programme Financial Statements, and the annual audit re"
+    },
+    {
+      "embedding_index": 263,
+      "global_chunk_id": "ec7ca295-2218-4f86-95f0-df7583dae34a",
+      "chunk_id": "10_FMP_2024_text_263",
+      "document_id": "10_FMP_2024",
+      "page_idx": 110,
+      "text_preview": "In addition to the audit reports, the auditor will prepare a \"management letter\", in which the audit"
+    },
+    {
+      "embedding_index": 264,
+      "global_chunk_id": "64a132d6-8e0c-44b9-8828-b0d93a980495",
+      "chunk_id": "10_FMP_2024_text_264",
+      "document_id": "10_FMP_2024",
+      "page_idx": 110,
+      "text_preview": "The key personnel in the audit team, their minimum qualifications, and their anticipated inputs are "
+    },
+    {
+      "embedding_index": 265,
+      "global_chunk_id": "285dfabf-68cd-4688-a34b-890396a558a5",
+      "chunk_id": "10_FMP_2024_text_265",
+      "document_id": "10_FMP_2024",
+      "page_idx": 110,
+      "text_preview": "The auditor should be given access to all legal documents, books of accounts, procurement documents,"
+    },
+    {
+      "embedding_index": 266,
+      "global_chunk_id": "3e3c5e42-d083-4b19-a7bb-d056322a1566",
+      "chunk_id": "10_FMP_2024_text_266",
+      "document_id": "10_FMP_2024",
+      "page_idx": 111,
+      "text_preview": "( Rs. in lakhs)"
+    },
+    {
+      "embedding_index": 267,
+      "global_chunk_id": "4f073897-7a2a-48af-b167-ec67edbdcbd8",
+      "chunk_id": "10_FMP_2024_text_267",
+      "document_id": "10_FMP_2024",
+      "page_idx": 113,
+      "text_preview": "Name of the SNA"
+    },
+    {
+      "embedding_index": 268,
+      "global_chunk_id": "6c77d947-b0ef-4812-829d-1df968bb85da",
+      "chunk_id": "10_FMP_2024_text_268",
+      "document_id": "10_FMP_2024",
+      "page_idx": 114,
+      "text_preview": "Name of the SNA"
+    },
+    {
+      "embedding_index": 269,
+      "global_chunk_id": "30a0a65b-513b-4c2c-8a4f-a13069fb642c",
+      "chunk_id": "10_FMP_2024_text_269",
+      "document_id": "10_FMP_2024",
+      "page_idx": 116,
+      "text_preview": "Name of the State:"
+    },
+    {
+      "embedding_index": 270,
+      "global_chunk_id": "62fae864-400c-4603-9186-fbfded38d020",
+      "chunk_id": "10_FMP_2024_text_270",
+      "document_id": "10_FMP_2024",
+      "page_idx": 116,
+      "text_preview": "Quarter Ending:"
+    },
+    {
+      "embedding_index": 271,
+      "global_chunk_id": "976f3c86-9660-46c7-a094-4d624d35177c",
+      "chunk_id": "10_FMP_2024_text_271",
+      "document_id": "10_FMP_2024",
+      "page_idx": 117,
+      "text_preview": "Name of State:"
+    },
+    {
+      "embedding_index": 272,
+      "global_chunk_id": "9f8a6d19-473f-40ac-90c1-6a07333e3097",
+      "chunk_id": "10_FMP_2024_text_272",
+      "document_id": "10_FMP_2024",
+      "page_idx": 117,
+      "text_preview": "Without tender Single tender Open tender Limited tender Rate contract E. procurement"
+    },
+    {
+      "embedding_index": 273,
+      "global_chunk_id": "2b180aaa-393e-44cf-8437-3aceb8ec8844",
+      "chunk_id": "10_FMP_2024_text_273",
+      "document_id": "10_FMP_2024",
+      "page_idx": 118,
+      "text_preview": "Community Construction/district/state level Open tender/LTE based on financial threshold"
+    },
+    {
+      "embedding_index": 274,
+      "global_chunk_id": "ca4503cd-3488-42f0-bc02-1bcb196763c7",
+      "chunk_id": "10_FMP_2024_text_274",
+      "document_id": "10_FMP_2024",
+      "page_idx": 118,
+      "text_preview": "Preparation of specifications and bids document. Issue of Invitation to bid. Open bids \nEvaluation o"
+    },
+    {
+      "embedding_index": 275,
+      "global_chunk_id": "9076e023-b0fe-42dc-824e-376c4396bbed",
+      "chunk_id": "10_FMP_2024_text_275",
+      "document_id": "10_FMP_2024",
+      "page_idx": 120,
+      "text_preview": "i. Secretary, School education & Literacy-Chairperso ministry of education ii. Additional Secretary/"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "global_chunk_id": "d2231347-7420-458e-9e5a-c9da2163e2ae",
+    "document_id": "Module1",
+    "chunk_id": "Module1_table_0",
+    "chunk_index": 0,
+    "chunk_type": "table",
+    "source_file": "D:\\Inception.js\\backend\\data\\uploads\\Module1\\v1\\outputs",
+    "page_idx": 6,
+    "bbox": [
+      120,
+      424,
+      872,
+      758
+    ],
+    "img_path": "images/1818e2d1e9af1c661e37aa514f1a70999f81b646ff6285cf9708abf74eae3e3b.jpg",
+    "table_data": {
+      "rows": [
+        [
+          "Parameters",
+          "MR",
+          "VR",
+          "AR",
+          "XR"
+        ],
+        [
+          "Stands for",
+          "Mixed Reality",
+          "VirtualReality",
+          "AugmentedReality",
+          "Extended reality"
+        ],
+        [
+          "Definition",
+          "Mixed reality isaterm used todescribe themerging of areal-worldenvironment anda computer-generated one.",
+          "Virtual reality isasimulatedexperience thatemploys posetrackingand 3Dnear-eye displaysto give the user animmersive feel ofa virtual world",
+          "Augmentedreality ( AR)istheintegration ofdigitalinformationwith the user&#x27; senvironmentin real time.",
+          "Extended Reality( XR) is anumbrella termencapsulatingAugmentedReality ( AR), Virtual Reality( VR) MixedReality ( MR), andeverything inbetween."
+        ],
+        [
+          "Display",
+          "Translucentdisplay",
+          "Occlusiondisplay",
+          "Translucentdisplay",
+          "Head mounteddisplay"
+        ],
+        [
+          "Devices",
+          "Headsetandmobilel",
+          "VRheadset",
+          "ARwearables",
+          "3Glasses"
+        ],
+        [
+          "Example",
+          "Interactivevirtual content",
+          "Virtual gaming",
+          "Augmentedvirtual mapand direction",
+          "Gaming,"
+        ]
+      ],
+      "num_rows": 6,
+      "num_columns": 5,
+      "raw_html": "<table><tr><td rowspan=1 colspan=1>Parameters</td><td rowspan=1 colspan=1>MR</td><td rowspan=1 colspan=1>VR</td><td rowspan=1 colspan=1>AR</td><td rowspan=1 colspan=1>XR</td></tr><tr><td rowspan=1 colspan=1>Stands for</td><td rowspan=1 colspan=1>Mixed Reality</td><td rowspan=1 colspan=1>VirtualReality</td><td rowspan=1 colspan=1>AugmentedReality</td><td rowspan=1 colspan=1>Extended reality</td></tr><tr><td rowspan=1 colspan=1>Definition</td><td rowspan=1 colspan=1>Mixed reality isaterm  used  todescribe      themerging  of  areal-worldenvironment anda      computer-generated one.</td><td rowspan=1 colspan=1>Virtual reality isasimulatedexperience   thatemploys     posetrackingand 3Dnear-eye displaysto give the user animmersive feel ofa virtual world</td><td rowspan=1 colspan=1>Augmentedreality (AR)istheintegration ofdigitalinformationwith the user&#x27;senvironmentin real time.</td><td rowspan=1 colspan=1>Extended Reality(XR)    is    anumbrella     termencapsulatingAugmentedReality     (AR),Virtual    Reality(VR)      MixedReality (MR), andeverything      inbetween.</td></tr><tr><td rowspan=1 colspan=1>Display</td><td rowspan=1 colspan=1>Translucentdisplay</td><td rowspan=1 colspan=1>Occlusiondisplay</td><td rowspan=1 colspan=1>Translucentdisplay</td><td rowspan=1 colspan=1>Head mounteddisplay</td></tr><tr><td rowspan=1 colspan=1>Devices</td><td rowspan=1 colspan=1>Headsetandmobilel</td><td rowspan=1 colspan=1>VRheadset</td><td rowspan=1 colspan=1>ARwearables</td><td rowspan=1 colspan=1>3Glasses</td></tr><tr><td rowspan=1 colspan=1>Example</td><td rowspan=1 colspan=1>Interactivevirtual content</td><td rowspan=1 colspan=1>Virtual gaming</td><td rowspan=1 colspan=1>Augmentedvirtual mapand direction</td><td rowspan=1 colspan=1>Gaming,</td></tr></table>"
+    },
+    "table_text": "Caption: Difference between Mixed Reality, Virtual Reality, Immersive Reality, Extended Reality\nParameters | MR | VR | AR | XR\nStands for | Mixed Reality | VirtualReality | AugmentedReality | Extended reality\nDefinition | Mixed reality isaterm used todescribe themerging of areal-worldenvironment anda computer-generated one. | Virtual reality isasimulatedexperience thatemploys posetrackingand 3Dnear-eye displaysto give the user animmersive feel ofa virtual world | Augmentedreality ( AR)istheintegration ofdigitalinformationwith the user&#x27; senvironmentin real time. | Extended Reality( XR) is anumbrella termencapsulatingAugmentedReality ( AR), Virtual Reality( VR) MixedReality ( MR), andeverything inbetween.\nDisplay | Translucentdisplay | Occlusiondisplay | Translucentdisplay | Head mounteddisplay\nDevices | Headsetandmobilel | VRheadset | ARwearables | 3Glasses\nExample | Interactivevirtual content | Virtual gaming | Augmentedvirtual mapand direction | Gaming,",
+    "caption": "Difference between Mixed Reality, Virtual Reality, Immersive Reality, Extended Reality",
+    "footnote": "",
+    "has_embedding": false,
+    "embedding_model": null,
+    "embedding_dimension": null,
+    "created_at": "2025-12-14 18:16:04.471044",
+    "embedding_created_at": null,
+    "_id": "693efee40393a72eeca04ccb"
+  }
+]
