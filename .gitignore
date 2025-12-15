@@ -305,3 +305,6 @@ image_embeddings_clip_v3.npy
 *.out
 *.zip
 *.npy
+backend/vectorDB/embeddings_consolidated/*
+backend/vectorDB/chunked_outputs_v2/*
+backend/vectorDB/sparse_embeddings/*
