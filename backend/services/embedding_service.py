@@ -33,14 +33,24 @@ class HybridEmbeddingService:
         texts: List[str],
         batch_size: int = 20
     ) -> List[List[float]]:
-        """Create embeddings using HuggingFace API (online)"""
-        if not self.settings.HUGGINGFACE_API_KEY:
-            raise ValueError("HuggingFace API key not configured")
-        
-        # TODO: Implement HuggingFace API call
-        # For now, fallback to offline
-        raise NotImplementedError("Online embeddings not yet implemented")
-    
+        """Create embeddings using OpenRouter API (online)"""
+        import os
+        import aiohttp
+
+        api_key = self.settings.OPENROUTER_API_KEY
+        if not api_key:
+            raise ValueError("OpenRouter API key not configured")
+        url = "https://openrouter.ai/api/v1/embeddings"
+        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+        payload = {"input": texts, "model": "baai/bge-m3"}
+
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, json=payload, headers=headers) as resp:
+                if resp.status != 200:
+                    raise Exception(f"OpenRouter API error: {resp.status}")
+                data = await resp.json()
+                return data["embeddings"]
+
     async def _create_embeddings_offline(
         self,
         texts: List[str],
@@ -57,21 +67,22 @@ class HybridEmbeddingService:
     ) -> List[List[float]]:
         """
         Create embeddings with automatic fallback
-        
+
         Args:
             force_mode: Override auto-detection ('online' or 'offline')
         """
         mode = force_mode or await self._detect_mode()
-        
-        try:
-            # For now, always use offline (Ollama) for embeddings
-            # Online embeddings can be added later
-            logger.info(f"⚡ Creating embeddings using Ollama (offline)")
-            return await self._create_embeddings_offline(texts, batch_size)
-            
-        except Exception as e:
-            logger.error(f"❌ Embedding creation failed: {e}")
-            raise
+
+        if mode == "online":
+            try:
+                logger.info(f"⚡ Creating embeddings using OpenRouter (online)")
+                return await self._create_embeddings_online(texts, batch_size)
+            except Exception as e:
+                logger.warning(f"Online embedding failed, falling back to Ollama: {e}")
+
+        # Fallback to offline
+        logger.info(f"⚡ Creating embeddings using Ollama (offline)")
+        return await self._create_embeddings_offline(texts, batch_size)
     
     async def create_single_embedding(
         self,

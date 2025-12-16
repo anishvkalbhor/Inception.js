@@ -321,3 +321,4 @@ backend/vectorDB/embeddings_consolidated/*
 backend/vectorDB/chunked_outputs_v2/*
 backend/vectorDB/sparse_embeddings/*
 backend/core/config.py
+backend/core/config.py

@@ -63,6 +63,9 @@ class EmbeddingCreator:
         self.embedding_dim = self.model.get_sentence_embedding_dimension()
         print(f"✅ Model loaded. Embedding dimension: {self.embedding_dim}")
         print(f"   Batch size: {self.batch_size}")
+        
+        from services.embedding_service import HybridEmbeddingService
+        self.hybrid_service = HybridEmbeddingService()
     
     def _truncate_text(self, text: str) -> str:
         """✅ FIXED: Added missing truncate method"""
@@ -73,28 +76,10 @@ class EmbeddingCreator:
         return text
     
     def _generate_embeddings(self, texts: List[str]) -> np.ndarray:
-        """✅ FIXED: Generate embeddings with OOM protection"""
-        try:
-            with torch.no_grad():
-                embeddings = self.model.encode(
-                    texts,
-                    batch_size=self.batch_size,
-                    show_progress_bar=False,
-                    convert_to_numpy=True,
-                    normalize_embeddings=True,
-                    device=self.device  # ✅ FIXED: Explicitly set device
-                )
-            return embeddings
-        except RuntimeError as e:
-            if "out of memory" in str(e).lower():
-                print(f"\n⚠️  CUDA OOM! Reducing batch size from {self.batch_size} to {self.batch_size // 2}")
-                if self.device == "cuda":
-                    torch.cuda.empty_cache()
-                # Retry with smaller batch size
-                self.batch_size = max(1, self.batch_size // 2)
-                return self._generate_embeddings(texts)
-            else:
-                raise e
+        """Generate embeddings using HybridEmbeddingService (OpenRouter first, fallback to Ollama)"""
+        import asyncio
+        embeddings = asyncio.run(self.hybrid_service.create_embeddings(texts))
+        return np.array(embeddings)
     
     def embed_consolidated_text_chunks(self, json_file_path: str, output_dir: str) -> Dict[str, Any]:
         """
