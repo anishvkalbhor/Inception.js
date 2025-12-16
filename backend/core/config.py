@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     # === ONLINE CONFIGURATION (Primary) ===
     
     # OpenRouter (Online LLM)
-    OPENROUTER_API_KEY: str  = "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"
+    OPENROUTER_API_KEY: str  = "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"
     OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
     ONLINE_LLM_MODEL: str = "alibaba/tongyi-deepresearch-30b-a3b:free"
     
@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     ELEVENLABS_VOICE_ID: str = "21m00Tcm4TlvDq8ikWAM"
     
     # HuggingFace (Online Embeddings - fallback)
-    HUGGINGFACE_API_KEY: Optional[str] = None
+    HUGGINGFACE_API_KEY: Optional[str] = "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"
     ONLINE_EMBED_MODEL: str = "BAAI/bge-m3"
 
     # === OFFLINE CONFIGURATION (Fallback) ===

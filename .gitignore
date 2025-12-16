@@ -305,3 +305,4 @@ image_embeddings_clip_v3.npy
 *.out
 *.zip
 *.npy
+backend/core/config.py
